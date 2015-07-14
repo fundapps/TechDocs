@@ -1,0 +1,6 @@
+source "https://rubygems.org"
+
+gem 'rest-client', '~> 1.8.0'
+gem 'mime-types', '~> 2.5'
+gem 'oga', '~> 1.0.3'
+gem 'colorize', '~> 0.7.7'
