@@ -16,7 +16,7 @@ A number of methods are available, depending on the kind of data being uploaded.
 
 All of our API methods expect your upload file to be sent as the body of the request; our example implementations show how to achieve this with commonly used HTTP libraries.
 
-* `POST /v1/expost` - Upload Daily Positions. Expects data in XML format ([example XML position file](Sample-XML/)); large files may be zipped. Our response to this request includes a link to another method which allows tracking of job progress.
+* `POST /v1/expost` - Upload Daily Positions. Expects data in XML format ([example XML position file](Sample-XML/)); large files may be zipped. Our response to this request includes a link to another method which allows tracking of job progress. We also make available an XSD schema for position uploads; this may be retrieved from your instance at `/v1/expost/xsd`. If you don't have access to an instance yet and would like an XSD, please [contact support](https://fundapps.zendesk.com/hc/en-us/articles/200951119-Contacting-Support).
 
 * `POST /v1/indexdata` - (Optional) Upload Index data, if you wish to decouple this from your daily position upload. Expects CSV (Recommended), XLS or XLSX format.
 
@@ -35,6 +35,17 @@ XLS         | application/vnd.ms-excel
 XLSX        | application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
 XML         | application/xml
 ZIP         | application/zip
+
+## Data Types
+
+Type    | Definition                                | Example
+--------|-------------------------------------------|----------
+Boolean | Must be the word true or false            | true
+Date    | Must be in "YYYY-MM-DD" format (ISO 8601) | 2015-12-31
+Decimal | Must use "." as decimal separator. Group (thousand) separators are not allowed, exponential formatting not allowed | 123444.22
+Integer | Whole number (positive or negative). Group (thousand) separators are not allowed, exponential formatting not allowed | 19944
+String  | A sequence of characters. When using CSV format must not include commas (","). | Nokia
+Lists   | Comma separated string                    | XNYC,XLON
 
 ## Examples
 We provide a number of example implementations against our API using commonly available programming languages and libraries in this repository.
