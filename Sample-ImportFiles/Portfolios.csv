@@ -1,0 +1,11 @@
+PortfolioId,PortfolioName,PortfolioCurrency,PortfolioType,PortfolioCompany,DefaultParentId,RuleFolders,CompanyType,FundDomicile
+15,Managed Fund,EUR,Portfolio,Prism Asset Management,103,"Disclosure,Validation,Validation Disclosure","US-QII,UKIM,NotZA",US
+13,Special Interest Fund,EUR,Portfolio,Prism Asset Management,100,"Disclosure,Validation,Validation Disclosure","US-QII,UKIM,NotZA",US
+16,Managed (Voting) Fund,EUR,Portfolio,Prism Asset Management,103,"Disclosure,Validation,Validation Disclosure","US-QII,UKIM,NotZA",US
+12,Tax Haven Fund,EUR,Portfolio,Prism Asset Management,100,"Disclosure,Validation,Validation Disclosure,UCITS","US-QII,UKIM,NotZA",US
+11,Global Macro Fund,EUR,Portfolio,Prism Asset Management,100,"Disclosure,Validation,Validation Disclosure","US-QII,UKIM,NotZA",US
+17,US Fund II,EUR,Portfolio,US Asset Management,105,"Disclosure,Validation,Validation Disclosure,UCITS","US-QII,UKIM,NotZA",US
+14,US Fund,EUR,Portfolio,US Asset Management,105,"Disclosure,Validation,Validation Disclosure,UCITS","US-QII,UKIM,NotZA",US
+100,Top Level Company,EUR,Entity,Prism Asset Management,100,,"US-QII,UKIM,NotZA",US
+103,Management Entity,EUR,Entity,Prism Asset Management,100,,"US-QII,UKIM,NotZA",US
+105,US Entity,EUR,Entity,US Asset Management,103,,"US-QII,UKIM,NotZA",US
