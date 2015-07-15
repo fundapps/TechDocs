@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Snapshot Date="2015-02-22">
+    <Instruments>
+        <Equity InstrumentId="GB00BH4HKS39" InstrumentName="Vodafone Group PLC" IssuerId="2" IssuerName="Vodafone Group PLC" ISIN="GB00BH4HKS39" CountryOfIssue="GB" CountryOfIncorporation="GB" TotalVotingRights="3000" ClassSharesOutstanding="1000" TotalSharesOutstanding="2000" MarketCap="1000" InstrumentCurrency="GBP" VotesPerShare="3" Market="XLON" Price="10" CUSIP="" LotSize="1"/>
+        <ADR InstrumentId="US92857W2098" InstrumentName="Vod ADR NYSE" ISIN="US92857W2098" Market="XNYS" CUSIP="92857W209" ConversionRatio="2" MarketsListedIn="XNYS">
+            <Component InstrumentId="GB00BH4HKS39"/>
+        </ADR>
+    </Instruments>
+    <Portfolios>
+        <Portfolio PortfolioId="11">
+            <Asset AssetId="Vodafone ADR" AssetName="Vodafone ADR" InstrumentId="US92857W2098" Quantity="14000"/>
+        </Portfolio>
+        <Portfolio PortfolioId="12">
+            <Asset AssetId="Vodafone Equity" AssetName="Vodafone Equity" InstrumentId="GB00BH4HKS39" Quantity="30000"/>
+        </Portfolio>
+    </Portfolios>
+</Snapshot>
