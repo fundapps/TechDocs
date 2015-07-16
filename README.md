@@ -20,7 +20,11 @@ All of our API methods expect your upload file to be sent as the body of the req
 
 Upload Daily Positions. This method expects to receive data in XML format ([example XML position file](Sample-XML/)); large files may be zipped. The response includes a link which when polled allows monitoring of the progress of processing the file.
 
-#### Sample Response
+#### Sample
+    (Request Headers)
+    POST https://customer-api.fundapps.co/v1/expost/check HTTP/1.1 Content-Type: "application/xml"
+
+    (Response)
     <links>
       <result>/v1/ExPost/Result/fe633307-f196-4609-abfe-a1fc0111e875</result>
     </links>
@@ -43,21 +47,24 @@ Passed          | InProgress  | Rule execution in progress
 Failed          | NotRun      | Validation failed; rule processing canceled.
 Passed          | Failed      | Rule execution failed.
 
-#### Sample Responses
+#### Sample
+    (Request)
+    GET https://customer-api.fundapps.co/v1/ExPost/Result/fe633307-f196-4609-abfe-a1fc0111e875 HTTP/1.1
+    Content-Type: application/xml
 
-    (Headers)
+    (Response Headers, Rules running)
     HTTP/1.1 202 Accepted
     Content-Type: application/xml
 
-    (Content)
+    (Response Content, Rules running)
     <?xml version="1.0" encoding="utf-8"?>
     <ResultsSnapshot ValidationState="Passed" RuleState="InProgress" />
 
-    (Headers)
+    (Response Headers, Validation failed)
     HTTP/1.1 200 OK
     Content-Type: application/xml
 
-    (Content)
+    (Response Content, Validation failed)
     <?xml version="1.0" encoding="utf-8"?>
     <ResultSnapshot ValidationState="Failed" RuleState="NotRun" />
 
