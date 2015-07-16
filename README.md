@@ -16,13 +16,69 @@ A number of methods are available, depending on the kind of data being uploaded.
 
 All of our API methods expect your upload file to be sent as the body of the request; our example implementations show how to achieve this with commonly used HTTP libraries.
 
-* `POST /v1/expost` - Upload Daily Positions. Expects data in XML format ([example XML position file](Sample-XML/)); large files may be zipped. Our response to this request includes a link to another method which allows tracking of job progress. We also make available an XSD schema for position uploads; this may be retrieved from your instance at `/v1/expost/xsd`. If you don't have access to an instance yet and would like an XSD, please [contact support](https://fundapps.zendesk.com/hc/en-us/articles/200951119-Contacting-Support).
+### `POST /v1/expost`
 
-* `POST /v1/indexdata` - (Optional) Upload Index data, if you wish to decouple this from your daily position upload. Expects CSV (Recommended), XLS or XLSX format.
+Upload Daily Positions. This method expects to receive data in XML format ([example XML position file](Sample-XML/)); large files may be zipped. The response includes a link which when polled allows monitoring of the progress of processing the file.
 
-*  `POST /v1/portfolios` - (Optional) Upload Portfolio data, if your portfolio structure changes frequently you may wish to refresh this at an appropriate frequency. Expects CSV (Recommended, [example CSV portfolio file](Sample-ImportFiles/Portfolios.csv)), XLS or XLSX format.
+#### Sample
+    (Request Headers)
+    POST https://customer-api.fundapps.co/v1/expost/check HTTP/1.1 Content-Type: "application/xml"
 
-When sending data to these endpoints we expect certain content types to be set e.g.
+    (Response)
+    <links>
+      <result>/v1/ExPost/Result/fe633307-f196-4609-abfe-a1fc0111e875</result>
+    </links>
+
+#### Position File XSD
+We make an XSD schema available for the position upload XML format; this may be retrieved from your Rapptr instance at `/v1/expost/xsd`. If you don't have access to an instance yet and would like an XSD, please [contact support](https://fundapps.zendesk.com/hc/en-us/articles/200951119-Contacting-Support).
+
+### `GET /v1/expost/result/<guid>`
+
+Check the progress of the rule processing on a position upload. As noted above, when uploading a position file the specific URI for checking progress is provided; the unique ID of the job is included in the URI.
+
+This endpoint returns a `202 Accepted` HTTP status whilst the check is in progress and a `200 OK` status when the check is complete. The progress of validation and rule execution is reported separately in the response.
+
+ValidationState | RuleState   | Explanation
+----------------|-------------|--------------------------------------
+Unknown         | Unknown     | Job just received; not processed yet.
+Pending         | Pending     | Job queued
+InProgress      | Pending     | Validation in progress
+Passed          | InProgress  | Rule execution in progress
+Failed          | NotRun      | Validation failed; rule processing canceled.
+Passed          | Failed      | Rule execution failed.
+
+#### Sample
+    (Request)
+    GET https://customer-api.fundapps.co/v1/ExPost/Result/fe633307-f196-4609-abfe-a1fc0111e875 HTTP/1.1
+    Content-Type: application/xml
+
+    (Response Headers, Rules running)
+    HTTP/1.1 202 Accepted
+    Content-Type: application/xml
+
+    (Response Content, Rules running)
+    <?xml version="1.0" encoding="utf-8"?>
+    <ResultsSnapshot ValidationState="Passed" RuleState="InProgress" />
+
+    (Response Headers, Validation failed)
+    HTTP/1.1 200 OK
+    Content-Type: application/xml
+
+    (Response Content, Validation failed)
+    <?xml version="1.0" encoding="utf-8"?>
+    <ResultSnapshot ValidationState="Failed" RuleState="NotRun" />
+
+### `POST /v1/indexdata` (Optional)
+
+Upload Index data, if you wish to decouple this from your daily position upload. Expects CSV (Recommended), XLS or XLSX format.
+
+### `POST /v1/portfolios` (Optional)
+
+Upload Portfolio data, if your portfolio structure changes frequently you may wish to refresh this at an appropriate frequency. Expects CSV (Recommended, [example CSV portfolio file](Sample-ImportFiles/Portfolios.csv)), XLS or XLSX format.
+
+## Request Content-Types
+
+When sending data to the API we expect certain content types to be set on your request e.g.
 
     POST https://fictitious-staging-api.fundapps.co/v1/expost/check HTTP/1.1 Content-Type: "application/xml"
 
