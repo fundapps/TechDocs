@@ -30,7 +30,7 @@ Upload Daily Positions. This method expects to receive data in XML format ([exam
     </links>
 
 #### Position File XSD
-We make an XSD schema available for the position upload XML format; this may be retrieved from your Rapptr instance at `/v1/expost/xsd`. If you don't have access to an instance yet and would like an XSD, please [contact support](https://fundapps.zendesk.com/hc/en-us/articles/200951119-Contacting-Support).
+We make an XSD schema available for the position upload XML format; this may be retrieved from the `GET /v1/expost/xsd` API endpoint on your Rapptr instance . If you don't have access to an instance yet and would like access to an XSD file, please [contact support](https://fundapps.zendesk.com/hc/en-us/articles/200951119-Contacting-Support).
 
 ### `GET /v1/expost/result/<guid>`
 
