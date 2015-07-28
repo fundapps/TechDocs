@@ -12,6 +12,7 @@ require 'colorize'
 # fundapps_api.import_positions_and_get_result file: 'Disclosure_US_1Day.zip'
 # fundapps_api.import_index_data file: 'Indices.csv'
 # fundapps_api.import_portfolios file: 'Portfolios.csv'
+# puts fundapps_api.xsd
 
 class FundAppsAPI
   def initialize (endpoint:, username:, password:)
@@ -30,6 +31,7 @@ class FundAppsAPI
   def import_positions (file:) post "/v1/expost/check", file end
   def import_index_data (file:) post "/v1/indexdata/import", file end
   def import_portfolios (file:) post "/v1/portfolios/import", file end
+  def xsd; get "/v1/expost/xsd"; end
 
   private
 
@@ -77,7 +79,3 @@ class FundAppsAPI
     puts response.colorize(:red) if result_status[:Status] == "ValidationFailed"
   end
 end
-
-api = FundAppsAPI.new endpoint: "http://rapptr.local:38727", username: 'jsimpson', password: 'newuser'
-api.import_portfolios file: '../Sample-ImportFiles/Portfolios.csv'
-api.import_index_data file: '../Sample-ImportFiles/IndexComposition.csv'
