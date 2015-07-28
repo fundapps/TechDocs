@@ -8,9 +8,9 @@ GEM
       unf (>= 0.0.5, < 1.0.0)
     http-cookie (1.0.2)
       domain_name (~> 0.5)
-    mime-types (2.5)
+    mime-types (2.6.1)
     netrc (0.10.3)
-    oga (1.0.3)
+    oga (1.2.1)
       ast
       ruby-ll (~> 2.1)
     rest-client (1.8.0)
@@ -29,6 +29,5 @@ PLATFORMS
 
 DEPENDENCIES
   colorize (~> 0.7.7)
-  mime-types (~> 2.5)
-  oga (~> 1.0.3)
+  oga (~> 1.2.1)
   rest-client (~> 1.8.0)

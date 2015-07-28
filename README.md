@@ -68,11 +68,11 @@ Passed          | Failed      | Rule execution failed.
     <?xml version="1.0" encoding="utf-8"?>
     <ResultSnapshot ValidationState="Failed" RuleState="NotRun" />
 
-### `POST /v1/indexdata` (Optional)
+### `POST /v1/indexdata/import` (Optional)
 
-Upload Index data, if you wish to decouple this from your daily position upload. Expects CSV (Recommended), XLS or XLSX format.
+Upload Index data, if you wish to decouple this from your daily position upload. Expects CSV (Recommended), XLS or XLSX format input.
 
-### `POST /v1/portfolios` (Optional)
+### `POST /v1/portfolios/import` (Optional)
 
 Upload Portfolio data, if your portfolio structure changes frequently you may wish to refresh this at an appropriate frequency. Expects CSV (Recommended, [example CSV portfolio file](Sample-ImportFiles/Portfolios.csv)), XLS or XLSX format.
 
