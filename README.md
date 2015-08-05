@@ -101,7 +101,7 @@ Date    | Must be in "YYYY-MM-DD" format (ISO 8601) | 2015-12-31
 Decimal | Must use "." as decimal separator. Group (thousand) separators are not allowed, exponential formatting not allowed | 123444.22
 Integer | Whole number (positive or negative). Group (thousand) separators are not allowed, exponential formatting not allowed | 19944
 String  | A sequence of characters. When using CSV format must not include commas (","). | Nokia
-Lists   | Comma separated string                    | XNYC,XLON
+List    | Comma separated string                    | XNYC,XLON
 
 ## Examples
 We provide a number of example implementations against our API using commonly available programming languages and libraries in this repository.
