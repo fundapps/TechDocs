@@ -78,13 +78,13 @@ The Summary element is comprised of:
 
     (Response Content, File processed successfully)
     <?xml version="1.0" encoding="utf-8"?>
-    <ResultsSnapshot ValidationState="Passed" RuleState="Passed" Status="Okay" PipelineStage="Finished" Duration="00:00:03.4460000">
-        <Summary DataDate="2015-01-09T00:00:00" FundsChecked="1">
-            <Breach Total="1" NewTotal="1" />
-            <Disclosure Total="10" NewTotal="10" />
-            <Unknown Total="2" NewTotal="2" />
-            <Warning Total="2" NewTotal="2" />
-            <OK Total="364" NewTotal="364" />
+    <ResultsSnapshot ValidationState="Passed" RuleState="Passed" Status="Okay" PipelineStage="Finished" Duration="00:01:28.7030000">
+        <Summary DataDate="2015-07-20">
+            <Breach Total="1" New="1" />
+            <Disclosure Total="18" New="18" />
+            <Unknown Total="2" New="2" />
+            <Warning Total="4" New="4" />
+            <OK Total="399" New="399" />
         </Summary>
     </ResultsSnapshot>
 
