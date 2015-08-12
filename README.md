@@ -46,7 +46,15 @@ InProgress      | Pending     | Validation in progress
 Passed          | InProgress  | Rule execution in progress
 Failed          | NotRun      | Validation failed; rule processing canceled.
 Passed          | Failed      | Rule execution failed.
+Passed          | Passed      | Rule execution successful.
 
+When the rule execution is completed successfully, an additional 'Summary' element is provided in the response. This aims to provide the same information as the email notification sent by Rapptr when a positions file finishes processing. 
+
+The Summary element is comprised of:
+
+ * The total number of alerts by type - i.e. Breach, Unknown, etc.
+ * The number of new alerts by type (since the day before).
+ 
 #### Sample
     (Request)
     GET https://customer-api.fundapps.co/v1/ExPost/Result/fe633307-f196-4609-abfe-a1fc0111e875 HTTP/1.1
@@ -67,6 +75,18 @@ Passed          | Failed      | Rule execution failed.
     (Response Content, Validation failed)
     <?xml version="1.0" encoding="utf-8"?>
     <ResultSnapshot ValidationState="Failed" RuleState="NotRun" />
+
+    (Response Content, File processed successfully)
+    <?xml version="1.0" encoding="utf-8"?>
+    <ResultsSnapshot ValidationState="Passed" RuleState="Passed" Status="Okay" PipelineStage="Finished" Duration="00:01:28.7030000">
+        <Summary DataDate="2015-07-20">
+            <Breach Total="1" New="1" />
+            <Disclosure Total="18" New="18" />
+            <Unknown Total="2" New="2" />
+            <Warning Total="4" New="4" />
+            <OK Total="399" New="399" />
+        </Summary>
+    </ResultsSnapshot>
 
 ### `POST /v1/indexdata/import` (Optional)
 
