@@ -1,11 +1,11 @@
 PortfolioId,PortfolioName,PortfolioCurrency,PortfolioType,PortfolioCompany,DefaultParentId,RuleFolders,CompanyType,FundDomicile
-15,Managed Fund,USD,Portfolio,Prism Asset Management,103,"Disclosure,Validation,Validation Disclosure","US-QII,UKIM,NotZA",US
-13,Special Interest Fund,USD,Portfolio,Prism Asset Management,100,"Disclosure,Validation,Validation Disclosure","US-QII,UKIM,NotZA",US
-16,Managed (Voting) Fund,USD,Portfolio,Prism Asset Management,103,"Disclosure,Validation,Validation Disclosure","US-QII,UKIM,NotZA",US
-12,Tax Haven Fund,USD,Portfolio,Prism Asset Management,100,"Disclosure,Validation,Validation Disclosure,UCITS","US-QII,UKIM,NotZA",US
-11,Global Macro Fund,USD,Portfolio,Prism Asset Management,100,"Disclosure,Validation,Validation Disclosure","US-QII,UKIM,NotZA",US
-17,US Fund II,USD,Portfolio,US Asset Management,105,"Disclosure,Validation,Validation Disclosure,UCITS","US-QII,UKIM,NotZA",US
-14,US Fund,USD,Portfolio,US Asset Management,105,"Disclosure,Validation,Validation Disclosure,UCITS","US-QII,UKIM,NotZA",US
-100,Top Level Company,USD,Entity,Prism Asset Management,100,,"US-QII,UKIM,NotZA",US
-103,Management Entity,USD,Entity,Prism Asset Management,100,,"US-QII,UKIM,NotZA",US
-105,US Entity,USD,Entity,US Asset Management,103,,"US-QII,UKIM,NotZA",US
+100,Top Level Company,USD,Entity,Demo AM,100,,"US-QII,UKIM,NotZA",US
+103,Management Entity,USD,Entity,Demo AM,100,,"US-QII,UKIM,NotZA",US
+105,US Entity,USD,Entity,Demo AM,103,,"US-QII,UKIM,NotZA",US
+11,Global Macro Fund,USD,Portfolio,Demo AM,100,"Disclosure,Validation,Validation Disclosure","US-QII,UKIM,NotZA",US
+12,Tax Haven Fund,USD,Portfolio,Demo AM,100,"Disclosure,Validation,Validation Disclosure,UCITS","US-QII,UKIM,NotZA",US
+13,Special Interest Fund,USD,Portfolio,Demo AM,100,"Disclosure,Validation,Validation Disclosure","US-QII,UKIM,NotZA",US
+14,US Fund,USD,Portfolio,Demo AM,105,"Disclosure,Validation,Validation Disclosure,UCITS","US-QII,UKIM,NotZA",US
+15,Managed Fund,USD,Portfolio,Demo AM,103,"Disclosure,Validation,Validation Disclosure","US-QII,UKIM,NotZA",US
+16,Managed (Voting) Fund,USD,Portfolio,Demo AM,103,"Disclosure,Validation,Validation Disclosure","US-QII,UKIM,NotZA",US
+17,US Fund II,USD,Portfolio,Demo AM,105,"Disclosure,Validation,Validation Disclosure,UCITS","US-QII,UKIM,NotZA",US
