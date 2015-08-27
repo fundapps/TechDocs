@@ -2,10 +2,10 @@ PortfolioId,PortfolioName,PortfolioCurrency,PortfolioType,PortfolioCompany,Legal
 100,Top Level Company,USD,Entity,Demo AM,100,100,100,,"US-QII,UKIM,NotZA",US
 103,Management Entity,USD,Entity,Demo AM,100,100,100,,"US-QII,UKIM,NotZA",US
 105,US Entity,USD,Entity,Demo AM,103,103,103,,"US-QII,UKIM,NotZA",US
-11,Global Macro Fund,USD,Portfolio,Demo AM,100,100,100,"Disclosure,Validation,Validation Disclosure","US-QII,UKIM,NotZA",US
-12,Tax Haven Fund,USD,Portfolio,Demo AM,100,100,100,"Disclosure,Validation,Validation Disclosure","US-QII,UKIM,NotZA",US
-13,Special Interest Fund,USD,Portfolio,Demo AM,100,100,100,"Disclosure,Validation,Validation Disclosure","US-QII,UKIM,NotZA",US
-14,US Fund,USD,Portfolio,Demo AM,105,105,105,"Disclosure,Validation,Validation Disclosure","US-QII,UKIM,NotZA",US
-15,Managed Fund,USD,Portfolio,Demo AM,103,103,103,"Disclosure,Validation,Validation Disclosure","US-QII,UKIM,NotZA",US
-16,Managed (Voting) Fund,USD,Portfolio,Demo AM,103,103,103,"Disclosure,Validation,Validation Disclosure","US-QII,UKIM,NotZA",US
-17,US Fund II,USD,Portfolio,Demo AM,105,105,105,"Disclosure,Validation,Validation Disclosure","US-QII,UKIM,NotZA",US
+11,Global Macro Fund,USD,Portfolio,Demo AM,100,100,100,"Disclosure,Validation,Validation Disclosure",NotZA,US
+12,Tax Haven Fund,USD,Portfolio,Demo AM,100,100,100,"Disclosure,Validation,Validation Disclosure",NotZA,US
+13,Special Interest Fund,USD,Portfolio,Demo AM,100,100,100,"Disclosure,Validation,Validation Disclosure",NotZA,US
+14,US Fund,USD,Portfolio,Demo AM,105,105,105,"Disclosure,Validation,Validation Disclosure",NotZA,US
+15,Managed Fund,USD,Portfolio,Demo AM,103,103,103,"Disclosure,Validation,Validation Disclosure",NotZA,US
+16,Managed (Voting) Fund,USD,Portfolio,Demo AM,103,103,103,"Disclosure,Validation,Validation Disclosure",NotZA,US
+17,US Fund II,USD,Portfolio,Demo AM,105,105,105,"Disclosure,Validation,Validation Disclosure",NotZA,US
