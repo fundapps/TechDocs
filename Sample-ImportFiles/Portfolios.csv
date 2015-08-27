@@ -3,9 +3,9 @@ PortfolioId,PortfolioName,PortfolioCurrency,PortfolioType,PortfolioCompany,Defau
 103,Management Entity,USD,Entity,Demo AM,100,,"US-QII,UKIM,ITFM,NotZA",US
 105,US Entity,USD,Entity,Demo AM,103,,"CA-AMRS,US-QII,UKIM,ITFM,NotZA",US
 11,Global Macro Fund,USD,Portfolio,Demo AM,100,"Disclosure,Validation,Validation Disclosure",NotZA,US
-12,Tax Haven Fund,USD,Portfolio,Demo AM,100,"Disclosure,Validation,Validation Disclosure,UCITS",NotZA,US
+12,Tax Haven Fund,USD,Portfolio,Demo AM,100,"Disclosure,Validation,Validation Disclosure",NotZA,US
 13,Special Interest Fund,USD,Portfolio,Demo AM,100,"Disclosure,Validation,Validation Disclosure",NotZA,US
-14,US Fund,USD,Portfolio,Demo AM,105,"Disclosure,Validation,Validation Disclosure,UCITS",NotZA,US
+14,US Fund,USD,Portfolio,Demo AM,105,"Disclosure,Validation,Validation Disclosure",NotZA,US
 15,Managed Fund,USD,Portfolio,Demo AM,103,"Disclosure,Validation,Validation Disclosure",NotZA,US
 16,Managed (Voting) Fund,USD,Portfolio,Demo AM,103,"Disclosure,Validation,Validation Disclosure",NotZA,US
-17,US Fund II,USD,Portfolio,Demo AM,105,"Disclosure,Validation,Validation Disclosure,UCITS",NotZA,US
+17,US Fund II,USD,Portfolio,Demo AM,105,"Disclosure,Validation,Validation Disclosure",NotZA,US
