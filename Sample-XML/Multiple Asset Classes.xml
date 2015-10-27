@@ -34,6 +34,10 @@
        <Component InstrumentId="FI0009000681" Weighting="0.5"/>
        <Component InstrumentId="GB00BH4HKS39" Weighting="0.5"/>
     </Index>
+    <Unit InstrumentId="iShares_Developed_Markets_ETF" InstrumentName="iShares_Developed_Markets_ETF" IssuerId="iShares_Developed_Markets_ETF" IssuerName="iShares Developed Markets ETF" ISIN="None" CUSIP="921943858" TotalSharesOutstanding="1000" ClassSharesOutstanding="1000" TotalVotingRights="1000" Price="2000" InstrumentCurrency="USD" MarketsListedIn="XNYS" VotesPerShare="1" IsETF="True" ETFStructure="Partnership">
+            <Component InstrumentId="FI0009000681" Weighting="0.55"/>
+            <Component InstrumentId="GB00BH4HKS39" Weighting="0.45"/>
+    </Unit>
 
   </Instruments>
   <Portfolios>
@@ -48,6 +52,7 @@
       <Asset AssetId="7" AssetName="Nokia Right" InstrumentId="Right_Nokia" Quantity="10"/>
       <Asset AssetId="8" AssetName="Nokia Swap" InstrumentId="Swap_Nokia" Quantity="10"/>
       <Asset AssetId="9" AssetName="STOXX 600 SXXP Index Future" InstrumentId="Fut_STOXX_600" Quantity="-1"/>
+      <Asset AssetId="10" AssetName="iShares Developed Markets ETF" InstrumentId="iShares_Developed_Markets_ETF" Quantity="10"/>
 
     </Portfolio>
   </Portfolios>
