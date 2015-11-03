@@ -5,7 +5,7 @@ We provide a REST-ful HTTPS API for automated interfaces between your systems an
 Our API methods return machine readable responses in XML format, including error conditions.
 
 ## Base URI
-If your Rapptr installation is available at https://company.fundapps.co/ the URI from which your API is available is https://company-api.fundapps.co/. API requests to our API must be made over HTTPS.
+If your Rapptr installation is available at https://company.fundapps.co/ the URI from which your API is available is https://company-api.fundapps.co/. All requests made to our API must be over HTTPS.
 
 ## Authentication
 You authenticate to the Rapptr API via HTTP Basic Authentication, using an API credential created by a Rapptr administrator within your organisation. You must authenticate for all requests.
@@ -48,13 +48,13 @@ Failed          | NotRun      | Validation failed; rule processing canceled.
 Passed          | Failed      | Rule execution failed.
 Passed          | Passed      | Rule execution successful.
 
-When the rule execution is completed successfully, an additional 'Summary' element is provided in the response. This aims to provide the same information as the email notification sent by Rapptr when a positions file finishes processing. 
+When the rule execution is completed successfully, an additional 'Summary' element is provided in the response. This aims to provide the same information as the email notification sent by Rapptr when a positions file finishes processing.
 
 The Summary element is comprised of:
 
  * The total number of alerts by type - i.e. Breach, Unknown, etc.
  * The number of new alerts by type (since the day before).
- 
+
 #### Sample
     (Request)
     GET https://customer-api.fundapps.co/v1/ExPost/Result/fe633307-f196-4609-abfe-a1fc0111e875 HTTP/1.1
