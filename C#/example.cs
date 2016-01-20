@@ -9,10 +9,9 @@ var client = new RestClient("https://[ALIAS]-api.fundapps.co")
 // make the HTTP post request
 var request = new RestRequest("v1/expost/check", Method.POST);
 //use this line if you wish to send an XML file
-request.AddParameter("text/xml", File.ReadAllText("positions.xml"), 
-                     ParameterType.RequestBody);
+request.AddParameter("text/xml", File.ReadAllText("positions.xml"), ParameterType.RequestBody);
 //use this line if you wish to send a ZIP file
-//req.AddFile(null, File.ReadAllBytes("positions.zip"), "positions.zip", "application/zip");
+//request.AddFile(null, File.ReadAllBytes("positions.zip"), "positions.zip", "application/zip");
 
 var response = client.Execute(request);
 // if response comes back with a 2xx status, then file was received successfully
