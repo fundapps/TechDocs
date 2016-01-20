@@ -1,7 +1,6 @@
 // Example using RestSharp (https://github.com/restsharp/RestSharp)
 
-// Create a client which will connect to the HTTPS endpoint
-// with the API credentials you have been provided
+// Create a client which will connect to the HTTPS endpoint with the API credentials you have been provided
 var client = new RestClient("https://[ALIAS]-api.fundapps.co")
 {
   Authenticator = new HttpBasicAuthenticator([USERNAME],[PASSWORD])
