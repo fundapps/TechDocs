@@ -8,11 +8,13 @@ We accept transaction data in CSV format. You can find a [sample file here](Tran
 
 Column Name     | Data Type (Format) | Required/Optional | Length | Notes
 ----------------|--------------------|-------------------|--------|----------------------------
-PORTFOLIOID     | String             | Required          | 510    |
-ASSETID         | String             | Required          | 510    |
+PORTFOLIOID     | String             | Required          | 255    |
+ASSETID         | String             | Required          | 255    |
 TRANSACTIONID   | String             | Required          | 200    |
 EXECUTIONDATE   | Date (yyyy-mm-dd)  | Required          |  -     | E.g. 2016-01-27
 TRANSACTIONTYPE | String             | Required          |  -     | See below for valid options       
+PRICE           | Decimal            | Required          |  -     | Precision: 28; Scale: 8
+QUANTITY        | Decimal            | Required          |  -     | Precision: 28; Scale: 8
 
 ### Recognised Transaction Types
 
