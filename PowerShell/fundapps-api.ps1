@@ -8,10 +8,11 @@
 function API-Post {
     Param ($Uri, $User, $Password, $File)
     $basicAuth = "Basic " + [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes($($User) + ":" + $($Password)));
+	$fileName = Split-Path $File -leaf
     $params = @{
         Uri = $Uri
         Method = 'Post'
-        Headers = @{ Authorization = $basicAuth }
+        Headers = @{ Authorization = $basicAuth, "X-ContentName" = $fileName}
         ContentType = Get-Content-Type -Filename $File
         InFile = $File
     }

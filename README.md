@@ -112,6 +112,12 @@ XLSX        | application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
 XML         | application/xml
 ZIP         | application/zip
 
+## Content Names
+
+When uploading data to the API, it is stored and later displayed in Rapptr using a default file name. To specify a different file name, populate the "X-ContentName" header, e.g.
+
+	POST https://fictitious-staging-api.fundapps.co/v1/expost/check HTTP/1.1 Content-Type: "application/xml" X-ContentName: "positions-monday.xml"
+
 ## Data Types
 
 Type    | Definition                                | Example
