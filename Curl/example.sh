@@ -11,7 +11,7 @@ read -p "Enter API URL: " API_URL
 
 function API-Post {
   curl -X POST -u $USERNAME:$PASSWORD\
-    $API_URL/$1 -H "Content-Type: text/csv"\
+    $API_URL/$1 -H "Content-Type: text/csv" -H "X-ContentName: positions.csv"\
     --data-binary "@$2" -o intermediate.xml
 }
 

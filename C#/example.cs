@@ -12,6 +12,8 @@ request.AddParameter("text/xml", File.ReadAllText("positions.xml"), ParameterTyp
 //use this line instead of the above if you wish to send a ZIP file
 //request.AddFile(null, File.ReadAllBytes("positions.zip"), "positions.zip", "application/zip");
 
+//use this line to specify a name for the uploaded file
+request.AddHeader("X-ContentName", "positions-monday.xml");
 var response = client.Execute(request);
 // if response comes back with a 2xx status, then file was received successfully
 if ((resp.StatusCode != HttpStatusCode.OK && resp.StatusCode != HttpStatusCode.Accepted))
