@@ -25,5 +25,5 @@ Long Rights,11,2015-01-09,Right_NZ,,Air NZ Right (Class A),Rights,Equity,10,,NZ,
 "Multple disclosures - Incorporated in Switzerland, HomeMemberState in France",11,2015-01-09,CH0038838394,CH0038838394,Weatherford international,Equity,,80,Weatherford international,CH,CH,1000,1000,1000,1000,CHF,0.5,XPAR,10,,,,,,,,,,,,,,,
 Long Equity -- These positions test short selling equity rules e.g. Ireland --,11,2015-01-09,Equity_Ryanair,IE00B1GKF381,Ryanair Equity,Equity,,3,Ryanair,IE,IE,1000,1000,1000,1000,EUR,1,XDUB,100,,,,,,,,,,,,,,,
 Short CFD,11,2015-01-09,CFD_Ryanair,,Ryanair CFD,CFD,Equity,-8,,IE,IE,1000,1000,1000,1000,EUR,1,XDUB,10,1,100,IE00B1GKF381,Ryanair,,TRUE,,,,,,,,,
-Short Index future (ULInstrumentID important),11,2015-01-09,Call_STOXX_600,,STOXX 600 SXXP Index Future,Future,Index,-1,,,,,,,,EUR,,,100,10,10755,,,,TRUE,,,,,,SXXP,,,
+Short Index future (ULInstrumentID Important),11,2015-01-09,Call_STOXX_600,,STOXX 600 SXXP Index Future,Future,Index,-1,,,,,,,,EUR,,,100,10,10755,,,,TRUE,,,,,,SXXP,,,
 Short Sovereign Debt -- These positions test short selling sovereign debt rules e.g. Finland --,11,2015-01-09,PTOTEQOE0015,PTOTEQOE0015,"Portugal, OT 5.65 15feb2024",Bond,,10,Portugal,PT,PT,,,,,EUR,,XLIS,10,,,,,,,,,,,,,TRUE,-729000000,3.4
