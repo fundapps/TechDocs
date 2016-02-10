@@ -90,7 +90,7 @@ The Summary element is comprised of:
 
 ### `POST /v1/indexdata/import` (Optional)
 
-Upload Index data, if you wish to decouple this from your daily position upload. Expects CSV (Recommended), XLS or XLSX format input.
+Upload Index data, if you wish to decouple this from your daily position upload. Expects CSV (Recommended, [example CSV index file](Sample-ImportFiles/IndexComposition.csv)), XLS or XLSX format input.
 
 ### `POST /v1/portfolios/import` (Optional)
 
