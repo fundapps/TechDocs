@@ -18,7 +18,7 @@ All of our API methods expect your upload file to be sent as the body of the req
 
 ### `POST /v1/expost`
 
-Upload Daily Positions. This method expects to receive data in XML format ([example XML position file](Sample-XML/)); large files may be zipped. The response includes a link which when polled allows monitoring of the progress of processing the file.
+Upload Daily Positions. This method expects to receive data in XML format ([example XML position files](Sample-XML/)); large files may be zipped. The response includes a link which when polled allows monitoring of the progress of processing the file.
 
 #### Sample
     (Request Headers)
