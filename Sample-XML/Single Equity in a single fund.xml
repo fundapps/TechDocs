@@ -1,5 +1,4 @@
-
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Snapshot Date="2015-02-22">
     <Instruments>
         <Equity InstrumentId="FI0009000681" InstrumentName="Nokia Equity" IssuerId="1" IssuerName="Nokia" ISIN="FI0009000681" CountryOfIssue="FI" CountryOfIncorporation="FI" TotalVotingRights="3000" ClassSharesOutstanding="1000" TotalSharesOutstanding="2000" MarketCap="1000" InstrumentCurrency="EUR" VotesPerShare="3" Market="XHEL" Price="10" />
