@@ -5,7 +5,7 @@ We provide a REST-ful HTTPS API for automated interfaces between your systems an
 Our API methods return machine readable responses in XML format, including error conditions.
 
 ## Base URI
-If your Rapptr installation is available at https://%company%.fundapps.co/ the URI from which your API is available is https://<company>-api.fundapps.co/. All requests made to our API must be over HTTPS.
+If your Rapptr installation is available at https://%company%.fundapps.co/ the URI from which your API is available is https://%company%-api.fundapps.co/. All requests made to our API must be over HTTPS.
 
 ## Authentication
 You authenticate to the Rapptr API via HTTP Basic Authentication, using an API credential created by a Rapptr administrator within your organisation. You must authenticate for all requests.
@@ -22,7 +22,7 @@ Upload Daily Positions. This method expects to receive data in XML format ([exam
 
 #### Sample
     (Request Headers)
-    POST https://customer-api.fundapps.co/v1/expost/check HTTP/1.1 Content-Type: "application/xml"
+    POST https://%company%-api.fundapps.co/v1/expost/check HTTP/1.1 Content-Type: "application/xml"
 
     (Response)
     <links>
@@ -57,7 +57,7 @@ The Summary element is comprised of:
 
 #### Sample
     (Request)
-    GET https://customer-api.fundapps.co/v1/ExPost/Result/fe633307-f196-4609-abfe-a1fc0111e875 HTTP/1.1
+    GET https://%company%-api.fundapps.co/v1/ExPost/Result/fe633307-f196-4609-abfe-a1fc0111e875 HTTP/1.1
     Content-Type: application/xml
 
     (Response Headers, Rules running)
@@ -100,7 +100,7 @@ Upload Portfolio data, if your portfolio structure changes frequently you may wi
 
 When sending data to the API we expect certain content types to be set on your request e.g.
 
-    POST https://fictitious-staging-api.fundapps.co/v1/expost/check HTTP/1.1 Content-Type: "application/xml"
+    POST https://%company%-api.fundapps.co/v1/expost/check HTTP/1.1 Content-Type: "application/xml"
 
 These Content-Type values are as follows:
 
@@ -116,7 +116,7 @@ ZIP         | application/zip
 
 When uploading data to the API, it is stored and later displayed in Rapptr using a default file name. To specify a different file name, populate the "X-ContentName" header, e.g.
 
-	POST https://fictitious-staging-api.fundapps.co/v1/expost/check HTTP/1.1 Content-Type: "application/xml" X-ContentName: "positions-monday.xml"
+	POST https://%company%-api.fundapps.co/v1/expost/check HTTP/1.1 Content-Type: "application/xml" X-ContentName: "positions-monday.xml"
 
 ## Data Types
 
