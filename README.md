@@ -5,7 +5,7 @@ We provide a REST-ful HTTPS API for automated interfaces between your systems an
 Our API methods return machine readable responses in XML format, including error conditions.
 
 ## Base URI
-If your Rapptr installation is available at https://<company>.fundapps.co/ the URI from which your API is available is https://<company>-api.fundapps.co/. All requests made to our API must be over HTTPS.
+If your Rapptr installation is available at https://%company%.fundapps.co/ the URI from which your API is available is https://<company>-api.fundapps.co/. All requests made to our API must be over HTTPS.
 
 ## Authentication
 You authenticate to the Rapptr API via HTTP Basic Authentication, using an API credential created by a Rapptr administrator within your organisation. You must authenticate for all requests.
