@@ -9,7 +9,8 @@ If your Rapptr installation is available at https://%company%.fundapps.co/ the U
 All requests made to our API must be over HTTPS.
 
 ## Authentication
-You authenticate to the Rapptr API via HTTP Basic Authentication, using an API credential created by a Rapptr administrator within your organisation. You must authenticate for all requests.
+You authenticate to the Rapptr API via HTTP Basic Authentication. A Rapptr administrator from your organisation must create a user with the role "API" for this purpose. You must authenticate for all requests.
+**Note:** Please ensure you create a seperate user for the API as if you use an existing user's account, as soon as they change their password the API upload will fail.
 
 ## Methods
 
