@@ -98,6 +98,10 @@ Upload Index data, if you wish to decouple this from your daily position upload.
 
 Upload Portfolio data, if your portfolio structure changes frequently you may wish to refresh this at an appropriate frequency. Expects CSV - [example file](Sample-ImportFiles/Portfolios.csv).
 
+### `POST /v1/transactions/import` (Optional)
+
+Upload Transaction data. Expects CSV - [example file](Sample-ImportFiles/Transactions.csv).
+
 ## Request Content-Types
 
 When sending data to the API we expect certain content types to be set on your request e.g.
