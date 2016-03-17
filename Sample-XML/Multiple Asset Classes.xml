@@ -37,7 +37,7 @@
     <Unit InstrumentId="iShares_Developed_Markets_ETF" InstrumentName="iShares_Developed_Markets_ETF" IssuerId="iShares_Developed_Markets_ETF" IssuerName="iShares Developed Markets ETF" ISIN="None" CUSIP="921943858" TotalSharesOutstanding="1000" ClassSharesOutstanding="1000" TotalVotingRights="1000" Price="2000" InstrumentCurrency="USD" MarketsListedIn="XNYS" VotesPerShare="1" IsETF="True">
             <Component InstrumentId="FI0009000681" Weighting="0.55"/>
             <Component InstrumentId="GB00BH4HKS39" Weighting="0.45"/>
-    </Unit>
+    </Unit> 
 
   </Instruments>
   <Portfolios>

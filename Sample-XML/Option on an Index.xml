@@ -9,7 +9,7 @@
         </Index>
         <Option InstrumentId="MSCIEAFEOption" InstrumentName="MSCI EAFE Option" CallOrPut="Call" IsCashSettled="true" Market="XHEL" ContractSize="100" MaturityDate="2015-12-15" Delta="0.8">
             <Component InstrumentId="MSCI"/>
-        </Option>
+        </Option> 
     </Instruments>
     <Portfolios>
         <Portfolio PortfolioId="11">
