@@ -6,7 +6,7 @@
     <ADR InstrumentId="ADR_Vod" InstrumentName="Vod ADR NYSE" ISIN="US92857W2098" Market="XNYS" CUSIP="92857W209" ConversionRatio="2" MarketsListedIn="XNYS">
       <Component InstrumentId="GB00BH4HKS39"/>
     </ADR>
-    <Convertible InstrumentId="Conv_Nokia" InstrumentName="Nokia CB 6.2% 2018" IssuerId="1" IssuerName="Nokia" ISIN="FI00B16GWD58" Market="XHEL" CUSIP="" ConversionRatio="2" InControlOfConversion="true" MaturityDate="2015-11-15" Delta="0.35">
+    <Convertible InstrumentId="Conv_Nokia" InstrumentName="Nokia CB 6.2% 2018" IssuerId="1" IssuerName="Nokia" ISIN="FI00B16GWD58" Market="XHEL" CUSIP="" ConversionRatio="2" InControlOfConversion="true" MaturityDate="2015-11-15" Delta="0.35" IsCoveredConvertible="false">
       <Component InstrumentId="FI0009000681"/>
     </Convertible>
     <Warrant InstrumentId="Warrant_Nokia" InstrumentName="Nokia Warrant" CallOrPut="Call" InControlOfConversion="true" IsCoveredWarrant="true" IsCashSettled="true" ContractSize="1" MaturityDate="2015-11-15" Market="XHEL" Delta="0.35">

@@ -3,7 +3,7 @@
     <Instruments>
         <Equity InstrumentId="FI0009000681" InstrumentName="Nokia Equity" IssuerId="1" IssuerName="Nokia" ISIN="FI0009000681" CountryOfIssue="FI" CountryOfIncorporation="FI" TotalVotingRights="3000" ClassSharesOutstanding="1000" TotalSharesOutstanding="2000" MarketCap="1000" InstrumentCurrency="EUR" VotesPerShare="3" Market="XHEL" Price="10" />
         <Equity InstrumentId="GB00BH4HKS39" InstrumentName="Vodafone Group PLC" IssuerId="2" IssuerName="Vodafone Group PLC" ISIN="GB00BH4HKS39" CountryOfIssue="GB" CountryOfIncorporation="GB" TotalVotingRights="3000" ClassSharesOutstanding="1000" TotalSharesOutstanding="2000" MarketCap="1000" InstrumentCurrency="GBP" VotesPerShare="3" Market="XLON" Price="10" />
-        <Index InstrumentId="MSCI" InstrumentName="MSCI Index">
+        <Index InstrumentId="MSCI" InstrumentName="MSCI Index" InstrumentCurrency="USD">
             <Component InstrumentId="FI0009000681" Weighting="0.1"/>
             <Component InstrumentId="GB00BH4HKS39" Weighting="0.1"/>
         </Index>
