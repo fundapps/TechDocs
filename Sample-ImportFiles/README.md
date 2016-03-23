@@ -18,11 +18,18 @@ QUANTITY        | Decimal            | Required          |  -     | Precision: 2
 
 ### Recognised Transaction Types
 
-Type           |
----------------|
-Buy            |  
-Sell           |
-CorporateAction|
+Type            |
+----------------|
+Buy             |
+Sell            |
+CorporateAction |
+Expiry          |
+Exercise        |
+Adjustment      |
+Maturity        |
+TakeOn          |
+Withdrawal      |
+
 
 ### Data requirements
 
