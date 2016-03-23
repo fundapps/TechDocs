@@ -21,8 +21,8 @@ BROKERNAME      | String             | Optional          |  255   |
 
 Type            | Description                                          |
 ----------------|------------------------------------------------------|
-Buy             |                                                      |
-Sell            |                                                      |
+Buy             | A standard purchase / buy transaction                |
+Sell            | A standard sale /sell transaction                    |
 CorporateAction |                                                      |
 Expiry          |                                                      |
 Exercise        |                                                      |
