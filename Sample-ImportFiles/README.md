@@ -15,20 +15,21 @@ EXECUTIONDATE   | Date (yyyy-mm-dd)  | Required          |  -     | E.g. 2016-01
 TRANSACTIONTYPE | String             | Required          |  -     | See below for valid options       
 PRICE           | Decimal            | Required          |  -     | Precision: 28; Scale: 8
 QUANTITY        | Decimal            | Required          |  -     | Precision: 28; Scale: 8
+BROKERNAME      | String             | Optional          |  255   | 
 
 ### Recognised Transaction Types
 
-Type            | Description |
-----------------|-------------|
-Buy             | |
-Sell            | |
-CorporateAction | |
-Expiry          | |
-Exercise        | |
-Adjustment      | |
-Maturity        | |
-TakeOn          | |
-Withdrawal      | |
+Type            | Description                                          |
+----------------|------------------------------------------------------|
+Buy             |                                                      |
+Sell            |                                                      |
+CorporateAction |                                                      |
+Expiry          |                                                      |
+Exercise        |                                                      |
+Adjustment      | Internal transfer of Assets                          |
+Maturity        |                                                      |
+TakeOn          | Asset resulting from a new account being opened      |
+Withdrawal      | Asset withdrawn due to an account being closed       |
 
 
 ### Data requirements
