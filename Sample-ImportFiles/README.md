@@ -19,17 +19,17 @@ BROKERNAME      | String             | Optional          |  255   |
 
 ### Recognised Transaction Types
 
-Type            | Description |
-----------------|-------------|
-Buy             | |
-Sell            | |
-CorporateAction | |
-Expiry          | |
-Exercise        | |
-Adjustment      | |
-Maturity        | |
-TakeOn          | |
-Withdrawal      | |
+Type            | Description                                          |
+----------------|------------------------------------------------------|
+Buy             |                                                      |
+Sell            |                                                      |
+CorporateAction |                                                      |
+Expiry          |                                                      |
+Exercise        |                                                      |
+Adjustment      | Internal transfer of Assets                          |
+Maturity        |                                                      |
+TakeOn          | Asset resulting from a new account being opened      |
+Withdrawal      | Asset withdrawn due to an account being closed       |
 
 
 ### Data requirements
