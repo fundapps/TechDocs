@@ -15,6 +15,7 @@ EXECUTIONDATE   | Date (yyyy-mm-dd)  | Required          |  -     | E.g. 2016-01
 TRANSACTIONTYPE | String             | Required          |  -     | See below for valid options       
 PRICE           | Decimal            | Required          |  -     | Precision: 28; Scale: 8
 QUANTITY        | Decimal            | Required          |  -     | Precision: 28; Scale: 8
+BROKERNAME      | String             | Optional          |  255   | 
 
 ### Recognised Transaction Types
 
