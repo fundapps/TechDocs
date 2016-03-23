@@ -19,17 +19,17 @@ BROKERNAME      | String             | Optional          |  255   |
 
 ### Recognised Transaction Types
 
-Type            | Description                                          |
-----------------|------------------------------------------------------|
-Buy             | A standard purchase / buy transaction                |
-Sell            | A standard sale /sell transaction                    |
-CorporateAction |                                                      |
-Expiry          |                                                      |
-Exercise        |                                                      |
-Adjustment      | Internal transfer of Assets                          |
-Maturity        |                                                      |
-TakeOn          | Asset resulting from a new account being opened      |
-Withdrawal      | Asset withdrawn due to an account being closed       |
+Type            | Description                                                                                 |
+----------------|---------------------------------------------------------------------------------------------|
+Buy             | A standard purchase / buy transaction                                                       |
+Sell            | A standard sale /sell transaction                                                           |
+CorporateAction | The issue of bonus shares, stock splits - everything related to actions taken by the issuer |
+Expiry          | The expiry of a derivative contract                                                         |
+Exercise        | The exercise of an option, future etc.                                                      |
+Adjustment      | Internal transfer of Assets                                                                 |
+Maturity        | The maturity of a convertible bond e.g.                                                     |
+TakeOn          | Asset resulting from a new account being opened                                             |
+Withdrawal      | Asset withdrawn due to an account being closed                                              |
 
 
 ### Data requirements
