@@ -1,21 +1,5 @@
 # Rapptr File Formats
 
-## Portfolio Data
-
-We accept portfolio date in CSV format,
-
-### File column detail
-
-Column Name     | Description | Type | Possible Values & Notes | 
-----------------|--------------------|-------------------|--------|
-PORTFOLIOID     | Unique identifier for the portfolio / entity             | String          | Must be uniquie    |
-PortfolioName|The name of the portfolio / entity|string||
-||||
-||||
-||||
-||||
-||||
-
 ## Transaction Data
 
 We accept transaction data in CSV format. You can find a [sample file here](Transactions.csv).
