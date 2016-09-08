@@ -1,5 +1,28 @@
 # Rapptr File Formats
 
+## Portfolio File
+
+When uploading company structures and portfolios to Rapptr, we recommend that this is done at once using our CSV portfolio file template. You can find a [sample file here](https://github.com/fundapps/api-examples/blob/master/Sample-ImportFiles/Portfolios.csv). For additional guidance on 
+
+### File column detail
+
+Column Name         | Description                                   | Data Type (Format) | Notes
+--------------------|-----------------------------------------------|------------------- |----------------------------
+PortfolioId         | Unique identifier for the portfolio / entity  | String             | Must be unique.    
+PortfolioName       | The name of the portfolio / entity            | String             |    
+PortfolioCurrency   | Currency in which the portfolio is denominated| String             | [ISO 4217 code](http://www.xe.com/iso4217.php)
+PortfolioType       | Values: Portfolio or Entity                   | String             | Portfolio - a container that holds assets (Accounts, Funds, Portfolios etc.); Entity - an aggregation of portfolios (Management Company, Controlling Entity, etc.)
+PortfolioCompany    | If a Chinese wall, or similar, exists, you will be able to limit the visibility to specific areas of the business.                                                           | String             | More information is available [here](https://fundapps.zendesk.com/hc/en-us/articles/201749897-Creating-and-Editing-Companies-).            
+DefaultParentID     | Identifier (PortfolioID) of the Entity that a portfolio or (sub)Entity aggregates to                                                                                                | String             | Must match a PortfolioID of an Entity in the file. This is used to define the aggregation structure. In this case, an aggregation structure named "Default" is used. For Entities which are at the top of the tree, the DefaultParentID will be it's own PortfolioID. For clients with multiple aggregation structures, additional columns named "XParentID" can be added, where X is the name of the tree (e.g. Voting, Legal, Management).      
+RuleFolders        | Defines which rules run on the system. Whether that's disclosure rules, UCITS monitoring or similar                                                                                  | String             | For our standard Shareholding Disclosure client use: Disclosure, Validation, Validation Disclosure. This list is always being added to, please contact us if there's something else you'd like to check.      
+CompanyType        | Values that indicate classifications for a portfolio/entity that have effect on the application of certain rules.                                                                     | String             | Valid CompanyTypes: CA-AMRS, UKIM, US-QII, USPassiveInvestor, ITFM, NotZA. More information is available [here](https://fundapps.zendesk.com/hc/en-us/articles/204842149-CompanyType-values).        
+FundDomicile      | Country where the fund is domiciled. Required for Spanish major shareholding rules to determine if the fund is domiciled in a tax haven. If not provided Rapptr will conservatively run both tax haven and non tax haven rules.                                                                                          | String           |  [ISO 3166-1 alpha-2 code](http://data.okfn.org/data/core/country-list)
+
+### Data requirements
+
+- *PortfolioId* needs to be unique. In the scenario where a PortfolioId is uploaded which already exists in Rapptr, the previous portfolio details associated with that PortfolioId will be overridden. 
+
+
 ## Transaction Data
 
 We accept transaction data in CSV format. You can find a [sample file here](Transactions.csv).
@@ -74,18 +97,18 @@ RegisterNumber                    | String             | Optional          | 255
 
 Type            | Description                                                                                                        |
 ----------------|--------------------------------------------------------------------------------------------------------------------|
-Id                                | The IssuerId that is currently used in your position file.                                                          |
-Name                              | The legal name of the issuer. This field could refer to the IssuerName that is currently used in your position file.|
-ContactPerson                     | The primary issuer contact. |
-ContactPersonPosition             | The primary issuer contact's position.                                                         |
-EmailAddress                      | The primary issuer contact's email address.|
-TelephoneNumber                   | The primary issuer contact's telephone number.                                                                 |
-AustralianCompanyNumber           | The Australian Company Number (ACN) is a unique, nine-digit number. Under the Corporations Act 2001, every company in Australia has been issued an ACN to ensure adequate identification of companies when transacting business.                                                      |
-AustralianRegisteredSchemeNumber  |  The Australian Registered Scheme Number (ARSN) is a nine digit number issued to Australian managed investment schemes by Australian Securities and Investments Commission.                                        |
-SouthAfricanRegistrationNumber    | The South African company registration number.                                              |
-IssuersRegisterCourt              | German company registration court. For more information consult or more information consult [Germany's Company Register](https://www.unternehmensregister.de/ureg/search1.2.html;jsessionid=0198670396BF01C2137968DEEC63C8CE.web01-1?submitaction=language&language=en).                                           |
-RegisterType                      | German company registeration type. Possible values could include: Cooperative Register, Commercial Register Excerpt, Commercial Register, Partnership Register. For more information consult [Germany's Company Register](https://www.unternehmensregister.de/ureg/search1.2.html;jsessionid=0198670396BF01C2137968DEEC63C8CE.web01-1?submitaction=language&language=en).                                              |
-RegisterNumber                    | The German company registeration number.                                              |
+Id                                | The IssuerId that is currently used in your position file.                                       |
+Name                              | The legal name of the issuer. This field could refer to the IssuerName that is currently used in                                      your position file.                                                                              |
+ContactPerson                     | The primary issuer contact.                                                                      |
+ContactPersonPosition             | The primary issuer contact's position.                                                           |
+EmailAddress                      | The primary issuer contact's email address.                                                      |
+TelephoneNumber                   | The primary issuer contact's telephone number.                                                   |
+AustralianCompanyNumber           | The Australian Company Number (ACN) is a unique, nine-digit number. Under the Corporations Act                                        2001, every company in Australia has been issued an ACN to ensure adequate identification of                                          companies when transacting business.                                                             |
+AustralianRegisteredSchemeNumber  | The Australian Registered Scheme Number (ARSN) is a nine digit number issued to Australian                                            managed investment schemes by Australian Securities and Investments Commission.                  |
+SouthAfricanRegistrationNumber    | The South African company registration number.                                                   |
+IssuersRegisterCourt              | German company registration court. For more information consult or more information consult     [Germany's Company Register](https://www.unternehmensregister.de/ureg/search1.2.html;jsessionid=0198670396BF01C2137968DEEC63C8CE.web01-1?submitaction=language&language=en).                                                                                               |
+RegisterType                      | German company registeration type. Possible values could include: Cooperative Register, Commercial Register Excerpt, Commercial Register, Partnership Register. For more information consult [Germany's Company Register](https://www.unternehmensregister.de/ureg/search1.2.html;jsessionid=0198670396BF01C2137968DEEC63C8CE.web01-1?submitaction=language&language=en).                                                                                                                  |
+RegisterNumber                    | The German company registeration number.                                                         |
 
 
 ### Data requirements
