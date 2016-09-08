@@ -36,3 +36,59 @@ Withdrawal      | Asset withdrawn due to an account being closed                
 
 - *TransactionId* needs to be unique. In the scenario where a TransactionId is uploaded which already exists in Rapptr, this will result in a validation error:
 - *AssetId* and *PortfolioId* values need to match the fields with the same name in Position data; this is key in order to be able to query the correct transactions for disclosure forms.
+
+
+## Issuer Register Data
+
+We accept issuer register data in CSV format. You can find a [sample file here](https://github.com/fundapps/api-examples/blob/master/Sample-ImportFiles/Issuers%20Register%20Upload.csv).
+
+### File column detail
+
+Column Name                       | Data Type (Format) | Required/Optional | Length  
+----------------------------------|--------------------|-------------------|--------
+Id                                | String             | Required          | 255    
+Name                              | String             | Required          | 255    
+Address                           | String             | Required          | 255    
+City                              | String             | Required          | 255    
+Province                          | String             | Optional          | 255    
+PostCode                          | String             | Optional          | 255    
+Country                           | String             | Required          | 255  
+
+### Additional Issuer Register Fields:
+
+Column Name                       | Data Type (Format) | Required/Optional | Length 
+----------------------------------|--------------------|-------------------|--------
+ContactPerson                     | String             | Optional          | 255   
+ContactPersonPosition             | String             | Optional          | 255     
+EmailAddress                      | String             | Optional          | 255     
+TelephoneNumber                   | String             | Optional          | 15      
+AustralianCompanyNumber           | String             | Optional          | 255     
+AustralianRegisteredSchemeNumber  | String             | Optional          | 255     
+SouthAfricanRegistrationNumber    | String             | Optional          | 255     
+IssuersRegisterCourt              | String             | Optional          | 255     
+RegisterType                      | String             | Optional          | 255     
+RegisterNumber                    | String             | Optional          | 255     
+
+
+### Issuer Register Field Definitions
+
+Type            | Description                                                                                                        |
+----------------|--------------------------------------------------------------------------------------------------------------------|
+Id                                | The IssuerId that is currently used in your position file.                                                          |
+Name                              | The legal name of the issuer. This field could refer to the IssuerName that is currently used in your position file.|
+ContactPerson                     | The primary issuer contact. |
+ContactPersonPosition             | The primary issuer contact's position.                                                         |
+EmailAddress                      | The primary issuer contact's email address.|
+TelephoneNumber                   | The primary issuer contact's telephone number.                                                                 |
+AustralianCompanyNumber           | The Australian Company Number (ACN) is a unique, nine-digit number. Under the Corporations Act 2001, every company in Australia has been issued an ACN to ensure adequate identification of companies when transacting business.                                                      |
+AustralianRegisteredSchemeNumber  |  The Australian Registered Scheme Number (ARSN) is a nine digit number issued to Australian managed investment schemes by Australian Securities and Investments Commission.                                        |
+SouthAfricanRegistrationNumber    | The South African company registration number.                                              |
+IssuersRegisterCourt              | German company registration court. For more information consult or more information consult [Germany's Company Register](https://www.unternehmensregister.de/ureg/search1.2.html;jsessionid=0198670396BF01C2137968DEEC63C8CE.web01-1?submitaction=language&language=en).                                           |
+RegisterType                      | German company registeration type. Possible values could include: Cooperative Register, Commercial Register Excerpt, Commercial Register, Partnership Register. For more information consult [Germany's Company Register](https://www.unternehmensregister.de/ureg/search1.2.html;jsessionid=0198670396BF01C2137968DEEC63C8CE.web01-1?submitaction=language&language=en).                                              |
+RegisterNumber                    | The German company registeration number.                                              |
+
+
+### Data requirements
+
+- *Id* (or IssuerId) needs to be unique. In the scenario where an IssuerId is uploaded which already exists as part of the Issuer Register, this will result in a validation error.
+- the *Id* value needs to match the IssuerId field the Position file; this is key in order to be able to query the correct issuer information for disclosure forms.
