@@ -50,14 +50,14 @@ CorporateAction | The issue of bonus shares, stock splits - everything related t
 Expiry          | The expiry of a derivative contract                                                         |
 Exercise        | The exercise of an option, future etc.                                                      |
 Adjustment      | Internal transfer of Assets                                                                 |
-Maturity        | The maturity of a convertible bond e.g.                                                     |
+Maturity        | The maturity of a convertible bond, for example                                             |
 TakeOn          | Asset resulting from a new account being opened                                             |
 Withdrawal      | Asset withdrawn due to an account being closed                                              |
 
 
 ### Data requirements
 
-- *TransactionId* needs to be unique. In the scenario where a TransactionId is uploaded which already exists in Rapptr, this will result in a validation error:
+- *TransactionId* needs to be unique. In the scenario where a TransactionId is uploaded which already exists in Rapptr, this will result in a validation error.
 - *AssetId* and *PortfolioId* values need to match the fields with the same name in Position data; this is key in order to be able to query the correct transactions for disclosure forms.
 
 
