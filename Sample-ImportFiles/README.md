@@ -4,7 +4,7 @@
 
 When uploading company structures and portfolios to Rapptr, we recommend that this is done at once using our CSV portfolio file template. You can find a [sample file here](https://github.com/fundapps/api-examples/blob/master/Sample-ImportFiles/Portfolios.csv) and a sample file with multiple aggregation structures [here](https://github.com/fundapps/api-examples/blob/master/Sample-ImportFiles/PortfoliosMultipleAggregationStructures.csv). For more guidance on how to structure your portfolio file, please refer to this [Help Centre article](https://fundapps.zendesk.com/hc/en-us/articles/210134023-Portfolio-File).
 
-### File column detail
+### File Column Detail
 
 Column Name         | Description                                   | Data Type (Format) | Notes
 --------------------|-----------------------------------------------|------------------- |----------------------------
@@ -18,7 +18,7 @@ RuleFolders        | Defines which rules run on the system. Whether that's discl
 CompanyType        | Values that indicate classifications for a portfolio/entity that have effect on the application of certain rules.                                                                     | String             | Valid CompanyTypes: CA-AMRS, UKIM, US-QII, USPassiveInvestor, ITFM, NotZA. More information is available [here](https://fundapps.zendesk.com/hc/en-us/articles/204842149-CompanyType-values)        
 FundDomicile      | Country where the fund is domiciled. Required for Spanish major shareholding rules to determine if the fund is domiciled in a tax haven. If not provided Rapptr will conservatively run both tax haven and non tax haven rules.                                                                                          | String           |  [ISO 3166-1 alpha-2 code](http://data.okfn.org/data/core/country-list)
 
-### Data requirements
+### Data Requirements
 
 - *PortfolioId* needs to be unique. In the scenario where a PortfolioId is uploaded which already exists in Rapptr, the previous portfolio details associated with that PortfolioId will be overridden. 
 
@@ -27,7 +27,7 @@ FundDomicile      | Country where the fund is domiciled. Required for Spanish ma
 
 We accept transaction data in CSV format. You can find a [sample file here](Transactions.csv).
 
-### File column detail
+### File Column Detail
 
 Column Name     | Data Type (Format) | Required/Optional | Length | Notes
 ----------------|--------------------|-------------------|--------|----------------------------
@@ -55,7 +55,7 @@ TakeOn          | Asset resulting from a new account being opened               
 Withdrawal      | Asset withdrawn due to an account being closed                                              |
 
 
-### Data requirements
+### Data Requirements
 
 - *TransactionId* needs to be unique. In the scenario where a TransactionId is uploaded which already exists in Rapptr, this will result in a validation error.
 - *AssetId* and *PortfolioId* values need to match the fields with the same name in Position data; this is key in order to be able to query the correct transactions for disclosure forms.
@@ -65,7 +65,7 @@ Withdrawal      | Asset withdrawn due to an account being closed                
 
 We accept issuer register data in CSV format. You can find a [sample file here](https://github.com/fundapps/api-examples/blob/master/Sample-ImportFiles/Issuers%20Register%20Upload.csv).
 
-### File column detail
+### File Column Detail
 
 Column Name                       | Data Type (Format) | Required/Optional | Length  
 ----------------------------------|--------------------|-------------------|--------
@@ -77,7 +77,7 @@ Province                          | String             | Optional          | 255
 PostCode                          | String             | Optional          | 255    
 Country                           | String             | Required          | 255  
 
-### Additional Issuer Register Fields:
+### Additional Issuer Register Fields
 
 Column Name                       | Data Type (Format) | Required/Optional | Length 
 ----------------------------------|--------------------|-------------------|--------
@@ -111,7 +111,7 @@ RegisterType                      | German company registeration type. Possible 
 RegisterNumber                    | The German company registeration number                                                         |
 
 
-### Data requirements
+### Data Requirements
 
 - *Id* (or IssuerId) needs to be unique. In the scenario where an IssuerId is uploaded which already exists as part of the Issuer Register, this will result in a validation error.
 - the *Id* value needs to match the IssuerId field the Position file; this is key in order to be able to query the correct issuer information for disclosure forms.
