@@ -84,7 +84,7 @@ Column Name                       | Data Type (Format) | Required/Optional | Len
 ContactPerson                     | String             | Optional          | 255   
 ContactPersonPosition             | String             | Optional          | 255     
 EmailAddress                      | String             | Optional          | 255     
-TelephoneNumber                   | String             | Optional          | 15      
+TelephoneNumber                   | String             | Optional          | 255      
 AustralianCompanyNumber           | String             | Optional          | 255     
 AustralianRegisteredSchemeNumber  | String             | Optional          | 255     
 SouthAfricanRegistrationNumber    | String             | Optional          | 255     
