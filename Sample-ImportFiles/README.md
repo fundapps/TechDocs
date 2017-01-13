@@ -6,7 +6,7 @@ When uploading company structures and portfolios to Rapptr, we recommend that th
 
 Please see [here](http://docs.fundapps.co/disclosureProperties.html#InstrumentProperties) for the portfolio file specs 
 
-- *PortfolioId* needs to be unique. In the scenario where a PortfolioId is uploaded which already exists in Rapptr, the previous portfolio details associated with that PortfolioId will be overridden, so if any columns are blank (e.g. disclosure form properties, then existing values will be overridden)
+*PortfolioId* needs to be unique. In the scenario where a PortfolioId is uploaded which already exists in Rapptr, the previous portfolio details associated with that PortfolioId will be overridden, so if any columns are blank (e.g. disclosure form properties, then existing values will be overridden)
 
 ## Transaction Data
 
