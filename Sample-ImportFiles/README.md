@@ -4,24 +4,9 @@
 
 When uploading company structures and portfolios to Rapptr, we recommend that this is done at once using our CSV portfolio file template. You can find a [sample file here](https://github.com/fundapps/api-examples/blob/master/Sample-ImportFiles/Portfolios.csv) and a sample file with multiple aggregation structures [here](https://github.com/fundapps/api-examples/blob/master/Sample-ImportFiles/PortfoliosMultipleAggregationStructures.csv). For more guidance on how to structure your portfolio file, please refer to this [Help Centre article](https://fundapps.zendesk.com/hc/en-us/articles/210134023-Portfolio-File).
 
-### File Column Detail
+Please see [here](http://docs.fundapps.co/disclosureProperties.html#InstrumentProperties) for the portfolio file specs 
 
-Column Name         | Description                                   | Data Type (Format) | Notes
---------------------|-----------------------------------------------|------------------- |----------------------------
-PortfolioId         | Unique identifier for the portfolio / entity  | String             | Must be unique    
-PortfolioName       | The name of the portfolio / entity            | String             |    
-PortfolioCurrency   | Currency in which the portfolio is denominated| String             | [ISO 4217 code](http://www.xe.com/iso4217.php)
-PortfolioType       | Values: Portfolio or Entity                   | String             | Portfolio - a container that holds assets (Accounts, Funds, Portfolios etc.); Entity - an aggregation of portfolios (Management Company, Controlling Entity, etc.)
-PortfolioCompany    | If a Chinese wall, or similar, exists, you will be able to limit the visibility to specific areas of the business.                                                           | String             | More information is available [here](https://fundapps.zendesk.com/hc/en-us/articles/201749897-Creating-and-Editing-Companies-)            
-DefaultParentID     | Identifier (PortfolioID) of the Entity that a portfolio or (sub)Entity aggregates to                                                                                                | String             | Must match a PortfolioID of an Entity in the file. This is used to define the aggregation structure. In this case, an aggregation structure named "Default" is used. For Entities which are at the top of the tree, the DefaultParentID will be it's own PortfolioID. For clients with multiple aggregation structures, additional columns named "XParentID" can be added, where X is the name of the tree (e.g. Voting, Legal, Management)      
-RuleFolders        | Defines which rules run on the system. Whether that's disclosure rules, UCITS monitoring or similar                                                                                  | String             | For our standard Shareholding Disclosure client use: Disclosure, Validation, Validation Disclosure. This list is always being added to, please contact us if there's something else you'd like to check      
-CompanyType        | Values that indicate classifications for a portfolio/entity that have effect on the application of certain rules.                                                                     | String             | Valid CompanyTypes: CA-AMRS, UKIM, US-QII, USPassiveInvestor, ITFM, NotZA. More information is available [here](https://fundapps.zendesk.com/hc/en-us/articles/204842149-CompanyType-values)        
-FundDomicile      | Country where the fund is domiciled. Required for Spanish major shareholding rules to determine if the fund is domiciled in a tax haven. If not provided Rapptr will conservatively run both tax haven and non tax haven rules.                                                                                          | String           |  [ISO 3166-1 alpha-2 code](http://data.okfn.org/data/core/country-list)
-
-### Data Requirements
-
-- *PortfolioId* needs to be unique. In the scenario where a PortfolioId is uploaded which already exists in Rapptr, the previous portfolio details associated with that PortfolioId will be overridden. 
-
+- *PortfolioId* needs to be unique. In the scenario where a PortfolioId is uploaded which already exists in Rapptr, the previous portfolio details associated with that PortfolioId will be overridden, so if any columns are blank (e.g. disclosure form properties, then existing values will be overridden)
 
 ## Transaction Data
 
