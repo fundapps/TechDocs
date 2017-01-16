@@ -76,3 +76,24 @@ RegisterNumber                    | The German company registeration number |Str
 
 - *Id* (or IssuerId) needs to be unique. In the scenario where an IssuerId is uploaded which already exists as part of the Issuer Register, this will result in a validation error.
 - the *Id* value needs to match the IssuerId field the Position file; this is key in order to be able to query the correct issuer information for disclosure forms.
+
+## Imported Disclosures
+We accept information about imported disclosures in CSV format. You can find a [sample file here](https://github.com/fundapps/api-examples/blob/master/Sample-ImportFiles/Imported%20Disclosures.csv). Unlike the the other import files, these should be sent to support@fundapps.co as we upload directly into the databases.  
+
+### File Column Detail
+
+Column Name                       | Data Type (Format) | Required/Optional | Length  | Notes
+----------------------------------|--------------------|-------------------|---------|--------
+RapptrRuleID                      | String             | Required          | -       | Unique ID of the rule this   
+AggregationStructure              | String             | Required          | -       | Which aggregation structure the rule triggers on
+PortfolioOrEntityID               | String             | Required          | -       | Unique ID of portfolio or entity where the rule was triggered
+ISIN                              | String             | Required          | -       | ISIN of the instrument which triggered the rule
+IssuerID                          | String             | Required          | -       | Unique ID of the issuer 
+IssuerName                        | String             | Required          | -       | Name of the issuer 
+OwnershipPercentageAtFiling       | String             | Required          | -       | Inputting 6.2 is equivalent to 6.2%
+DisclosureDate                    | Date (yyyy-mm-dd)  | Required          |  -      | The date at which the disclosure was made 
+
+
+### Data Requirements
+
+- IssuerId needs to be needs to be consistent throughout time so that the system can link the imported disclosure to another disclosurein the future.
