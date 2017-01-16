@@ -14,7 +14,7 @@ We accept transaction data in CSV format. You can find a [sample file here](Tran
 
 ### File Column Detail
 
-Column Name     | Data Type (Format) | Required/Optional | Length | Notes
+Column Name     | Data Type (Format) | Required / Optional | Length | Notes
 ----------------|--------------------|-------------------|--------|----------------------------
 PORTFOLIOID     | String             | Required          | 255    |
 ASSETID         | String             | Required          | 255    |
@@ -51,7 +51,7 @@ We accept issuer register data in CSV format. You can find a [sample file here](
 
 ### File Column Detail
 
-Column Name                       | Description |Data Type (Format) | Required/Optional | Length  
+Column Name                       | Description |Data Type (Format) | Required / Optional | Length  
 ----------------------------------|-------------|-------------------|-------------------|--------
 Id                                | The IssuerId that is currently used in your position file |String             | Required          | 255    
 Name                              | The legal name of the issuer. This field could refer to the IssuerName that is currently used in your position file |String             | Required          | 255    
