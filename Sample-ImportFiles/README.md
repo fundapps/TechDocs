@@ -47,7 +47,7 @@ Withdrawal      | Asset withdrawn due to an account being closed                
 
 ## Issuer Register Data
 
-We accept issuer register data in CSV format. You can find a [sample file here](https://github.com/fundapps/api-examples/blob/master/Sample-ImportFiles/Issuers%20Register.csv).
+We accept issuer register data in CSV format. You can find a [sample file here](https://github.com/fundapps/api-examples/blob/master/Sample-ImportFiles/Issuer%20Register.csv).
 
 ### File Column Detail
 
