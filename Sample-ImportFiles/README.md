@@ -39,7 +39,6 @@ Maturity        | The maturity of a convertible bond, for example               
 TakeOn          | Asset resulting from a new account being opened                                             |
 Withdrawal      | Asset withdrawn due to an account being closed                                              |
 
-
 ### Data Requirements
 
 - *TransactionId* needs to be unique. In the scenario where a TransactionId is uploaded which already exists in Rapptr, this will result in a validation error.
@@ -52,48 +51,25 @@ We accept issuer register data in CSV format. You can find a [sample file here](
 
 ### File Column Detail
 
-Column Name                       | Data Type (Format) | Required/Optional | Length  
-----------------------------------|--------------------|-------------------|--------
-Id                                | String             | Required          | 255    
-Name                              | String             | Required          | 255    
-Address                           | String             | Required          | 255    
-City                              | String             | Required          | 255    
-Province                          | String             | Optional          | 255    
-PostCode                          | String             | Optional          | 255    
-Country                           | String             | Required          | 255  
-
-### Additional Issuer Register Fields
-
-Column Name                       | Data Type (Format) | Required/Optional | Length 
-----------------------------------|--------------------|-------------------|--------
-ContactPerson                     | String             | Optional          | 255   
-ContactPersonPosition             | String             | Optional          | 255     
-EmailAddress                      | String             | Optional          | 255     
-TelephoneNumber                   | String             | Optional          | 255      
-AustralianCompanyNumber           | String             | Optional          | 255     
-AustralianRegisteredSchemeNumber  | String             | Optional          | 255     
-SouthAfricanRegistrationNumber    | String             | Optional          | 255     
-IssuersRegisterCourt              | String             | Optional          | 255     
-RegisterType                      | String             | Optional          | 255     
-RegisterNumber                    | String             | Optional          | 255     
-
-
-### Issuer Register Field Definitions
-
-Type            | Description                                                                                                        |
-----------------|--------------------------------------------------------------------------------------------------------------------|
-Id                                | The IssuerId that is currently used in your position file                                       |
-Name                              | The legal name of the issuer. This field could refer to the IssuerName that is currently used in                                      your position file                                                                              |
-ContactPerson                     | The primary issuer contact                                                                      |
-ContactPersonPosition             | The primary issuer contact's position                                                           |
-EmailAddress                      | The primary issuer contact's email address                                                      |
-TelephoneNumber                   | The primary issuer contact's telephone number                                                   |
-AustralianCompanyNumber           | The Australian Company Number (ACN) is a unique, nine-digit number. Under the Corporations Act                                        2001, every company in Australia has been issued an ACN to ensure adequate identification of                                          companies when transacting business                                                             |
-AustralianRegisteredSchemeNumber  | The Australian Registered Scheme Number (ARSN) is a nine digit number issued to Australian                                            managed investment schemes by Australian Securities and Investments Commission.                  |
-SouthAfricanRegistrationNumber    | The South African company registration number                                                   |
-IssuersRegisterCourt              | German company registration court. For more information consult or more information consult     [Germany's Company Register](https://www.unternehmensregister.de/ureg/search1.2.html;jsessionid=0198670396BF01C2137968DEEC63C8CE.web01-1?submitaction=language&language=en)                                                                                               |
-RegisterType                      | German company registeration type. Possible values could include: Cooperative Register, Commercial Register Excerpt, Commercial Register, Partnership Register. For more information consult [Germany's Company Register](https://www.unternehmensregister.de/ureg/search1.2.html;jsessionid=0198670396BF01C2137968DEEC63C8CE.web01-1?submitaction=language&language=en)                                                                                                                  |
-RegisterNumber                    | The German company registeration number                                                         |
+Column Name                       | Description |Data Type (Format) | Required/Optional | Length  
+----------------------------------|-------------|-------------------|-------------------|--------
+Id                                | The IssuerId that is currently used in your position file |String             | Required          | 255    
+Name                              | The legal name of the issuer. This field could refer to the IssuerName that is currently used in your position file |String             | Required          | 255    
+Address                           | The issuer's address |String             | Required          | 255    
+City                              | The city the issuer is located |String             | Required          | 255    
+Province                          | The province of the issuer (if any) |String             | Optional          | 255    
+PostCode                          | The post code of the issuer (if any) |String             | Optional          | 255    
+Country                           | The country the issuer is located |String             | Required          | 255  
+ContactPerson                     | The primary issuer contact |String             | Optional          | 255   
+ContactPersonPosition             | The primary issuer contact's position |String             | Optional          | 255     
+EmailAddress                      | The primary issuer contact's email address |String             | Optional          | 255     
+TelephoneNumber                   | The primary issuer contact's telephone number |String             | Optional          | 255      
+AustralianCompanyNumber           | The Australian Company Number (ACN) is a unique, nine-digit number. Under the Corporations Act 2001, every company in Australia has been issued an ACN to ensure adequate identification of companies when transacting business |String             | Optional          | 255     
+AustralianRegisteredSchemeNumber  | The Australian Registered Scheme Number (ARSN) is a nine digit number issued to Australian managed investment schemes by Australian Securities and Investments Commission. |String             | Optional          | 255     
+SouthAfricanRegistrationNumber    | The South African company registration number |String             | Optional          | 255     
+IssuersRegisterCourt              | German company registration court. For more information consult or more information consult     [Germany's Company Register](https://www.unternehmensregister.de/ureg/search1.2.html;jsessionid=0198670396BF01C2137968DEEC63C8CE.web01-1?submitaction=language&language=en) |String             | Optional          | 255     
+RegisterType                      | German company registeration type. Possible values could include: Cooperative Register, Commercial Register Excerpt, Commercial Register, Partnership Register. For more information consult [Germany's Company Register](https://www.unternehmensregister.de/ureg/search1.2.html;jsessionid=0198670396BF01C2137968DEEC63C8CE.web01-1?submitaction=language&language=en) |String             | Optional          | 255     
+RegisterNumber                    | The German company registeration number |String             | Optional          | 255     
 
 
 ### Data Requirements
