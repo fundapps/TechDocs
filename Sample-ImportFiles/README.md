@@ -84,14 +84,14 @@ We accept information about imported disclosures in CSV format. You can find a [
 
 Column Name                       | Data Type (Format) | Required/Optional | Length  | Notes
 ----------------------------------|--------------------|-------------------|---------|--------
-RapptrRuleID                      | String             | Required          | -       | Unique ID of the rule this   
-AggregationStructure              | String             | Required          | -       | Which aggregation structure the rule triggers on
-PortfolioOrEntityID               | String             | Required          | -       | Unique ID of portfolio or entity where the rule was triggered
+RapptrRuleID                      | String             | Required          | -       | ID of the rule for which this disclosure was made
+AggregationStructure              | String             | Required          | -       | The aggregation structure where the rule triggered on
+PortfolioOrEntityID               | String             | Required          | -       | ID of portfolio/entity where the rule triggered
 ISIN                              | String             | Required          | -       | ISIN of the instrument which triggered the rule
-IssuerID                          | String             | Required          | -       | Unique ID of the issuer 
+IssuerID                          | String             | Required          | -       | ID of the issuer
 IssuerName                        | String             | Required          | -       | Name of the issuer 
-OwnershipPercentageAtFiling       | String             | Required          | -       | Inputting 6.2 is equivalent to 6.2%
-DisclosureDate                    | Date (yyyy-mm-dd)  | Required          |  -      | The date at which the disclosure was made 
+OwnershipPercentageAtFiling       | String             | Required          | -       | Inputting 6.2 here is equivalent to 6.2%
+DisclosureDate                    | Date (yyyy-mm-dd)  | Required          |  -      | Date of disclosure filing
 
 
 ### Data Requirements
