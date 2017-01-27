@@ -54,7 +54,7 @@ We accept issuer register data in CSV format. You can find a [sample file here](
 Column Name                       | Description |Data type | Required | Length  
 ----------------------------------|-------------|-------------------|-------------------|--------
 Id                                | The IssuerId that is currently used in your position file | [String](https://github.com/fundapps/api-examples#data-types)             | X          | 255    
-Name                              | The legal name of the issuer. This field could refer to the IssuerName that is currently used in your position file | [String](https://github.com/fundapps/api-examples#data-types)             | Required          | 255    
+Name                              | The legal name of the issuer. This field could refer to the IssuerName that is currently used in your position file | [String](https://github.com/fundapps/api-examples#data-types)             | X          | 255    
 Address                           | The issuer's address | [String](https://github.com/fundapps/api-examples#data-types)             | X          | 255    
 City                              | The city the issuer is located | [String](https://github.com/fundapps/api-examples#data-types)             | X          | 255    
 Province                          | The province of the issuer (if any) | [String](https://github.com/fundapps/api-examples#data-types)             |           | 255    
