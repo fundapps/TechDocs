@@ -23,7 +23,7 @@ ExecutionDate   | [Date](https://github.com/fundapps/api-examples#data-types)  |
 TransactionType | [String](https://github.com/fundapps/api-examples#data-types)             | X        |  -     | See below for valid options       
 Price           | [Decimal](https://github.com/fundapps/api-examples#data-types)           | X        |  -     | Precision: 28; Scale: 8
 Quantity        | [Decimal](https://github.com/fundapps/api-examples#data-types)            | X        |  -     | Precision: 28; Scale: 8
-BrokenName      | [String](https://github.com/fundapps/api-examples#data-types)             |          |  255   | 
+BrokerName      | [String](https://github.com/fundapps/api-examples#data-types)             |          |  255   | 
 
 ### Recognised Transaction Types
 
