@@ -19,7 +19,7 @@ Column Name     | Data type          | Required | Length | Notes
 PortfolioId     | [String](https://github.com/fundapps/api-examples#data-types)             | X        | 255    |
 AssetId         | [String](https://github.com/fundapps/api-examples#data-types)             | X        | 255    |
 TransactionId   | [String](https://github.com/fundapps/api-examples#data-types)             | X        | 200    |
-ExecutionDate   | [Date](https://github.com/fundapps/api-examples#data-types)  | X        |  -     | E.g. 2016-01-27
+ExecutionDate   | [Date](https://github.com/fundapps/api-examples#data-types)  | X        |  -     | 
 TransactionType | [String](https://github.com/fundapps/api-examples#data-types)             | X        |  -     | See below for valid options       
 Price           | [Decimal](https://github.com/fundapps/api-examples#data-types)           | X        |  -     | Precision: 28; Scale: 8
 Quantity        | [Decimal](https://github.com/fundapps/api-examples#data-types)            | X        |  -     | Precision: 28; Scale: 8
