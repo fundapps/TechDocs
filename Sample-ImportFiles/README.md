@@ -14,16 +14,16 @@ We accept transaction data in CSV format. You can find a [sample file here](Tran
 
 ### File Column Detail
 
-Column Name     | Data Type (Format) | Required | Length | Notes
+Column Name     | Data type          | Required | Length | Notes
 ----------------|--------------------|-------------------|--------|----------------------------
-PortfolioId     | String             | X        | 255    |
-AssetId         | String             | X        | 255    |
-TransactionId   | String             | X        | 200    |
-ExecutionDate   | Date (yyyy-mm-dd)  | X        |  -     | E.g. 2016-01-27
-TransactionType | String             | X        |  -     | See below for valid options       
-Price           | Decimal            | X        |  -     | Precision: 28; Scale: 8
-Quantity        | Decimal            | X        |  -     | Precision: 28; Scale: 8
-BrokenName      | String             |          |  255   | 
+PortfolioId     | [String](https://github.com/fundapps/api-examples#data-types)             | X        | 255    |
+AssetId         | [String](https://github.com/fundapps/api-examples#data-types)             | X        | 255    |
+TransactionId   | [String](https://github.com/fundapps/api-examples#data-types)             | X        | 200    |
+ExecutionDate   | [Date](https://github.com/fundapps/api-examples#data-types)  | X        |  -     | E.g. 2016-01-27
+TransactionType | [String](https://github.com/fundapps/api-examples#data-types)             | X        |  -     | See below for valid options       
+Price           | [Decimal](https://github.com/fundapps/api-examples#data-types)           | X        |  -     | Precision: 28; Scale: 8
+Quantity        | [Decimal](https://github.com/fundapps/api-examples#data-types)            | X        |  -     | Precision: 28; Scale: 8
+BrokenName      | [String](https://github.com/fundapps/api-examples#data-types)             |          |  255   | 
 
 ### Recognised Transaction Types
 
@@ -53,23 +53,23 @@ We accept issuer register data in CSV format. You can find a [sample file here](
 
 Column Name                       | Description |Data Type (Format) | Required | Length  
 ----------------------------------|-------------|-------------------|-------------------|--------
-Id                                | The IssuerId that is currently used in your position file |String             | X          | 255    
-Name                              | The legal name of the issuer. This field could refer to the IssuerName that is currently used in your position file |String             | Required          | 255    
-Address                           | The issuer's address |String             | X          | 255    
-City                              | The city the issuer is located |String             | X          | 255    
-Province                          | The province of the issuer (if any) |String             | Optional          | 255    
-PostCode                          | The post code of the issuer (if any) |String             | Optional          | 255    
-Country                           | The country the issuer is located |String             | X          | 255  
-ContactPerson                     | The primary issuer contact |String             | Optional          | 255   
-ContactPersonPosition             | The primary issuer contact's position |String             | Optional          | 255     
-EmailAddress                      | The primary issuer contact's email address |String             | Optional          | 255     
-TelephoneNumber                   | The primary issuer contact's telephone number |String             | Optional          | 255      
-AustralianCompanyNumber           | The Australian Company Number (ACN) is a unique, nine-digit number. Under the Corporations Act 2001, every company in Australia has been issued an ACN to ensure adequate identification of companies when transacting business |String             | Optional          | 255     
-AustralianRegisteredSchemeNumber  | The Australian Registered Scheme Number (ARSN) is a nine digit number issued to Australian managed investment schemes by Australian Securities and Investments Commission. |String             | Optional          | 255     
-SouthAfricanRegistrationNumber    | The South African company registration number |String             | Optional          | 255     
-IssuersRegisterCourt              | German company registration court. For more information consult or more information consult     [Germany's Company Register](https://www.unternehmensregister.de/ureg/search1.2.html;jsessionid=0198670396BF01C2137968DEEC63C8CE.web01-1?submitaction=language&language=en) |String             | Optional          | 255     
-RegisterType                      | German company registeration type. Possible values could include: Cooperative Register, Commercial Register Excerpt, Commercial Register, Partnership Register. For more information consult [Germany's Company Register](https://www.unternehmensregister.de/ureg/search1.2.html;jsessionid=0198670396BF01C2137968DEEC63C8CE.web01-1?submitaction=language&language=en) |String             | Optional          | 255     
-RegisterNumber                    | The German company registeration number |String             | Optional          | 255     
+Id                                | The IssuerId that is currently used in your position file | [String](https://github.com/fundapps/api-examples#data-types)             | X          | 255    
+Name                              | The legal name of the issuer. This field could refer to the IssuerName that is currently used in your position file | [String](https://github.com/fundapps/api-examples#data-types)             | Required          | 255    
+Address                           | The issuer's address | [String](https://github.com/fundapps/api-examples#data-types)             | X          | 255    
+City                              | The city the issuer is located | [String](https://github.com/fundapps/api-examples#data-types)             | X          | 255    
+Province                          | The province of the issuer (if any) | [String](https://github.com/fundapps/api-examples#data-types)             | Optional          | 255    
+PostCode                          | The post code of the issuer (if any) | [String](https://github.com/fundapps/api-examples#data-types)             | Optional          | 255    
+Country                           | The country the issuer is located | [String](https://github.com/fundapps/api-examples#data-types)             | X          | 255  
+ContactPerson                     | The primary issuer contact | [String](https://github.com/fundapps/api-examples#data-types)             | Optional          | 255   
+ContactPersonPosition             | The primary issuer contact's position | [String](https://github.com/fundapps/api-examples#data-types)             | Optional          | 255     
+EmailAddress                      | The primary issuer contact's email address | [String](https://github.com/fundapps/api-examples#data-types)             | Optional          | 255     
+TelephoneNumber                   | The primary issuer contact's telephone number | [String](https://github.com/fundapps/api-examples#data-types)             | Optional          | 255      
+AustralianCompanyNumber           | The Australian Company Number (ACN) is a unique, nine-digit number. Under the Corporations Act 2001, every company in Australia has been issued an ACN to ensure adequate identification of companies when transacting business | [String](https://github.com/fundapps/api-examples#data-types)             | Optional          | 255     
+AustralianRegisteredSchemeNumber  | The Australian Registered Scheme Number (ARSN) is a nine digit number issued to Australian managed investment schemes by Australian Securities and Investments Commission. | [String](https://github.com/fundapps/api-examples#data-types)             | Optional          | 255     
+SouthAfricanRegistrationNumber    | The South African company registration number | [String](https://github.com/fundapps/api-examples#data-types)             | Optional          | 255     
+IssuersRegisterCourt              | German company registration court. For more information consult or more information consult     [Germany's Company Register](https://www.unternehmensregister.de/ureg/search1.2.html;jsessionid=0198670396BF01C2137968DEEC63C8CE.web01-1?submitaction=language&language=en) | [String](https://github.com/fundapps/api-examples#data-types)             | Optional          | 255     
+RegisterType                      | German company registeration type. Possible values could include: Cooperative Register, Commercial Register Excerpt, Commercial Register, Partnership Register. For more information consult [Germany's Company Register](https://www.unternehmensregister.de/ureg/search1.2.html;jsessionid=0198670396BF01C2137968DEEC63C8CE.web01-1?submitaction=language&language=en) | [String](https://github.com/fundapps/api-examples#data-types)             | Optional          | 255     
+RegisterNumber                    | The German company registeration number | [String](https://github.com/fundapps/api-examples#data-types)             | Optional          | 255     
 
 
 ### Data Requirements
@@ -84,14 +84,14 @@ We accept information about imported disclosures in CSV format. You can find a [
 
 Column Name                       | Data Type (Format) | Required | Length  | Notes
 ----------------------------------|--------------------|-------------------|---------|--------
-RapptrRuleID                      | String             | X        | -       | ID of the rule for which this disclosure was made
-AggregationStructure              | String             | X        | -       | The aggregation structure where the rule triggered on
-PortfolioOrEntityID               | String             | X        | -       | ID of portfolio/entity where the rule triggered
-ISIN                              | String             | X        | -       | ISIN of the instrument which triggered the rule
-IssuerID                          | String             | X        | -       | ID of the issuer
-IssuerName                        | String             | X        | -       | Name of the issuer 
-OwnershipPercentageAtFiling       | String             | X        | -       | Inputting 6.2 here is equivalent to 6.2%
-DisclosureDate                    | Date (yyyy-mm-dd)  | X        |  -      | Date of disclosure filing
+RapptrRuleID                      | [String](https://github.com/fundapps/api-examples#data-types)             | X        | -       | ID of the rule for which this disclosure was made
+AggregationStructure              | [String](https://github.com/fundapps/api-examples#data-types)             | X        | -       | The aggregation structure where the rule triggered on
+PortfolioOrEntityID               | [String](https://github.com/fundapps/api-examples#data-types)             | X        | -       | ID of portfolio/entity where the rule triggered
+ISIN                              | [String](https://github.com/fundapps/api-examples#data-types)             | X        | -       | ISIN of the instrument which triggered the rule
+IssuerID                          | [String](https://github.com/fundapps/api-examples#data-types)             | X        | -       | ID of the issuer
+IssuerName                        | [String](https://github.com/fundapps/api-examples#data-types)             | X        | -       | Name of the issuer 
+OwnershipPercentageAtFiling       | [String](https://github.com/fundapps/api-examples#data-types)             | X        | -       | Inputting 6.2 here is equivalent to 6.2%
+DisclosureDate                    | [Date](https://github.com/fundapps/api-examples#data-types)  | X        |  -      | Date of disclosure filing
 
 
 ### Data Requirements
