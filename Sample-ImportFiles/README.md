@@ -51,15 +51,15 @@ We accept issuer register data in CSV format. You can find a [sample file here](
 
 ### File Column Detail
 
-Column Name                       | Description |Data Type (Format) | Required / Optional | Length  
+Column Name                       | Description |Data Type (Format) | Required | Length  
 ----------------------------------|-------------|-------------------|-------------------|--------
-Id                                | The IssuerId that is currently used in your position file |String             | Required          | 255    
+Id                                | The IssuerId that is currently used in your position file |String             | X          | 255    
 Name                              | The legal name of the issuer. This field could refer to the IssuerName that is currently used in your position file |String             | Required          | 255    
-Address                           | The issuer's address |String             | Required          | 255    
-City                              | The city the issuer is located |String             | Required          | 255    
+Address                           | The issuer's address |String             | X          | 255    
+City                              | The city the issuer is located |String             | X          | 255    
 Province                          | The province of the issuer (if any) |String             | Optional          | 255    
 PostCode                          | The post code of the issuer (if any) |String             | Optional          | 255    
-Country                           | The country the issuer is located |String             | Required          | 255  
+Country                           | The country the issuer is located |String             | X          | 255  
 ContactPerson                     | The primary issuer contact |String             | Optional          | 255   
 ContactPersonPosition             | The primary issuer contact's position |String             | Optional          | 255     
 EmailAddress                      | The primary issuer contact's email address |String             | Optional          | 255     
