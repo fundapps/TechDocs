@@ -82,7 +82,7 @@ We accept information about imported disclosures in CSV format. You can find a [
 
 ### File Column Detail
 
-Column Name                       | Data Type | Required | Length  | Notes
+Column Name                       | Data type | Required | Length  | Notes
 ----------------------------------|--------------------|-------------------|---------|--------
 RapptrRuleID                      | [String](https://github.com/fundapps/api-examples#data-types)             | X        | -       | ID of the rule for which this disclosure was made
 AggregationStructure              | [String](https://github.com/fundapps/api-examples#data-types)             | X        | -       | The aggregation structure where the rule triggered on
