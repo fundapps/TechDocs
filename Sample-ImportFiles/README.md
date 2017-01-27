@@ -14,16 +14,16 @@ We accept transaction data in CSV format. You can find a [sample file here](Tran
 
 ### File Column Detail
 
-Column Name     | Data Type (Format) | Required / Optional | Length | Notes
+Column Name     | Data Type (Format) | Required | Length | Notes
 ----------------|--------------------|-------------------|--------|----------------------------
-PORTFOLIOID     | String             | Required          | 255    |
-ASSETID         | String             | Required          | 255    |
-TRANSACTIONID   | String             | Required          | 200    |
-EXECUTIONDATE   | Date (yyyy-mm-dd)  | Required          |  -     | E.g. 2016-01-27
-TRANSACTIONTYPE | String             | Required          |  -     | See below for valid options       
-PRICE           | Decimal            | Required          |  -     | Precision: 28; Scale: 8
-QUANTITY        | Decimal            | Required          |  -     | Precision: 28; Scale: 8
-BROKERNAME      | String             | Optional          |  255   | 
+PortfolioId     | String             | X        | 255    |
+AssetId         | String             | X        | 255    |
+TransactionId   | String             | X        | 200    |
+ExecutionDate   | Date (yyyy-mm-dd)  | X        |  -     | E.g. 2016-01-27
+TransactionType | String             | X        |  -     | See below for valid options       
+Price           | Decimal            | X        |  -     | Precision: 28; Scale: 8
+Quantity        | Decimal            | X        |  -     | Precision: 28; Scale: 8
+BrokenName      | String             |          |  255   | 
 
 ### Recognised Transaction Types
 
@@ -82,16 +82,16 @@ We accept information about imported disclosures in CSV format. You can find a [
 
 ### File Column Detail
 
-Column Name                       | Data Type (Format) | Required/Optional | Length  | Notes
+Column Name                       | Data Type (Format) | Required | Length  | Notes
 ----------------------------------|--------------------|-------------------|---------|--------
-RapptrRuleID                      | String             | Required          | -       | ID of the rule for which this disclosure was made
-AggregationStructure              | String             | Required          | -       | The aggregation structure where the rule triggered on
-PortfolioOrEntityID               | String             | Required          | -       | ID of portfolio/entity where the rule triggered
-ISIN                              | String             | Required          | -       | ISIN of the instrument which triggered the rule
-IssuerID                          | String             | Required          | -       | ID of the issuer
-IssuerName                        | String             | Required          | -       | Name of the issuer 
-OwnershipPercentageAtFiling       | String             | Required          | -       | Inputting 6.2 here is equivalent to 6.2%
-DisclosureDate                    | Date (yyyy-mm-dd)  | Required          |  -      | Date of disclosure filing
+RapptrRuleID                      | String             | X        | -       | ID of the rule for which this disclosure was made
+AggregationStructure              | String             | X        | -       | The aggregation structure where the rule triggered on
+PortfolioOrEntityID               | String             | X        | -       | ID of portfolio/entity where the rule triggered
+ISIN                              | String             | X        | -       | ISIN of the instrument which triggered the rule
+IssuerID                          | String             | X        | -       | ID of the issuer
+IssuerName                        | String             | X        | -       | Name of the issuer 
+OwnershipPercentageAtFiling       | String             | X        | -       | Inputting 6.2 here is equivalent to 6.2%
+DisclosureDate                    | Date (yyyy-mm-dd)  | X        |  -      | Date of disclosure filing
 
 
 ### Data Requirements
