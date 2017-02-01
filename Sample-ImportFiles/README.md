@@ -70,8 +70,8 @@ SouthAfricanRegistrationNumber    | The South African company registration numbe
 IssuersRegisterCourt              | German company registration court. For more information consult or more information consult     [Germany's Company Register](https://www.unternehmensregister.de/ureg/search1.2.html;jsessionid=0198670396BF01C2137968DEEC63C8CE.web01-1?submitaction=language&language=en) | [String](https://github.com/fundapps/api-examples#data-types)             |           | 255     
 RegisterType                      | German company registeration type. Possible values could include: Cooperative Register, Commercial Register Excerpt, Commercial Register, Partnership Register. For more information consult [Germany's Company Register](https://www.unternehmensregister.de/ureg/search1.2.html;jsessionid=0198670396BF01C2137968DEEC63C8CE.web01-1?submitaction=language&language=en) | [String](https://github.com/fundapps/api-examples#data-types)             |           | 255     
 RegisterNumber                    | The German company registeration number | [String](https://github.com/fundapps/api-examples#data-types)             |           | 255     
-IssuerPhilippineSecId             | The identification number issued by the Securities and Exchange Commission in the Philippines | [String](https://github.com/fundapps/api-examples#data-types) | | 255 
-IssuerPhilippineBirTaxId          | The company tax identification number issued by the Bureau of Internal Revenue (BIR) | [String](https://github.com/fundapps/api-examples#data-types) | | 255 
+PhilippineSecId             | The identification number issued by the Securities and Exchange Commission in the Philippines | [String](https://github.com/fundapps/api-examples#data-types) | | 255 
+PhilippineBirTaxId          | The company tax identification number issued by the Bureau of Internal Revenue (BIR) | [String](https://github.com/fundapps/api-examples#data-types) | | 255 
 
 ### Data Requirements
 
