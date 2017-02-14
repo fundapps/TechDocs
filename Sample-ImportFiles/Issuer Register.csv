@@ -1,4 +1,5 @@
-Id,Name,Address,City,Province,PostCode,Country,ContactPerson,ContactPersonPosition,EmailAddress,TelephoneNumber,AustralianCompanyNumber,AustralianRegisteredSchemeNumber,SouthAfricanRegistrationNumber,IssuersRegisterCourt,RegisterType,RegisterNumber,PhilippineSecId,PhilippineBirTaxId,
+
+Id,LegalName,Address,City,Province,PostCode,Country,ContactPerson,ContactPersonPosition,EmailAddress,TelephoneNumber,AustralianCompanyNumber,AustralianRegisteredSchemeNumber,SouthAfricanRegistrationNumber,IssuersRegisterCourt,RegisterType,RegisterNumber,PhilippineSecId,PhilippineBirTaxId,
 4,British Petroleum,1 St James's Square,London,London,SW1Y 4PD,United Kingdom,Kori Antonia,Communications Executive,Kori.Antonia@bp.com,+44 02074964000,,,,,,,,,
 16,GlaxoSmithKline,980 Great West Road,London,London,N1 JPF,United Kingdom,Eimear Azat,External Communications Manager,Eimear.Azat@gsk.com,+44 02080475000,,,,,,,,,
 15,Cathay Pacific,"Cathay Pacific City, 8 Scenic Road",Lantau,Hong Kong,999077,Hong Kong,Ka-fai Leung,Company Representative,Leung.Kafai@cathaypacific.com,+85 227477838,,,,,,,,,
