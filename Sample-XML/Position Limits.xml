@@ -2,12 +2,12 @@
 <Snapshot Date="2017-01-03">
   <Instruments>
 
-	<Future InstrumentID="11" InstrumentName="AGRICULTURE - BURSA MALAYSIA CRUDE PALM OIL GASOIL SPREAD (POG) FUTURES*" Market="CME" DeliveryMonth="2017-03" CommoditySymbol="POG" IsCashSettled="true"/>
-	<Future InstrumentID="12" InstrumentName="AGRICULTURE - BURSA MALAYSIA CRUDE PALM OIL GASOIL SPREAD (POG) FUTURES*" Market="CME" DeliveryMonth="2017-04" CommoditySymbol="POG" IsCashSettled="true"/>
+	<Future InstrumentID="11" InstrumentName="AGRICULTURE - BURSA MALAYSIA CRUDE PALM OIL GASOIL SPREAD (POG) FUTURES*" Market="XCME" DeliveryMonth="2017-03" CommoditySymbol="POG"/>
+	<Future InstrumentID="12" InstrumentName="AGRICULTURE - BURSA MALAYSIA CRUDE PALM OIL GASOIL SPREAD (POG) FUTURES*" Market="XCME" DeliveryMonth="2017-04" CommoditySymbol="POG"/>
 	
-	<Option InstrumentID="14" InstrumentName="AGRICULTURE - MILK CLASS III MID-SIZE OPTIONS ON FUTURES" Market="CME" DeliveryMonth="2017-02" CommoditySymbol="JQ" IsCashSettled="true" CallOrPut="Call"/>
-	<Option InstrumentID="15" InstrumentName="AGRICULTURE - MILK CLASS III MID-SIZE OPTIONS ON FUTURES" Market="CME" DeliveryMonth="2017-03" CommoditySymbol="JQ" IsCashSettled="true" CallOrPut="Call"/>
-	<Option InstrumentID="16" InstrumentName="AGRICULTURE - MILK CLASS III MID-SIZE OPTIONS ON FUTURES" Market="CME" DeliveryMonth="2017-04" CommoditySymbol="JQ" IsCashSettled="true" CallOrPut="Call"/>
+	<Option InstrumentID="14" InstrumentName="AGRICULTURE - MILK CLASS III MID-SIZE OPTIONS ON FUTURES" Market="XCME" DeliveryMonth="2017-02" CommoditySymbol="JQ" CallOrPut="Call"/>
+	<Option InstrumentID="15" InstrumentName="AGRICULTURE - MILK CLASS III MID-SIZE OPTIONS ON FUTURES" Market="XCME" DeliveryMonth="2017-03" CommoditySymbol="JQ" CallOrPut="Call"/>
+	<Option InstrumentID="16" InstrumentName="AGRICULTURE - MILK CLASS III MID-SIZE OPTIONS ON FUTURES" Market="XCME" DeliveryMonth="2017-04" CommoditySymbol="JQ" CallOrPut="Call"/>
 
   </Instruments>
 
