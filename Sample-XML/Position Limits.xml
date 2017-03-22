@@ -9,7 +9,7 @@
 	<Option InstrumentID="15" InstrumentName="AGRICULTURE - MILK CLASS III MID-SIZE OPTIONS ON FUTURES" Market="XCME" DeliveryMonth="2017-03" CommoditySymbol="JQ" IsCashSettled="true" CallOrPut="Call"/>
 	<Option InstrumentID="16" InstrumentName="AGRICULTURE - MILK CLASS III MID-SIZE OPTIONS ON FUTURES" Market="XCME" DeliveryMonth="2017-04" CommoditySymbol="JQ" IsCashSettled="true" CallOrPut="Call"/>
 
-	<Swap InstrumentID="17" InstrumentName="CLEARING ONLY - AGRICULTURE - S&amp;P GSCI EXCESS RETURN INDEX (SES) SWAPS" Market="XCME" DeliveryMonth="2017-04" CommoditySymbol="SES"/>
+	<Swap InstrumentID="17" InstrumentName="CLEARING ONLY - AGRICULTURE - S&amp;P GSCI EXCESS RETURN INDEX (SES) SWAPS" Market="XCME" DeliveryMonth="2017-04" CommoditySymbol="SES" IsCashSettled="true"/>
 
   </Instruments>
 
