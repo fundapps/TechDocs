@@ -72,6 +72,7 @@ RegisterType                      | German company registeration type. Possible 
 RegisterNumber                    | The German company registeration number | [String](https://github.com/fundapps/api-examples#data-types)             |           | 255     
 PhilippineSecId             | The identification number issued by the Securities and Exchange Commission in the Philippines | [String](https://github.com/fundapps/api-examples#data-types) | | 255 
 PhilippineBirTaxId          | The company tax identification number issued by the Bureau of Internal Revenue (BIR) | [String](https://github.com/fundapps/api-examples#data-types) | | 255 
+MalaysiaCompanyNumber             | The Company Number given to each listed issuer in Malaysia, when registered with the exchange. | [String](https://github.com/fundapps/api-examples#data-types) | | 255 
 
 ### Data Requirements
 
