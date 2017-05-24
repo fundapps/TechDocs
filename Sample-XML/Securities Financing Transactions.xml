@@ -6,8 +6,8 @@
     <Portfolios>
         <Portfolio PortfolioId="11">
     <Asset AssetId="1" AssetName="Equity1" InstrumentId="GB0009000681" Quantity="10" SFTType="Normal"/>
-    <Asset AssetId="2" AssetName="Equity1-Borrow" InstrumentId="GB0009000681" Quantity="10" SFTType="Borrowed" HasTransferOfTitle="TRUE" HasTransferOfVotingPower="TRUE"/>
-    <Asset AssetId="3" AssetName="Equity1-on-lent" InstrumentId="GB0009000681" Quantity="5" SFTType="Lent" HasTransferOfTitle="TRUE" HasTransferOfVotingPower="FALSE" />
+    <Asset AssetId="2" AssetName="Equity1-Borrow" InstrumentId="GB0009000681" Quantity="10" SFTType="Borrowed" HasTransferOfTitle="true" HasTransferOfVotingPower="true"/>
+    <Asset AssetId="3" AssetName="Equity1-on-lent" InstrumentId="GB0009000681" Quantity="5" SFTType="Lent" HasTransferOfTitle="true" HasTransferOfVotingPower="false" />
         </Portfolio>
     </Portfolios>
 </Snapshot>
