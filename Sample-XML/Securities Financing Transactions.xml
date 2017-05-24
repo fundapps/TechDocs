@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Snapshot Date="2015-02-22">
+    <Instruments>
+        <Equity InstrumentId="GB0009000681" InstrumentName="Vodafone Group PLC" IssuerId="2" IssuerName="Vodafone Group PLC" ISIN="GB0009000681" CountryOfIssue="GB" CountryOfIncorporation="GB" TotalVotingRights="3000" ClassSharesOutstanding="1000" TotalSharesOutstanding="2000" TotalSharesInTreasury="200" MarketCap="1000" InstrumentCurrency="GBP" VotesPerShare="3" Market="XLON" MarketsListedIn="XLON" Price="10" CUSIP="" LotSize="1"/>
+    </Instruments>
+    <Portfolios>
+        <Portfolio PortfolioId="11">
+    <Asset AssetId="1" AssetName="Equity1" InstrumentId="GB0009000681" Quantity="10" SFTType="Normal"/>
+    <Asset AssetId="2" AssetName="Equity1-Borrow" InstrumentId="GB0009000681" Quantity="10" SFTType="Borrowed" HasTransferOfTitle="TRUE" HasTransferOfVotingPower="TRUE"/>
+    <Asset AssetId="3" AssetName="Equity1-on-lent" InstrumentId="GB0009000681" Quantity="5" SFTType="Lent" HasTransferOfTitle="TRUE" HasTransferOfVotingPower="FALSE" />
+        </Portfolio>
+    </Portfolios>
+</Snapshot>
