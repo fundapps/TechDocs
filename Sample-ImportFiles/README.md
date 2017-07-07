@@ -93,7 +93,7 @@ ISIN                              | [String](https://github.com/fundapps/api-exa
 IssuerID                          | [String](https://github.com/fundapps/api-examples#data-types)             | X        | -       | ID of the issuer
 IssuerName                        | [String](https://github.com/fundapps/api-examples#data-types)             | X        | -       | Name of the issuer 
 OwnershipPercentageAtFiling       | [String](https://github.com/fundapps/api-examples#data-types)             | X        | -       | Inputting 6.2 here is equivalent to 6.2%
-DisclosureDate                    | [Date](https://github.com/fundapps/api-examples#data-types)  | X        |  -      | Date of disclosure filing
+DisclosureDate                    | [Date](https://github.com/fundapps/api-examples#data-types)  | X        |  -      | Date of disclosure filing. Note, this must reference the actual trade date on when disclosure value was calculated. Choosing a weekend for the imported disclosure is not valid
 
 
 ### Data Requirements
