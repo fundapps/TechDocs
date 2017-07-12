@@ -45,7 +45,8 @@ class FundAppsAPI
       :user => @username,
       :password => @password,
       :payload => File.read(file),
-      :headers => { :content_type => @content_types[extension], :x-contentname => File.basename(file) }
+      :headers => { :content_type => @content_types[extension], :'x-contentname' => File.basename(file) },
+      :timeout => nil
     )
     wait_for_expost_result(response) if endpoint == "/v1/expost/check"
     rescue RestClient::ExceptionWithResponse => e
