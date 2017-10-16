@@ -2,26 +2,26 @@
 <Snapshot Date="2017-01-03">
   <Instruments>
 
-	<Future InstrumentID="11" InstrumentName="AGRICULTURE - BURSA MALAYSIA CRUDE PALM OIL GASOIL SPREAD (POG) FUTURES*" Market="XCME" DeliveryMonth="2017-03" CommoditySymbol="POG" IsCashSettled="true">
+	<Future InstrumentID="11" InstrumentName="AGRICULTURE - BURSA MALAYSIA CRUDE PALM OIL GASOIL SPREAD (POG) FUTURES*" Market="XCME" ISIN="US2009812212" DeliveryMonth="2017-03" CommoditySymbol="POG" IsCashSettled="true">
 		<Component InstrumentId="100"/>
 	</Future>
-	<Future InstrumentID="12" InstrumentName="AGRICULTURE - BURSA MALAYSIA CRUDE PALM OIL GASOIL SPREAD (POG) FUTURES*" Market="XCME" DeliveryMonth="2017-04" CommoditySymbol="POG" IsCashSettled="true">
+	<Future InstrumentID="12" InstrumentName="AGRICULTURE - BURSA MALAYSIA CRUDE PALM OIL GASOIL SPREAD (POG) FUTURES*" Market="XCME" ISIN="US2009812212" DeliveryMonth="2017-04" CommoditySymbol="POG" IsCashSettled="true">
 		<Component InstrumentId="100"/>
 	</Future>
 	<Commodity InstrumentName="AGRICULTURE - BURSA MALAYSIA CRUDE PALM OIL GASOIL" InstrumentId="100"/>
 
-	<Option InstrumentID="14" InstrumentName="AGRICULTURE - MILK CLASS III MID-SIZE OPTIONS ON FUTURES" Market="XCME" DeliveryMonth="2017-02" CommoditySymbol="JQ" IsCashSettled="true" CallOrPut="Call">
+	<Option InstrumentID="14" InstrumentName="AGRICULTURE - MILK CLASS III MID-SIZE OPTIONS ON FUTURES" Market="XCME" ISIN="US0000300212" DeliveryMonth="2017-02" CommoditySymbol="JQ" IsCashSettled="true" CallOrPut="Call">
 		<Component InstrumentId="101"/>
 	</Option>
-	<Option InstrumentID="15" InstrumentName="AGRICULTURE - MILK CLASS III MID-SIZE OPTIONS ON FUTURES" Market="XCME" DeliveryMonth="2017-03" CommoditySymbol="JQ" IsCashSettled="true" CallOrPut="Call">
+	<Option InstrumentID="15" InstrumentName="AGRICULTURE - MILK CLASS III MID-SIZE OPTIONS ON FUTURES" Market="XCME" ISIN="US0000300212" DeliveryMonth="2017-03" CommoditySymbol="JQ" IsCashSettled="true" CallOrPut="Call">
 		<Component InstrumentId="101"/>
 	</Option>
-	<Option InstrumentID="16" InstrumentName="AGRICULTURE - MILK CLASS III MID-SIZE OPTIONS ON FUTURES" Market="XCME" DeliveryMonth="2017-04" CommoditySymbol="JQ" IsCashSettled="true" CallOrPut="Call">
+	<Option InstrumentID="16" InstrumentName="AGRICULTURE - MILK CLASS III MID-SIZE OPTIONS ON FUTURES" Market="XCME" ISIN="US0000300212" DeliveryMonth="2017-04" CommoditySymbol="JQ" IsCashSettled="true" CallOrPut="Call">
 		<Component InstrumentId="101"/>
 	</Option>
 	<Commodity InstrumentName="AGRICULTURE - MILK CLASS III" InstrumentId="101"/>
 
-	<Swap InstrumentID="17" InstrumentName="CLEARING ONLY - AGRICULTURE - S&amp;P GSCI EXCESS RETURN INDEX (SES) SWAPS" Market="XCME" DeliveryMonth="2017-04" CommoditySymbol="SES" IsCashSettled="true">
+	<Swap InstrumentID="17" InstrumentName="CLEARING ONLY - AGRICULTURE - S&amp;P GSCI EXCESS RETURN INDEX (SES) SWAPS" Market="XCME" ISIN="US0002008209" DeliveryMonth="2017-04" CommoditySymbol="SES" IsCashSettled="true">
 		<Component InstrumentId="102"/>
 	</Swap>
 	<Commodity InstrumentName="CLEARING ONLY - AGRICULTURE - S&amp;P GSCI EXCESS RETURN INDEX" InstrumentId="102"/>
