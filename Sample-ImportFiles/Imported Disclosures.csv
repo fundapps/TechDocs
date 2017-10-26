@@ -1,4 +1,4 @@
-RapptrRuleID,AggregationName,PortfolioOrEntityID,ISIN,GroupKey,IssuerName,ResultType,Disclosure,Value,Date
+RapptrRuleID,AggregationName,PortfolioOrEntityID,ISIN,GroupKey,IssuerName,ResultType,Value,Date
 1010,Legal,101,AU039682961,WF3060215,Wesfarmers,Disclosure,6.20,2016-08-05
 1019,Voting,100,AT292972016,6792031,Red Bull GmbH,Disclosure,4.08,2016-12-21
 1020,Voting,100,AT292972016,6792031,Red Bull GmbH,Disclosure,4.08,2016-12-21
