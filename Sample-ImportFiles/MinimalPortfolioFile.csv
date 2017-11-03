@@ -1,0 +1,7 @@
+PortfolioId,PortfolioName,PortfolioType,PortfolioCurrency,PortfolioCompany
+100,FundApps Alternatives Ltd,Entity,GBP,FundApps
+101,FundApps AM Europe Ltd,Entity,EUR,FundApps
+102,FundApps AM USA Inc,Entity,USD,FundApps
+11,Tax Haven Fund,Portfolio,EUR,FundApps
+12,Global Macro Fund,Portfolio,EUR,FundApps
+13,Special Interest Fund,Portfolio,USD,FundApps
