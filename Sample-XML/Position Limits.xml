@@ -24,10 +24,13 @@
 	<Swap InstrumentID="17" InstrumentName="CLEARING ONLY - AGRICULTURE - S&amp;P GSCI EXCESS RETURN INDEX (SES) SWAPS" Market="XCME" ISIN="US0002008209" DeliveryMonth="2017-04" CommoditySymbol="SES" IsCashSettled="true">
 		<Component InstrumentId="102"/>
 	</Swap>
-	<Commodity InstrumentName="CLEARING ONLY - AGRICULTURE - S&amp;P GSCI EXCESS RETURN INDEX" InstrumentId="102"/>
+	<Index InstrumentName="CLEARING ONLY - AGRICULTURE - S&amp;P GSCI EXCESS RETURN INDEX" InstrumentId="102"/>
 
+	<Future InstrumentID="18" InstrumentName="SSF - SEB (GRBF) FUTURES" Market="XEUR" ISIN="IS2009811231" DeliveryMonth="2017-06" CommoditySymbol="GRBF" IsCashSettled="true" OpenInterest="100000">
+		<Component InstrumentId="103"/>
+	</Future>
+	<Equity InstrumentName="SEB (GRBF)" InstrumentId="103"/>
   </Instruments>
-
   <Portfolios>
     <Portfolio PortfolioId="12">
 
@@ -39,6 +42,8 @@
 		<Asset AssetId="16" AssetName="April 2017 AGRICULTURE - MILK CLASS III MID-SIZE OPTIONS ON FUTURES" InstrumentId="16" Quantity="1400"/>
 
 		<Asset AssetId="17" AssetName="CLEARING ONLY - AGRICULTURE - S&amp;P GSCI EXCESS RETURN INDEX (SES) SWAPS" InstrumentId="17" Quantity="1400"/>
+
+		<Asset AssetId="18" AssetName="SSF - SEB (GRBF) FUTURES" InstrumentId="18" Quantity="200"/>
 		
     </Portfolio>
 
