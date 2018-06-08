@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Snapshot Date="2018-02-22">
+ <Instruments>
+   
+   <Option InstrumentId="Bond_DE_option" InstrumentName="Option DE bond" CallOrPut="Put" IsCashSettled="false" Market="XHEL" MaturityDate="2015-12-15" Delta="0.8" Notional="2000" InstrumentCurrency="EUR">
+     <Component InstrumentId="Bond_DE"/>
+   </Option>
+
+   <Bond InstrumentId="Bond_DE" InstrumentName="DE bond" IssuerId="DE" IssuerName="Germany" ISIN="DE0009000681" DurationAdjustment="0.9" FaceValue="1000" InstrumentCurrency="EUR" IsGovernmentBacked="True" CountryOfIssue="DE" Market="XHEL" MarketsListedIn="XHEL" Price="10" />
+
+ </Instruments>
+ <Portfolios>
+   <Portfolio PortfolioId="11">
+
+     <Asset AssetId="1" AssetName="DE bond option" InstrumentId="Bond_DE_option" Quantity="100" SFTType="Normal" />
+     <Asset AssetId="2" AssetName="DE bond" InstrumentId="Bond_DE" Quantity="-100000" SFTType="Normal"/>
+
+   </Portfolio>
+ </Portfolios>
+</Snapshot>
