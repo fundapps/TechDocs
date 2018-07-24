@@ -2,19 +2,14 @@
 <Snapshot Date="2018-07-16">
     <Instruments>
         <Bond InstrumentId="GV123456789" InstrumentName="USGV123456789 Govt" instrumentCurrency="USD" IssuerID="US GOV" IssuerName="UNITED STATES" CUSIP="112233445566" ISIN="US123456789" MarketsListedIn="XNYS" Market="XNYS" Price="100" CountryOfIssue="US" DurationAdjustment="1" FaceValue="100" IsGovernmentBacked="true" />
-        <CDS AssetClassCustomer="CDS" CUSIP="None" ISIN="Unknown"
-            InstrumentCurrency="USD" InstrumentId="87654321"
-            InstrumentName="US GV CDS"
-            Market="XXXX" MarketsListedIn="XXXX" Notional="200" Price="50">
+        <CDS CUSIP="None" ISIN="Unknown" InstrumentCurrency="USD" InstrumentId="87654321" InstrumentName="US GV CDS" Market="XXXX" MarketsListedIn="XXXX" Notional="200" Price="50">
             <Component InstrumentId="GV123456789"/>
         </CDS>
     </Instruments>
     <Portfolios>
         <Portfolio PortfolioId="11">
             <Asset
-                AssetId="87654321"
-                AssetName="USGV123456789 Govt CDS"
-                InstrumentId="87654321" Quantity="700"/>
+                AssetId="87654321" AssetName="USGV123456789 Govt CDS" InstrumentId="87654321" Quantity="700"/>
         </Portfolio>
     </Portfolios>
 </Snapshot>
