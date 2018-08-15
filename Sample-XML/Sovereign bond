@@ -9,35 +9,3 @@
    </Portfolio>
  </Portfolios>
 </Snapshot>
-
-<?xml version="1.0" ?>
-<Snapshot Date="2017-12-29">
-  <Instruments>
-    <Equity InstrumentId="88579Y101" CUSIP="88579Y101" InstrumentCurrency="USD" Price="217.82" InstrumentName="3M CO" />
-    <Equity InstrumentId="83001A102" CUSIP="83001A102" InstrumentCurrency="USD" Price="60.72" InstrumentName="SIX FLAGS ENTMT" />
-    <Equity InstrumentId="037833100" CUSIP="037833100" InstrumentCurrency="USD" Price="160.22" InstrumentName="APPLE INC A" />
-    <Equity InstrumentId="191216100" CUSIP="191216100" InstrumentCurrency="USD" Price="46.21" InstrumentName="COCA COLA" />
-    <Equity InstrumentId="594918104" CUSIP="594918104" InstrumentCurrency="USD" Price="77.62" InstrumentName="MICROSOFT CORP A" />
-    <Equity InstrumentId="121220107" CUSIP="121220107" InstrumentCurrency="USD" Price="35.50" InstrumentName="BURGER KING INC" />
-    <Equity InstrumentId="580135101" CUSIP="580135101" InstrumentCurrency="USD" Price="165.44" InstrumentName="MCDONALDS CORP" />
-    <Equity InstrumentId="68389X105" CUSIP="68389X105" InstrumentCurrency="USD" Price="49.22" InstrumentName="ORACLE CORP" />
-    <Equity InstrumentId="000375204" CUSIP="000375204" InstrumentCurrency="USD" Price="24.95" InstrumentName="ABB LTD" />
-  </Instruments>
-
-  <Portfolios>
-    <Portfolio PortfolioId="14">
-      <Asset InstrumentId="88579Y101" AssetId="1" SFTType="Normal" Quantity="99999" AssetName="3M CO" />
-      <Asset InstrumentId="83001A102" AssetId="2" SFTType="Normal" Quantity="99895" AssetName="SIX FLAGS ENTMT" />
-      <Asset InstrumentId="037833100" AssetId="3" SFTType="Normal" Quantity="99999" AssetName="APPLE INC A" />
-      <Asset InstrumentId="191216100" AssetId="4" SFTType="Normal" Quantity="96531" AssetName="COCA COLA" />
-      <Asset InstrumentId="594918104" AssetId="5" SFTType="Normal" Quantity="93500" AssetName="MICROSOFT CORP A" />
-      <Asset InstrumentId="121220107" AssetId="6" SFTType="Normal" Quantity="89010" AssetName="BURGER KING INC" />
-      <Asset InstrumentId="580135101" AssetId="7" SFTType="Normal" Quantity="99999" AssetName="MCDONALDS CORP" />
-      <Asset InstrumentId="68389X105" AssetId="8" SFTType="Normal" Quantity="96932" AssetName="ORACLE CORP" />
-      <Asset InstrumentId="000375204" AssetId="9" SFTType="Normal" Quantity="89491" AssetName="ABB LTD" />
-    </Portfolio>
-    <Portfolio PortfolioId="17">
-      <Asset InstrumentId="88579Y101" AssetId="1" SFTType="Normal" Quantity="99000" AssetName="3M CO" />
-    </Portfolio>
-  </Portfolios>
-</Snapshot>
