@@ -80,7 +80,7 @@ MalaysiaCompanyNumber            | The Company Number given to each listed issue
 ### Data Requirements
 
 - *Id* (or IssuerId) needs to be unique. In the scenario where an IssuerId is uploaded which already exists as part of the Issuer Register, this will result in a validation error.
-- the *Id* value needs to match the IssuerId field the Position file; this is key in order to be able to query the correct issuer information for disclosure forms.
+- *Id* needs to match the IssuerId field the Position file; this is key in order to be able to query the correct issuer information for disclosure forms.
 
 ## Imported Disclosure Data
 We accept information about imported disclosures in CSV format. You can find a [sample file here](https://github.com/fundapps/api-examples/blob/master/Sample-ImportFiles/Imported%20Disclosures.csv). Unlike the the other import files, these should be sent to support@fundapps.co as we upload directly into the databases.  
