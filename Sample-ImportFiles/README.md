@@ -14,16 +14,16 @@ We accept transaction data in CSV format. You can find a [sample file here](Tran
 
 ### File Column Detail
 
-Column Name     | Data type          | Required | Length | Notes
-----------------|--------------------|-------------------|--------|----------------------------
-PortfolioId     | [String](https://github.com/fundapps/api-examples#data-types)             | X        | 255    |
-AssetId         | [String](https://github.com/fundapps/api-examples#data-types)             | X        | 255    |
-TransactionId   | [String](https://github.com/fundapps/api-examples#data-types)             | X        | 200    |
-ExecutionDate   | [Date](https://github.com/fundapps/api-examples#data-types)  | X        |  -     | 
-TransactionType | [String](https://github.com/fundapps/api-examples#data-types)             | X        |  -     | See below for valid options       
-Price           | [Decimal](https://github.com/fundapps/api-examples#data-types)           | X        |  -     | Precision: 28; Scale: 8
-Quantity        | [Decimal](https://github.com/fundapps/api-examples#data-types)            | X        |  -     | Precision: 28; Scale: 8
-BrokerName      | [String](https://github.com/fundapps/api-examples#data-types)             |          |  255   | 
+Column Name     | Data type                                                            | Required 
+----------------|----------------------------------------------------------------------|---------
+PortfolioId     | [String(255)](https://github.com/fundapps/api-examples#data-types)   | X 
+AssetId         | [String(255)](https://github.com/fundapps/api-examples#data-types)   | X 
+TransactionId   | [String(100)](https://github.com/fundapps/api-examples#data-types)   | X 
+ExecutionDate   | [Date](https://github.com/fundapps/api-examples#data-types)          | X 
+TransactionType | [String](https://github.com/fundapps/api-examples#data-types)        | X 
+Price           | [Decimal(28,8)](https://github.com/fundapps/api-examples#data-types) | X 
+Quantity        | [Decimal(28,8)](https://github.com/fundapps/api-examples#data-types) | X 
+BrokerName      | [String(255)](https://github.com/fundapps/api-examples#data-types)   |   
 
 ### Recognised Transaction Types
 
@@ -51,28 +51,31 @@ We accept issuer register data in CSV format. You can find a [sample file here](
 
 ### File Column Detail
 
-Column Name                       | Description |Data type | Required | Length  
-----------------------------------|-------------|-------------------|-------------------|--------
-Id                                | The IssuerId that is currently used in your position file | [String](https://github.com/fundapps/api-examples#data-types)             | X          | 255    
-LegalName                         | The legal name of the issuer. This field could refer to the IssuerName that is currently used in your position file | [String](https://github.com/fundapps/api-examples#data-types)             | X          | 255    
-Address                           | The issuer's address | [String](https://github.com/fundapps/api-examples#data-types)             | X          | 255    
-City                              | The city the issuer is located | [String](https://github.com/fundapps/api-examples#data-types)             | X          | 255    
-Province                          | The province of the issuer (if any) | [String](https://github.com/fundapps/api-examples#data-types)             |           | 255    
-PostCode                          | The post code of the issuer (if any) | [String](https://github.com/fundapps/api-examples#data-types)             |           | 255    
-Country                           | The country the issuer is located | [String](https://github.com/fundapps/api-examples#data-types)             | X          | 255  
-ContactPerson                     | The primary issuer contact | [String](https://github.com/fundapps/api-examples#data-types)             |           | 255   
-ContactPersonPosition             | The primary issuer contact's position | [String](https://github.com/fundapps/api-examples#data-types)             |           | 255     
-EmailAddress                      | The primary issuer contact's email address | [String](https://github.com/fundapps/api-examples#data-types)             |           | 255     
-TelephoneNumber                   | The primary issuer contact's telephone number | [String](https://github.com/fundapps/api-examples#data-types)             |           | 255      
-AustralianCompanyNumber           | The Australian Company Number (ACN) is a unique, nine-digit number. Under the Corporations Act 2001, every company in Australia has been issued an ACN to ensure adequate identification of companies when transacting business | [String](https://github.com/fundapps/api-examples#data-types)             |           | 255     
-AustralianRegisteredSchemeNumber  | The Australian Registered Scheme Number (ARSN) is a nine digit number issued to Australian managed investment schemes by Australian Securities and Investments Commission. | [String](https://github.com/fundapps/api-examples#data-types)             |           | 255     
-SouthAfricanRegistrationNumber    | The South African company registration number | [String](https://github.com/fundapps/api-examples#data-types)             |           | 255     
-IssuersRegisterCourt              | German company registration court. For more information consult or more information consult     [Germany's Company Register](https://www.unternehmensregister.de/ureg/search1.2.html;jsessionid=0198670396BF01C2137968DEEC63C8CE.web01-1?submitaction=language&language=en) | [String](https://github.com/fundapps/api-examples#data-types)             |           | 255     
-RegisterType                      | German company registeration type. Possible values could include: Cooperative Register, Commercial Register Excerpt, Commercial Register, Partnership Register. For more information consult [Germany's Company Register](https://www.unternehmensregister.de/ureg/search1.2.html;jsessionid=0198670396BF01C2137968DEEC63C8CE.web01-1?submitaction=language&language=en) | [String](https://github.com/fundapps/api-examples#data-types)             |           | 255     
-RegisterNumber                    | The German company registeration number | [String](https://github.com/fundapps/api-examples#data-types)             |           | 255     
-PhilippineSecId             | The identification number issued by the Securities and Exchange Commission in the Philippines | [String](https://github.com/fundapps/api-examples#data-types) | | 255 
-PhilippineBirTaxId          | The company tax identification number issued by the Bureau of Internal Revenue (BIR) | [String](https://github.com/fundapps/api-examples#data-types) | | 255 
-MalaysiaCompanyNumber             | The Company Number given to each listed issuer in Malaysia, when registered with the exchange. | [String](https://github.com/fundapps/api-examples#data-types) | | 255 
+Column Name                      | Description                                                                                                         | Data type                                                          | Required  
+---------------------------------|---------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------     |---
+Id                               | The IssuerId that is currently used in your position file. We recommend using the LEI where available               | [String(255)](https://github.com/fundapps/api-examples#data-types) | X 
+LEI                              | The Legal Entity Identifier of the issuer                                                                           | [String(20)](https://github.com/fundapps/api-examples#data-types) |   
+LegalName                        | The legal name of the issuer. This field could refer to the IssuerName that is currently used in your position file | [String(255)](https://github.com/fundapps/api-examples#data-types) | X 
+Address                          | The issuer's address                                                                                                | [String(255)](https://github.com/fundapps/api-examples#data-types) | X 
+City                             | The city the issuer is located                                                                                      | [String(255)](https://github.com/fundapps/api-examples#data-types) | X 
+Province                         | The province of the issuer (if any)                                                                                 | [String(255)](https://github.com/fundapps/api-examples#data-types) |   
+PostCode                         | The post code of the issuer (if any)                                                                                | [String(255)](https://github.com/fundapps/api-examples#data-types) |   
+Country                          | The country the issuer is located                                                                                   | [String(255)](https://github.com/fundapps/api-examples#data-types) | X 
+ContactPerson                    | The primary issuer contact                                                                                          | [String(255)](https://github.com/fundapps/api-examples#data-types) |   
+ContactPersonPosition            | The primary issuer contact's position                                                                               | [String(255)](https://github.com/fundapps/api-examples#data-types) |   
+EmailAddress                     | The primary issuer contact's email address                                                                          | [String(255)](https://github.com/fundapps/api-examples#data-types) |   
+DenominatorWebsite               | The URL where the denominator can be found                                                                          | [String(Max)](https://github.com/fundapps/api-examples#data-types) |   
+TelephoneNumber                  | The primary issuer contact's telephone number                                                                       | [String(255)](https://github.com/fundapps/api-examples#data-types) |   
+AustralianCompanyNumber          | The ACN is a 9 digit number. Under the Corporations Act 2001, every company in Australia has been issued an ACN     | [String(255)](https://github.com/fundapps/api-examples#data-types) |   
+AustralianRegisteredSchemeNumber | The ARSN is a 9 digit number issued to Australian managed investment schemes by the ASIC                            | [String(255)](https://github.com/fundapps/api-examples#data-types) |   
+SouthAfricanRegistrationNumber   | The South African company registration number                                                                       | [String(255)](https://github.com/fundapps/api-examples#data-types) |   
+IssuersRegisterCourt             | German company registration court. For more information consult [Germany's Company Register](https://www.unternehmensregister.de/ureg/search1.2.html?submitaction=language&language=en) | [String(255)](https://github.com/fundapps/api-examples#data-types) |   
+RegisterType                     | German company registration type. Possible values could include: Cooperative Register, Commercial Register Excerpt, Commercial Register, Partnership Register. For more information consult [Germany's Company Register](https://www.unternehmensregister.de/ureg/search1.2.html?submitaction=language&language=en) | [String(255)](https://github.com/fundapps/api-examples#data-types) |   
+RegisterNumber                   | The German company registeration number                                                                             | [String(255)](https://github.com/fundapps/api-examples#data-types) |   
+PhilippineSecId                  | The identification number issued by the Securities and Exchange Commission in the Philippines                       | [String(255)](https://github.com/fundapps/api-examples#data-types) |   
+PhilippineBirTaxId               | The company tax identification number issued by the Bureau of Internal Revenue (BIR)                                | [String(255)](https://github.com/fundapps/api-examples#data-types) |   
+MalaysiaCompanyNumber            | The Company Number given to each listed issuer in Malaysia, when registered with the exchange                       | [String(255)](https://github.com/fundapps/api-examples#data-types) |   
+
 
 ### Data Requirements
 
@@ -84,18 +87,18 @@ We accept information about imported disclosures in CSV format. You can find a [
 
 ### File Column Detail
 
-Column Name                       | Data type | Required | Length  | Notes
-----------------------------------|--------------------|-------------------|---------|--------
-RapptrRuleID                      | [String](https://github.com/fundapps/api-examples#data-types)             | X        | -       | ID of the rule for which this disclosure was made
-AggregationStructure              | [String](https://github.com/fundapps/api-examples#data-types)             | X        | -       | The aggregation structure where the rule triggered on
-PortfolioOrEntityID               | [String](https://github.com/fundapps/api-examples#data-types)             | X        | -       | ID of portfolio/entity where the rule triggered
-ISIN                              | [String](https://github.com/fundapps/api-examples#data-types)             | X        | -       | ISIN of the instrument which triggered the rule
-IssuerID                          | [String](https://github.com/fundapps/api-examples#data-types)             | X        | -       | ID of the issuer
-IssuerName                        | [String](https://github.com/fundapps/api-examples#data-types)             | X        | -       | Name of the issuer 
-OwnershipPercentageAtFiling       | [String](https://github.com/fundapps/api-examples#data-types)             | X        | -       | Inputting 6.2 here is equivalent to 6.2%
-DisclosureDate                    | [Date](https://github.com/fundapps/api-examples#data-types)  | X        |  -      | Date of disclosure. Note, this must reference the actual trade date when the disclosure value was calculated. Choosing a weekend for the imported disclosure is not valid
+Column Name                 | Data type                                                            | Required | Notes
+----------------------------|----------------------------------------------------------------------|---|---------
+RapptrRuleID                | [String](https://github.com/fundapps/api-examples#data-types)        | X | ID of the rule for which this disclosure was made
+AggregationStructure        | [String](https://github.com/fundapps/api-examples#data-types)        | X | The aggregation structure where the rule triggered on
+PortfolioOrEntityID         | [String](https://github.com/fundapps/api-examples#data-types)        | X | ID of portfolio/entity where the rule triggered
+ISIN                        | [String(255)](https://github.com/fundapps/api-examples#data-types)   | X | ISIN of the instrument which triggered the rule
+IssuerID                    | [String(255)](https://github.com/fundapps/api-examples#data-types)   | X | ID of the issuer
+IssuerName                  | [String(255)](https://github.com/fundapps/api-examples#data-types)   | X | Name of the issuer 
+OwnershipPercentageAtFiling | [Decimal(28,8)](https://github.com/fundapps/api-examples#data-types) | X | Inputting 6.25 here is equivalent to 6.25%
+DisclosureDate              | [Date](https://github.com/fundapps/api-examples#data-types)          | X | Date of disclosure. Note, this must reference the actual trade date when the disclosure value was calculated. Choosing a weekend for the imported disclosure is not valid
 
 
 ### Data Requirements
 
-- IssuerId needs to be needs to be consistent throughout time so that the system can link the imported disclosure to another disclosurein the future.
+- IssuerId needs to be needs to be consistent throughout time so that the system can link the imported disclosure to another disclosure in the future.
