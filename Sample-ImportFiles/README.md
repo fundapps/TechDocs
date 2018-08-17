@@ -14,16 +14,16 @@ We accept transaction data in CSV format. You can find a [sample file here](Tran
 
 ### File Column Detail
 
-Column Name     | Data type                                                            | Required 
-----------------|----------------------------------------------------------------------|---------
-PortfolioId     | [String(255)](https://github.com/fundapps/api-examples#data-types)   | X 
-AssetId         | [String(255)](https://github.com/fundapps/api-examples#data-types)   | X 
-TransactionId   | [String(100)](https://github.com/fundapps/api-examples#data-types)   | X 
-ExecutionDate   | [Date](https://github.com/fundapps/api-examples#data-types)          | X 
-TransactionType | [String](https://github.com/fundapps/api-examples#data-types)        | X 
-Price           | [Decimal(28,8)](https://github.com/fundapps/api-examples#data-types) | X 
-Quantity        | [Decimal(28,8)](https://github.com/fundapps/api-examples#data-types) | X 
-BrokerName      | [String(255)](https://github.com/fundapps/api-examples#data-types)   |   
+Column Name     | Description                          | Data type                                                            | Required 
+----------------|--------------------------------------|----------------------------------------------------------------------|---------
+PortfolioId     | ID of the portfolio                  | [String(255)](https://github.com/fundapps/api-examples#data-types)   | X 
+AssetId         | ID of the asset                      | [String(255)](https://github.com/fundapps/api-examples#data-types)   | X 
+TransactionId   | ID of the transaction                | [String(100)](https://github.com/fundapps/api-examples#data-types)   | X 
+ExecutionDate   | Date the transaction was executed    | [Date](https://github.com/fundapps/api-examples#data-types)          | X 
+TransactionType | See below for possible types         | [String(50)](https://github.com/fundapps/api-examples#data-types)    | X 
+Price           | Price transaction was executed at    | [Decimal(28,8)](https://github.com/fundapps/api-examples#data-types) | X 
+Quantity        | Quantity purchased/sold              | [Decimal(28,8)](https://github.com/fundapps/api-examples#data-types) | X 
+BrokerName      | Broker transaction was executed with | [String(255)](https://github.com/fundapps/api-examples#data-types)   |   
 
 ### Recognised Transaction Types
 
