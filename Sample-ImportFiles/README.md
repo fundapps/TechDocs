@@ -87,17 +87,16 @@ We accept information about imported disclosures in CSV format. You can find a [
 
 ### File Column Detail
 
-Column Name                 | Data type                                                            | Required | Notes
-----------------------------|----------------------------------------------------------------------|---|---------
-RapptrRuleID                | [String](https://github.com/fundapps/api-examples#data-types)        | X | ID of the rule for which this disclosure was made
-AggregationStructure        | [String](https://github.com/fundapps/api-examples#data-types)        | X | The aggregation structure where the rule triggered on
-PortfolioOrEntityID         | [String](https://github.com/fundapps/api-examples#data-types)        | X | ID of portfolio/entity where the rule triggered
-ISIN                        | [String(255)](https://github.com/fundapps/api-examples#data-types)   | X | ISIN of the instrument which triggered the rule
-IssuerID                    | [String(255)](https://github.com/fundapps/api-examples#data-types)   | X | ID of the issuer
-IssuerName                  | [String(255)](https://github.com/fundapps/api-examples#data-types)   | X | Name of the issuer 
-OwnershipPercentageAtFiling | [Decimal(28,8)](https://github.com/fundapps/api-examples#data-types) | X | Inputting 6.25 here is equivalent to 6.25%
-DisclosureDate              | [Date](https://github.com/fundapps/api-examples#data-types)          | X | Date of disclosure. Note, this must reference the actual trade date when the disclosure value was calculated. Choosing a weekend for the imported disclosure is not valid
-
+Column Name                 | Description                                                                                                                             | Data type                                                            | Required  
+----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------|-----------
+RapptrRuleID                | ID of the rule for which this disclosure was made                                                                                       | [String](https://github.com/fundapps/api-examples#data-types)        | X 
+AggregationStructure        | The aggregation structure where the rule triggered on                                                                                   | [String](https://github.com/fundapps/api-examples#data-types)        | X  
+PortfolioOrEntityID         | ID of portfolio/entity where the rule triggered                                                                                         | [String](https://github.com/fundapps/api-examples#data-types)        | X  
+ISIN                        | ISIN of the instrument which triggered the rule                                                                                         | [String(255)](https://github.com/fundapps/api-examples#data-types)   | X  
+IssuerID                    | ID of the issuer                                                                                                                        | [String(255)](https://github.com/fundapps/api-examples#data-types)   | X  
+IssuerName                  | Name of the issuer                                                                                                                      | [String(255)](https://github.com/fundapps/api-examples#data-types)   | X  
+OwnershipPercentageAtFiling | Inputting 6.25 here is equivalent to 6.25%                                                                                              | [Decimal(28,8)](https://github.com/fundapps/api-examples#data-types) | X  
+DisclosureDate              | Date of disclosure. This must reference the actual trade date when the disclosure value was calculated. Choosing a weekend is not valid | [Date](https://github.com/fundapps/api-examples#data-types)          | X  
 
 ### Data Requirements
 
