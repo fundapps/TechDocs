@@ -25,7 +25,7 @@ Upload Daily Positions. This method expects to receive data in XML format ([exam
 #### Sample
     (Request Headers)
     POST https://%company%-api.fundapps.co/v1/expost/check HTTP/1.1 Content-Type: "application/xml"
-
+    
     (Response)
     <links>
       <result>/v1/ExPost/Result/fe633307-f196-4609-abfe-a1fc0111e875</result>
@@ -61,23 +61,23 @@ The Summary element is comprised of:
     (Request)
     GET https://%company%-api.fundapps.co/v1/ExPost/Result/fe633307-f196-4609-abfe-a1fc0111e875 HTTP/1.1
     Content-Type: application/xml
-
+    
     (Response Headers, Rules running)
     HTTP/1.1 202 Accepted
     Content-Type: application/xml
-
+    
     (Response Content, Rules running)
     <?xml version="1.0" encoding="utf-8"?>
     <ResultsSnapshot ValidationState="Passed" RuleState="InProgress" />
-
+    
     (Response Headers, Validation failed)
     HTTP/1.1 200 OK
     Content-Type: application/xml
-
+    
     (Response Content, Validation failed)
     <?xml version="1.0" encoding="utf-8"?>
     <ResultSnapshot ValidationState="Failed" RuleState="NotRun" />
-
+    
     (Response Content, File processed successfully)
     <?xml version="1.0" encoding="utf-8"?>
     <ResultsSnapshot ValidationState="Passed" RuleState="Passed" Status="Okay" PipelineStage="Finished" Duration="00:01:28.7030000">
@@ -89,10 +89,6 @@ The Summary element is comprised of:
             <OK Total="399" New="399" />
         </Summary>
     </ResultsSnapshot>
-
-### `POST /v1/indexdata/import` (Optional)
-
-Upload Index data, if you wish to decouple this from your daily position upload. Expects CSV - [example file](Sample-ImportFiles/IndexComposition.csv).
 
 ### `POST /v1/portfolios/import` (Optional)
 
