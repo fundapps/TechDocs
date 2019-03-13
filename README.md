@@ -41,7 +41,7 @@ Check the progress of the rule processing on a position upload. As noted above, 
 This endpoint returns a `202 Accepted` HTTP status whilst the check is in progress and a `200 OK` status when the check is complete. The progress of validation and rule execution is reported separately in the response.
 
 ValidationState | RuleState   | Explanation
-----------------|-------------|--------------------------------------
+----------------|-------------|--------------------------------------------
 Unknown         | Unknown     | Job just received; not processed yet.
 Pending         | Pending     | Job queued
 InProgress      | Pending     | Validation in progress
