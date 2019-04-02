@@ -1,9 +1,9 @@
-Id,LegalName,Address,City,Province,PostCode,Country,ContactPerson,ContactPersonPosition,EmailAddress,TelephoneNumber,AustralianCompanyNumber,AustralianRegisteredSchemeNumber,SouthAfricanRegistrationNumber,IssuersRegisterCourt,RegisterType,RegisterNumber,PhilippineSecId,PhilippineBirTaxId,MalaysiaCompanyNumber,
-4,British Petroleum,1 St James's Square,London,London,SW1Y 4PD,United Kingdom,Kori Antonia,Communications Executive,Kori.Antonia@bp.com,+44 02074964000,,,,,,,,,,
-16,GlaxoSmithKline,980 Great West Road,London,London,N1 JPF,United Kingdom,Eimear Azat,External Communications Manager,Eimear.Azat@gsk.com,+44 02080475000,,,,,,,,,,
-15,Cathay Pacific,"Cathay Pacific City, 8 Scenic Road",Lantau,Hong Kong,999077,Hong Kong,Ka-fai Leung,Company Representative,Leung.Kafai@cathaypacific.com,+85 227477838,,,,,,,,,,
-14,Total,"La D‚fense 6, 2 Pl. Jean Millier",Paris,Paris,92078,France,Jean-Baptiste Blanc,Office Manager,Jean-Baptiste.Blanc@total.com,+33 147444546,,,,,,,,,,
-19,Alkane Resources,89 Burswood Road,Perth,West Australia,WA6100,Australia,David Irwin,President Communications,D.Irwin@alkane.com.au,+61 892275677,689216,,,,,,,,001234567-P,
-10,A C Harvest Communications,91 3rd Ave,Cape Town,Wester Cape,7979,South Africa,Z. Mthembi,Cape Town Office Assistant,Z.Mthembi@ACHarvest.co.za,+27 3932302144,,,2006/203607/23,,,,,,,
-7,Deutsche Bank,Taunusanlage 12,Frankfurt Am Main,Hesse,60325,Germany,Frank Richter,Director Corporate Communications,Frank.Richter@db.com,+1 8002853000,,,,Frankfurt am Main,Commercial Register,HRB 30 000,,,,
-8,"PAL Holdings Inc","7th Floor Allied Bank Centre, 6754 Ayala Avenue",Makati City,Makati City,1200,Philippines,,,,+6 32 817 8710,,,,,,,PW-94,000-707-922-000,,
+Id,LegalName,Address,City,Province,PostCode,Country,ContactPerson,ContactPersonPosition,ContactEmailAddress,FilingEmailAddress,TelephoneNumber,AustralianCompanyNumber,AustralianRegisteredSchemeNumber,SouthAfricanRegistrationNumber,IssuersRegisterCourt,RegisterType,RegisterNumber,PhilippineSecId,PhilippineBirTaxId,MalaysiaCompanyNumber
+4,British Petroleum,1 St James's Square,London,London,SW1Y 4PD,United Kingdom,Kori Antonia,Communications Executive,Kori.Antonia@bp.com,filings@bp.com,+44 02074964000,,,,,,,,,
+16,GlaxoSmithKline,980 Great West Road,London,London,N1 JPF,United Kingdom,Eimear Azat,External Communications Manager,Eimear.Azat@gsk.com,filings@gsk.com,+44 02080475000,,,,,,,,,
+15,Cathay Pacific,"Cathay Pacific City, 8 Scenic Road",Lantau,Hong Kong,999077,Hong Kong,Ka-fai Leung,Company Representative,Leung.Kafai@cathaypacific.com,,+85 227477838,,,,,,,,,
+14,Total,"La D‚fense 6, 2 Pl. Jean Millier",Paris,Paris,92078,France,Jean-Baptiste Blanc,Office Manager,Jean-Baptiste.Blanc@total.com,,+33 147444546,,,,,,,,,
+19,Alkane Resources,89 Burswood Road,Perth,West Australia,WA6100,Australia,David Irwin,President Communications,D.Irwin@alkane.com.au,,+61 892275677,689216,,,,,,,,001234567-P
+10,A C Harvest Communications,91 3rd Ave,Cape Town,Wester Cape,7979,South Africa,Z. Mthembi,Cape Town Office Assistant,Z.Mthembi@ACHarvest.co.za,,+27 3932302144,,,2006/203607/23,,,,,,
+7,Deutsche Bank,Taunusanlage 12,Frankfurt Am Main,Hesse,60325,Germany,Frank Richter,Director Corporate Communications,Frank.Richter@db.com,,+1 8002853000,,,,Frankfurt am Main,Commercial Register,HRB 30 000,,,
+8,PAL Holdings Inc,"7th Floor Allied Bank Centre, 6754 Ayala Avenue",Makati City,Makati City,1200,Philippines,,,,,+6 32 817 8710,,,,,,,PW-94,000-707-922-000,
