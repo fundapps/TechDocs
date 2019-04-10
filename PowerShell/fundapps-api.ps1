@@ -12,7 +12,7 @@ function API-Post {
     $params = @{
         Uri = $Uri
         Method = 'Post'
-        Headers = @{ Authorization = $basicAuth, "X-ContentName" = $fileName}
+        Headers = @{ Authorization = $basicAuth; 'X-ContentName' = $fileName}
         ContentType = Get-Content-Type -Filename $File
         InFile = $File
     }
