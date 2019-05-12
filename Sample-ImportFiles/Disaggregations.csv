@@ -1,0 +1,4 @@
+Name,Country,Labels,Rules,Entities
+Italy Major Disaggregation,IT,"Short Selling, Major Shareholding",,110
+GB Takeover Disaggregation,GB,,"MajorGB-H, MajorGB-F-IM-FI",120
+US Major Disaggregation,US,Major Shareholding,,"110,120"
