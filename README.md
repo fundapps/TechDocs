@@ -42,13 +42,13 @@ This endpoint returns a `202 Accepted` HTTP status whilst the check is in progre
 
 ValidationState | RuleState   | Explanation
 ----------------|-------------|--------------------------------------------
-Unknown         | Unknown     | Job just received; not processed yet.
+Unknown         | Unknown     | Job just received; not processed yet
 Pending         | Pending     | Job queued
 InProgress      | Pending     | Validation in progress
 Passed          | InProgress  | Rule execution in progress
-Failed          | NotRun      | Validation failed; rule processing canceled.
-Passed          | Failed      | Rule execution failed.
-Passed          | Passed      | Rule execution successful.
+Failed          | NotRun      | Validation failed; rule processing cancelled
+Passed          | Failed      | Rule execution failed
+Passed          | Passed      | Rule execution successful
 
 When the rule execution is completed successfully, an additional 'Summary' element is provided in the response. This aims to provide the same information as the email notification sent by Rapptr when a positions file finishes processing.
 
