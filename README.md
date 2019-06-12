@@ -124,7 +124,7 @@ When uploading data to the API, it is stored and later displayed in Rapptr using
 
 Type                     | Definition                                                                                                                                                 | Example
 -------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|----------
-Boolean                  | Must be the word TRUE or FALSE                                                                                                                             | TRUE
+Boolean                  | Must be the word true or false (case sensitive)                                                                                                            | true
 Date                     | Must be in "YYYY-MM-DD" format ([ISO 8601](https://en.wikipedia.org/wiki/ISO_8601))                                                                        | 2015-12-31
 Decimal(Precision,Scale) | Must use "." as decimal separator. Group (thousand) separators are not allowed, exponential formatting not allowed. Up to 21 decimal places are supported. | 123444.227566
 Integer                  | Whole number (positive or negative). Group (thousand) separators are not allowed, exponential formatting not allowed                                       | 19944
