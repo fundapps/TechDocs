@@ -11,7 +11,7 @@ read -p "Enter API URL: " API_URL
 
 function API-Post {
   curl -X POST -u $USERNAME:$PASSWORD\
-    $API_URL/$1 -H "Content-Type: text/csv" -H "X-ContentName: positions.csv"\
+    $API_URL/$1 -H "Content-Type: application/xml" -H "X-ContentName: positions.xml"\
     --data-binary "@$2" -o intermediate.xml
 }
 
@@ -22,7 +22,7 @@ function API-Get {
 }
 
 printf ">>> Uploading Position File.. \n\n"
-API-Post "v1/expost/check" "$SAMPLE_DATA_DIR/positions.csv"
+API-Post "v1/expost/check" "$SAMPLE_DATA_DIR/positions.xml"
 printf "\n>>> Server Response (intermediate.xml): "
 cat intermediate.xml
 RESULT_URL=`cat intermediate.xml | grep -oP '(?<=result>)[^<]+'`
