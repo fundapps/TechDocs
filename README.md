@@ -131,5 +131,9 @@ Integer                  | Whole number (positive or negative). Group (thousand)
 String                   | A sequence of characters. When using CSV format must not include commas (","). All strings are case-INSENSITIVE in Rapptr (except Ratings)                 | Nokia
 List                     | Comma separated string                                                                                                                                     | XNYC,XLON
 
+## Max File Size
+
+We have a maximum allowed file size of approximately 100MB. If your file exceeds this size we suggest zipping it.
+
 ## Examples
 We provide a number of example implementations against our API using commonly available programming languages and libraries in this repository.
