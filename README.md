@@ -10,7 +10,7 @@ All requests made to our API must be over HTTPS.
 
 ## Authentication
 You authenticate to the Rapptr API via [Basic Authentication](https://tools.ietf.org/html/rfc2617) over HTTPS. A Rapptr administrator from your organisation must create a user with the role "API" for this purpose. You must authenticate for all requests.
-**Note:** Please ensure you create a seperate user for the API as if you use an existing user's account, as soon as they change their password the API upload will fail.
+**Note:** Please ensure you create a separate user for the API as if you use an existing user's account, as soon as they change their password the API upload will fail.
 
 ## Methods
 
