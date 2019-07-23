@@ -42,11 +42,9 @@
             <Component InstrumentId="FI0009000681" Weighting="0.55"/>
             <Component InstrumentId="GB00BH4HKS39" Weighting="0.45"/>
     </Unit> 
-
   </Instruments>
   <Portfolios>
     <Portfolio PortfolioId="11">
-
       <Asset AssetId="1" AssetName="Nokia Equity" InstrumentId="FI0009000681" Quantity="10"/>
       <Asset AssetId="2" AssetName="Nokia CFD" InstrumentId="CGB00B16GWXYZ" Quantity="10"/>
       <Asset AssetId="3" AssetName="PS Call on Nokia" InstrumentId="CALL_Nokia_PY" Quantity="1"/>
@@ -57,7 +55,6 @@
       <Asset AssetId="8" AssetName="Nokia Swap" InstrumentId="Swap_Nokia" Quantity="10"/>
       <Asset AssetId="9" AssetName="STOXX 600 SXXP Index Future" InstrumentId="Fut_STOXX_600" Quantity="-1"/>
       <Asset AssetId="10" AssetName="iShares Developed Markets ETF" InstrumentId="iShares_Developed_Markets_ETF" Quantity="10"/>
-
     </Portfolio>
   </Portfolios>
 </Snapshot>
