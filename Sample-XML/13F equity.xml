@@ -11,7 +11,6 @@
     <Equity InstrumentId="68389X105" CUSIP="68389X105" InstrumentCurrency="USD" Price="49.22" InstrumentName="ORACLE CORP" />
     <Equity InstrumentId="000375204" CUSIP="000375204" InstrumentCurrency="USD" Price="24.95" InstrumentName="ABB LTD" />
   </Instruments>
-
   <Portfolios>
     <Portfolio PortfolioId="14">
       <Asset InstrumentId="88579Y101" AssetId="1" SFTType="Normal" Quantity="99999" AssetName="3M CO" />
