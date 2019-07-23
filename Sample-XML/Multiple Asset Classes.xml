@@ -34,13 +34,13 @@
     <Future InstrumentId="Fut_STOXX_600" InstrumentName="STOXX 600 SXXP Index Future" IsCashSettled="true" ContractSize="10" Market="XHEL" MarketsListedIn="XHEL">
       <Component InstrumentId="SXXP"/>
     </Future>
-     <Index InstrumentId="SXXP" InstrumentName="STOXX 600" Price="3120.00" InstrumentCurrency="EUR">
-       <Component InstrumentId="FI0009000681" Weighting="0.5"/>
-       <Component InstrumentId="GB00BH4HKS39" Weighting="0.5"/>
+    <Index InstrumentId="SXXP" InstrumentName="STOXX 600" Price="3120.00" InstrumentCurrency="EUR">
+      <Component InstrumentId="FI0009000681" Weighting="0.5"/>
+      <Component InstrumentId="GB00BH4HKS39" Weighting="0.5"/>
     </Index>
     <Unit InstrumentId="iShares_Developed_Markets_ETF" InstrumentName="iShares_Developed_Markets_ETF" IssuerId="iShares_Developed_Markets_ETF" IssuerName="iShares Developed Markets ETF" ISIN="None" CUSIP="921943858" TotalSharesOutstanding="1000" ClassSharesOutstanding="1000" TotalVotingRights="1000" Price="2000" InstrumentCurrency="USD" Market="XNYS" MarketsListedIn="XNYS" VotesPerShare="1" IsETF="True">
-            <Component InstrumentId="FI0009000681" Weighting="0.55"/>
-            <Component InstrumentId="GB00BH4HKS39" Weighting="0.45"/>
+      <Component InstrumentId="FI0009000681" Weighting="0.55"/>
+      <Component InstrumentId="GB00BH4HKS39" Weighting="0.45"/>
     </Unit> 
   </Instruments>
   <Portfolios>
