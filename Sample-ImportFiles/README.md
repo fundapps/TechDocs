@@ -25,12 +25,12 @@ Price           | Price transaction was executed at    | [Decimal(28,8)](https:/
 Quantity        | Quantity purchased/sold              | [Decimal(28,8)](https://github.com/fundapps/api-examples#data-types) | X 
 BrokerName      | Broker transaction was executed with | [String(255)](https://github.com/fundapps/api-examples#data-types)   |   
 
-### Recognised Transaction Types
+### Recognised Transaction Types (All case sensitive)
 
 Type            | Description                                                                                 |
 ----------------|---------------------------------------------------------------------------------------------|
-Buy             | A standard purchase / buy transaction (case sensitive)                                      |
-Sell            | A standard sale /sell transaction (case sensitive)                                          |
+Buy             | A standard purchase / buy transaction                                                       |
+Sell            | A standard sale /sell transaction                                                           |
 CorporateAction | The issue of bonus shares, stock splits - everything related to actions taken by the issuer |
 Expiry          | The expiry of a derivative contract                                                         |
 Exercise        | The exercise of an option, future etc.                                                      |
