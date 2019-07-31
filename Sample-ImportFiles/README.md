@@ -29,8 +29,8 @@ BrokerName      | Broker transaction was executed with | [String(255)](https://g
 
 Type            | Description                                                                                 |
 ----------------|---------------------------------------------------------------------------------------------|
-Buy             | A standard purchase / buy transaction                                                       |
-Sell            | A standard sale /sell transaction                                                           |
+Buy             | A standard purchase / buy transaction (case sensitive)                                      |
+Sell            | A standard sale /sell transaction (case sensitive)                                          |
 CorporateAction | The issue of bonus shares, stock splits - everything related to actions taken by the issuer |
 Expiry          | The expiry of a derivative contract                                                         |
 Exercise        | The exercise of an option, future etc.                                                      |
