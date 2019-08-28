@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<Snapshot Date="2017-12-29">
+<Instruments>
+<Equity InstrumentId="037833100" CUSIP="037833100" InstrumentCurrency="USD" Price="160.22" InstrumentName="APPLE INC A" LEI = "HWUPKR0MPOU8FGXBT394" />
+</Instruments>
+<Portfolios>
+<Portfolio PortfolioId="14">
+<Asset InstrumentId="037833100" AssetId="3" SFTType="Normal" Quantity="99999" AssetName="APPLE INC A" />
+</Portfolio>
+</Portfolios>
+</Snapshot>
