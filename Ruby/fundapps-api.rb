@@ -7,10 +7,9 @@ require 'colorize'
 # Usage:
 # ... (run 'bundle install' to restore gems from Gemfile) ...
 #
-# fundapps_api = FundAppsAPI.new endpoint: "http://rapptr.local:38727", username: 'jsimpson', password: 'newuser'
+# fundapps_api = FundAppsAPI.new endpoint: "http://rapptr.local:38727", username: 'jsimpson', password: 'password'
 # fundapps_api.import_positions file: 'SamplePositions_Simple.zip'
 # fundapps_api.import_positions_and_get_result file: 'Disclosure_US_1Day.zip'
-# fundapps_api.import_index_data file: 'Indices.csv'
 # fundapps_api.import_portfolios file: 'Portfolios.csv'
 # puts fundapps_api.xsd
 
@@ -21,15 +20,12 @@ class FundAppsAPI
     @password = password
     @content_types = {
       '.csv' => 'text/csv',
-      '.xls' => 'application/vnd.ms-excel',
-      '.xlsx' => 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
       '.xml' => 'application/xml',
       '.zip' => 'application/zip'
     }
   end
 
   def import_positions (file:) post "/v1/expost/check", file end
-  def import_index_data (file:) post "/v1/indexdata/import", file end
   def import_portfolios (file:) post "/v1/portfolios/import", file end
   def xsd; get "/v1/expost/xsd"; end
 
