@@ -2,7 +2,6 @@
 #
 # Usage:
 # Expost-Check -APIUri "https://[ALIAS]-api.fundapps.co" -User "user" -Password "pass" -File "TestUpload.xml"
-# IndexData-Import -APIUri "https://[ALIAS]-api.fundapps.co" -User "user" -Password "pass" -File "Indices.csv"
 # Portfolios-Import -APIUri "https://[ALIAS]-api.fundapps.co" -User "user" -Password "pass" -File "Portfolios.csv"
 
 function API-Post {
@@ -44,11 +43,6 @@ function Import-File {
 function Expost-Check {
     Param ($APIUri, $User, $Password, $File)
     Import-File -User $User -Password $Password -File $File -Uri ($APIUri + "/v1/expost/check")
-}
-
-function IndexData-Import {
-    Param ($APIUri, $User, $Password, $File)
-    Import-File -User $User -Password $Password -File $File -Uri ($APIUri + "/v1/indexdata/import")
 }
 
 function Portfolios-Import {
