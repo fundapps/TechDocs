@@ -133,7 +133,7 @@ List                     | Comma separated string                               
 
 ## Max File Size
 
-We have a maximum allowed file size of approximately 100MB. If your file exceeds this size we suggest zipping it.
+When uploading via the API, we have a maximum allowed file size of approximately 100MB. If your file exceeds this size we suggest zipping it.
 
 ## Examples
 We provide a number of example implementations against our API using commonly available programming languages and libraries in this repository.
