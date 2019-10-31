@@ -18,7 +18,7 @@ A number of methods are available, depending on the kind of data being uploaded.
 
 All of our API methods expect your upload file to be sent as the body of the request; our example implementations show how to achieve this with commonly used HTTP libraries.
 
-### `POST /v1/expost`
+### `POST /v1/expost/check`
 
 Upload Daily Positions. This method expects to receive data in XML format ([example XML position files](Sample-XML/)); large files may be zipped. The response includes a link which when polled allows monitoring of the progress of processing the file.
 
