@@ -13,9 +13,9 @@
     </Instruments>
     <Portfolios>
         <Portfolio PortfolioId="9000">
-            <Asset AssetId="1" AssetName="Vodafone Equity" InstrumentId="GB00BH4HKS39" Quantity="30000" SFTtype="Normal"/>
-            <Asset AssetId="2" AssetName="MSCI EAFE Future" InstrumentId="MSCIEAFEFuture" Quantity="30000" SFTtype="Normal"/>
-            <Asset AssetId="3" AssetName="Nokia Equity" InstrumentId="FI0009000681" Quantity="30000" SFTtype="Normal"/>
+            <Asset AssetId="1" AssetName="Vodafone Equity" InstrumentId="GB00BH4HKS39" Quantity="30000" SFTType="Normal"/>
+            <Asset AssetId="2" AssetName="MSCI EAFE Future" InstrumentId="MSCIEAFEFuture" Quantity="30000" SFTType="Normal"/>
+            <Asset AssetId="3" AssetName="Nokia Equity" InstrumentId="FI0009000681" Quantity="30000" SFTType="Normal"/>
         </Portfolio>
     </Portfolios>
 </Snapshot>
