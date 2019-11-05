@@ -3,14 +3,14 @@
   <Instruments>
     <Equity InstrumentId="FI0009000681" InstrumentName="Nokia Equity" IssuerId="1" IssuerName="Nokia" ISIN="FI0009000681" CountryOfIssue="FI" CountryOfIncorporation="FI" TotalVotingRights="3000" ClassSharesOutstanding="1000" TotalSharesOutstanding="2000" TotalSharesInTreasury="200" MarketCap="1000" InstrumentCurrency="GBP" VotesPerShare="3" Market="XHEL" MarketsListedIn="XHEL" Price="10" CUSIP="" LotSize="1"/>
     <Equity InstrumentId="GB00BH4HKS39" InstrumentName="Vodafone Group PLC" IssuerId="2" IssuerName="Vodafone Group PLC" ISIN="GB00BH4HKS39" CountryOfIssue="GB" CountryOfIncorporation="GB" TotalVotingRights="3000" ClassSharesOutstanding="1000" TotalSharesOutstanding="2000" TotalSharesInTreasury="200" MarketCap="1000" InstrumentCurrency="GBP" VotesPerShare="3" Market="XLON" MarketsListedIn="XBUE,XLON,XNGS" Price="10" CUSIP="" LotSize="1"/>
-    <PreferredEquity InstrumentId="FI0014152282" InstrumentName="Nokia Preferred Equity" IssuerId="1" IssuerName="Nokia" ISIN="FI0014152282" CountryOfIssue="FI" CountryOfIncorporation="FI" TotalVotingRights="3000" ClassSharesOutstanding="1000" TotalSharesOutstanding="2000" TotalSharesInTreasury="200" MarketCap="1000" InstrumentCurrency="GBP" VotesPerShare="0" Market="XHEL" MarketsListedIn="XHEL" Price="15" CUSIP="" LotSize="1" IsConvertiblePreferred="False"/>
-    <PreferredEquity InstrumentId="FI1124856280" InstrumentName="Nokia Convertible Preferred Equity" IssuerId="1" IssuerName="Nokia" ISIN="FI1124856280" CountryOfIssue="FI" CountryOfIncorporation="FI" TotalVotingRights="3000" ClassSharesOutstanding="200" TotalSharesOutstanding="2000" TotalSharesInTreasury="200" MarketCap="1000" InstrumentCurrency="GBP" VotesPerShare="0" Market="XHEL" MarketsListedIn="XHEL" Price="20" CUSIP="" LotSize="1" IsConvertiblePreferred="True">
+    <PreferredEquity InstrumentId="FI0014152282" InstrumentName="Nokia Preferred Equity" IssuerId="1" IssuerName="Nokia" ISIN="FI0014152282" CountryOfIssue="FI" CountryOfIncorporation="FI" TotalVotingRights="3000" ClassSharesOutstanding="1000" TotalSharesOutstanding="2000" TotalSharesInTreasury="200" MarketCap="1000" InstrumentCurrency="GBP" VotesPerShare="0" Market="XHEL" MarketsListedIn="XHEL" Price="15" CUSIP="" LotSize="1" IsConvertiblePreferred="false"/>
+    <PreferredEquity InstrumentId="FI1124856280" InstrumentName="Nokia Convertible Preferred Equity" IssuerId="1" IssuerName="Nokia" ISIN="FI1124856280" CountryOfIssue="FI" CountryOfIncorporation="FI" TotalVotingRights="3000" ClassSharesOutstanding="200" TotalSharesOutstanding="2000" TotalSharesInTreasury="200" MarketCap="1000" InstrumentCurrency="GBP" VotesPerShare="0" Market="XHEL" MarketsListedIn="XHEL" Price="20" CUSIP="" LotSize="1" IsConvertiblePreferred="true">
         <Component InstrumentId="FI0009000681"/>
     </PreferredEquity>
     <ADR InstrumentId="ADR_Vod" InstrumentName="Vod ADR NYSE" ISIN="US92857W2098" Market="XNYS" CUSIP="92857W209" ConversionRatio="2" MarketsListedIn="XNYS">
       <Component InstrumentId="GB00BH4HKS39"/>
     </ADR>
-    <Convertible InstrumentId="Conv_Nokia" InstrumentName="Nokia CB 6.2% 2018" IssuerId="1" IssuerName="Nokia" ISIN="FI00B16GWD58" Market="XHEL" MarketsListedIn="XHEL" CUSIP="" ConversionRatio="2" InControlOfConversion="true" MaturityDate="2015-11-15" Delta="0.35" IsCoveredConvertible="false">
+    <Convertible InstrumentId="Conv_Nokia" InstrumentName="Nokia CB 6.2% 2018" IssuerId="1" IssuerName="Nokia" ISIN="FI00B16GWD58" Market="XHEL" MarketsListedIn="XHEL" CUSIP="" ConversionRatio="2" InControlOfConversion="true" MaturityDate="2015-11-15" Delta="0.35" IsCoveredConvertible="False">
       <Component InstrumentId="FI0009000681"/>
     </Convertible>
     <Warrant InstrumentId="Warrant_Nokia" InstrumentName="Nokia Warrant" CallOrPut="Call" InControlOfConversion="true" IsCoveredWarrant="true" IsCashSettled="true" ContractSize="1" MaturityDate="2015-11-15" Market="XHEL" MarketsListedIn="XHEL" Delta="0.35">
@@ -38,7 +38,7 @@
       <Component InstrumentId="FI0009000681" Weighting="0.5"/>
       <Component InstrumentId="GB00BH4HKS39" Weighting="0.5"/>
     </Index>
-    <Unit InstrumentId="iShares_Developed_Markets_ETF" InstrumentName="iShares_Developed_Markets_ETF" IssuerId="iShares_Developed_Markets_ETF" IssuerName="iShares Developed Markets ETF" ISIN="None" CUSIP="921943858" TotalSharesOutstanding="1000" ClassSharesOutstanding="1000" TotalVotingRights="1000" Price="2000" InstrumentCurrency="USD" Market="XNYS" MarketsListedIn="XNYS" VotesPerShare="1" IsETF="True">
+    <Unit InstrumentId="iShares_Developed_Markets_ETF" InstrumentName="iShares_Developed_Markets_ETF" IssuerId="iShares_Developed_Markets_ETF" IssuerName="iShares Developed Markets ETF" ISIN="None" CUSIP="921943858" TotalSharesOutstanding="1000" ClassSharesOutstanding="1000" TotalVotingRights="1000" Price="2000" InstrumentCurrency="USD" Market="XNYS" MarketsListedIn="XNYS" VotesPerShare="1" IsETF="true">
       <Component InstrumentId="FI0009000681" Weighting="0.55"/>
       <Component InstrumentId="GB00BH4HKS39" Weighting="0.45"/>
     </Unit> 
