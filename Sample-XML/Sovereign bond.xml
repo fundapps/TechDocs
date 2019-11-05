@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Snapshot Date="2018-02-22">
  <Instruments>
-   <Bond InstrumentId="Bond_DE" InstrumentName="DE bond" IssuerId="DE" IssuerName="Germany" ISIN="DE0009000681" DurationAdjustment="0.9" FaceValue="1000" InstrumentCurrency="EUR" IsGovernmentBacked="True" CountryOfIssue="DE" Market="XHEL" MarketsListedIn="XHEL" Price="10" />
+   <Bond InstrumentId="Bond_DE" InstrumentName="DE bond" IssuerId="DE" IssuerName="Germany" ISIN="DE0009000681" DurationAdjustment="0.9" FaceValue="1000" InstrumentCurrency="EUR" IsGovernmentBacked="true" CountryOfIssue="DE" Market="XHEL" MarketsListedIn="XHEL" Price="10"  IsCovered="true"/>
  </Instruments>
  <Portfolios>
    <Portfolio PortfolioId="11">
