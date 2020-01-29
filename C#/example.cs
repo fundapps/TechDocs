@@ -16,8 +16,8 @@ request.AddParameter("text/xml", File.ReadAllText("positions.xml"), ParameterTyp
 request.AddHeader("X-ContentName", "positions-monday.xml");
 var response = client.Execute(request);
 // if response comes back with a 2xx status, then file was received successfully
-if ((resp.StatusCode != HttpStatusCode.OK && resp.StatusCode != HttpStatusCode.Accepted))
+if ((response.StatusCode != HttpStatusCode.OK && response.StatusCode != HttpStatusCode.Accepted))
 {
-   throw new Exception("Failed to send file. Received a HTTP " + (int)resp.StatusCode + " " + resp.StatusCode + " instead of HTTP 200 OK");
+   throw new Exception("Failed to send file. Received a HTTP " + (int)response.StatusCode + " " + response.StatusCode + " instead of HTTP 200 OK");
 }
 // successfully sent file to FundApps
