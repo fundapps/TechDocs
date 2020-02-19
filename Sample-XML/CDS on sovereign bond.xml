@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Snapshot Date="2018-07-16">
     <Instruments>
-        <Bond InstrumentId="GV123456789" InstrumentName="USGV123456789 Govt" InstrumentCurrency="USD" IssuerId="US GOV" IssuerName="UNITED STATES" CUSIP="112233445566" ISIN="US123456789" MarketsListedIn="XNYS" Market="XNYS" Price="100" CountryOfIssue="US" DurationAdjustment="1" FaceValue="100" IsGovernmentBacked="true" IsCovered="true"/>
+        <Bond InstrumentId="GV123456789" InstrumentName="USGV123456789 Govt" InstrumentCurrency="USD" IssuerId="US GOV" IssuerName="UNITED STATES" CUSIP="112233445566" ISIN="US123456789" MarketsListedIn="XNYS" Market="XNYS" Price="100" CountryOfIssue="US" DurationAdjustment="1" FaceValue="100" IsGovernmentBacked="true" />
         <CDS CUSIP="None" ISIN="Unknown" InstrumentCurrency="USD" InstrumentId="87654321" InstrumentName="US GV CDS" Market="XXXX" MarketsListedIn="XXXX" Notional="200" Price="50">
             <Component InstrumentId="GV123456789"/>
         </CDS>
