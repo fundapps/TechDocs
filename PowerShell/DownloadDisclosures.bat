@@ -1,0 +1,1 @@
+powershell.exe -NoProfile -ExecutionPolicy RemoteSigned "& './DownloadDisclosures.ps1'
