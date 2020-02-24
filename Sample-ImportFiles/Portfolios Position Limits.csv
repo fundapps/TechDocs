@@ -1,7 +1,7 @@
 PortfolioId,PortfolioName,PortfolioType,PortfolioCurrency,InceptionDate,PortfolioCompany,LegalParentId,ManagementParentId,RuleFolders,CompanyName,ExchangeAccountType
 100,FundApps Alternatives Ltd,Entity,GBP,,FundApps Alternatives,100,100,,FundApps Alternatives Ltd,"XAMSClientAccount,XEURMarketMakerAccount,XKFEInstitutionalAccount,XSESHedgeAccount"
-103,Management Entity,Entity,EUR,,FundApps Alternatives,103,103,,FundApps Alternatives Ltd,"XAMSClientAccount,XEURMarketMakerAccount,XKFEInstitutionalAccount,XSESHedgeAccount"
-105,FundApps AM USA Ltd,Entity,USD,,FundApps AM USA,105,105,,FundApps AM USA Ltd,"XAMSClientAccount,XEURMarketMakerAccount,XKFEInstitutionalAccount,XSESHedgeAccount"
+103,Management Entity,Entity,EUR,,FundApps Alternatives,103,103,,FundApps Alternatives Ltd,
+105,FundApps AM USA Ltd,Entity,USD,,FundApps AM USA,105,105,,FundApps AM USA Ltd,
 12,Tax Haven Fund,Portfolio,EUR,2013-09-12,FundApps Alternatives,,,Position Limits,FundApps Ltd,
 11,Global Macro Fund,Portfolio,EUR,2013-08-12,FundApps Alternatives,,,Position Limits,FundApps Alternatives Ltd,
 16,Managed (Voting) Fund,Portfolio,EUR,2013-01-12,FundApps Alternatives,,103,Position Limits,,
