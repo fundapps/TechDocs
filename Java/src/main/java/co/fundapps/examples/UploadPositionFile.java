@@ -19,15 +19,17 @@ import java.net.URISyntaxException;
 public class UploadPositionFile {
 
     // replace with your company name
-    public static final String CLIENT = "";
+    public static final String CLIENT = "client";
     // replace with your username
-    public static final String USERNAME = "";
+    public static final String USERNAME = "api-user";
     // replace with your password
     public static final String PASSWORD = "";
 
     public static void main(String[] args) throws URISyntaxException, IOException {
-        String endpoint = String.format("https://%s-api.fundapps.co/v1/expost/check", CLIENT);
         HttpHost fundAppsHost = HttpHost.create(String.format("https://%s-api.fundapps.co", CLIENT));
+        String endpoint = String.format("%s/v1/expost/check", fundAppsHost.toURI());
+
+        System.out.println("endpoint = " + endpoint);
 
         Request postPositions = Request.post(endpoint).bodyFile(new File("positions.xml"), ContentType.TEXT_XML);
         Executor executor = Executor.newInstance().auth(fundAppsHost, USERNAME, PASSWORD.toCharArray());
@@ -39,7 +41,7 @@ public class UploadPositionFile {
         if(response.getCode() == HttpStatus.SC_ACCEPTED ||response.getCode() == HttpStatus.SC_OK){
             System.out.println("File submitted");
         } else {
-            System.out.printf("Error submitting file. HTTP Status Code was: %d", response.getCode());
+            System.err.printf("Error submitting file. HTTP Status Code was: %d", response.getCode());
         }
 
     }
