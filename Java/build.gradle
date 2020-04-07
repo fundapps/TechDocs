@@ -13,5 +13,4 @@ repositories {
 
 dependencies {
     implementation 'org.apache.httpcomponents.client5:httpclient5-fluent:5.0'
-    testImplementation group: 'junit', name: 'junit', version: '4.12'
 }
