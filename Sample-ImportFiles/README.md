@@ -90,14 +90,14 @@ We accept information about imported disclosures in CSV format. You can find a [
 
 Column Name                 | Description                                                                                                                             | Data type                                                            | Required  
 ----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------|-----------
-RapptrRuleID                | ID of the rule for which this disclosure was made                                                                                       | [String](https://github.com/fundapps/api-examples#data-types)        | X 
-AggregationStructure        | The aggregation structure where the rule triggered on                                                                                   | [String](https://github.com/fundapps/api-examples#data-types)        | X  
+RuleID                | ID of the rule for which this disclosure was made                                                                                       | [String](https://github.com/fundapps/api-examples#data-types)        | X 
+AggregationName        | The aggregation structure where the rule triggered on                                                                                   | [String](https://github.com/fundapps/api-examples#data-types)        | X  
 PortfolioOrEntityID         | ID of portfolio/entity where the rule triggered                                                                                         | [String](https://github.com/fundapps/api-examples#data-types)        | X  
 ISIN                        | ISIN of the instrument which triggered the rule                                                                                         | [String(255)](https://github.com/fundapps/api-examples#data-types)   | X  
 IssuerID                    | ID of the issuer                                                                                                                        | [String(255)](https://github.com/fundapps/api-examples#data-types)   | X  
 IssuerName                  | Name of the issuer                                                                                                                      | [String(255)](https://github.com/fundapps/api-examples#data-types)   | X  
-OwnershipPercentageAtFiling | Inputting 6.25 here is equivalent to 6.25%                                                                                              | [Decimal(28,8)](https://github.com/fundapps/api-examples#data-types) | X  
-DisclosureDate              | Date of disclosure. This must reference the actual trade date when the disclosure value was calculated. Choosing a weekend is not valid | [Date](https://github.com/fundapps/api-examples#data-types)          | X  
+Value | Ownership Percentage At Filing: Inputting 6.25 here is equivalent to 6.25%                                                                                               | [Decimal(28,8)](https://github.com/fundapps/api-examples#data-types) | X  
+Date              | Date of disclosure. This must reference the actual trade date when the disclosure value was calculated. Choosing a weekend is not valid | [Date](https://github.com/fundapps/api-examples#data-types)          | X  
 
 ### Data Requirements
 
