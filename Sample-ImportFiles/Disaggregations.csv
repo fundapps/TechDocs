@@ -2,3 +2,4 @@ Name,Country,Labels,Rules,Entities
 Italy Major & Short Disaggregation,IT,"Short Selling, Major Shareholding",,110
 GB Takeover Disaggregation,GB,,"TakeOverGB, TakeOverGB-Dealings",120
 US Major Disaggregation,US,Major Shareholding,,"110,120"
+Position Limits Disaggregation,US,Position Limits Disaggregated,,"120"
