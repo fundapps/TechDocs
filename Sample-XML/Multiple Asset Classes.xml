@@ -19,9 +19,6 @@
     <Rights InstrumentId="Right_Nokia" InstrumentName="Nokia Right" ConversionRatio="3" MaturityDate="2015-11-15" Market="XHEL" MarketsListedIn="XHEL">
       <Component InstrumentId="FI0009000681"/>
     </Rights>
-    <CFD InstrumentId="CGB00B16GWXYZ" InstrumentName="Nokia CFD" ContractSize="1" IsCashSettled="true" Market="XHEL" MarketsListedIn="XHEL">
-      <Component InstrumentId="FI0009000681"/>
-    </CFD>
     <Option InstrumentId="CALL_Nokia_PY" InstrumentName="PS Call on Nokia" CallOrPut="Call" IsCashSettled="false" Market="XHEL" ContractSize="100" MaturityDate="2015-11-15" Delta="0.85">
       <Component InstrumentId="FI0009000681"/>
     </Option>
@@ -45,16 +42,15 @@
   </Instruments>
   <Portfolios>
     <Portfolio PortfolioId="11">
-      <Asset AssetId="1" AssetName="Nokia Equity" InstrumentId="FI0009000681" Quantity="10"/>
-      <Asset AssetId="2" AssetName="Nokia CFD" InstrumentId="CGB00B16GWXYZ" Quantity="10"/>
-      <Asset AssetId="3" AssetName="PS Call on Nokia" InstrumentId="CALL_Nokia_PY" Quantity="1"/>
-      <Asset AssetId="4" AssetName="CS Call on Nokia" InstrumentId="CALL_Nokia_CS" Quantity="1"/>
-      <Asset AssetId="5" AssetName="Nokia CB 6.2% 2018" InstrumentId="Conv_Nokia" Quantity="10"/>
-      <Asset AssetId="6" AssetName="Nokia Warrant" InstrumentId="Warrant_Nokia" Quantity="10"/>
-      <Asset AssetId="7" AssetName="Nokia Right" InstrumentId="Right_Nokia" Quantity="10"/>
-      <Asset AssetId="8" AssetName="Nokia Swap" InstrumentId="Swap_Nokia" Quantity="10"/>
-      <Asset AssetId="9" AssetName="STOXX 600 SXXP Index Future" InstrumentId="Fut_STOXX_600" Quantity="-1"/>
-      <Asset AssetId="10" AssetName="iShares Developed Markets ETF" InstrumentId="iShares_Developed_Markets_ETF" Quantity="10"/>
+      <Asset AssetId="1" AssetName="Nokia Equity" InstrumentId="FI0009000681" Quantity="10" SFTType="Normal"/>
+      <Asset AssetId="3" AssetName="PS Call on Nokia" InstrumentId="CALL_Nokia_PY" Quantity="1"SFTType="Normal"/>
+      <Asset AssetId="4" AssetName="CS Call on Nokia" InstrumentId="CALL_Nokia_CS" Quantity="1"SFTType="Normal"/>
+      <Asset AssetId="5" AssetName="Nokia CB 6.2% 2018" InstrumentId="Conv_Nokia" Quantity="10"SFTType="Normal"/>
+      <Asset AssetId="6" AssetName="Nokia Warrant" InstrumentId="Warrant_Nokia" Quantity="10"SFTType="Normal"/>
+      <Asset AssetId="7" AssetName="Nokia Right" InstrumentId="Right_Nokia" Quantity="10"SFTType="Normal"/>
+      <Asset AssetId="8" AssetName="Nokia Swap" InstrumentId="Swap_Nokia" Quantity="10"SFTType="Normal"/>
+      <Asset AssetId="9" AssetName="STOXX 600 SXXP Index Future" InstrumentId="Fut_STOXX_600" Quantity="-1"/SFTType="Normal">
+      <Asset AssetId="10" AssetName="iShares Developed Markets ETF" InstrumentId="iShares_Developed_Markets_ETF" Quantity="10" SFTType="Normal"/>
     </Portfolio>
   </Portfolios>
 </Snapshot>
