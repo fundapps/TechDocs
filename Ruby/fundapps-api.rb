@@ -11,6 +11,7 @@ require 'colorize'
 # fundapps_api.import_positions file: 'SamplePositions_Simple.zip'
 # fundapps_api.import_positions_and_get_result file: 'Disclosure_US_1Day.zip'
 # fundapps_api.import_portfolios file: 'Portfolios.csv'
+# fundapps_api.import_portfolios_ignore_unknowns file: 'Portfolios.csv'
 # puts fundapps_api.xsd
 
 class FundAppsAPI
@@ -27,6 +28,7 @@ class FundAppsAPI
 
   def import_positions (file:) post "/v1/expost/check", file end
   def import_portfolios (file:) post "/v1/portfolios/import", file end
+  def import_portfolios_ignore_unknowns (file:) post "/v1/portfolios/import?ignoreUnknownProperties=true", file end
   def xsd; get "/v1/expost/xsd"; end
 
   private

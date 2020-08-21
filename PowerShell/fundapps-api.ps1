@@ -3,6 +3,7 @@
 # Usage:
 # Expost-Check -APIUri "https://[ALIAS]-api.fundapps.co" -User "user" -Password "pass" -File "TestUpload.xml"
 # Portfolios-Import -APIUri "https://[ALIAS]-api.fundapps.co" -User "user" -Password "pass" -File "Portfolios.csv"
+# Portfolios-Import-Ignore-Unknowns -APIUri "https://[ALIAS]-api.fundapps.co" -User "user" -Password "pass" -File "Portfolios.csv"
 
 function API-Post {
     Param ($Uri, $User, $Password, $File)
@@ -48,4 +49,9 @@ function Expost-Check {
 function Portfolios-Import {
     Param ($APIUri, $User, $Password, $File)
     Import-File -User $User -Password $Password -File $File -Uri ($APIUri + "/v1/portfolios/import")
+}
+
+function Portfolios-Import-Ignore-Unknowns {
+    Param ($APIUri, $User, $Password, $File)
+    Import-File -User $User -Password $Password -File $File -Uri ($APIUri + "/v1/portfolios/import?ignoreUnknownProperties=true")
 }
