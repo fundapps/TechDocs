@@ -1,4 +1,0 @@
-IsEnabled,Type,ConditionProperty,ConditionValue,TargetProperty,TargetSourceType,TargetSource,TargetCondition,ActiveFrom,ActiveTo,Note
-TRUE,Override,ISIN,GB00BH4HKS39,TotalSharesOutstanding,ReplaceWithConstant,2400,2000,2019-05-07,2021-05-06,Change Vodafone's (ISIN: GB00BH4HKS39) TSO to 2400 if source file provides 2000
-TRUE,Default,ISIN,GB00BH4HKS39,MarketCap,ReplaceWithConstant,512000000,,2019-05-07,,Defaulted as data was not available from data source
-TRUE,Remove,InstrumentId,Fut_STOXX_600,CallOrPut,,,,2019-05-07,2021-05-06,Property not required for Futures
