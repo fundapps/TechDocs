@@ -5,7 +5,7 @@
     </Instruments> 
     <Portfolios>
         <Portfolio PortfolioId="11">
-            <Asset AssetId="1" AssetName="Nokia Equity" InstrumentId="FI0009000681" Quantity="10"/>
+            <Asset AssetId="FI0009000681XHEL" AssetName="Nokia Equity" InstrumentId="FI0009000681" Quantity="10"/>
         </Portfolio>
     </Portfolios>
 </Snapshot>
