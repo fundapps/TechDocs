@@ -20,10 +20,10 @@
     </Instruments>
     <Portfolios>
         <Portfolio PortfolioId="11">
-            <Asset AssetId="1" AssetName="Vodafone Equity" InstrumentId="GB00BH4HKS39" Quantity="30000"/>
-            <Asset AssetId="2" AssetName="MSCI EAFE Index Option" InstrumentId="MSCIEAFEOption" Quantity="200"/>
-            <Asset AssetId="3" AssetName="March 17 AGRICULTURE - BURSA MALAYSIA CRUDE PALM OIL GASOIL SPREAD (POG) FUTURES*" InstrumentId="11" Quantity="1500"/>
-            <Asset AssetId="4" AssetName="April 17 AGRICULTURE - BURSA MALAYSIA CRUDE PALM OIL GASOIL SPREAD (POG) FUTURES*" InstrumentId="12" Quantity="-1800"/>
+            <Asset AssetId="GB00BH4HKS39XLON" AssetName="Vodafone Equity" InstrumentId="GB00BH4HKS39" Quantity="30000"/>
+            <Asset AssetId="MSCIEAFEOption" AssetName="MSCI EAFE Index Option" InstrumentId="MSCIEAFEOption" Quantity="200"/>
+            <Asset AssetId="US2009812212XCME2017-03" AssetName="March 17 AGRICULTURE - BURSA MALAYSIA CRUDE PALM OIL GASOIL SPREAD (POG) FUTURES*" InstrumentId="11" Quantity="1500"/>
+            <Asset AssetId="US2009812212XCME2017-04" AssetName="April 17 AGRICULTURE - BURSA MALAYSIA CRUDE PALM OIL GASOIL SPREAD (POG) FUTURES*" InstrumentId="12" Quantity="-1800"/>
         </Portfolio>
     </Portfolios>
 </Snapshot>
