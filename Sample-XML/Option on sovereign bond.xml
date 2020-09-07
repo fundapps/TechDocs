@@ -8,8 +8,8 @@
  </Instruments>
  <Portfolios>
    <Portfolio PortfolioId="11">
-     <Asset AssetId="1" AssetName="DE bond option" InstrumentId="Bond_DE_option" Quantity="100" SFTType="Normal" />
-     <Asset AssetId="2" AssetName="DE bond" InstrumentId="Bond_DE" Quantity="-100000" SFTType="Normal"/>
+     <Asset AssetId="DE0009000681OptionXHEL" AssetName="DE bond option" InstrumentId="Bond_DE_option" Quantity="100" SFTType="Normal" />
+     <Asset AssetId="DE0009000681XHEL" AssetName="DE bond" InstrumentId="Bond_DE" Quantity="-100000" SFTType="Normal"/>
    </Portfolio>
  </Portfolios>
 </Snapshot>
