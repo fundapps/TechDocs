@@ -5,7 +5,7 @@
  </Instruments>
  <Portfolios>
    <Portfolio PortfolioId="11">
-     <Asset AssetId="1" AssetName="DE bond" InstrumentId="Bond_DE" Quantity="-100000" SFTType="Normal"/>
+     <Asset AssetId="DE0009000681XHEL" AssetName="DE bond" InstrumentId="Bond_DE" Quantity="-100000" SFTType="Normal"/>
    </Portfolio>
  </Portfolios>
 </Snapshot>
