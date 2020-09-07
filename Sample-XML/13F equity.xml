@@ -24,7 +24,7 @@
       <Asset InstrumentId="000375204" AssetId="9" SFTType="Normal" Quantity="89491" AssetName="ABB LTD" />
     </Portfolio>
     <Portfolio PortfolioId="17">
-      <Asset InstrumentId="88579Y101" AssetId="1" SFTType="Normal" Quantity="99000" AssetName="3M CO" />
+      <Asset InstrumentId="88579Y101" AssetId="88579Y101" SFTType="Normal" Quantity="99000" AssetName="3M CO" />
     </Portfolio>
   </Portfolios>
 </Snapshot>
