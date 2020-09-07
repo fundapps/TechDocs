@@ -8,7 +8,7 @@
     </Instruments> 
     <Portfolios>
         <Portfolio PortfolioId="11">
-            <Asset AssetId="1" AssetName="Nokia Right" InstrumentId="FI0009000681" Quantity="10" SFTType="Normal"/>
+            <Asset AssetId="FI0009000681XEGX" AssetName="Nokia Right" InstrumentId="FI0009000681" Quantity="10" SFTType="Normal"/>
         </Portfolio>
     </Portfolios>
 </Snapshot>
