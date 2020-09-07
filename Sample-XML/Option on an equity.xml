@@ -8,10 +8,10 @@
   </Instruments>
   <Portfolios>
     <Portfolio PortfolioId="11">
-      <Asset AssetId="1" AssetName="PS Call on Nokia" InstrumentId="CALL_Nokia_PY" Quantity="1"/>
+      <Asset AssetId="FI0009000681PSCALL" AssetName="PS Call on Nokia" InstrumentId="CALL_Nokia_PY" Quantity="1"/>
     </Portfolio>
     <Portfolio PortfolioId="12">
-      <Asset AssetId="1" AssetName="Nokia Equity" InstrumentId="FI0009000681" Quantity="10"/>
+      <Asset AssetId="FI0009000681XHEL" AssetName="Nokia Equity" InstrumentId="FI0009000681" Quantity="10"/>
     </Portfolio>
   </Portfolios>
 </Snapshot>
