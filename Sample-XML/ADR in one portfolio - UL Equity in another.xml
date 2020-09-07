@@ -8,10 +8,10 @@
     </Instruments>
     <Portfolios>
         <Portfolio PortfolioId="11">
-            <Asset AssetId="1" AssetName="Vodafone ADR" InstrumentId="US92857W2098" Quantity="14000"/>
+            <Asset AssetId="US92857W2098XNYS" AssetName="Vodafone ADR" InstrumentId="US92857W2098" Quantity="14000"/>
         </Portfolio>
         <Portfolio PortfolioId="12">
-            <Asset AssetId="1" AssetName="Vodafone Equity" InstrumentId="GB00BH4HKS39" Quantity="30000"/>
+            <Asset AssetId="GB00BH4HKS39XLON" AssetName="Vodafone Equity" InstrumentId="GB00BH4HKS39" Quantity="30000"/>
         </Portfolio>
     </Portfolios>
 </Snapshot>
