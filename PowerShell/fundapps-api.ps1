@@ -4,6 +4,7 @@
 # Expost-Check -APIUri "https://[ALIAS]-api.fundapps.co" -User "user" -Password "pass" -File "TestUpload.xml"
 # Portfolios-Import -APIUri "https://[ALIAS]-api.fundapps.co" -User "user" -Password "pass" -File "Portfolios.csv"
 # Portfolios-Import-Ignore-Unknowns -APIUri "https://[ALIAS]-api.fundapps.co" -User "user" -Password "pass" -File "Portfolios.csv"
+# For how to encrypt passwords on a machine before using as a parameter see here: https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/convertto-securestring?view=powershell-7
 
 function API-Post {
     Param ($Uri, $User, $Password, $File)
