@@ -2,10 +2,10 @@ PortfolioId,PortfolioName,PortfolioCurrency,PortfolioType,PortfolioCompany,Legal
 100,Top Level Company,USD,Entity,Demo AM,100,100,100,,"US-QII,UKIM,NotZA",US,
 103,Management Entity,USD,Entity,Demo AM,100,100,100,,"US-QII,UKIM,NotZA",US,
 105,US Entity,USD,Entity,Demo AM,103,103,103,,"US-QII,UKIM,NotZA",US,
-11,Global Macro Fund,USD,Portfolio,Demo AM,100,100,100,"Disclosure, Validation, Validation Disclosure, Short Selling, Short Selling Ban",NotZA,US,FALSE
-12,Tax Haven Fund,USD,Portfolio,Demo AM,100,100,100,"Disclosure, Validation, Validation Disclosure, Short Selling, Short Selling Ban",NotZA,US,FALSE
-13,Special Interest Fund,USD,Portfolio,Demo AM,100,100,100,"Disclosure, Validation, Validation Disclosure, Short Selling, Short Selling Ban",NotZA,US,FALSE
-14,US Fund,USD,Portfolio,Demo AM,105,105,105,"Disclosure, Validation, Validation Disclosure, Short Selling, Short Selling Ban",NotZA,US,FALSE
-15,Managed Fund,USD,Portfolio,Demo AM,103,103,103,"Disclosure, Validation, Validation Disclosure, Short Selling, Short Selling Ban",NotZA,US,FALSE
-16,Managed (Voting) Fund,USD,Portfolio,Demo AM,103,103,103,"Disclosure, Validation, Validation Disclosure, Short Selling, Short Selling Ban",NotZA,US,FALSE
-17,US Fund II,USD,Portfolio,Demo AM,105,105,105,"Disclosure, Validation, Validation Disclosure, Short Selling, Short Selling Ban",NotZA,US,FALSE
+11,Global Macro Fund,USD,Portfolio,Demo AM,100,100,100,"Disclosure, Validation, Validation Disclosure, Short Selling",NotZA,US,FALSE
+12,Tax Haven Fund,USD,Portfolio,Demo AM,100,100,100,"Disclosure, Validation, Validation Disclosure, Short Selling",NotZA,US,FALSE
+13,Special Interest Fund,USD,Portfolio,Demo AM,100,100,100,"Disclosure, Validation, Validation Disclosure, Short Selling",NotZA,US,FALSE
+14,US Fund,USD,Portfolio,Demo AM,105,105,105,"Disclosure, Validation, Validation Disclosure, Short Selling",NotZA,US,FALSE
+15,Managed Fund,USD,Portfolio,Demo AM,103,103,103,"Disclosure, Validation, Validation Disclosure, Short Selling",NotZA,US,FALSE
+16,Managed (Voting) Fund,USD,Portfolio,Demo AM,103,103,103,"Disclosure, Validation, Validation Disclosure, Short Selling",NotZA,US,FALSE
+17,US Fund II,USD,Portfolio,Demo AM,105,105,105,"Disclosure, Validation, Validation Disclosure, Short Selling",NotZA,US,FALSE
