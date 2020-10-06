@@ -10,7 +10,7 @@
       <Component InstrumentId="GB00BH4HKS39" Weighting="0.3"/>
     </StructuredProduct>
 <!--If using quantity weighting for structured products, use the example below-->
-    <StructuredProduct InstrumentId="SP9000" InstrumentName="Structured Product 9000" InstrumentCurrency="EUR" Price="100" IssuerDomicile="GB">
+    <StructuredProduct InstrumentId="SP9000" InstrumentName="Structured Product 9000" InstrumentCurrency="EUR" Price="100000" IssuerDomicile="GB">
       <Component InstrumentId="FI0009000681" WeightingQuantity="7000"/>
       <Component InstrumentId="GB00BH4HKS39" WeightingQuantity="3000"/>
     </StructuredProduct>
