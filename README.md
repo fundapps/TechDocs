@@ -57,6 +57,16 @@ The Summary element is comprised of:
  * The total number of alerts by type - i.e. Breach, Unknown, etc.
  * The number of new alerts by type (since the day before).
 
+You cannot check the progress of a portfolio file upload because these files load too quickly. Instead, when you upload a portfolio file, it will return a status immediately of any of the following:
+
+ValidationState  | Explanation  
+-----------------|-------------
+Uploaded         | Succesfully uploaded    
+Validation       | Validation failure
+No input document| No file attached to API call     
+Unexpected Error | Error in file upload  
+
+
 #### Sample
     (Request)
     GET https://%company%-api.fundapps.co/v1/ExPost/Result/fe633307-f196-4609-abfe-a1fc0111e875 HTTP/1.1
