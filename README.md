@@ -59,12 +59,12 @@ The Summary element is comprised of:
 
 You cannot check the progress of a portfolio file upload because these files load too quickly. Instead, when you upload a portfolio file, it will return a status immediately of any of the following:
 
-ValidationState  | Explanation  
------------------|-------------
-Uploaded         | Succesfully uploaded    
-Validation       | Validation failure
-No input document| No file attached to API call     
-Unexpected Error | Error in file upload  
+ValidationState   | Explanation  
+------------------|-------------
+Uploaded          | Succesfully uploaded    
+Validation failure| File did not pass validation
+No input document | No file attached to API call     
+Unexpected Error  | Error in file upload  
 
 
 #### Sample
