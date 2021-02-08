@@ -57,7 +57,7 @@ The Summary element is comprised of:
  * The total number of alerts by type - i.e. Breach, Unknown, etc.
  * The number of new alerts by type (since the day before).
 
-You cannot check the progress of a portfolio file upload because these files load too quickly. Instead, when you upload a portfolio file, it will return a status immediately of any of the following:
+You cannot check the progress of a portfolio file upload. Instead, when you upload a portfolio file, it will return a status immediately of any of the following:
 
 ValidationState   | Explanation  
 ------------------|-------------
