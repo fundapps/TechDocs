@@ -5,7 +5,7 @@ from xml.etree import ElementTree
 import time
 
 ############
-# PLEASE POPULATE FOUR VARIABLES BELOW TO TEST
+# PLEASE POPULATE FOUR VARIABLES BELOW TO TEST, PLEASE USE PYTHON 3.6 OR ABOVE
 ###########
 
 client_environment  = '' 
