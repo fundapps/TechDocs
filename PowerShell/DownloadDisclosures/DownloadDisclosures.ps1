@@ -43,6 +43,6 @@ $ws = Get-LocalSession -Url $url -Email $email -Password $password
 $today = Get-Date -Format yyyy-MM-dd
 #Default is Last 31 Days, Change to -10000 for alltime (will take longer to query)
 $one_month_ago = Get-Date -date $(Get-Date).AddDays(-31) -format yyyy-MM-dd
-$response = Invoke-RestMethod -Uri "$url/IncidentDisclosureList/Excel?startFilter=$one_month_ago&endFilter=$today" -Method Get -WebSession $ws.Session
+$response = Invoke-RestMethod -Uri "$url/api/reporting/disclosures-detailed/export?startDate=$one_month_ago&endDate=$today" -Method Get -WebSession $ws.Session
 $csv = $response | ConvertFrom-CSV
 $csv | Select-Object Entity,Rule,Key,"Cross date","Due by (UTC)","Filed (UTC)",Value,Assignee,Status | Export-Csv -Path "$env:USERPROFILE\HistoricDisclosures.csv"
