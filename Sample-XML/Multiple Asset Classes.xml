@@ -28,7 +28,7 @@
     <Swap InstrumentId="Swap_Nokia" InstrumentName="Nokia Swap" IsCashSettled="true" Market="XHEL" MarketsListedIn="XHEL">
       <Component InstrumentId="FI0009000681"/>
     </Swap>
-    <Future InstrumentId="Fut_STOXX_600" InstrumentName="STOXX 600 SXXP Index Future" IsCashSettled="true" ContractSize="10" Market="XHEL" MarketsListedIn="XHEL">
+    <Future InstrumentId="Fut_STOXX_600" InstrumentName="STOXX 600 SXXP Index Future" ISIN="FUT900090001" IsCashSettled="true" Market="XHEL" MarketsListedIn="XHEL"  ContractSize="100" CUSIP="123456789" CommoditySymbol="FXXP" DeliveryMonth="2015-12" MaturityDate="2015-12-15" ExercisePrice="3120" Notional="3000">
       <Component InstrumentId="SXXP"/>
     </Future>
     <Index InstrumentId="SXXP" InstrumentName="STOXX 600" Price="3120.00" InstrumentCurrency="EUR">
