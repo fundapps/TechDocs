@@ -7,7 +7,7 @@
             <Component InstrumentId="FI0009000681" Weighting="0.7"/>
             <Component InstrumentId="GB00BH4HKS39" Weighting="0.3"/>
         </Index>
-        <Future InstrumentId="MSCIEAFEFuture" InstrumentName="MSCI EAFE Future" ISIN="FUT900090001" IsCashSettled="true" Market="XHEL" MarketsListedIn="XHEL"  ContractSize="100" CUSIP="123456789" MaturityDate="2018-12-15" ExercisePrice="3120" Notional="3000">
+        <Future InstrumentId="MSCIEAFEFuture" InstrumentName="MSCI EAFE Future" ISIN="FUT900090001" IsCashSettled="true" Market="XHEL" MarketsListedIn="XHEL"  ContractSize="100" CUSIP="123456789" CommoditySymbol="MSF" DeliveryMonth="2018-12" MaturityDate="2018-12-15" ExercisePrice="3120" Notional="3000">
             <Component InstrumentId="MSCI"/>
         </Future> 
     </Instruments>

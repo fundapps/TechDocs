@@ -2,7 +2,7 @@
 <Snapshot Date="2018-08-30">
     <Instruments>
         <Bond InstrumentId="Evil Bond" Instrumentname="Evil Corporate Bond" IssuerId="EvilCorp" IssuerName="Evil Corporation" CountryOfIssue="GB" CUSIP="123456789" FaceValue="1000" ISIN="ABC123456789"  Market="XLON" MarketsListedIn="XLON" TitleOfClass="EVIL"/>
-        <Future InstrumentId="BondFuture" InstrumentName="Evil Bond Future" ISIN="FUT900090001" IsCashSettled="true" Market="XHEL" MarketsListedIn="XHEL" CUSIP="123456789" MaturityDate="2018-12-15" ExercisePrice="3120" Notional="3000">
+        <Future InstrumentId="BondFuture" InstrumentName="Evil Bond Future" ISIN="FUT900090001" IsCashSettled="true" Market="XHEL" MarketsListedIn="XHEL" CUSIP="123456789" CommoditySymbol="ZBM1" DeliveryMonth="2018-12" MaturityDate="2018-12-15" ExercisePrice="3120" Notional="3000">
             <Component InstrumentId="Evil Bond"/>
         </Future> 
     </Instruments>
