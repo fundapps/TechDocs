@@ -171,11 +171,11 @@ You must submit your data vendor username and password to this endpoint. Before 
 
 ## Methods
 
-## 'POST /rest/api/v1/task/positions'
-Upload daily positions. This method expects a csv format ([example XML position files](Adapptr/)). The response includes a taskId and a trackingEndpoint that can then be polled via the GET method to monitor the progress of the task through the Adapptr service.
+## `POST /rest/api/v1/task/positions`
+Upload daily positions. This method expects a csv format ([example Adapptr position files](Adapptr/)). The response includes a taskId and a trackingEndpoint that can then be polled via the GET method to monitor the progress of the task through the Adapptr service.
 
 #### Sample
-`
+```
 {
     "id": "35ce6225-1534-4e7e-8199-611a8647f8ee",
     "type": {
@@ -191,10 +191,10 @@ Upload daily positions. This method expects a csv format ([example XML position 
     "trackingEndpoint": "/prod/rest/api/v1/task/35ce6225-1534-4e7e-8199-611a8647f8ee/status",
     "errors": null
 }
-`
+```
 
 
-## 'GET /rest/api/v1/task/:taskID/status'
+## `GET /rest/api/v1/task/:taskID/status`
 GET the task status. This method returns a status of the requested TaskId and if the task has failed, the errors that have contributed to the failure.
 
 There are 4 status ids
@@ -209,7 +209,7 @@ id | status      | Explanation
 Once transmitted, the request will give the Rapptr trackingEndpoint url which can be polled to see the status of the xml positions file upload to FundApps.
 
 #### Sample
-`
+```
 {
     "id": "35ce6225-1534-4e7e-8199-611a8647f8ee",
     "type": {
@@ -225,4 +225,4 @@ Once transmitted, the request will give the Rapptr trackingEndpoint url which ca
     "trackingEndpoint": "https://demo-melon-api.fundapps.co/v1/expost/result/a0fdcb8f-ad01-4765-9c09-ad4a009a4406",
     "errors": null
 }
-`
+```
