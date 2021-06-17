@@ -162,11 +162,11 @@ The base url is https://vjo5dtpd4b.execute-api.eu-west-1.amazonaws.com/prod/
 You authenticate to the Adapptr API via [Basic Authentication](https://tools.ietf.org/html/rfc2617) over HTTPS. A Rapptr administrator from your organisation must create a user with the role "API" for this purpose. You must authenticate for all requests.
 **Note:** Please ensure you create a separate user for the API as if you use an existing user's account, as soon as they change their password the API upload will fail.
 
-## Available data vendors 'GET /rest/api/v1/dataproviders'
+## Available data vendors `GET /rest/api/v1/dataproviders`
 The list of available data vendors can be requested from this endpoint. You must then user the :providerId number when calling the POST request below to submit your data vendor credentials.
 
 
-## Data vendor credentials 'POST /rest/api/v1/dataproviders/:providerId/credentials'
+## Data vendor credentials `POST /rest/api/v1/dataproviders/:providerId/credentials`
 You must submit your data vendor username and password to this endpoint. Before being able to post a file to Adapptr, your data vendor credentials must be set. Your file upload will otherwise fail because FundApps will be unable to connect and authenticate against the data vendor.
 
 ## Methods
