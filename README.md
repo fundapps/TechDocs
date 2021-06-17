@@ -156,7 +156,7 @@ We provide a REST-ful HTTPS API for automated interfaces between your systems an
 Our API methods return machine readable responses in JSON format, including error conditions.
 
 ## Base URI
-The base url is https://vjo5dtpd4b.execute-api.eu-west-1.amazonaws.com/prod/
+The base url will be shared in the Adapptr implementation manual.
 
 ## Authentication
 You authenticate to the Adapptr API via [Basic Authentication](https://tools.ietf.org/html/rfc2617) over HTTPS. A Rapptr administrator from your organisation must create a user with the role "API" for this purpose. You must authenticate for all requests.
