@@ -176,7 +176,7 @@ For all methods, the header `X-Client-Environment` is required. This must be pop
 ## `POST /rest/api/v1/task/positions`
 Upload daily positions. This method expects a csv format ([example Adapptr position files](Adapptr/)). The response includes a taskId and a trackingEndpoint that can then be polled via the GET method to monitor the progress of the task through the Adapptr service.
 
-`snapshotDate` needs to be included as a parameter in the format yyyy-mm-dd. This is the snapshot date of the positions being uploaded in the csv file.
+The `snapshotDate` parameter must be included as a parameter in the format `yyyy-mm-dd`. This is the snapshot date of the positions being uploaded in the csv file.
 
 #### Sample Response
 ```
