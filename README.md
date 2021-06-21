@@ -162,19 +162,23 @@ The base url will be shared in the Adapptr implementation manual.
 You authenticate to the Adapptr API via [Basic Authentication](https://tools.ietf.org/html/rfc2617) over HTTPS. A Rapptr administrator from your organisation must create a user with the role "API" for this purpose. You must authenticate for all requests.
 **Note:** Please ensure you create a separate user for the API as if you use an existing user's account, as soon as they change their password the API upload will fail.
 
-## Available data vendors `GET /rest/api/v1/dataproviders`
+## Available Data Vendors `GET /rest/api/v1/dataproviders`
 The list of available data vendors can be requested from this endpoint. You must then user the :providerId number when calling the POST request below to submit your data vendor credentials.
 
 
-## Data vendor credentials `POST /rest/api/v1/dataproviders/:providerId/credentials`
+## Data Vendor Credentials `POST /rest/api/v1/dataproviders/:providerId/credentials`
 You must submit your data vendor username and password to this endpoint. Before being able to post a file to Adapptr, your data vendor credentials must be set. Your file upload will otherwise fail because FundApps will be unable to connect and authenticate against the data vendor.
 
 ## Methods
 
+For all methods, the header `X-Client-Environment` is required. This must be populated with the name of your FundApps environment.
+
 ## `POST /rest/api/v1/task/positions`
 Upload daily positions. This method expects a csv format ([example Adapptr position files](Adapptr/)). The response includes a taskId and a trackingEndpoint that can then be polled via the GET method to monitor the progress of the task through the Adapptr service.
 
-#### Sample
+`snapshotDate` needs to be included as a parameter in the format yyyy-mm-dd. This is the snapshot date of the positions being uploaded in the csv file.
+
+#### Sample Response
 ```
 {
     "id": "35ce6225-1534-4e7e-8199-611a8647f8ee",
@@ -202,13 +206,13 @@ There are 4 status ids
 id | status      | Explanation                                                                                                    
 ---|-------------|------------------------
 1  | Accepted    | Job just received; not processed yet                                                                           
-2  | Enrichment  | Requesting data from data vendor, combining it with information sent in the csv file and building the xml file 
+2  | Enriched    | Data is being requested from data vendor, then enriched with the csv file and the xml file generated but not yet sent to Rapptr  
 3  | Transmitted | xml file sent to fundapps                                                                                      
 4  | Failed      | Job has failed. Please read errors to identify cause of job failure.                                           
 
 Once transmitted, the request will give the Rapptr trackingEndpoint url which can be polled to see the status of the xml positions file upload to FundApps.
 
-#### Sample
+#### Sample Response
 ```
 {
     "id": "35ce6225-1534-4e7e-8199-611a8647f8ee",
