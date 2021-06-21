@@ -165,6 +165,9 @@ You authenticate to the Adapptr API via [Basic Authentication](https://tools.iet
 ## Available Data Vendors `GET /rest/api/v1/dataproviders`
 The list of available data vendors can be requested from this endpoint. You must then user the :providerId number when calling the POST request below to submit your data vendor credentials.
 
+Id | Data Vendor  
+---|------------
+1  | Refinitiv    
 
 ## Data Vendor Credentials `POST /rest/api/v1/dataproviders/:providerId/credentials`
 You must submit your data vendor username and password to this endpoint. Before being able to post a file to Adapptr, your data vendor credentials must be set. Your file upload will otherwise fail because FundApps will be unable to connect and authenticate against the data vendor.
