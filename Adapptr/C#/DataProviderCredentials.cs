@@ -23,7 +23,7 @@ namespace FundAppsScripts.Scripts
             // your FundApps environment name
             var clientEnvironmentSubDomain = "";
 
-            //data providers ids can be obtained from a GET /rest/api/v1/dataproviders
+            //data providers ids can be obtained from a GET /rest/api/v1/dataproviders. You will need to fill Id with the value of the data vendor you are using
             var refinitivId = _adapptrConfig.RefinitivConfig.Id;
             // set your username
             var refinitivUsername = _adapptrConfig.RefinitivConfig.Username;
