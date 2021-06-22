@@ -15,10 +15,10 @@ namespace FundAppsScripts.Scripts
             var password = _adapptrConfig.Password;
             // your FundApps environment name
             var clientEnvironmentSubDomain = "";
-             // csv file only
+            // csv file only
             var pathToFile = "";
             // the snapshot date of your positions in the format yyyy-MM-dd
-            var snapshotDate = DateTime.Today.ToString("");
+            var snapshotDate = DateTime.Today.ToString("yyyy-MM-dd");
 
             //Example using RestSharp (https://github.com/restsharp/RestSharp)
 
@@ -41,7 +41,7 @@ namespace FundAppsScripts.Scripts
             var response = client.Execute<TaskProfileResponse>(request);
 
             // if response comes back with a 200 status, then as task for the positions file was created successfully
-            if ((response.StatusCode != HttpStatusCode.OK) || (response.StatusCode != HttpStatusCode.Accepted))
+            if ((response.StatusCode != HttpStatusCode.OK) && (response.StatusCode != HttpStatusCode.Accepted))
             {
                 throw new Exception("Failed to send file. Received a HTTP " + (int)response.StatusCode + " " + response.StatusCode + " instead of HTTP 200 OK");
             }
