@@ -172,9 +172,17 @@ Id | Data Vendor
 ## Data Vendor Credentials `POST /rest/api/v1/dataproviders/:providerId/credentials`
 You must submit your data vendor username and password to this endpoint. Before being able to post a file to Adapptr, your data vendor credentials must be set. Your file upload will otherwise fail because FundApps will be unable to connect and authenticate against the data vendor.
 
+e.g 
+`{
+    "Username": "[Username]",
+    "Password": "[Password]"
+}`
+
 ## Methods
 
 For all methods, the header `X-Client-Environment` is required. This must be populated with the name of your FundApps environment.
+
+For all methods, authentication is made against your FundApps environment. You are required to include the Username and Password of an API user in the FundApps environment you have set in the `X-Client-Environment` header.
 
 ## `POST /rest/api/v1/task/positions`
 Upload daily positions. This method expects a csv format ([example Adapptr position files](Adapptr/)). The response includes a taskId and a trackingEndpoint that can then be polled via the GET method to monitor the progress of the task through the Adapptr service.
