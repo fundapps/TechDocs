@@ -162,14 +162,31 @@ The base url will be shared in the Adapptr implementation manual.
 You authenticate to the Adapptr API via [Basic Authentication](https://tools.ietf.org/html/rfc2617) over HTTPS. A Rapptr administrator from your organisation must create a user with the role "API" for this purpose. You must authenticate for all requests.
 **Note:** Please ensure you create a separate user for the API as if you use an existing user's account, as soon as they change their password the API upload will fail.
 
-## Available Data Vendors `GET /rest/api/v1/dataproviders`
-The list of available data vendors can be requested from this endpoint. You must then user the :providerId number when calling the POST request below to submit your data vendor credentials.
+## Methods
+
+For all methods, the header `X-Client-Environment` is required. This must be populated with the name of your FundApps environment.
+
+For all methods, authentication is made against your FundApps environment. You are required to include the Username and Password of an API user in the FundApps environment you have set in the `X-Client-Environment` header.
+
+## Available Nomenclatures `GET /rest/api/v1/nomenclatures`
+List of available data vendors, identifier types and position services and more. Those can be requested from this endpoint. You must then use the appropriate ids for parameters in other requests.
 
 Id | Data Vendor  
 ---|------------
 1  | Refinitiv    
 
-## Data Vendor Credentials `POST /rest/api/v1/dataproviders/:providerId/credentials`
+Id | Identifier Type
+---|------------
+1  | Isin
+2  | Sedol   
+
+Id | Positions Service
+---|------------
+2  | Shareholding Disclosure
+4  | Position Limits
+6  | Shareholding Disclosure & Position Limits
+
+## Data Vendor Credentials `POST /rest/api/v1/configuration/dataproviders/:providerId/credentials`
 You must submit your data vendor username and password to this endpoint. Before being able to post a file to Adapptr, your data vendor credentials must be set. Your file upload will otherwise fail because FundApps will be unable to connect and authenticate against the data vendor.
 
 e.g 
@@ -178,16 +195,16 @@ e.g
     "Password": "[Password]"
 }`
 
-## Methods
-
-For all methods, the header `X-Client-Environment` is required. This must be populated with the name of your FundApps environment.
-
-For all methods, authentication is made against your FundApps environment. You are required to include the Username and Password of an API user in the FundApps environment you have set in the `X-Client-Environment` header.
-
 ## `POST /rest/api/v1/task/positions`
 Upload daily positions. This method expects a csv format ([example Adapptr position files](Adapptr/)). The response includes a taskId and a trackingEndpoint that can then be polled via the GET method to monitor the progress of the task through the Adapptr service.
 
-The `snapshotDate` parameter must be included as a parameter in the format `yyyy-mm-dd`. This is the snapshot date of the positions being uploaded in the csv file.
+The `positions` parameter must be the file that you need to upload.
+
+The `snapshotDate` parameter must be included as a parameter in the format `yyyy-mm-dd`. This is the snapshot date of the positions being uploaded in the csv file.  
+
+The `services` *[optional]* parameter can be included if you need different from the default `Shareholding Disclosure` service. It expects Id of a service(s), that could be obtained from the [Available Nomenclatures](#available-nomenclatures-get-restapiv1nomenclatures) endpoint.
+
+The `primaryIdentifier` *[optional]*  parameter can be included if you need to specify which identifier from your positions file have higher priority. For example if a position has both ISIN and SEDOL this parameter indicates which of the two identifiers should be used when rquesting data from your market data provider. The default is ISIN. The value could be obtained from the [Available Nomenclatures](#available-nomenclatures-get-restapiv1nomenclatures) endpoint.
 
 #### Sample Response
 ```
@@ -199,7 +216,8 @@ The `snapshotDate` parameter must be included as a parameter in the format `yyyy
     },
     "status": {
         "id": 1,
-        "name": "Accepted"
+        "name": "Accepted",
+	"description": "Position file accepted. Please check the tracking endpoint to check for any errors in the file upload and to track the progress of the file enrichment and transmission to Rapptr."
     },
     "dateCreated": "2021-06-17T09:20:58.9553866Z",
     "dateUpdated": null,
