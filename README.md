@@ -202,9 +202,9 @@ The `positions` parameter must be the file that you need to upload.
 
 The `snapshotDate` parameter must be included as a parameter in the format `yyyy-mm-dd`. This is the snapshot date of the positions being uploaded in the csv file.  
 
-The `services` *[optional]* parameter can be included if you need different from the default `Shareholding Disclosure` service. It expects Id of a service(s), that could be obtained from the [Available Nomenclatures](#available-nomenclatures) endpoint.
+The `services` *[optional]* parameter can be included if you need different from the default `Shareholding Disclosure` service. It expects Id of a service(s), that could be obtained from the [Available Nomenclatures](#available-nomenclatures-get-restapiv1nomenclatures) endpoint.
 
-The `primaryIdentifier` *[optional]*  parameter can be included if you need to specify which identifier from your positions file have higher priority. For example if a position has both ISIN and SEDOL this parameter indicates which of the two identifiers should be used when rquesting data from your market data provider. The default is ISIN. The value could be obtained from the [Available Nomenclatures](#available-nomenclatures-`GET-/rest/api/v1/nomenclatures`) endpoint.
+The `primaryIdentifier` *[optional]*  parameter can be included if you need to specify which identifier from your positions file have higher priority. For example if a position has both ISIN and SEDOL this parameter indicates which of the two identifiers should be used when rquesting data from your market data provider. The default is ISIN. The value could be obtained from the [Available Nomenclatures](#available-nomenclatures-get-restapiv1nomenclatures) endpoint.
 
 #### Sample Response
 ```
