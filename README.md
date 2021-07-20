@@ -216,7 +216,8 @@ The `primaryIdentifier` *[optional]*  parameter can be included if you need to s
     },
     "status": {
         "id": 1,
-        "name": "Accepted"
+        "name": "Accepted",
+	"description": "Position file accepted. Please check the tracking endpoint to check for any errors in the file upload and to track the progress of the file enrichment and transmission to Rapptr."
     },
     "dateCreated": "2021-06-17T09:20:58.9553866Z",
     "dateUpdated": null,
