@@ -206,6 +206,8 @@ The `services` *[optional]* parameter can be included if you need different from
 
 The `primaryIdentifier` *[optional]*  parameter can be included if you need to specify which identifier from your positions file have higher priority. For example if a position has both ISIN and SEDOL this parameter indicates which of the two identifiers should be used when rquesting data from your market data provider. The default is ISIN. The value could be obtained from the [Available Nomenclatures](#available-nomenclatures-get-restapiv1nomenclatures) endpoint.
 
+The `excludeErroredAssets` *[optional]* is a boolean parameter that can be set if you need to send the positions to Rapptr despite errors due to incomplete data from your market data provider. Default value: `false`
+
 #### Sample Response
 ```
 {
@@ -221,8 +223,7 @@ The `primaryIdentifier` *[optional]*  parameter can be included if you need to s
     },
     "dateCreated": "2021-06-17T09:20:58.9553866Z",
     "dateUpdated": null,
-    "trackingEndpoint": "/prod/rest/api/v1/task/35ce6225-1534-4e7e-8199-611a8647f8ee/status",
-    "errors": null
+    "trackingEndpoint": "/prod/rest/api/v1/task/35ce6225-1534-4e7e-8199-611a8647f8ee/status"
 }
 ```
 
@@ -234,28 +235,38 @@ There are 4 status ids
 
 id | status      | Explanation                                                                                                    
 ---|-------------|------------------------
-1  | Accepted    | Job just received; not processed yet                                                                           
-2  | Enriched    | Data is being requested from data vendor, then enriched with the csv file and the xml file generated but not yet sent to Rapptr  
-3  | Transmitted | xml file sent to fundapps                                                                                      
-4  | Failed      | Job has failed. Please read errors to identify cause of job failure.                                           
+1  | Accepted    | Job just received; not processed yet.                                                                           
+2  | Enriched    | Data is being requested from data vendor, then enriched with the csv file and the xml file generated but not yet sent to Rapptr.
+3  | Transmitted | xml file sent to fundapps.
+4  | EnrichedWithExclusions | Data is being requested from data vendor, then enriched with the csv file and the xml file generated but not yet sent to Rapptr, some positions skipped due to incomplete data.
+5  | TransmittedWithExclusions | xml file sent to fundapps, some positions skipped due to incomplete data.
+500  | Failed | Job has failed. Please read errors to identify cause of job failure.                                           
 
 Once transmitted, the request will give the Rapptr trackingEndpoint url which can be polled to see the status of the xml positions file upload to FundApps.
 
 #### Sample Response
 ```
 {
-    "id": "35ce6225-1534-4e7e-8199-611a8647f8ee",
+    "id": "9b134cda-81db-44c0-9c52-cfeb897e663a",
     "type": {
         "id": 1,
         "name": "Positions"
     },
     "status": {
-        "id": 3,
-        "name": "Transmitted"
+        "id": 5,
+        "name": "TransmittedWithExclusions",
+        "description": "Successfully transmited to Rapptr. Some positions were skipped, most likly due to incomplete data from your market data provider. Please check the warnings field for a list of all skipped positions as well as the cause reason."
     },
-    "dateCreated": "2021-06-17T09:20:58.955+00:00",
-    "dateUpdated": "2021-06-17T09:21:40.143+00:00",
-    "trackingEndpoint": "https://demo-melon-api.fundapps.co/v1/expost/result/a0fdcb8f-ad01-4765-9c09-ad4a009a4406",
-    "errors": null
+    "dateCreated": "2021-07-22T17:09:01.186+03:00",
+    "dateUpdated": "2021-07-22T17:13:19.024+03:00",
+    "trackingEndpoint": "https://demo-melon-api.fundapps.co/v1/expost/result/38ba5713-c253-42d1-896a-bd6e00ea5ec3",
+    "statusReport": {
+	"errors": null,
+        "warnings": [
+            "Identifier: <Identifier> | Component is required for this instrument. Refinitiv returned null or empty value for UnderlyingISIN and UnderlyingRIC. Consider providing ComponentISIN value in the positions file.",
+            "Identifier: <Identifier> | Empty result while getting enrichment data for item. Please check if the identifier is valid.",
+            "For component | Parent Identifier: <Identifier> | Identifier: <Identifier> | Unsupported AssetClass: <AssetClass>"
+        ]
+    }
 }
 ```
