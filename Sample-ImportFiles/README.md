@@ -63,3 +63,21 @@ Date              | Date of disclosure. This must reference the actual trade dat
 ### Data Requirements
 
 - IssuerId needs to be needs to be consistent throughout time so that the system can link the imported disclosure to another disclosure in the future.
+
+## Create Data Overrides
+
+### File Column Detail
+
+Column Name                 | Description                                                                                                                             | Data type                                                            | Required  
+----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------|-----------
+IsEnabled                |True for enabling the override                                                              | [Boolean](https://github.com/fundapps/api-examples#data-types)        | X 
+Type        | Default is for populating fields that are blank or missing in the input file. \\ Override is for changing the value of fields when the input property matches a certain condition. \ Remove is for removing extra fields that are present in the input file.                                                                  | [String](https://github.com/fundapps/api-examples#data-types)        | X  
+ConditionProperty         | ID of portfolio/entity where the rule triggered                                                                                         | [String](https://github.com/fundapps/api-examples#data-types)        | X  
+ConditionValue                        | ISIN of the instrument which triggered the rule                                                                                         | [String(255)](https://github.com/fundapps/api-examples#data-types)   | X  
+TargetProperty                    | ID of the issuer                                                                                                                        | [String(255)](https://github.com/fundapps/api-examples#data-types)   | X  
+TargetSourceType                  | Name of the issuer                                                                                                                      | [String(255)](https://github.com/fundapps/api-examples#data-types)   | X  
+TargetSource | Ownership Percentage At Filing: Inputting 6.25 here is equivalent to 6.25%                                                                                               | [Decimal(28,8)](https://github.com/fundapps/api-examples#data-types) | X  
+TargetCondition              | Date of disclosure. This must reference the actual trade date when the disclosure value was calculated. Choosing a weekend is not valid | [Date](https://github.com/fundapps/api-examples#data-types)          | X  
+ActiveFrom              | Date of disclosure. This must reference the actual trade date when the disclosure value was calculated. Choosing a weekend is not valid | [Date](https://github.com/fundapps/api-examples#data-types)          | X  
+ActiveTo              | Date of disclosure. This must reference the actual trade date when the disclosure value was calculated. Choosing a weekend is not valid | [Date](https://github.com/fundapps/api-examples#data-types)          | X  
+Note  | Date of disclosure. This must reference the actual trade date when the disclosure value was calculated. Choosing a weekend is not valid | [Date](https://github.com/fundapps/api-examples#data-types)          | X 
