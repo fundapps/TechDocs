@@ -65,6 +65,7 @@ Date              | Date of disclosure. This must reference the actual trade dat
 - IssuerId needs to be needs to be consistent throughout time so that the system can link the imported disclosure to another disclosure in the future.
 
 ## Data Overrides
+This is the API of [data overrides](https://fundapps.zendesk.com/hc/en-us/articles/201042883-Creating-Data-Overrides)
 
 ### File Column Detail
 
