@@ -66,7 +66,7 @@ Date              | Date of disclosure. This must reference the actual trade dat
 
 ## Data Overrides
 You can upload a file to populating fields that are blank or missing in the input file, or change the value of fields when the input property matches a certain condition.
-This is the API of [data overrides](https://fundapps.zendesk.com/hc/en-us/articles/201042883-Creating-Data-Overrides).
+This is the API of the [data overrides](https://fundapps.zendesk.com/hc/en-us/articles/201042883-Creating-Data-Overrides) feature in the web UI.
 
 ### File Column Detail
 
@@ -75,7 +75,7 @@ Column Name               | Description                                         
 IsEnabled                 | True for enabling the override                                                              | [Boolean](https://github.com/fundapps/api-examples#data-types)
 Type                      | `Default` is for populating fields that are blank or missing in the input file. <br> `Override` for changing the value of fields when the input property matches a certain condition. | [String(255)](https://github.com/fundapps/api-examples#data-types)
 ConditionProperty         | Property that determines whether the override should be enabled | [String(255)](https://github.com/fundapps/api-examples#data-types)
-ConditionValue            | Value which override should be enabled | [String(255)](https://github.com/fundapps/api-examples#data-types)
+ConditionValue            | Value of ConditionProperty | [String(255)](https://github.com/fundapps/api-examples#data-types)
 TargetProperty            | Property to be overriden, e.g. Delta | [String(255)](https://github.com/fundapps/api-examples#data-types)   
 TargetSourceType          | `ReplaceWithConstant` or `ReplaceWithAnotherProperty` | [String(255)](https://github.com/fundapps/api-examples#data-types) 
 TargetSource              | Replacement value or replacement property name | [Decimal(28,8)](https://github.com/fundapps/api-examples#data-types) 
