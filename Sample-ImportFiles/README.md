@@ -77,7 +77,7 @@ ConditionValue            | Value which override should be enabled | [String(255
 TargetProperty            | Property to be overriden, e.g. Delta | [String(255)](https://github.com/fundapps/api-examples#data-types)   
 TargetSourceType          | `ReplaceWithConstant` or `ReplaceWithAnotherProperty` | [String(255)](https://github.com/fundapps/api-examples#data-types) 
 TargetSource              | Replacement value or replacement property name | [Decimal(28,8)](https://github.com/fundapps/api-examples#data-types) 
-TargetCondition           | Only override when the target property satisfy TargetCondition, only available for type override | [Date](https://github.com/fundapps/api-examples#data-types)   
+TargetCondition           | Required if Type is set to override. Override is only enabled when `TargetProperty` satisfy `TargetCondition` | [Date](https://github.com/fundapps/api-examples#data-types)   
 ActiveFrom                | Start date of override | [Date](https://github.com/fundapps/api-examples#data-types) 
 ActiveTo                  | End date of override | [Date](https://github.com/fundapps/api-examples#data-types)
 Note                      | Reason for override | [String](https://github.com/fundapps/api-examples#data-types) 
