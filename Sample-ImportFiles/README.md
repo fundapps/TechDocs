@@ -65,7 +65,7 @@ Date              | Date of disclosure. This must reference the actual trade dat
 - IssuerId needs to be needs to be consistent throughout time so that the system can link the imported disclosure to another disclosure in the future.
 
 ## Data Overrides
-You can upload a file to populating fields that are blank or missing in the input file, or change the value of fields when the input property matches a certain condition.
+You can upload a file to populate fields that are blank or missing in the input file, or change the value of fields when the input property matches a certain condition.
 This is the API of the [data overrides](https://fundapps.zendesk.com/hc/en-us/articles/201042883-Creating-Data-Overrides) feature in the web UI.
 
 ### File Column Detail
