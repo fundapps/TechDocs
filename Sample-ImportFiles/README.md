@@ -75,7 +75,7 @@ Column Name               | Description                                         
 IsEnabled                 | True for enabling the override                                                              | [Boolean](https://github.com/fundapps/api-examples#data-types)
 Type                      | `Default` is for populating fields that are blank or missing in the input file. <br> `Override` for changing the value of fields when the input property matches a certain condition. | [String(255)](https://github.com/fundapps/api-examples#data-types)
 ConditionProperty         | Property that determines whether the override should be enabled | [String(255)](https://github.com/fundapps/api-examples#data-types)
-ConditionValue            | Value of ConditionProperty | [String(255)](https://github.com/fundapps/api-examples#data-types)
+ConditionValue            | If the ConditionProperty is equal to this Value then override it | [String(255)](https://github.com/fundapps/api-examples#data-types)
 TargetProperty            | Property to be overriden, e.g. Delta | [String(255)](https://github.com/fundapps/api-examples#data-types)   
 TargetSourceType          | `ReplaceWithConstant` or `ReplaceWithAnotherProperty` | [String(255)](https://github.com/fundapps/api-examples#data-types) 
 TargetSource              | Replacement value or replacement property name | [Decimal(28,8)](https://github.com/fundapps/api-examples#data-types) 
