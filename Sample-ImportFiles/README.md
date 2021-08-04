@@ -83,3 +83,5 @@ TargetCondition           | Required if Type is set to override. Override is onl
 ActiveFrom                | Start date of override | [Date](https://github.com/fundapps/api-examples#data-types) 
 ActiveTo                  | End date of override | [Date](https://github.com/fundapps/api-examples#data-types)
 Note                      | Reason for override | [String](https://github.com/fundapps/api-examples#data-types) 
+
+Note that all strings are case sensitive, e.g. `Default` would pass validation but `default` would fail. Booleans are not case sensitive so both `True` and `true` means the same.
