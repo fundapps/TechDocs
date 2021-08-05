@@ -64,3 +64,25 @@ We accept information about imported disclosures in CSV format. You can find a [
 ### Data Requirements
 
 - IssuerId needs to be needs to be consistent throughout time so that the system can link the imported disclosure to another disclosure in the future.
+
+## Data Overrides
+You can upload a file to populate fields that are blank or missing in the input file, or change the value of fields when the input property matches a certain condition.
+This is the API of the [data overrides](https://fundapps.zendesk.com/hc/en-us/articles/201042883-Creating-Data-Overrides) feature in the web UI.
+
+### File Column Detail
+
+Column Name               | Description                                                                                                                             | Data type                                                             
+--------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------
+IsEnabled                 | True for enabling the override                                                              | [Boolean](https://github.com/fundapps/api-examples#data-types)
+Type                      | `Default` is for populating fields that are blank or missing in the input file. <br> `Override` for changing the value of fields when the input property matches a certain condition. | [String(255)](https://github.com/fundapps/api-examples#data-types)
+ConditionProperty         | Property that determines whether the override should be enabled | [String(255)](https://github.com/fundapps/api-examples#data-types)
+ConditionValue            | If the ConditionProperty is equal to this Value then override it | [String(255)](https://github.com/fundapps/api-examples#data-types)
+TargetProperty            | Property to be overriden, e.g. Delta | [String(255)](https://github.com/fundapps/api-examples#data-types)   
+TargetSourceType          | `ReplaceWithConstant` or `ReplaceWithAnotherProperty` | [String(255)](https://github.com/fundapps/api-examples#data-types) 
+TargetSource              | Replacement value or replacement property name | [Decimal(28,8)](https://github.com/fundapps/api-examples#data-types) 
+TargetCondition           | Required if Type is set to override. Override is only enabled when `TargetProperty` satisfy `TargetCondition` | [Date](https://github.com/fundapps/api-examples#data-types)   
+ActiveFrom                | Start date of override | [Date](https://github.com/fundapps/api-examples#data-types) 
+ActiveTo                  | End date of override | [Date](https://github.com/fundapps/api-examples#data-types)
+Note                      | Reason for override | [String](https://github.com/fundapps/api-examples#data-types) 
+
+Note that all strings are case sensitive, e.g. `Default` would pass validation but `default` would fail. Booleans are not case sensitive so both `True` and `true` means the same.

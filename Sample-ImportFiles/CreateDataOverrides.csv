@@ -1,0 +1,2 @@
+IsEnabled,Type,ConditionProperty,ConditionValue,TargetProperty,TargetSourceType,TargetSource,TargetCondition,ActiveFrom,ActiveTo,Note
+True,Default,,,IsListed,ReplaceWithConstant,true,,2010-01-01,,
