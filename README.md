@@ -108,6 +108,38 @@ Upload Portfolio data, if your portfolio structure changes frequently you may wi
 
 Upload Transaction data. Expects CSV - [example file](Sample-ImportFiles/Transactions.csv).
 
+### `GET /results/missing-data?dataDate={date}` (Optional)
+
+Get the missing data for a specific data date.
+
+#### Sample Response
+```
+{
+   "SnapshotDate":"2020-08-03",
+   "PropertyMissing":[
+      {
+         "PropertyName":"IssuerName",
+         "PropertyDetails":[
+            {
+               "AssetId":"ABC_1",
+               "IssuerId":"Issuer4",
+               "IssuerName":"Issuer 4 Name",
+               "InstrumentId":"Instrument4",
+               "InstrumentName":"Instrument 4 Name",
+               "AffectedPortfolios":[
+                  "PortfolioA",
+                  "PortfolioB"
+               ],
+               "AffectedRules":[
+                  "Rule 1"
+               ]
+            }
+         ]
+      }
+   ]
+}
+```
+
 ## Request Content-Types
 
 When sending data to the API we expect certain content types to be set on your request e.g.
