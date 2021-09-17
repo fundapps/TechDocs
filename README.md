@@ -180,6 +180,15 @@ When uploading via the API, we have a maximum allowed file size of approximately
 ## Examples
 We provide a number of example implementations against our API using commonly available programming languages and libraries in this repository.
 
+# FundApps Room In A Name (RIAN) API
+
+The Room In A Name API allows our clients to programtically consume the exact number of instruments they can trade before reaching a reportable threshold, in both an upward and downward direction.
+
+The RIAN API is interactively documented using Swagger. Clients can access the documentation at {clientname}-api.fundapps.co/swagger with an API user.  
+
+## PL Clients
+
+The RIAN API is PL enabled, please make sure to selecy "PL" from the dropdown at top-right of the page to see PL specific extensions to the API. 
 
 # FundApps Adapptr Spec & Examples
 
