@@ -140,6 +140,25 @@ Get the missing data for a specific data date.
 }
 ```
 
+### `GET /allUsers` (Optional)
+
+Gets the user entitlement and access information.
+
+#### Sample Response
+```
+{
+   "Id":"1cf50653-7b9e-494e-8b4e-01ff6bc2a0e7",
+   "DisplayName":"User Name",
+   "Role":"SuperUser",
+   "CompanyName":"ExampleCompany",
+   "Email":"example@email.com",
+   "CreatedDate":"2021-09-14T12:53:10.61",
+   "LastLogin": "2021-09-21T08:43:45.257",
+   "IsDeactivated":false,
+   "PasswordFailuresSinceLastSuccess":0
+}
+```
+
 ## Request Content-Types
 
 When sending data to the API we expect certain content types to be set on your request e.g.
