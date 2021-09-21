@@ -140,23 +140,36 @@ Get the missing data for a specific data date.
 }
 ```
 
-### `GET /allUsers` (Optional)
+### `GET /v1/userProvision` (Optional)
 
 Gets the user entitlement and access information.
 
 #### Sample Response
 ```
-{
-   "Id":"1cf50653-7b9e-494e-8b4e-01ff6bc2a0e7",
-   "DisplayName":"User Name",
-   "Role":"SuperUser",
-   "CompanyName":"ExampleCompany",
-   "Email":"example@email.com",
-   "CreatedDate":"2021-09-14T12:53:10.61",
-   "LastLogin": "2021-09-21T08:43:45.257",
-   "IsDeactivated":false,
-   "PasswordFailuresSinceLastSuccess":0
-}
+[
+   {
+      "Id":"1cf50653-7b9e-494e-8b4e-01ff6bc2a0e7",
+      "DisplayName":"User1",
+      "Role":"SuperUser",
+      "CompanyName":"Company1",
+      "Email":"example2@email.com",
+      "CreatedDate":"2021-09-14T12:53:10.61",
+      "LastLogin":null,
+      "IsDeactivated":false,
+      "PasswordFailuresSinceLastSuccess":0
+   },
+   {
+      "Id":"3b2c6a62-d1dd-492f-b216-ffb73a291455",
+      "DisplayName":"User2",
+      "Role":"SuperUser",
+      "CompanyName":"Company1",
+      "Email":"example2@email.com",
+      "CreatedDate":"2021-09-14T12:53:10.61",
+      "LastLogin":"2021-09-21T08:43:45.257",
+      "IsDeactivated":false,
+      "PasswordFailuresSinceLastSuccess":0
+   }
+]
 ```
 
 ## Request Content-Types
