@@ -1,0 +1,3 @@
+﻿PortfolioId,DeliverMonth,Market,CommoditySymbol,AssetClass,AssetName,Quantity,CallorPut,Delta
+11,2021-12,XCBT,C,Future,CORN FUTURE DEC21,-1362,,
+12,2021-12,IFLL,AQB,Option,SSO - ALTUS GROUP LIMITED (AIF) OPTIONS,1000,Call,0.4
