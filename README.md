@@ -220,7 +220,7 @@ The RIAN API is interactively documented using Swagger. Clients can access the d
 
 ## Position Limits Clients
 
-The RIAN API is Position Limits (PL) enabled, please make sure to selecy "PL" from the dropdown at top-right of the page to see Position Limits specific extensions to the API. 
+The RIAN API is Position Limits (PL) enabled, please make sure to select "PL" from the dropdown at top-right of the page to see Position Limits specific extensions to the API. 
 
 # FundApps Adapptr Spec & Examples
 
