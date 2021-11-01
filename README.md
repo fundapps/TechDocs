@@ -247,6 +247,7 @@ List of available data vendors, identifier types and position services and more.
 Id | Data Vendor  
 ---|------------
 1  | Refinitiv    
+2  | Bloomberg
 
 Id | Identifier Type
 ---|------------
@@ -281,6 +282,8 @@ The `primaryIdentifier` *[optional]*  parameter can be included if you need to s
 
 The `excludeErroredAssets` *[optional]* is a boolean parameter that can be set if you need to send the positions to Rapptr despite errors due to incomplete data from your market data provider. Default value: `false`
 
+The `dataProvider` *[optional]* is an integer parameter that can be set if you need to select a specific data provider. Default value is `1` (Refinitiv). A list of all supported providers can be obtained from the [Available Nomenclatures](#available-nomenclatures-get-restapiv1nomenclatures) endpoint.
+
 #### Sample Response
 ```
 {
@@ -308,11 +311,12 @@ There are 4 status ids
 
 id | status      | Explanation                                                                                                    
 ---|-------------|------------------------
-1  | Accepted    | Job just received; not processed yet.                                                                           
+1  | Accepted    | Job just received; not processed yet.                                                                     
 2  | Enriched    | Data is being requested from data vendor, then enriched with the csv file and the xml file generated but not yet sent to Rapptr.
 3  | Transmitted | xml file sent to fundapps.
 4  | EnrichedWithExclusions | Data is being requested from data vendor, then enriched with the csv file and the xml file generated but not yet sent to Rapptr, some positions skipped due to incomplete data.
 5  | TransmittedWithExclusions | xml file sent to fundapps, some positions skipped due to incomplete data.
+6  | WaitingExtractions | A request is sent to the data provider, but there is no response yet. 
 500  | Failed | Job has failed. Please read errors to identify cause of job failure.                                           
 
 Once transmitted, the request will give the Rapptr trackingEndpoint url which can be polled to see the status of the xml positions file upload to FundApps.
