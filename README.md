@@ -242,9 +242,9 @@ For all methods, the header `X-Client-Environment` is required. This must be pop
 For all methods, authentication is made against your FundApps environment. You are required to include the Username and Password of an API user in the FundApps environment you have set in the `X-Client-Environment` header.
 
 ## Available Nomenclatures `GET /rest/api/v1/nomenclatures`
-List of available data vendors, identifier types and position services and more. Those can be requested from this endpoint. You must then use the appropriate ids for parameters in other requests.
+List of available data providers, identifier types and position services and more. Those can be requested from this endpoint. You must then use the appropriate ids for parameters in other requests.
 
-Id | Data Vendor  
+Id | Data Provider  
 ---|------------
 1  | Refinitiv    
 2  | Bloomberg
@@ -260,8 +260,8 @@ Id | Positions Service
 4  | Position Limits
 6  | Shareholding Disclosure & Position Limits
 
-## Data Vendor Credentials `POST /rest/api/v1/configuration/dataproviders/:providerId/credentials`
-You must submit your data vendor username and password to this endpoint. Before being able to post a file to Adapptr, your data vendor credentials must be set. Your file upload will otherwise fail because FundApps will be unable to connect and authenticate against the data vendor.
+## Data Provider Credentials `POST /rest/api/v1/configuration/dataproviders/:providerId/credentials`
+You must submit your data provider username and password to this endpoint. Before being able to post a file to Adapptr, your data provider credentials must be set. Your file upload will otherwise fail because FundApps will be unable to connect and authenticate against the data provider.
 
 e.g 
 `{
@@ -312,9 +312,9 @@ There are 4 status ids
 id | status      | Explanation                                                                                                    
 ---|-------------|------------------------
 1  | Accepted    | Job just received; not processed yet.                                                                     
-2  | Enriched    | Data is being requested from data vendor, then enriched with the csv file and the xml file generated but not yet sent to Rapptr.
+2  | Enriched    | Data is being requested from data provider, then enriched with the csv file and the xml file generated but not yet sent to Rapptr.
 3  | Transmitted | xml file sent to fundapps.
-4  | EnrichedWithExclusions | Data is being requested from data vendor, then enriched with the csv file and the xml file generated but not yet sent to Rapptr, some positions skipped due to incomplete data.
+4  | EnrichedWithExclusions | Data is being requested from data provider, then enriched with the csv file and the xml file generated but not yet sent to Rapptr, some positions skipped due to incomplete data.
 5  | TransmittedWithExclusions | xml file sent to fundapps, some positions skipped due to incomplete data.
 6  | WaitingExtractions | A request is sent to the data provider, but there is no response yet. 
 500  | Failed | Job has failed. Please read errors to identify cause of job failure.                                           
