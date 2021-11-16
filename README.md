@@ -293,7 +293,7 @@ The `excludeErroredAssets` _[optional]_ is a boolean parameter that can be set i
 
 The `dataProvider` _[optional]_ is an integer parameter that can be set if you need to select a specific data provider. Default value is `1` (Refinitiv). A list of all supported providers can be obtained from the [Available Nomenclatures](#available-nomenclatures-get-restapiv1nomenclatures) endpoint.
 
-## 'POST /rest/api/v1/task/positions/without-enrichment'
+## `POST /rest/api/v1/task/positions/without-enrichment`
 
 This method converts the Consensys csv file format into the FundApps required format for the Position Limits service. The response includes a taskId and a trackingEndpoint that can then be polled via the GET method to monitor the progress of the task through the Adapptr service.
 
