@@ -252,7 +252,7 @@ For all methods, authentication is made against your FundApps environment. You a
 
 ## Available Nomenclatures `GET /rest/api/v1/nomenclatures`
 
-List of available data providers, identifier types and position services and more. Those can be requested from this endpoint. You must then use the appropriate ids for parameters in other requests.
+List of available data providers, identifier types, position services and more. Those can be requested from this endpoint. You must then use the appropriate ids for parameters in other requests.
 
 | Id  | Data Provider |
 | --- | ------------- |
@@ -269,6 +269,11 @@ List of available data providers, identifier types and position services and mor
 | 2   | Shareholding Disclosure                   |
 | 4   | Position Limits                           |
 | 6   | Shareholding Disclosure & Position Limits |
+
+| Id  | File Data Formats |
+| --- | --------------- |
+| 1   | Adapptr         |
+| 2   | Consensus       |
 
 ## Data Provider Credentials `POST /rest/api/v1/configuration/dataproviders/:providerId/credentials`
 
@@ -295,13 +300,15 @@ The `dataProvider` _[optional]_ is an integer parameter that can be set if you n
 
 ## `POST /rest/api/v1/task/positions/without-enrichment`
 
-This method converts the Consensys csv file format into the FundApps required format for the Position Limits service. The response includes a taskId and a trackingEndpoint that can then be polled via the GET method to monitor the progress of the task through the Adapptr service.
+This method converts the Consensys or Adapptr csv file format into the FundApps required format for the Position Limits service. The response includes a taskId and a trackingEndpoint that can then be polled via the GET method to monitor the progress of the task through the Adapptr service.
 
 The `positions` parameter must be the file that you need to upload.
 
 The `snapshotDate` parameter must be included as a parameter in the format `yyyy-mm-dd`. This is the snapshot date of the positions being uploaded in the csv file.
 
-This method works only with the FundApps Position Limits service and works with the Consensys file format only. Please see ([here](Adapptr/Position Limits)) for an example.
+The `format` _[optional]_ _[default value = 2]_ parameter can be included if you prefer using different file data format. A list of all supported file data formats can be obtained from the [Available Nomenclatures](#available-nomenclatures-get-restapiv1nomenclatures) endpoint.
+
+This method works only with the FundApps Position Limits service. Please see ([here](Adapptr/Position Limits)) for an example.
 
 #### Sample Response
 
