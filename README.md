@@ -272,8 +272,8 @@ List of available data providers, identifier types, position services and more. 
 
 | Id  | File Data Formats |
 | --- | --------------- |
-| 1   | Adapptr         |
-| 2   | Consensus       |
+| 1   | FundApps         |
+| 2   | Consensys       |
 
 ## Data Provider Credentials `POST /rest/api/v1/configuration/dataproviders/:providerId/credentials`
 
