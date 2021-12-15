@@ -277,7 +277,9 @@ List of available data providers, identifier types, position services and more. 
 
 ## Data Provider Credentials `POST /rest/api/v1/configuration/dataproviders/:providerId/credentials`
 
-You must submit your data provider username and password to this endpoint. Before being able to post a file to Adapptr, your data provider credentials must be set. Your file upload will otherwise fail because FundApps will be unable to connect and authenticate against the data provider.
+In case of Refinitiv you must submit your data provider username and password to this endpoint. Before being able to post a file to Adapptr, your data provider credentials must be set. Your file upload will otherwise fail because FundApps will be unable to connect and authenticate against the data provider.
+
+`This endpoint does not support Bloomberg data provider. The support team will have to use your Bloomberg generated certificate to enable Adapptr integration. Please contact support for more details.`
 
 e.g
 `{ "Username": "[Username]", "Password": "[Password]" }`
