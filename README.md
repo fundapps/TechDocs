@@ -277,9 +277,9 @@ List of available data providers, identifier types, position services and more. 
 
 ## Data Provider Credentials `POST /rest/api/v1/configuration/dataproviders/:providerId/credentials`
 
-In case of Refinitiv you must submit your data provider username and password to this endpoint. Before being able to post a file to Adapptr, your data provider credentials must be set. Your file upload will otherwise fail because FundApps will be unable to connect and authenticate against the data provider.
+If you are using Refinitiv data you must submit your username and password to this endpoint. Before being able to post a file to Adapptr, your data provider credentials must be set. Your file upload will otherwise fail because FundApps will be unable to connect and authenticate against the data provider.
 
-`This endpoint does not support Bloomberg data provider. The support team will have to use your Bloomberg generated certificate to enable Adapptr integration. Please contact support for more details.`
+`This endpoint does not support Bloomberg data provider. The support team will have to use your Bloomberg generated certificate to enable Adapptr integration. Please contact support@fundapps.co or you Client Success Manager for more details.`
 
 e.g
 `{ "Username": "[Username]", "Password": "[Password]" }`
@@ -294,7 +294,10 @@ The `snapshotDate` parameter must be included as a parameter in the format `yyyy
 
 The `services` _[optional]_ parameter can be included if you need different from the default `Shareholding Disclosure` service. It expects Id of a service(s), that could be obtained from the [Available Nomenclatures](#available-nomenclatures-get-restapiv1nomenclatures) endpoint.
 
-The `primaryIdentifier` _[optional]_ parameter can be included if you need to specify which identifier from your positions file have higher priority. For example if a position has both ISIN and SEDOL this parameter indicates which of the two identifiers should be used when rquesting data from your market data provider. The default is ISIN. The value could be obtained from the [Available Nomenclatures](#available-nomenclatures-get-restapiv1nomenclatures) endpoint.
+The `primaryIdentifier` _[optional]_ parameter can be included if you need to specify which identifier from your positions file you wish to use to query against the data provider. For example if a position has both ISIN and SEDOL this parameter indicates which of the two identifiers should be used when requesting data from your market data provider. If not populated, the default is ISIN. The value could be obtained from the [Available Nomenclatures](#available-nomenclatures-get-restapiv1nomenclatures) endpoint.
+
+The `secondaryIdentifier` _[optional]_ parameter can be included if you need to specify which identifier to fall back to if your primaryIdentifier is not populated. For example if your primaryIdentifier is set to 1 for ISIN and you have a position which doesn't have an ISIN but has a SEDOL, setting the secondaryIdentifier to 2 (SEDOL) would tell Adapptr to use SEDOL to query data from your market data provider if ISIN is not populated. By default this is empty. The value could be obtained from the [Available Nomenclatures](#available-nomenclatures-get-restapiv1nomenclatures) endpoint.
+
 
 The `excludeErroredAssets` _[optional]_ is a boolean parameter that can be set if you need to send the positions to Rapptr despite errors due to incomplete data from your market data provider. Default value: `false`
 
