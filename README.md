@@ -313,7 +313,7 @@ The `snapshotDate` parameter must be included as a parameter in the format `yyyy
 
 The `format` _[optional]_ _[default value = 2]_ parameter can be included if you prefer using different file data format. A list of all supported file data formats can be obtained from the [Available Nomenclatures](#available-nomenclatures-get-restapiv1nomenclatures) endpoint.
 
-This method works only with the FundApps Position Limits service. Please see ([here](Adapptr/Position Limits)) for an example.
+This method works only with the FundApps Position Limits service. Please see [here](Adapptr/Position Limits) for an example.
 
 #### Sample Response
 
