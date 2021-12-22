@@ -346,9 +346,9 @@ There are 4 status ids
 | 1   | Accepted                  | Job just received; not processed yet.                                                                                                                                             |
 | 2   | Enriched                  | Data is being requested from data provider, then enriched with the csv file and the xml file generated but not yet sent to Rapptr.                                                |
 | 3   | Transmitted               | xml file sent to fundapps.                                                                                                                                                        |
-| 4   | EnrichedWithExclusions    | Data is being requested from data provider, then enriched with the csv file and the xml file generated but not yet sent to Rapptr, some positions skipped due to incomplete data. |
-| 5   | TransmittedWithExclusions | xml file sent to fundapps, some positions skipped due to incomplete data.                                                                                                         |
-| 6   | WaitingExtractions        | A request is sent to the data provider, but there is no response yet.                                                                                                             |
+| 4   | Enriched With Exclusions    | Data is being requested from data provider, then enriched with the csv file and the xml file generated but not yet sent to Rapptr, some positions skipped due to incomplete data. |
+| 5   | Transmitted With Exclusions | xml file sent to fundapps, some positions skipped due to incomplete data.                                                                                                         |
+| 6   | Waiting Extractions        | A request is sent to the data provider, but there is no response yet.                                                                                                             |
 | 500 | Failed                    | Job has failed. Please read errors to identify cause of job failure.                                                                                                              |
 
 Once transmitted, the request will give the Rapptr trackingEndpoint url which can be polled to see the status of the xml positions file upload to FundApps.
