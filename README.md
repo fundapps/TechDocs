@@ -364,7 +364,7 @@ Once transmitted, the request will give the Rapptr trackingEndpoint url which ca
     },
     "status": {
         "id": 5,
-        "name": "TransmittedWithExclusions",
+        "name": "Transmitted With Exclusions",
         "description": "Successfully transmited to Rapptr. Some positions were skipped, most likly due to incomplete data from your market data provider. Please check the warnings field for a list of all skipped positions as well as the cause reason."
     },
     "dateCreated": "2021-07-22T17:09:01.186+03:00",
