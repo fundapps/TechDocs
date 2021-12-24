@@ -1,4 +1,3 @@
-# FundApps Example PowerShell Adapptr Upload Positions
 #
 # Usage: First run the script, then call the function below. You might need to run the script with . .\upload-positions.ps1 instead of .\upload-positions.ps1
 # Import-Positions  -APIUri "[BASEURL]" -User "[USERNAME]" -Password "[PASSWORD]" -File "[PATH_TO_FILE]" -ClientEnvironment "[ALIAS]"
@@ -15,11 +14,15 @@ function API-Post {
     $boundary = [System.Guid]::NewGuid().ToString(); 
     $LF = "`r`n";
     $snapshotDate = Get-Date -Format "yyyy-MM-dd";
-
+    $format = "2";
+    
     $bodyLines = ( 
         "--$boundary",
         "Content-Disposition: form-data; name=`"snapshotDate`"$LF",
         "$snapshotDate$LF",
+        "--$boundary",
+        "Content-Disposition: form-data; name=`"format`"$LF",
+        "$format$LF",
         "--$boundary",
         "Content-Disposition: form-data; name=`"positions`"; filename=`"positions.csv`"",
         "Content-Type: application/octet-stream$LF",
