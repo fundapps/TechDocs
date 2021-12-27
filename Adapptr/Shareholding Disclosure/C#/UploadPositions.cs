@@ -33,11 +33,12 @@ namespace FundAppsScripts.Scripts
 
             // add body params to the request
             request.AddFile("positions", pathToFile, "text/csv");
-            request.AddParameter("snapshotDate", snapshotDate, ParameterType.RequestBody);
+            request.AddParameter("snapshotDate", snapshotDate);
 
             // add header with the rapptr environment
             request.AddHeader("X-Client-Environment", clientEnvironmentSubDomain);
-
+            request.AddHeader("Content-Type", "multipart/form-data");
+            
             var response = client.Execute<TaskProfileResponse>(request);
 
             // if response comes back with a 200 status, then as task for the positions file was created successfully
