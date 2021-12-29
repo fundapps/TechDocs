@@ -15,11 +15,19 @@ function API-Post {
     $boundary = [System.Guid]::NewGuid().ToString(); 
     $LF = "`r`n";
     $snapshotDate = Get-Date -Format "yyyy-MM-dd";
+    
+    # if dataProvider = 1 it means that the dataProvider is Refinitiv
+    # if dataProvider = 2 it means that the dataProvider is Bloomberg
+    # plese refer to the documentation for more info: https://github.com/mmitushevskiMelon/api-examples#post-restapiv1taskpositions
+    $dataProvider = "1";
 
     $bodyLines = ( 
         "--$boundary",
         "Content-Disposition: form-data; name=`"snapshotDate`"$LF",
         "$snapshotDate$LF",
+        "--$boundary",
+        "Content-Disposition: form-data; name=`"dataProvider`"$LF",
+        "$dataProvider$LF",
         "--$boundary",
         "Content-Disposition: form-data; name=`"positions`"; filename=`"positions.csv`"",
         "Content-Type: application/octet-stream$LF",
