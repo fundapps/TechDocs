@@ -14,7 +14,10 @@ namespace FundAppsScripts.Scripts
         {
             _adapptrConfig = adapptrConfig;
         }
-
+        
+        // if you need to use Bloomberg as a data provider the implementation given below is not applicable
+        // please refer to the documentation for more info: https://github.com/fundapps/api-examples#data-provider-credentials-post-restapiv1configurationdataprovidersprovideridcredentials
+       
         public void PostDataPrividerCredentials()
         {
             var baseUrl = _adapptrConfig.BaseUrl;
