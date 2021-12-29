@@ -3,8 +3,8 @@
 # Usage: First run the script, then call the function below. You might need to run the script with . .\post-data-provider-credentials.ps1 instead of .\post-data-provider-credentials.ps1
 # Update-Credentials  -APIUri "[BASEURL]" -User "[USERNAME]" -Password "[PASSWORD]" -DataProviderId "[DATA_PROVIDER_ID]" -DataProviderUsername "[DATA_PROVIDER_USERNAME]" -DataProviderPassword "[DATA_PROVIDER_PASSWORD]" -ClientEnvironment "[ALIAS]"
 # For how to encrypt passwords on a machine before using as a parameter see here: https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/convertto-securestring?view=powershell-7
-# if you need to use Bloomberg as a data provider the implementation given below is not applicable
-# please refer to the documentation for more info: https://github.com/fundapps/api-examples#data-provider-credentials-post-restapiv1configurationdataprovidersprovideridcredentials
+# If you need to use Bloomberg as a data provider the implementation given below is not applicable
+# Please refer to the documentation for more info: https://github.com/fundapps/api-examples#data-provider-credentials-post-restapiv1configurationdataprovidersprovideridcredentials
 
 Write-Host "Install functions"
 
