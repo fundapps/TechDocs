@@ -15,7 +15,7 @@ namespace FundAppsScripts.Scripts
             var password = _adapptrConfig.Password;
             // your FundApps environment name
             var clientEnvironmentSubDomain = "";
-            // csv file only
+            // include the file in the path - csv file only
             var pathToFile = "";
             // the snapshot date of your positions in the format yyyy-MM-dd
             var snapshotDate = DateTime.Today.ToString("yyyy-MM-dd");
