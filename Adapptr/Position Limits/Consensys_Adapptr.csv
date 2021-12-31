@@ -1,2 +1,2 @@
-Source System,Account,Account Name,Account Type,Trader,Contract Month,Exchange Code,Product Code,Product Type,Option Type,Exchange Clearing ID,Product Description,Currency,Strike,Strike Type,Expiry Date,Last Trade Date,Option Delta,Buy/Sell,Quantity,Initial Margin,As of Date,FIA Tech Code,Is Cash Settled,Contract Size
-Bloomberg,1,1,,,202109,CBT,TYU1 Comdty,F,,TYU1 Comdty,US 10YR NOTE (CBT)Sep21,USD,,,,20210921,,,100,,20210701,21,TRUE,100
+Source System,Account,Account Name,Account Type,Trader,Contract Month,Exchange Code,Product Code,Product Type,Option Type,Exchange Clearing ID,Product Description,Currency,Strike,Strike Type,Expiry Date,Last Trade Date,Option Delta,Buy/Sell,Quantity,Initial Margin,As of Date,Is Cash Settled,Contract Size
+Bloomberg,1,1,,,202109,CBT,TYU1 Comdty,F,,TYU1 Comdty,US 10YR NOTE (CBT)Sep21,USD,,,,20210921,,,100,,20210701,TRUE,100
