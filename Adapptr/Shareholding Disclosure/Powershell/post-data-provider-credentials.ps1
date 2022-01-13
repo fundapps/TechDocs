@@ -47,7 +47,7 @@ function Update-Credentials {
     Write-Host ("$APIUri/rest/api/v1/dataproviders/$DataProviderId/credentials")
 
     $params = @{
-        Uri = "$APIUri/rest/api/v1/dataproviders/$DataProviderId/credentials"
+        Uri = "$APIUri/rest/api/v1/configuration/dataproviders/$DataProviderId/credentials"
         User = $User
         Password = $Password
         Data = @{
