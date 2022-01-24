@@ -17,7 +17,8 @@ function API-GET {
     }
 
     try {
-        Invoke-RestMethod @params
+        $psObject = Invoke-RestMethod @params
+		ConvertTo-Json -InputObject $psObject -Depth 10
     }
     catch [System.Net.WebException]{
         if ($_.Exception.Response) {
