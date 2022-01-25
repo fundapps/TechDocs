@@ -1,19 +1,19 @@
 <?xml version="1.0" ?>
-<Snapshot Date="2020-01-01">
+<Snapshot Date="2021-10-01">
     <Instruments>
-        <Equity InstrumentId="Instrument1" ISIN="Tesco" IssuerId="T3SC0" Price="123.45"/>
-        <Equity InstrumentId="Instrument2" ISIN="Apple" IssuerId="4PPL3" Price="789.10"/>
+        <Equity InstrumentId="Instrument1" InstrumentName="Instrument1" ISIN="Tesco" IssuerId="T3SC0" Price="123.45"/>
+        <Equity InstrumentId="Instrument2" InstrumentName="Instrument2" ISIN="Apple" IssuerId="4PPL3" Price="789.10"/>
     </Instruments>
         
     <Desks>
-        <Desk DeskId="a" DeskName="DeskA" EntityId="123" EntityName="Entity1"/>
-        <Desk DeskId="b" DeskName="DeskB" EntityId="234" EntityName="Entity2"/>
-        <Desk DeskId="c" DeskName="DeskC" EntityId="345" EntityName="Entity3"/>
+        <Desk DeskId="a" DeskName="DeskA" EntityId="Entity_0" EntityName="Entity_0"/>
+        <Desk DeskId="b" DeskName="DeskB" EntityId="Entity_1" EntityName="Entity_1"/>
+        <Desk DeskId="c" DeskName="DeskC" EntityId="Entity_2" EntityName="Entity_2"/>
     </Desks>
 
     <Portfolios>
         <Portfolio PortfolioId="Portfolio1">
-            <Asset AssetId="Asset1" Quantity="300" InstrumentId="Instrument1" SFTType="Borrowed">
+            <Asset AssetId="Asset1" AssetName="Asset1" Quantity="300" InstrumentId="Instrument1" SFTType="Borrowed">
                 <DeskAsset DeskId="a" DeskAssetId="Asset1_a" DeskQuantity="300" DeskSFTType="Normal"/>
                 <DeskAsset DeskId="b" DeskAssetId="Asset1_b" DeskQuantity="200" DeskSFTType="Borrowed"/>
                 <DeskAsset DeskId="c" DeskAssetId="Asset1_c" DeskQuantity="-200" DeskSFTType="Lent"/>
