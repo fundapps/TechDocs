@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<Snapshot DataDate="2020-01-01">
+<Snapshot Date="2020-01-01">
     <Instruments>
         <Equity InstrumentId="Instrument1" ISIN="Tesco" IssuerId="T3SC0" Price="123.45"/>
         <Equity InstrumentId="Instrument2" ISIN="Apple" IssuerId="4PPL3" Price="789.10"/>
