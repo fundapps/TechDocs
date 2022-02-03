@@ -303,9 +303,13 @@ The `excludeErroredAssets` _[optional]_ is a boolean parameter that can be set i
 
 The `dataProvider` _[optional]_ is an integer parameter that can be set if you need to select a specific data provider. Default value is `1` (Refinitiv). A list of all supported providers can be obtained from the [Available Nomenclatures](#available-nomenclatures-get-restapiv1nomenclatures) endpoint.
 
+The `copyDownParentInstrumentData` _[optional]_ _[bloomberg-only]_ is a boolean parameter that can be set if you find the Bloomberg component data not complete enough. Setting the value to `true` will copy all data from the parent instrument to the instrument of the component. The resulting component instrument will be Equity. Default value: `false`
+
+The `populateExecutionVenueWithMarket` _[optional]_ is a boolean parameter that can be set if you need to use your data provider's Market field to populate ExecutionVenue of your assets. Default value: `false`
+
 ## `POST /rest/api/v1/task/positions/without-enrichment`
 
-This method converts the Consensys or Adapptr csv file format into the FundApps required format for the Position Limits service. The response includes a taskId and a trackingEndpoint that can then be polled via the GET method to monitor the progress of the task through the Adapptr service.
+This method converts the Consensys or Adapptr csv file format into the FundApps required format for the Position Limits service only. The response includes a taskId and a trackingEndpoint that can then be polled via the GET method to monitor the progress of the task through the Adapptr service.
 
 The `positions` parameter must be the file that you need to upload.
 

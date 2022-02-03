@@ -15,9 +15,10 @@ function API-Post {
     $LF = "`r`n";
     $snapshotDate = Get-Date -Format "yyyy-MM-dd";
     
-    # if the file format type is not specified then the format will be 2 by default
-    # 2 means Consensys
-    # please refer to the documentation for more info: https://github.com/fundapps/api-examples#available-nomenclatures-get-restapiv1nomenclatures
+    # please refer to the documentation for more info on parameters:
+    # https://github.com/fundapps/TechDocs#available-nomenclatures-get-restapiv1nomenclatures
+    # https://github.com/fundapps/TechDocs#post-restapiv1taskpositionswithout-enrichment
+
     $format = "2";
     
     $bodyLines = ( 
