@@ -8,7 +8,7 @@ namespace FundAppsScripts.Scripts
 {
     public partial class AdapptrScripts
     {
-        public string UploadPositions()
+        public string UploadPositionsWithoutEnrichment()
         {
             var baseUrl = _adapptrConfig.BaseUrl;
             var username = _adapptrConfig.Username;

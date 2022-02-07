@@ -16,11 +16,11 @@ function API-Post {
     $LF = "`r`n";
     $snapshotDate = Get-Date -Format "yyyy-MM-dd";
     
-    # if dataProvider = 1 it means that the dataProvider is Refinitiv
-    # if dataProvider = 2 it means that the dataProvider is Bloomberg
-    # plese refer to the documentation for more info: https://github.com/mmitushevskiMelon/api-examples#post-restapiv1taskpositions
-    $dataProvider = "1";
 
+    # plese refer to the documentation for more information on parameters that you can use: https://github.com/fundapps/TechDocs#post-restapiv1taskpositions
+
+    $dataProvider = "1";
+    
     $bodyLines = ( 
         "--$boundary",
         "Content-Disposition: form-data; name=`"snapshotDate`"$LF",
@@ -62,7 +62,6 @@ function API-Post {
         else{
             throw
         }
-
     }
 }
 function Get-Content-Type {
