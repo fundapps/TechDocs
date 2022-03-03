@@ -1,0 +1,8 @@
+<Equity InstrumentId="G3934K103" InstrumentName="Global SPAC Partners Co - Sub Unit" CUSIP="G3934K103" CountryOfIssue="US" InstrumentCurrency="USD" ISIN="KYG3934K1379" IssuerId="GLOSPACP" IssuerName="Global SPAC Partners Co" MarketsListedIn="XNYS" Market="XNYS" Price="10" ClassSharesOutstanding="30000000" TotalSharesOutstanding="30000000" TotalVotingRights="30000000" TotalVotingShares="30000000" TotalSharesInTreasury="0" VotesPerShare="1" GICSIndustries="151030" TotalVotingRightsInTreasury="0" IsWhenIssued="False" TotalVotingSharesInTreasury="0"/>
+   <Warrant InstrumentId="G3934K111" InstrumentName="Global SPAC Partners Co - Warrant" CallOrPut="Call" ContractSize="1" Delta="1" CUSIP="G3934K111" InControlOfConversion="false" IsCoveredWarrant="true" IsCashSettled="false" Market="XXXX" MaturityDate="2026-11-30" ExerciseStyle="American" MarketsListedIn="XXXX" InstrumentCurrency="USD" AssetClassCustomer="SPAC Warrant">
+      <Component InstrumentId="G3934K103"/>
+   </Warrant>
+      
+<Portfolio PortfolioId="17">
+   <Asset SFTType="Normal" HoldingType="Direct" AssetId="G3934K103" AssetName="Global SPAC Partners Co - Sub Unit" InstrumentId="G3934K103" Quantity="750000" />
+   <Asset SFTType="Normal" HoldingType="Direct" AssetId="G3934K111" AssetName="Global SPAC Partners Co - Warrant" InstrumentId="G3934K111" Quantity="750000" />
