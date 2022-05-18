@@ -19,7 +19,11 @@ function API-Post {
 
     # plese refer to the documentation for more information on parameters that you can use: https://github.com/fundapps/TechDocs#post-restapiv1taskpositions
 
-    $dataProvider = "1";
+    $dataProvider = "1"; # Refinitiv
+    $primaryIdentifier = "1"; # Isin
+    $secondaryIdentifier = "2"; # Sedol or "3" for Cusip
+    $excludeErroredAssets = "true";
+    $copyDownParentInstrumentData = "true";
     
     $bodyLines = ( 
         "--$boundary",
@@ -28,6 +32,18 @@ function API-Post {
         "--$boundary",
         "Content-Disposition: form-data; name=`"dataProvider`"$LF",
         "$dataProvider$LF",
+        "--$boundary",
+        "Content-Disposition: form-data; name=`"primaryIdentifier`"$LF",
+        "$primaryIdentifier$LF",
+        "--$boundary",
+        "Content-Disposition: form-data; name=`"secondaryIdentifier`"$LF",
+        "$secondaryIdentifier$LF",
+        "--$boundary",
+        "Content-Disposition: form-data; name=`"excludeErroredAssets`"$LF",
+        "$excludeErroredAssets$LF",
+        "--$boundary",
+        "Content-Disposition: form-data; name=`"copyDownParentInstrumentData`"$LF",
+        "$copyDownParentInstrumentData$LF",
         "--$boundary",
         "Content-Disposition: form-data; name=`"positions`"; filename=`"positions.csv`"",
         "Content-Type: application/octet-stream$LF",
