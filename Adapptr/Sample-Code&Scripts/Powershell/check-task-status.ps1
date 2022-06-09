@@ -35,7 +35,7 @@ function API-GET {
         }
         else{
             throw
-        }      
+        }
     }
 }
 
@@ -43,7 +43,7 @@ function Get-Status {
     Param ($APIUri, $User, $Password, $TaskId, $ClientEnvironment)
 
     $params = @{
-        Uri = "$APIUri/rest/api/v1/task/$TaskId/status"
+        Uri = "$APIUri/api/adapptr/v1/task/$TaskId/status"
         User = $User
         Password = $Password
         ClientEnvironment = $ClientEnvironment

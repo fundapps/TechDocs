@@ -90,7 +90,7 @@ function Import-File {
 
 function Import-Positions {
     Param ($APIUri, $User, $Password, $File, $ClientEnvironment)
-    Import-File -User $User -Password $Password -File $File -Uri ($APIUri + "/rest/api/v1/task/positions") -ClientEnvironment $ClientEnvironment
+    Import-File -User $User -Password $Password -File $File -Uri ($APIUri + "/api/adapptr/v1/task/positions") -ClientEnvironment $ClientEnvironment
 }
 
 Write-Host "Done"

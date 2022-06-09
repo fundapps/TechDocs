@@ -250,7 +250,7 @@ For all methods, the header `X-Client-Environment` is required. This must be pop
 
 For all methods, authentication is made against your FundApps environment. You are required to include the Username and Password of an API user in the FundApps environment you have set in the `X-Client-Environment` header.
 
-## Available Nomenclatures `GET /rest/api/v1/nomenclatures`
+## Available Nomenclatures `GET /api/adapptr/v1/nomenclatures`
 
 List of available data providers, identifier types, position services and more. Those can be requested from this endpoint. You must then use the appropriate ids for parameters in other requests.
 
@@ -275,7 +275,7 @@ List of available data providers, identifier types, position services and more. 
 | 1   | FundApps         |
 | 2   | Consensys       |
 
-## Data Provider Credentials `POST /rest/api/v1/configuration/dataproviders/:providerId/credentials`
+## Data Provider Credentials `POST /api/adapptr/v1/configuration/dataproviders/:providerId/credentials`
 
 If you are using Refinitiv data you must submit your username and password to this endpoint. Before being able to post a file to Adapptr, your data provider credentials must be set. Your file upload will otherwise fail because FundApps will be unable to connect and authenticate against the data provider.
 
@@ -284,7 +284,7 @@ If you are using Refinitiv data you must submit your username and password to th
 e.g
 `{ "Username": "[Username]", "Password": "[Password]" }`
 
-## `POST /rest/api/v1/task/positions`
+## `POST /api/adapptr/v1/task/positions`
 
 Upload daily positions. This method expects a csv format ([example Adapptr position files](Adapptr/)). The response includes a taskId and a trackingEndpoint that can then be polled via the GET method to monitor the progress of the task through the Adapptr service.
 
@@ -307,7 +307,7 @@ The `copyDownParentInstrumentData` _[optional]_ is a boolean parameter that can 
 
 The `populateExecutionVenueWithMarket` _[optional]_ is a boolean parameter that can be set if you need to use your data provider's Market field to populate ExecutionVenue of your assets. Default value: `false`
 
-## `POST /rest/api/v1/task/positions/without-enrichment`
+## `POST /api/adapptr/v1/task/positions/without-enrichment`
 
 This method converts the Consensys or Adapptr csv file format into the FundApps required format for the Position Limits service only. The response includes a taskId and a trackingEndpoint that can then be polled via the GET method to monitor the progress of the task through the Adapptr service.
 
@@ -335,11 +335,11 @@ This method works only with the FundApps Position Limits service. Please see [he
     },
     "dateCreated": "2021-06-17T09:20:58.9553866Z",
     "dateUpdated": null,
-    "trackingEndpoint": "/prod/rest/api/v1/task/35ce6225-1534-4e7e-8199-611a8647f8ee/status"
+    "trackingEndpoint": "/prod/api/adapptr/v1/task/35ce6225-1534-4e7e-8199-611a8647f8ee/status"
 }
 ```
 
-## `GET /rest/api/v1/task/:taskID/status`
+## `GET /api/adapptr/v1/task/:taskID/status`
 
 GET the task status. This method returns a status of the requested TaskId and if the task has failed, the errors that have contributed to the failure.
 
