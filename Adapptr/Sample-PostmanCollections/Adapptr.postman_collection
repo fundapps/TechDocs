@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "7902048e-b0f5-4cf9-93f3-01caf0d7df30",
+		"_postman_id": "365d376f-97f8-43f1-9b4f-b5df467eef39",
 		"name": "Adapptr",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "3279036"
@@ -688,13 +688,13 @@
 					]
 				},
 				"url": {
-					"raw": "{{BaseUrl}}/api/adapptr/v1/task/positions",
+					"raw": "{{BaseUrl}}/rest/api/v1/task/positions",
 					"host": [
 						"{{BaseUrl}}"
 					],
 					"path": [
+						"rest",
 						"api",
-						"adapptr",
 						"v1",
 						"task",
 						"positions"

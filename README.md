@@ -6,7 +6,7 @@ Our API methods return machine readable responses in XML format, including error
 
 ## Base URI
 
-If your Rapptr installation is available at <https://%company%.fundapps.co/> the URI from which your API is available is <https://%company%-api.fundapps.co/>. Ditto, staging api is available at <https://%company%-staging-api.fundapps.co/>
+If your Rapptr installation is available at <https://%company%.fundapps.co/>, your API URI is available at <https://%company%-api.fundapps.co/>. Same rule applies for your staging API, available at <https://%company%-staging-api.fundapps.co/>.  
 All requests made to our API must be over HTTPS.
 
 ## Authentication
@@ -241,7 +241,7 @@ Please note our collection of Adapptr samples:
 - [Sample Import Files](Adapptr/Sample-ImportFiles)
 - [Sample Postman Collections](Adapptr/Sample-PostmanCollections)
 
-See [here](Adapptr/APIMigration.md) for a page detailing the Adapptr API migration.
+ℹ See [here](Adapptr/APIMigration.md) for a page detailing the Adapptr API migration.
 
 ## Base URI
 
@@ -258,7 +258,7 @@ For all methods, the header `X-Client-Environment` is required. This must be pop
 
 For all methods, authentication is made against your FundApps environment. You are required to include the Username and Password of an API user in the FundApps environment you have set in the `X-Client-Environment` header.
 
-## Available Nomenclatures `GET /api/adapptr/v1/nomenclatures`
+## Available Nomenclatures `GET /rest/api/v1/nomenclatures` (migrated: `GET /api/adapptr/v1/nomenclatures`)
 
 List of available data providers, identifier types, position services and more. Those can be requested from this endpoint. You must then use the appropriate ids for parameters in other requests.
 
@@ -283,7 +283,7 @@ List of available data providers, identifier types, position services and more. 
 | 1   | FundApps         |
 | 2   | Consensys       |
 
-## Data Provider Credentials `POST /api/adapptr/v1/configuration/dataproviders/:providerId/credentials`
+## Data Provider Credentials `POST /rest/api/v1/configuration/dataproviders/:providerId/credentials` (migrated `POST /api/adapptr/v1/configuration/dataproviders/:providerId/credentials`)
 
 If you are using Refinitiv data you must submit your username and password to this endpoint. Before being able to post a file to Adapptr, your data provider credentials must be set. Your file upload will otherwise fail because FundApps will be unable to connect and authenticate against the data provider.
 
@@ -292,11 +292,11 @@ If you are using Refinitiv data you must submit your username and password to th
 e.g
 `{ "Username": "[Username]", "Password": "[Password]" }`
 
-## `POST /api/adapptr/v1/task/positions`
+## Upload positions `POST /rest/api/v1/task/positions` (migrated: `POST /api/adapptr/v1/task/positions`)
 
-Upload daily positions. This method expects a csv format ([example Adapptr position files](Adapptr/)). The response includes a taskId and a trackingEndpoint that can then be polled via the GET method to monitor the progress of the task through the Adapptr service.
+Upload daily positions. This method expects a csv format ([example Adapptr position files](Adapptr/)). The response includes a `taskId` and a `trackingEndpoint` that can then be polled via the GET method to monitor the progress of the task through the Adapptr service.  
 
-The `positions` parameter must be the file that you need to upload.
+The `positions` parameter must be the file that you need to upload.  
 
 The `snapshotDate` parameter must be included as a parameter in the format `yyyy-mm-dd`. This is the snapshot date of the positions being uploaded in the csv file.
 
@@ -314,13 +314,13 @@ The `copyDownParentInstrumentData` _[optional]_ is a boolean parameter that can 
 
 The `populateExecutionVenueWithMarket` _[optional]_ is a boolean parameter that can be set if you need to use your data provider's Market field to populate ExecutionVenue of your assets. Default value: `false`
 
-## `POST /api/adapptr/v1/task/positions/without-enrichment`
+## Upload positions without enrichment `POST /rest/api/v1/task/positions/without-enrichment` (migrated: `POST /api/adapptr/v1/task/positions/without-enrichment`)
 
-This method converts the Consensys or Adapptr csv file format into the FundApps required format for the Position Limits service only. The response includes a taskId and a trackingEndpoint that can then be polled via the GET method to monitor the progress of the task through the Adapptr service.
+This method converts the Consensys or Adapptr csv file format into the FundApps required format for the Position Limits service only. The response includes a taskId and a trackingEndpoint that can then be polled via the GET method to monitor the progress of the task through the Adapptr service.  
 
-The `positions` parameter must be the file that you need to upload.
+The `positions` parameter must be the file that you need to upload.  
 
-The `snapshotDate` parameter must be included as a parameter in the format `yyyy-mm-dd`. This is the snapshot date of the positions being uploaded in the csv file.
+The `snapshotDate` parameter must be included as a parameter in the format `yyyy-mm-dd`. This is the snapshot date of the positions being uploaded in the CSV file.
 
 The `format` _[optional]_ _[default value = 2]_ parameter can be included if you prefer using different file data format. A list of all supported file data formats can be obtained from the [Available Nomenclatures](#available-nomenclatures-get-restapiv1nomenclatures) endpoint.
 
@@ -338,7 +338,7 @@ This method works only with the FundApps Position Limits service. Please see [he
     "status": {
         "id": 1,
         "name": "Accepted",
- "description": "Position file accepted. Please check the tracking endpoint to check for any errors in the file upload and to track the progress of the file enrichment and transmission to Rapptr."
+        "description": "Position file accepted. Please check the tracking endpoint to check for any errors in the file upload and to track the progress of the file enrichment and transmission to Rapptr."
     },
     "dateCreated": "2021-06-17T09:20:58.9553866Z",
     "dateUpdated": null,
@@ -346,7 +346,7 @@ This method works only with the FundApps Position Limits service. Please see [he
 }
 ```
 
-## `GET /api/adapptr/v1/task/:taskID/status`
+## Task status `GET /rest/api/v1/task/:taskID/status` (migrated: `GET /api/adapptr/v1/task/:taskID/status`)
 
 GET the task status. This method returns a status of the requested TaskId and if the task has failed, the errors that have contributed to the failure.
 
@@ -362,7 +362,7 @@ There are 4 status ids
 | 6   | Waiting Extractions        | A request is sent to the data provider, but there is no response yet.                                                                                                             |
 | 500 | Failed                    | Job has failed. Please read errors to identify cause of job failure.                                                                                                              |
 
-Once transmitted, the request will give the Rapptr trackingEndpoint url which can be polled to see the status of the xml positions file upload to FundApps.
+Once transmitted, the request will give the Rapptr `trackingEndpoint` url which can be polled to check the status of the XML positions file upload to FundApps.
 
 #### Sample Response
 
@@ -382,7 +382,7 @@ Once transmitted, the request will give the Rapptr trackingEndpoint url which ca
     "dateUpdated": "2021-07-22T17:13:19.024+03:00",
     "trackingEndpoint": "https://demo-melon-api.fundapps.co/v1/expost/result/38ba5713-c253-42d1-896a-bd6e00ea5ec3",
     "statusReport": {
- "errors": null,
+        "errors": null,
         "warnings": [
             "Identifier: <Identifier> | Component is required for this instrument. Refinitiv returned null or empty value for UnderlyingISIN and UnderlyingRIC. Consider providing ComponentISIN value in the positions file.",
             "Identifier: <Identifier> | Empty result while getting enrichment data for item. Please check if the identifier is valid.",
