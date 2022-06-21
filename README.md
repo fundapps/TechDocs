@@ -6,7 +6,7 @@ Our API methods return machine readable responses in XML format, including error
 
 ## Base URI
 
-If your Rapptr installation is available at https://%company%.fundapps.co/ the URI from which your API is available is https://%company%-api.fundapps.co/. Ditto, staging api is available at https://%company%-staging-api.fundapps.co/
+If your Rapptr installation is available at <https://%company%.fundapps.co/> the URI from which your API is available is <https://%company%-api.fundapps.co/>. Ditto, staging api is available at <https://%company%-staging-api.fundapps.co/>
 All requests made to our API must be over HTTPS.
 
 ## Authentication
@@ -231,9 +231,17 @@ The RIAN API is Position Limits (PL) enabled, please make sure to select "PL" fr
 
 # FundApps Adapptr Spec & Examples
 
-We provide a REST-ful HTTPS API for automated interfaces between your systems and our Adapptr service. Our API uses predictable, resource-oriented URI's to make methods available and HTTP response codes to indicate errors. These built-in HTTP features, like HTTP authentication and HTTP verbs are part of the standards underpinning the modern web and are able to be understood by off-the-shelf HTTP clients.
+We provide a RESTful HTTPS API for automated interfaces between your systems and our Adapptr service. Our API uses predictable, resource-oriented URIs to make methods available and HTTP response codes to indicate errors. These built-in HTTP features, like HTTP authentication and HTTP verbs are part of the standards underpinning the modern web and are able to be understood by off-the-shelf HTTP clients.
 
 Our API methods return machine readable responses in JSON format, including error conditions.
+
+Please note our collection of Adapptr samples:
+
+- [Sample Code and Scripts](Adapptr/Sample-Code&Scripts)
+- [Sample Import Files](Adapptr/Sample-ImportFiles)
+- [Sample Postman Collections](Adapptr/Sample-PostmanCollections)
+
+See [here](Adapptr/APIMigration.md) for a page detailing the Adapptr API migration.
 
 ## Base URI
 
@@ -298,7 +306,6 @@ The `primaryIdentifier` _[optional]_ parameter can be included if you need to sp
 
 The `secondaryIdentifier` _[optional]_ parameter can be included if you need to specify which identifier to fall back to if your primaryIdentifier is not populated. For example if your primaryIdentifier is set to 1 for ISIN and you have a position which doesn't have an ISIN but has a SEDOL, setting the secondaryIdentifier to 2 (SEDOL) would tell Adapptr to use SEDOL to query data from your market data provider if ISIN is not populated. By default this is empty. The value could be obtained from the [Available Nomenclatures](#available-nomenclatures-get-restapiv1nomenclatures) endpoint.
 
-
 The `excludeErroredAssets` _[optional]_ is a boolean parameter that can be set if you need to send the positions to Rapptr despite errors due to incomplete data from your market data provider. Default value: `false`
 
 The `dataProvider` _[optional]_ is an integer parameter that can be set if you need to select a specific data provider. Default value is `1` (Refinitiv). A list of all supported providers can be obtained from the [Available Nomenclatures](#available-nomenclatures-get-restapiv1nomenclatures) endpoint.
@@ -331,7 +338,7 @@ This method works only with the FundApps Position Limits service. Please see [he
     "status": {
         "id": 1,
         "name": "Accepted",
-	"description": "Position file accepted. Please check the tracking endpoint to check for any errors in the file upload and to track the progress of the file enrichment and transmission to Rapptr."
+ "description": "Position file accepted. Please check the tracking endpoint to check for any errors in the file upload and to track the progress of the file enrichment and transmission to Rapptr."
     },
     "dateCreated": "2021-06-17T09:20:58.9553866Z",
     "dateUpdated": null,
@@ -375,7 +382,7 @@ Once transmitted, the request will give the Rapptr trackingEndpoint url which ca
     "dateUpdated": "2021-07-22T17:13:19.024+03:00",
     "trackingEndpoint": "https://demo-melon-api.fundapps.co/v1/expost/result/38ba5713-c253-42d1-896a-bd6e00ea5ec3",
     "statusReport": {
-	"errors": null,
+ "errors": null,
         "warnings": [
             "Identifier: <Identifier> | Component is required for this instrument. Refinitiv returned null or empty value for UnderlyingISIN and UnderlyingRIC. Consider providing ComponentISIN value in the positions file.",
             "Identifier: <Identifier> | Empty result while getting enrichment data for item. Please check if the identifier is valid.",
