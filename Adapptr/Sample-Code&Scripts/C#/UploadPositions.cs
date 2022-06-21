@@ -22,7 +22,7 @@ namespace FundAppsScripts.Scripts
 
             // if dataProvider = 1 it means that the dataProvider is Refinitiv
             // if dataProvider = 2 it means that the dataProvider is Bloomberg
-            // plese refer to the documentation for more info: https://github.com/mmitushevskiMelon/api-examples#post-restapiv1taskpositions
+            // plese refer to the documentation for more info: https://github.com/fundapps/TechDocs#post-restapiv1taskpositions
             var dataProvider = 1;
 
             //Example using RestSharp (https://github.com/restsharp/RestSharp)
