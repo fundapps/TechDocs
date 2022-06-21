@@ -31,7 +31,7 @@ function API-Post-Json {
             $reader.DiscardBufferedData()
             $responseBody = $reader.ReadToEnd();
 
-            Write-Host "StatusCode:" $_.Exception.Response.StatusCode.value__ 
+            Write-Host "StatusCode:" $_.Exception.Response.StatusCode.value__
             Write-Host "StatusDescription:" $_.Exception.Response.StatusDescription
             Write-Host $_.ErrorDetails.Message
             Write-Host $responseBody
@@ -44,10 +44,10 @@ function API-Post-Json {
 
 function Update-Credentials {
     Param ($APIUri, $User, $Password, $DataProviderId, $DataProviderUsername, $DataProviderPassword, $ClientEnvironment)
-    Write-Host ("$APIUri/rest/api/v1/configuration/dataproviders/$DataProviderId/credentials")
+    Write-Host ("$APIUri/api/adapptr/v1/configuration/dataproviders/$DataProviderId/credentials")
 
     $params = @{
-        Uri = "$APIUri/rest/api/v1/configuration/dataproviders/$DataProviderId/credentials"
+        Uri = "$APIUri/api/adapptr/v1/configuration/dataproviders/$DataProviderId/credentials"
         User = $User
         Password = $Password
         Data = @{

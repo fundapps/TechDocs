@@ -1,7 +1,7 @@
 # FundApps Example PowerShell Adapptr Upload Positions
 #
 # Usage: First run the script, then call the function below. You might need to run the script with . .\check-task-status.ps1 instead of .\check-task-status.ps1
-#Get-Status -APIUri "[BASEURL]" -User "[USERNAME]" -Password "[PASSWORD]" -TaskId "[TASKID]"  -ClientEnvironment "[ALIAS]"
+#Get-Status -User "[USERNAME]" -Password "[PASSWORD]" -TaskId "[TASKID]"  -ClientEnvironment "[ALIAS]"
 # For how to encrypt passwords on a machine before using as a parameter see here: https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/convertto-securestring?view=powershell-7
 
 Write-Host "Install functions"
@@ -35,15 +35,15 @@ function API-GET {
         }
         else{
             throw
-        }      
+        }
     }
 }
 
 function Get-Status {
-    Param ($APIUri, $User, $Password, $TaskId, $ClientEnvironment)
+    Param ($User, $Password, $TaskId, $ClientEnvironment)
 
     $params = @{
-        Uri = "$APIUri/rest/api/v1/task/$TaskId/status"
+        Uri = "$ClientEnvironment-svc.fundapps.co/api/adapptr/v1/task/$TaskId/status"
         User = $User
         Password = $Password
         ClientEnvironment = $ClientEnvironment

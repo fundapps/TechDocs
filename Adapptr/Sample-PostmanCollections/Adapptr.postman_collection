@@ -1,0 +1,476 @@
+{
+	"info": {
+		"_postman_id": "faca8254-b3bf-4b42-864d-1bacd72f12a5",
+		"name": "Adapptr",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3279036"
+	},
+	"item": [
+		{
+			"name": "Rapptr",
+			"item": [
+				{
+					"name": "Upload Positions XML",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "positions",
+									"type": "file",
+									"src": "test.xml"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://{{ClientEnvironment}}-api.fundapps.co/v1/expost/check",
+							"protocol": "https",
+							"host": [
+								"{{ClientEnvironment}}-api",
+								"fundapps",
+								"co"
+							],
+							"path": [
+								"v1",
+								"expost",
+								"check"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Check Rapptr Status",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{ClientEnvironment}}-api.fundapps.co/v1/expost/result/:id",
+							"protocol": "https",
+							"host": [
+								"{{ClientEnvironment}}-api",
+								"fundapps",
+								"co"
+							],
+							"path": [
+								"v1",
+								"expost",
+								"result",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "6fc60e00-d6d8-4460-919b-ae3000c0dea9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get JWT",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{ClientEnvironment}}.fundapps.co/jwtbearer/token",
+							"protocol": "https",
+							"host": [
+								"{{ClientEnvironment}}",
+								"fundapps",
+								"co"
+							],
+							"path": [
+								"jwtbearer",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "XSD",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{ClientEnvironment}}-api.fundapps.co/v1/expost/xsd",
+							"protocol": "https",
+							"host": [
+								"{{ClientEnvironment}}-api",
+								"fundapps",
+								"co"
+							],
+							"path": [
+								"v1",
+								"expost",
+								"xsd"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Upload Positions",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Client-Environment",
+						"value": "{{ClientEnvironment}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "positions",
+							"type": "file",
+							"src": "test.csv"
+						},
+						{
+							"key": "snapshotDate",
+							"value": "2022-03-30",
+							"type": "text"
+						},
+						{
+							"key": "services",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "primaryIdentifier",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "secondaryIdentifier",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "excludeErroredAssets",
+							"value": "false",
+							"type": "text"
+						},
+						{
+							"key": "dataProvider",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "excludeDuplicatedAssets",
+							"value": "false",
+							"type": "text"
+						},
+						{
+							"key": "copyDownParentInstrumentData",
+							"value": "false",
+							"type": "text"
+						},
+						{
+							"key": "populateExecutionVenueWithMarket",
+							"value": "false",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/v1/task/positions",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"api",
+						"adapptr",
+						"v1",
+						"task",
+						"positions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Positions Without Enrichment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Client-Environment",
+						"value": "{{ClientEnvironment}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "positions",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "snapshotDate",
+							"value": "2021-11-16",
+							"type": "text"
+						},
+						{
+							"key": "format",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/v1/task/positions/without-enrichment",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"api",
+						"adapptr",
+						"v1",
+						"task",
+						"positions",
+						"without-enrichment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Task Status",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Client-Environment",
+						"value": "{{ClientEnvironment}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BaseUrl}}/v1/task/:taskID/status",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"api",
+						"adapptr",
+						"v1",
+						"task",
+						":taskID",
+						"status"
+					],
+					"variable": [
+						{
+							"key": "taskID",
+							"value": "c60861a2-a3b2-4599-b4ac-3b55f403dad7"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Data Provider Credentials",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Client-Environment",
+						"value": "{{ClientEnvironment}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Username\": \"\",\r\n    \"Password\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/v1/configuration/dataproviders/:providerId/credentials",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"api",
+						"adapptr",
+						"v1",
+						"configuration",
+						"dataproviders",
+						":providerId",
+						"credentials"
+					],
+					"variable": [
+						{
+							"key": "providerId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Nomenclatures",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Client-Environment",
+						"value": "{{ClientEnvironment}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BaseUrl}}/v1/nomenclatures",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"api",
+						"adapptr",
+						"v1",
+						"nomenclatures"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BaseUrl",
+			"value": "http://{{ClientEnvironment}}-svc.fundapps.co/api/adapptr"
+		},
+		{
+			"key": "ClientEnvironment",
+			"value": ""
+		}
+	]
+}
