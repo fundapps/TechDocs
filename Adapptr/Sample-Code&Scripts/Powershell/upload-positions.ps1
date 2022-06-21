@@ -12,16 +12,16 @@ function API-Post {
 
     $fileBytes = [System.IO.File]::ReadAllBytes($File);
     $fileEnc = [System.Text.Encoding]::GetEncoding('UTF-8').GetString($fileBytes);
-    $boundary = [System.Guid]::NewGuid().ToString(); 
+    $boundary = [System.Guid]::NewGuid().ToString();
     $LF = "`r`n";
     $snapshotDate = Get-Date -Format "yyyy-MM-dd";
-    
+
 
     # plese refer to the documentation for more information on parameters that you can use: https://github.com/fundapps/TechDocs#post-restapiv1taskpositions
 
     $dataProvider = "1";
-    
-    $bodyLines = ( 
+
+    $bodyLines = (
         "--$boundary",
         "Content-Disposition: form-data; name=`"snapshotDate`"$LF",
         "$snapshotDate$LF",
@@ -32,7 +32,7 @@ function API-Post {
         "Content-Disposition: form-data; name=`"positions`"; filename=`"positions.csv`"",
         "Content-Type: application/octet-stream$LF",
         $fileEnc,
-        "--$boundary--$LF" 
+        "--$boundary--$LF"
     ) -join $LF
 
     $params = @{
@@ -44,7 +44,7 @@ function API-Post {
     }
 
     try {
-        Invoke-RestMethod @params 
+        Invoke-RestMethod @params
     }
     catch [System.Net.WebException]{
         if($_.Exception.Response){
@@ -53,8 +53,8 @@ function API-Post {
             $reader.BaseStream.Position = 0
             $reader.DiscardBufferedData()
             $responseBody = $reader.ReadToEnd();
-    
-            Write-Host "StatusCode:" $_.Exception.Response.StatusCode.value__ 
+
+            Write-Host "StatusCode:" $_.Exception.Response.StatusCode.value__
             Write-Host "StatusDescription:" $_.Exception.Response.StatusDescription
             Write-Host $_.ErrorDetails.Message
             Write-Host $responseBody
