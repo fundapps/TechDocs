@@ -1,0 +1,946 @@
+{
+	"info": {
+		"_postman_id": "faca8254-b3bf-4b42-864d-1bacd72f12a5",
+		"name": "Adapptr",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3279036"
+	},
+	"item": [
+		{
+			"name": "Rapptr",
+			"item": [
+				{
+					"name": "Upload Positions XML",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "password",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "username",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "positions",
+									"type": "file",
+									"src": "///FS-SF01/RDSusers$/mihristov/Desktop/test.xml"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://*ClientEnvironment*-api.fundapps.co/v1/expost/check",
+							"protocol": "https",
+							"host": [
+								"*ClientEnvironment*-api",
+								"fundapps",
+								"co"
+							],
+							"path": [
+								"v1",
+								"expost",
+								"check"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Check Rapptr Status",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "password",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "username",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://*ClientEnvironment*-api.fundapps.co/v1/expost/result/:id",
+							"protocol": "https",
+							"host": [
+								"*ClientEnvironment*-api",
+								"fundapps",
+								"co"
+							],
+							"path": [
+								"v1",
+								"expost",
+								"result",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "6fc60e00-d6d8-4460-919b-ae3000c0dea9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get JWT",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://*ClientEnvironment*.fundapps.co/jwtbearer/token",
+							"protocol": "https",
+							"host": [
+								"*ClientEnvironment*",
+								"fundapps",
+								"co"
+							],
+							"path": [
+								"jwtbearer",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "XSD",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://*ClientEnvironment*-api.fundapps.co/v1/expost/xsd",
+							"protocol": "https",
+							"host": [
+								"*ClientEnvironment*-api",
+								"fundapps",
+								"co"
+							],
+							"path": [
+								"v1",
+								"expost",
+								"xsd"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Refinitiv",
+			"item": [
+				{
+					"name": "GetAssetCategories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{RefinitivBaseUrl}}/RestApi/v1/Search/GetAssetCategories",
+							"host": [
+								"{{RefinitivBaseUrl}}"
+							],
+							"path": [
+								"RestApi",
+								"v1",
+								"Search",
+								"GetAssetCategories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ExtractWithNotesShareholderDisclosure",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ExtractionRequest\": {\r\n        \"@odata.type\": \"#DataScope.Select.Api.Extractions.ExtractionRequests.CompositeExtractionRequest\",\r\n        \"ContentFieldNames\": [\r\n            \"CUSIP\",\r\n            \"Par Value\",\r\n            \"Nominal Value\",\r\n            \"Nominal Value Currency\",\r\n            \"Total Issued Share Capital - Currency\",\r\n            \"Asset Type\",\r\n            \"ISIN\",\r\n            \"Market MIC\",\r\n            \"Security Long Name\",\r\n            \"Issuer Name\",\r\n            \"Currency Code\",\r\n            \"Close Price\",\r\n            \"Issuer PermID\",\r\n            \"MIC List\",\r\n            \"Notional Amount\",\r\n            \"Lot Size\",\r\n            \"Strike Price\",\r\n            \"Total Amount Outstanding\",\r\n            \"Conversion Ratio\",\r\n            \"Delta\",\r\n            \"Ticker\",\r\n            \"Shares Amount\",\r\n            \"Round Lot Size\",\r\n            \"Voting Rights Per Share\",\r\n            \"Country of Incorporation\",\r\n            \"Market Capitalization\",\r\n            \"Total Shares - Treasury\",\r\n            \"Total Shares - Outstanding\",\r\n            \"Total Voting Rights - Default\",\r\n            \"Total Voting Shares - Default\",\r\n            \"Maturity Date\",\r\n            \"Country of Issuance\",\r\n            \"SEC Section 12\",\r\n            \"Security Description\",\r\n            \"Entity LEI\",\r\n            \"Share Class\",\r\n            \"Bond Future Modified Duration\",\r\n            \"Debt Outstanding - Total Amount Outstanding\",\r\n            \"Convertible Redemption Type\",\r\n            \"GICS Industry Code\",\r\n            \"Expiration Date\",\r\n            \"Underlying RIC\",\r\n            \"Covered Bond Flag\",\r\n            \"Asset Ratio Against\",\r\n            \"Asset Ratio For\",\r\n            \"Convertible Effective Date\",\r\n            \"Asset SubType\",\r\n            \"Refinitiv Classification Scheme\",\r\n            \"Convertible Flag\",\r\n            \"Convertible Sub Type Code\",\r\n            \"When Issued Flag\",\r\n            \"Conversion Fixed Shares\",\r\n            \"Method of Delivery\",\r\n            \"Exercise Style\",\r\n            \"Put Call Flag\",\r\n            \"Exchange Listed Flag\",\r\n            \"Exchange Code\",\r\n            \"Industry Description\",\r\n            \"Industry Sector Code\",\r\n            \"Industry Sector Description\",\r\n            \"Industry Sub-Description\",\r\n            \"Industry Sub-Sector Code\",\r\n            \"Industry Sub-Sector Description\",\r\n            \"Parent Immediate Industry Sector\",\r\n            \"Parent Immediate Industry Description\",\r\n            \"Industry Classification Benchmark Code\",\r\n            \"Industry Classification Benchmark Description\",\r\n            \"Parent Industry Description\",\r\n            \"Asset Status Description\",\r\n            \"Underlying ISIN\",\r\n            \"Total Issued Share Capital\",\r\n            \"Domicile\",\r\n            \"Executable Ratio Shares Held\",\r\n            \"Executable Ratio Resulting Shares\",\r\n            \"Total Voting Rights - Treasury\",\r\n            \"Security Long Description\",\r\n            \"Total Voting Shares - Treasury\",\r\n            \"GICS Industry Description Code\"\r\n        ],\r\n        \"IdentifierList\": {\r\n            \"@odata.type\": \"#DataScope.Select.Api.Extractions.ExtractionRequests.InstrumentIdentifierList\",\r\n            \"InstrumentIdentifiers\": [\r\n  {\r\n    \"Identifier\": \"KYG9830T1067\",\r\n    \"IdentifierType\": \"Isin\"\r\n  },\r\n  {\r\n    \"Identifier\": \"ES0113900J37\",\r\n    \"IdentifierType\": \"Isin\"\r\n  },\r\n  {\r\n    \"Identifier\": \"CH0108503795\",\r\n    \"IdentifierType\": \"Isin\"\r\n  },\r\n  {\r\n    \"Identifier\": \"TSLA.OQ\",\r\n    \"IdentifierType\": \"Ric\"\r\n  },\r\n  {\r\n    \"Identifier\": \"BSANTANDER.SN\",\r\n    \"IdentifierType\": \"Ric\"\r\n  },\r\n  {\r\n    \"Identifier\": \"BE0974288202\",\r\n    \"IdentifierType\": \"Isin\"\r\n  },\r\n  {\r\n    \"Identifier\": \"IT0000336518\",\r\n    \"IdentifierType\": \"Isin\"\r\n  },\r\n  {\r\n    \"Identifier\": \"PIN.UNL\",\r\n    \"IdentifierType\": \"Ric\"\r\n  },\r\n  {\r\n    \"Identifier\": \"FR0000031122\",\r\n    \"IdentifierType\": \"Isin\"\r\n  },\r\n  {\r\n    \"Identifier\": \"GB00B019KW72\",\r\n    \"IdentifierType\": \"Isin\"\r\n  },\r\n  {\r\n    \"Identifier\": \"GB00B03MLX29\",\r\n    \"IdentifierType\": \"Isin\"\r\n  },\r\n  {\r\n    \"Identifier\": \"US0378331005\",\r\n    \"IdentifierType\": \"Isin\"\r\n  }\r\n],\r\n            \"ValidationOptions\":{\r\n                \"UseExchangeCodeInsteadOfLipper\": true,\r\n                \"AllowUnsupportedInstruments\": true\r\n            },\r\n            \"UseUserPreferencesForValidationOptions\": false\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{RefinitivBaseUrl}}/RestApi/v1/Extractions/ExtractWithNotes",
+							"host": [
+								"{{RefinitivBaseUrl}}"
+							],
+							"path": [
+								"RestApi",
+								"v1",
+								"Extractions",
+								"ExtractWithNotes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ExtractWithNotesCombined",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ExtractionRequest\": {\r\n        \"@odata.type\": \"#DataScope.Select.Api.Extractions.ExtractionRequests.CompositeExtractionRequest\",\r\n        \"ContentFieldNames\": [\r\n            \"CUSIP\",\r\n            \"Par Value\",\r\n            \"Nominal Value\",\r\n            \"Nominal Value Currency\",\r\n            \"Total Issued Share Capital - Currency\",\r\n            \"Asset Type\",\r\n            \"ISIN\",\r\n            \"Market MIC\",\r\n            \"Security Long Name\",\r\n            \"Issuer Name\",\r\n            \"Currency Code\",\r\n            \"Close Price\",\r\n            \"Issuer PermID\",\r\n            \"MIC List\",\r\n            \"Notional Amount\",\r\n            \"Lot Size\",\r\n            \"Strike Price\",\r\n            \"Total Amount Outstanding\",\r\n            \"Conversion Ratio\",\r\n            \"Delta\",\r\n            \"Ticker\",\r\n            \"Shares Amount\",\r\n            \"Round Lot Size\",\r\n            \"Voting Rights Per Share\",\r\n            \"Country of Incorporation\",\r\n            \"Market Capitalization\",\r\n            \"Total Shares - Treasury\",\r\n            \"Total Shares - Outstanding\",\r\n            \"Total Voting Rights - Default\",\r\n            \"Total Voting Shares - Default\",\r\n            \"Maturity Date\",\r\n            \"Country of Issuance\",\r\n            \"SEC Section 12\",\r\n            \"Security Description\",\r\n            \"Entity LEI\",\r\n            \"Share Class\",\r\n            \"Bond Future Modified Duration\",\r\n            \"Debt Outstanding - Total Amount Outstanding\",\r\n            \"Convertible Redemption Type\",\r\n            \"GICS Industry Code\",\r\n            \"Expiration Date\",\r\n            \"Underlying RIC\",\r\n            \"Covered Bond Flag\",\r\n            \"Asset Ratio Against\",\r\n            \"Asset Ratio For\",\r\n            \"Convertible Effective Date\",\r\n            \"Asset SubType\",\r\n            \"Refinitiv Classification Scheme\",\r\n            \"Convertible Flag\",\r\n            \"Convertible Sub Type Code\",\r\n            \"When Issued Flag\",\r\n            \"Conversion Fixed Shares\",\r\n            \"Method of Delivery\",\r\n            \"Exercise Style\",\r\n            \"Put Call Flag\",\r\n            \"Exchange Listed Flag\",\r\n            \"Exchange Code\",\r\n            \"Industry Description\",\r\n            \"Industry Sector Code\",\r\n            \"Industry Sector Description\",\r\n            \"Industry Sub-Description\",\r\n            \"Industry Sub-Sector Code\",\r\n            \"Industry Sub-Sector Description\",\r\n            \"Parent Immediate Industry Sector\",\r\n            \"Parent Immediate Industry Description\",\r\n            \"Industry Classification Benchmark Code\",\r\n            \"Industry Classification Benchmark Description\",\r\n            \"Parent Industry Description\",\r\n            \"Asset Status Description\",\r\n            \"Underlying ISIN\",\r\n            \"Total Issued Share Capital\",\r\n            \"Domicile\",\r\n            \"Executable Ratio Shares Held\",\r\n            \"Executable Ratio Resulting Shares\",\r\n            \"Total Voting Rights - Treasury\",\r\n            \"Last Updated Open Interest\",\r\n            \"Security Long Description\",\r\n            \"Share Delivery Code\"\r\n        ],\r\n        \"IdentifierList\": {\r\n            \"@odata.type\": \"#DataScope.Select.Api.Extractions.ExtractionRequests.InstrumentIdentifierList\",\r\n            \"InstrumentIdentifiers\": [\r\n                {\r\n                    \"Identifier\": \"US98421U1088\",\r\n                    \"IdentifierType\": \"Isin\"\r\n                }\r\n            ],\r\n            \"ValidationOptions\": {\r\n                \"UseExchangeCodeInsteadOfLipper\": true,\r\n                \"AllowUnsupportedInstruments\": true\r\n            },\r\n            \"UseUserPreferencesForValidationOptions\": false\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{RefinitivBaseUrl}}/RestApi/v1/Extractions/ExtractWithNotes",
+							"host": [
+								"{{RefinitivBaseUrl}}"
+							],
+							"path": [
+								"RestApi",
+								"v1",
+								"Extractions",
+								"ExtractWithNotes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ExtractWithNotesPositionLimits",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ExtractionRequest\": {\r\n        \"@odata.type\": \"#DataScope.Select.Api.Extractions.ExtractionRequests.CompositeExtractionRequest\",\r\n        \"ContentFieldNames\": [\r\n            \"Asset Type\",\r\n            \"Asset SubType\",\r\n            \"Refinitiv Classification Scheme\",\r\n            \"Underlying RIC\",\r\n            \"Underlying ISIN\",\r\n            \"Currency Code\",\r\n            \"Security Description\",\r\n            \"Close Price\",\r\n            \"Market MIC\",\r\n            \"Exchange Code\",\r\n            \"Asset Status Description\",\r\n            \"Ticker\",\r\n            \"Lot Size\",\r\n            \"Expiration Date\",\r\n            \"Delta\",\r\n            \"Method of Delivery\",\r\n            \"Last Updated Open Interest\",\r\n            \"Put Call Flag\",\r\n            \"Security Long Description\"\r\n        ],\r\n        \"IdentifierList\": {\r\n            \"@odata.type\": \"#DataScope.Select.Api.Extractions.ExtractionRequests.InstrumentIdentifierList\",\r\n            \"InstrumentIdentifiers\": [\r\n                {\r\n                    \"Identifier\": \"BYW4289\",\r\n                    \"IdentifierType\": \"Sedol\"\r\n                },\r\n                {\r\n                    \"Identifier\": \"BN2BD13\",\r\n                    \"IdentifierType\": \"Sedol\"\r\n                }\r\n            ],\r\n            \"ValidationOptions\":{\r\n                \"UseExchangeCodeInsteadOfLipper\": true,\r\n                \"AllowUnsupportedInstruments\": true\r\n            },\r\n            \"UseUserPreferencesForValidationOptions\": false\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{RefinitivBaseUrl}}/RestApi/v1/Extractions/ExtractWithNotes",
+							"host": [
+								"{{RefinitivBaseUrl}}"
+							],
+							"path": [
+								"RestApi",
+								"v1",
+								"Extractions",
+								"ExtractWithNotes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Request Token",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Credentials\": {\r\n        \"Username\": \"9008961\",\r\n        \"Password\": \"JIN0Xd3A\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{RefinitivBaseUrl}}/RestApi/v1/Authentication/RequestToken",
+							"host": [
+								"{{RefinitivBaseUrl}}"
+							],
+							"path": [
+								"RestApi",
+								"v1",
+								"Authentication",
+								"RequestToken"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetGicsIndustryClassifications",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{RefinitivBaseUrl}}/RestApi/v1/Search/GetGicsIndustryClassifications ",
+							"host": [
+								"{{RefinitivBaseUrl}}"
+							],
+							"path": [
+								"RestApi",
+								"v1",
+								"Search",
+								"GetGicsIndustryClassifications "
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "oauth2",
+				"oauth2": [
+					{
+						"key": "headerPrefix",
+						"value": "Token",
+						"type": "string"
+					},
+					{
+						"key": "addTokenTo",
+						"value": "header",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.sendRequest({",
+							"    url: pm.variables.get(\"RefinitivBaseUrl\") + '/RestApi/v1/Authentication/RequestToken',",
+							"    method: 'POST',",
+							"    header: {",
+							"        'content-type': 'application/json'",
+							"    },",
+							"    body: {",
+							"        mode: 'raw',",
+							"        raw: JSON.stringify({",
+							"          \"Credentials\": {",
+							"            \"Username\": pm.variables.get(\"RefinitivUsername\"),",
+							"            \"Password\": pm.variables.get(\"RefinitivPassword\")",
+							"          }",
+							"        })",
+							"    }",
+							"}, function (err, res) {",
+							"    pm.variables.set(\"RefinitivToken\", res.json().value);",
+							"});"
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Adapptr Integrations",
+			"item": [
+				{
+					"name": "Convert - Large",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "storageFileName",
+									"value": "2d808d79fc31442b8f2f0a914d209558-hassana format.xls",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{AdapptrIntegrationsBaseUrl}}/rest/api/v1/positions/large/convert",
+							"host": [
+								"{{AdapptrIntegrationsBaseUrl}}"
+							],
+							"path": [
+								"rest",
+								"api",
+								"v1",
+								"positions",
+								"large",
+								"convert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ping",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{AdapptrIntegrationsBaseUrl}}/ping",
+							"host": [
+								"{{AdapptrIntegrationsBaseUrl}}"
+							],
+							"path": [
+								"ping"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pre Signed Url",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{AdapptrIntegrationsBaseUrl}}/rest/api/v1/positions/large/pre-signed-url?fileName=Hassana Format.XLS",
+							"host": [
+								"{{AdapptrIntegrationsBaseUrl}}"
+							],
+							"path": [
+								"rest",
+								"api",
+								"v1",
+								"positions",
+								"large",
+								"pre-signed-url"
+							],
+							"query": [
+								{
+									"key": "fileName",
+									"value": "Hassana Format.XLS"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload File Using PreSignedUrl",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "file",
+							"file": {
+								"src": "///FS-SF01/RDSusers$/mihristov/Downloads/adapptr-data/Hassana Format.XLS"
+							}
+						},
+						"url": {
+							"raw": "https://adapptr-integrations-localhost.s3-eu-west-1.amazonaws.com/client-files/2d808d79fc31442b8f2f0a914d209558-hassana%20format.xls?X-Amz-Expires=1800&X-Amz-Security-Token=IQoJb3JpZ2luX2VjELH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCWV1LXdlc3QtMSJIMEYCIQCHN%2FCbnr8qQ1avIC6TbuCo4mx0FP1fho%2BLFDgiQTe0zQIhAK%2Ftwn5oUbfM6NqTgutkAnPpqcjYKPJ581OQzMtOjOhSKqEDCLr%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNjg0Njc4Njk4NDQzIgymg%2Fmgr0SkQGs00Vkq9QIlIKCJsPvMGfA2bbEq1SRERF34BEx4CxKS0PQfC8APqRtS%2BitkIJzgdDzWR61sul5wVP7CtjHFCUPNRtyWcoFI8klViAe3SsCSQ0n9QBfMSfWUlM%2F797FljzwijWRQ8xml8EumOkckh%2BWUNbCFii0LchAjQUAulZyUlPrbTmUpLUV50Fo%2BNXtrGXqR743nSsoJApFlneOSTfx3AN5XPYNk8nswVsGD1OSuzmSiljmKith1aYW4LHE85jZitDCemPabv6IQe6lSJpVK2A9aTNWnT7pIN25wuyMWRBDPpHXwv8Lex5zqdbqQ%2BzpzTgODxkXr2GDkQCyqDwxk%2BZctqM%2BddTKhPYydVtIkgUDqGj%2BsiARW2JXUAeZuj6oSMYjDsvTPEX4e%2FQcsuH7LB8n8fo4XW%2Bv3MJ6Ytl8EtYLiXxNdLyOxm9blJleWU%2BzP6D%2BtMoQK6gBygzkKmJfo6ONnDW53f2SNCo7F7V6z3YyTgxXOBGx1%2FO07MIT8344GOqUBSWI7oficGtv3i9L%2BvlLW9G7uwqbyYCuKqrcHUGWGCWibK5zcMp6byaheabyDqwRs%2BOXT7NzgqvGDQFkIRg4gT0XptclV9hFclXT5nyoR3nV8wVslLi1Nh6NQ8GZfNkzunAG%2F11HdSlHsPC%2FJO13Q0dC4ak12d45Yk7Ci4RdysarVZz42TkrgpzuvLGwA%2BLjz4qsPlncFptq9Ngb5I7HNHDlFZ3F%2B&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAZ62QH2XFZFLGTJXY/20220107/eu-west-1/s3/aws4_request&X-Amz-Date=20220107T084956Z&X-Amz-SignedHeaders=host&X-Amz-Signature=eed68d46adc1a55d36c7d1cfcef689c73b1094506f176d4136d7451e84d21287",
+							"protocol": "https",
+							"host": [
+								"adapptr-integrations-localhost",
+								"s3-eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"client-files",
+								"2d808d79fc31442b8f2f0a914d209558-hassana%20format.xls"
+							],
+							"query": [
+								{
+									"key": "X-Amz-Expires",
+									"value": "1800"
+								},
+								{
+									"key": "X-Amz-Security-Token",
+									"value": "IQoJb3JpZ2luX2VjELH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCWV1LXdlc3QtMSJIMEYCIQCHN%2FCbnr8qQ1avIC6TbuCo4mx0FP1fho%2BLFDgiQTe0zQIhAK%2Ftwn5oUbfM6NqTgutkAnPpqcjYKPJ581OQzMtOjOhSKqEDCLr%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNjg0Njc4Njk4NDQzIgymg%2Fmgr0SkQGs00Vkq9QIlIKCJsPvMGfA2bbEq1SRERF34BEx4CxKS0PQfC8APqRtS%2BitkIJzgdDzWR61sul5wVP7CtjHFCUPNRtyWcoFI8klViAe3SsCSQ0n9QBfMSfWUlM%2F797FljzwijWRQ8xml8EumOkckh%2BWUNbCFii0LchAjQUAulZyUlPrbTmUpLUV50Fo%2BNXtrGXqR743nSsoJApFlneOSTfx3AN5XPYNk8nswVsGD1OSuzmSiljmKith1aYW4LHE85jZitDCemPabv6IQe6lSJpVK2A9aTNWnT7pIN25wuyMWRBDPpHXwv8Lex5zqdbqQ%2BzpzTgODxkXr2GDkQCyqDwxk%2BZctqM%2BddTKhPYydVtIkgUDqGj%2BsiARW2JXUAeZuj6oSMYjDsvTPEX4e%2FQcsuH7LB8n8fo4XW%2Bv3MJ6Ytl8EtYLiXxNdLyOxm9blJleWU%2BzP6D%2BtMoQK6gBygzkKmJfo6ONnDW53f2SNCo7F7V6z3YyTgxXOBGx1%2FO07MIT8344GOqUBSWI7oficGtv3i9L%2BvlLW9G7uwqbyYCuKqrcHUGWGCWibK5zcMp6byaheabyDqwRs%2BOXT7NzgqvGDQFkIRg4gT0XptclV9hFclXT5nyoR3nV8wVslLi1Nh6NQ8GZfNkzunAG%2F11HdSlHsPC%2FJO13Q0dC4ak12d45Yk7Ci4RdysarVZz42TkrgpzuvLGwA%2BLjz4qsPlncFptq9Ngb5I7HNHDlFZ3F%2B"
+								},
+								{
+									"key": "X-Amz-Algorithm",
+									"value": "AWS4-HMAC-SHA256"
+								},
+								{
+									"key": "X-Amz-Credential",
+									"value": "ASIAZ62QH2XFZFLGTJXY/20220107/eu-west-1/s3/aws4_request"
+								},
+								{
+									"key": "X-Amz-Date",
+									"value": "20220107T084956Z"
+								},
+								{
+									"key": "X-Amz-SignedHeaders",
+									"value": "host"
+								},
+								{
+									"key": "X-Amz-Signature",
+									"value": "eed68d46adc1a55d36c7d1cfcef689c73b1094506f176d4136d7451e84d21287"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Convert",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "positions",
+									"type": "file",
+									"src": "///FS-SF01/RDSusers$/mihristov/Downloads/adapptr-data/Hassana Format.XLS"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{AdapptrIntegrationsBaseUrl}}/rest/api/v1/positions/convert",
+							"host": [
+								"{{AdapptrIntegrationsBaseUrl}}"
+							],
+							"path": [
+								"rest",
+								"api",
+								"v1",
+								"positions",
+								"convert"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "basic",
+				"basic": [
+					{
+						"key": "password",
+						"value": "password",
+						"type": "string"
+					},
+					{
+						"key": "username",
+						"value": "username",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Upload Positions",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Client-Environment",
+						"value": "{{ClientEnvironment}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "positions",
+							"type": "file",
+							"src": "///FS-SF01/RDSusers$/mihristov/Desktop/Case 3.csv"
+						},
+						{
+							"key": "snapshotDate",
+							"value": "2022-03-30",
+							"type": "text"
+						},
+						{
+							"key": "services",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "primaryIdentifier",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "secondaryIdentifier",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "excludeErroredAssets",
+							"value": "false",
+							"type": "text"
+						},
+						{
+							"key": "dataProvider",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "excludeDuplicatedAssets",
+							"value": "false",
+							"type": "text"
+						},
+						{
+							"key": "copyDownParentInstrumentData",
+							"value": "false",
+							"type": "text"
+						},
+						{
+							"key": "populateExecutionVenueWithMarket",
+							"value": "false",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/api/adapptr/v1/task/positions",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"api",
+						"adapptr",
+						"v1",
+						"task",
+						"positions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Positions Without Enrichment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Client-Environment",
+						"value": "{{ClientEnvironment}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "positions",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "snapshotDate",
+							"value": "2021-11-16",
+							"type": "text"
+						},
+						{
+							"key": "format",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/api/adapptr/v1/task/positions/without-enrichment",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"api",
+						"adapptr",
+						"v1",
+						"task",
+						"positions",
+						"without-enrichment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Task Status",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Client-Environment",
+						"value": "{{ClientEnvironment}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BaseUrl}}/api/adapptr/v1/task/:taskID/status",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"api",
+						"adapptr",
+						"v1",
+						"task",
+						":taskID",
+						"status"
+					],
+					"variable": [
+						{
+							"key": "taskID",
+							"value": "c60861a2-a3b2-4599-b4ac-3b55f403dad7"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ping",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseUrl}}/api/adapptr/ping",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"api",
+						"adapptr",
+						"ping"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Data Provider Credentials",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Client-Environment",
+						"value": "{{ClientEnvironment}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Username\": \"9008961\",\r\n    \"Password\": \"JIN0Xd3A\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/api/adapptr/v1/configuration/dataproviders/:providerId/credentials",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"api",
+						"adapptr",
+						"v1",
+						"configuration",
+						"dataproviders",
+						":providerId",
+						"credentials"
+					],
+					"variable": [
+						{
+							"key": "providerId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Nomenclatures",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Client-Environment",
+						"value": "{{ClientEnvironment}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BaseUrl}}/api/adapptr/v1/nomenclatures",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"api",
+						"adapptr",
+						"v1",
+						"nomenclatures"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "password",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "username",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BaseUrl",
+			"value": "http://*ClientEnvironment*-svc.fundapps.co"
+		},
+		{
+			"key": "RefinitivBaseUrl",
+			"value": "https://selectapi.datascope.refinitiv.com/"
+		},
+		{
+			"key": "RefinitivUsername",
+			"value": "*ActualRefinitivUsername*"
+		},
+		{
+			"key": "RefinitivPassword",
+			"value": "*ActualRefinitivPassword*"
+		},
+		{
+			"key": "RefinitivToken",
+			"value": ""
+		},
+		{
+			"key": "ClientEnvironment",
+			"value": "*ClientEnvironmentName*"
+		},
+		{
+			"key": "AdapptrIntegrationsBaseUrl",
+			"value": "http://*ClientEnvironment*-svc.fundapps.co"
+		}
+	]
+}
