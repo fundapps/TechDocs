@@ -22,7 +22,7 @@ namespace FundAppsScripts.Scripts
 
             // if the file format type is not specified then the format will be 2 by default
             // 2 means Consensys
-            // please refer to the documentation for more info: https://github.com/fundapps/api-examples#available-nomenclatures-get-restapiv1nomenclatures
+            // please refer to the documentation for more info: https://github.com/fundapps/TechDocs#available-nomenclatures-get-restapiv1nomenclatures
             var format = "2";
 
             //Example using RestSharp (https://github.com/restsharp/RestSharp)
@@ -34,7 +34,7 @@ namespace FundAppsScripts.Scripts
             };
 
             // make the HTTP POST request
-            var request = new RestRequest($"/api/adapptr/v1/task/positions/without-enrichment", Method.POST);
+            var request = new RestRequest($"/v1/task/positions/without-enrichment", Method.POST);
 
             // add body params to the request
             request.AddFile("positions", pathToFile, "text/csv");

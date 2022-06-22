@@ -28,7 +28,7 @@ namespace FundAppsScripts.Scripts
             };
 
             // make the HTTP GET request with the taskId as route parameter
-            var request = new RestRequest($"/api/adapptr/v1/task/{taskId}/status", Method.GET);
+            var request = new RestRequest($"/v1/task/{taskId}/status", Method.GET);
 
             // add header with the rapptr environment
             request.AddHeader("X-Client-Environment", clientEnvironmentSubDomain);

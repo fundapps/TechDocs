@@ -16,7 +16,7 @@ namespace FundAppsScripts.Scripts
         }
 
         // if you need to use Bloomberg as a data provider the implementation given below is not applicable
-        // please refer to the documentation for more info: https://github.com/fundapps/api-examples#data-provider-credentials-post-restapiv1configurationdataprovidersprovideridcredentials
+        // please refer to the documentation for more info: https://github.com/fundapps/TechDocs#data-provider-credentials-post-restapiv1configurationdataprovidersprovideridcredentials
 
         public void PostDataPrividerCredentials()
         {
@@ -26,7 +26,7 @@ namespace FundAppsScripts.Scripts
             // your FundApps environment name
             var clientEnvironmentSubDomain = "";
 
-            //data providers ids can be obtained from a GET /api/adapptr/v1/dataproviders. You will need to fill Id with the value of the data vendor you are using
+            //data providers ids can be obtained from a GET /v1/dataproviders. You will need to fill Id with the value of the data vendor you are using
             var refinitivId = _adapptrConfig.RefinitivConfig.Id;
             // set your username
             var refinitivUsername = _adapptrConfig.RefinitivConfig.Username;
@@ -42,7 +42,7 @@ namespace FundAppsScripts.Scripts
             };
 
             // make the HTTP POST request with the market data provider id as route parameter
-            var request = new RestRequest($"/api/adapptr/v1/dataproviders/{refinitivId}/credentials", Method.POST);
+            var request = new RestRequest($"/v1/dataproviders/{refinitivId}/credentials", Method.POST);
 
             // add json body to the request
             request.AddJsonBody(new
