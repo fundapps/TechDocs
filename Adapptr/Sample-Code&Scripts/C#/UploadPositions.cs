@@ -34,7 +34,7 @@ namespace FundAppsScripts.Scripts
             };
 
             // make the HTTP POST request
-            var request = new RestRequest($"/v1/task/positions", Method.POST);
+            var request = new RestRequest($"/v2/task/positions", Method.POST);
 
             // add body params to the request
             request.AddFile("positions", pathToFile, "text/csv");

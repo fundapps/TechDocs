@@ -44,10 +44,10 @@ function API-Post-Json {
 
 function Update-Credentials {
     Param ($APIUri, $User, $Password, $DataProviderId, $DataProviderUsername, $DataProviderPassword, $ClientEnvironment)
-    Write-Host ("$APIUri/api/adapptr/v1/configuration/dataproviders/$DataProviderId/credentials")
+    Write-Host ("$APIUri/api/adapptr/v2/configuration/dataproviders/$DataProviderId/credentials")
 
     $params = @{
-        Uri = "$APIUri/api/adapptr/v1/configuration/dataproviders/$DataProviderId/credentials"
+        Uri = "$APIUri/api/adapptr/v2/configuration/dataproviders/$DataProviderId/credentials"
         User = $User
         Password = $Password
         Data = @{

@@ -27,4 +27,12 @@ The new endpoints are the same as above, except for replacing `/rest/api/v1/` wi
 `BaseUrl = https://abc-svc.fundapps.co` + `/api/adapptr/v1` + `/task/{taskId}/status`  
 etc.
 
+DIFF view of endpoint changes, an example for the positions upload:  
+```diff
+- https://abc2d2ef3g.execute-api.eu-west-1.amazonaws.com/prod/rest/api/v1/task/positions
++ https://abc-svc.fundapps.co/api/adapptr/v1/task/positions
+```
+
 ℹ A [Sample Postman collection](Sample-PostmanCollections/New_Adapptr.postman_collection) is available to use in your migration efforts.
+
+◀ [Return to Main page](../README.md)

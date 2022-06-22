@@ -257,7 +257,7 @@
 					]
 				},
 				"url": {
-					"raw": "{{BaseUrl}}/v1/task/positions",
+					"raw": "{{BaseUrl}}/v2/task/positions",
 					"host": [
 						"{{BaseUrl}}"
 					],
@@ -304,7 +304,7 @@
 					]
 				},
 				"url": {
-					"raw": "{{BaseUrl}}/v1/task/positions/without-enrichment",
+					"raw": "{{BaseUrl}}/v2/task/positions/without-enrichment",
 					"host": [
 						"{{BaseUrl}}"
 					],
@@ -335,7 +335,7 @@
 					}
 				],
 				"url": {
-					"raw": "{{BaseUrl}}/v1/task/:taskID/status",
+					"raw": "{{BaseUrl}}/v2/task/:taskID/status",
 					"host": [
 						"{{BaseUrl}}"
 					],
@@ -378,7 +378,7 @@
 					}
 				},
 				"url": {
-					"raw": "{{BaseUrl}}/v1/configuration/dataproviders/:providerId/credentials",
+					"raw": "{{BaseUrl}}/v2/configuration/dataproviders/:providerId/credentials",
 					"host": [
 						"{{BaseUrl}}"
 					],
@@ -413,7 +413,7 @@
 					}
 				],
 				"url": {
-					"raw": "{{BaseUrl}}/v1/nomenclatures",
+					"raw": "{{BaseUrl}}/v2/nomenclatures",
 					"host": [
 						"{{BaseUrl}}"
 					],
