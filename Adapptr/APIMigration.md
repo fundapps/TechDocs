@@ -18,13 +18,21 @@ etc.
 
 **ABC**'s Rapptr service URL remains the same after migration.  
 Their their new **base Adapptr URL** however is `https://abc-svc.fundapps.co`.  
-The new endpoints are the same as above, except for replacing `/rest/api/v1/` with `/api/adapptr/v1/`, as shown below:
+The new endpoints are the same as above, except for replacing `/rest/api/v1/` with `/api/adapptr/v2/`, as shown below:
 
-`BaseUrl = https://abc-svc.fundapps.co` + `/api/adapptr/v1` + `/configuration/dataproviders/{providerId}/credentials`  
-`BaseUrl = https://abc-svc.fundapps.co` + `/api/adapptr/v1` + `/nomenclatures`  
-`BaseUrl = https://abc-svc.fundapps.co` + `/api/adapptr/v1` + `/task/positions`  
-`BaseUrl = https://abc-svc.fundapps.co` + `/api/adapptr/v1` + `/task/positions/without-enrichment`  
-`BaseUrl = https://abc-svc.fundapps.co` + `/api/adapptr/v1` + `/task/{taskId}/status`  
+`BaseUrl = https://abc-svc.fundapps.co` + `/api/adapptr/v2` + `/configuration/dataproviders/{providerId}/credentials`  
+`BaseUrl = https://abc-svc.fundapps.co` + `/api/adapptr/v2` + `/nomenclatures`  
+`BaseUrl = https://abc-svc.fundapps.co` + `/api/adapptr/v2` + `/task/positions`  
+`BaseUrl = https://abc-svc.fundapps.co` + `/api/adapptr/v2` + `/task/positions/without-enrichment`  
+`BaseUrl = https://abc-svc.fundapps.co` + `/api/adapptr/v2` + `/task/{taskId}/status`  
 etc.
 
+Example DIFF view of the positions upload endpoint changes side by side:  
+```diff
+- https://abc2d2ef3g.execute-api.eu-west-1.amazonaws.com/prod/rest/api/v1/task/positions
++ https://abc-svc.fundapps.co/api/adapptr/v2/task/positions
+```
+
 ℹ A [Sample Postman collection](Sample-PostmanCollections/New_Adapptr.postman_collection) is available to use in your migration efforts.
+
+◀ [Return to Main page](../README.md)

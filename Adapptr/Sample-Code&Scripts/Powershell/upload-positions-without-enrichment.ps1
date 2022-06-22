@@ -91,7 +91,7 @@ function Import-File {
 
 function Import-Positions {
     Param ($User, $Password, $File, $ClientEnvironment)
-    Import-File -User $User -Password $Password -File $File -Uri ($ClientEnvironment + "-svc.fundapps.co/api/adapptr/v1/task/positions/without-enrichment") -ClientEnvironment $ClientEnvironment
+    Import-File -User $User -Password $Password -File $File -Uri "$ClientEnvironment-svc.fundapps.co/api/adapptr/v2/task/positions/without-enrichment" -ClientEnvironment $ClientEnvironment
 }
 
 Write-Host "Done"

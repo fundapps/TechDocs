@@ -43,7 +43,7 @@ function Get-Status {
     Param ($User, $Password, $TaskId, $ClientEnvironment)
 
     $params = @{
-        Uri = "$ClientEnvironment-svc.fundapps.co/api/adapptr/v1/task/$TaskId/status"
+        Uri = "$ClientEnvironment-svc.fundapps.co/api/adapptr/v2/task/$TaskId/status"
         User = $User
         Password = $Password
         ClientEnvironment = $ClientEnvironment
