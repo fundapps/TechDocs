@@ -17,7 +17,7 @@ As per the [official docs](../README.md), **ABC's** endpoints currently resemble
 etc.
 
 **ABC**'s Rapptr service URL remains the same after migration.  
-Their their new **base Adapptr URL** however is `https://abc-svc.fundapps.co`.  
+Their new **base Adapptr URL** however is `https://abc-svc.fundapps.co`.  
 The new endpoints are the same as above, except for replacing `/rest/api/v1/` with `/api/adapptr/v2/`, as shown below:
 
 `BaseUrl = https://abc-svc.fundapps.co` + `/api/adapptr/v2` + `/configuration/dataproviders/{providerId}/credentials`  
