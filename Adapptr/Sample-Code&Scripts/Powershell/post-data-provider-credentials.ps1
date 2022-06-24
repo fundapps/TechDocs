@@ -1,7 +1,7 @@
 # FundApps Example PowerShell Adapptr Upload Positions
 #
 # Usage: First run the script, then call the function below. You might need to run the script with . .\post-data-provider-credentials.ps1 instead of .\post-data-provider-credentials.ps1
-# Update-Credentials  -APIUri "[BASEURL]" -User "[USERNAME]" -Password "[PASSWORD]" -DataProviderId "[DATA_PROVIDER_ID]" -DataProviderUsername "[DATA_PROVIDER_USERNAME]" -DataProviderPassword "[DATA_PROVIDER_PASSWORD]" -ClientEnvironment "[ALIAS]"
+# Update-Credentials -User "[USERNAME]" -Password "[PASSWORD]" -DataProviderId "[DATA_PROVIDER_ID]" -DataProviderUsername "[DATA_PROVIDER_USERNAME]" -DataProviderPassword "[DATA_PROVIDER_PASSWORD]" -ClientEnvironment "[ALIAS]"
 # For how to encrypt passwords on a machine before using as a parameter see here: https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/convertto-securestring?view=powershell-7
 # If you need to use Bloomberg as a data provider the implementation given below is not applicable
 # Please refer to the documentation for more info: https://github.com/fundapps/api-examples#data-provider-credentials-post-restapiv1configurationdataprovidersprovideridcredentials
@@ -38,16 +38,16 @@ function API-Post-Json {
         }
         else{
             throw
-        }      
+        }
     }
 }
 
 function Update-Credentials {
-    Param ($APIUri, $User, $Password, $DataProviderId, $DataProviderUsername, $DataProviderPassword, $ClientEnvironment)
-    Write-Host ("$APIUri/api/adapptr/v2/configuration/dataproviders/$DataProviderId/credentials")
+    Param ($User, $Password, $DataProviderId, $DataProviderUsername, $DataProviderPassword, $ClientEnvironment)
+    Write-Host ("$ClientEnvironment-svc.fundapps.co/api/adapptr/v2/configuration/dataproviders/$DataProviderId/credentials")
 
     $params = @{
-        Uri = "$APIUri/api/adapptr/v2/configuration/dataproviders/$DataProviderId/credentials"
+        Uri = "$ClientEnvironment-svc.fundapps.co/api/adapptr/v2/configuration/dataproviders/$DataProviderId/credentials"
         User = $User
         Password = $Password
         Data = @{
