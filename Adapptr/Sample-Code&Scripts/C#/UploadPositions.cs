@@ -19,12 +19,12 @@ namespace FundAppsScripts.Scripts
             var pathToFile = "";
             // the snapshot date of your positions in the format yyyy-MM-dd
             var snapshotDate = DateTime.Today.ToString("yyyy-MM-dd");
-            
+
             // if dataProvider = 1 it means that the dataProvider is Refinitiv
             // if dataProvider = 2 it means that the dataProvider is Bloomberg
-            // plese refer to the documentation for more info: https://github.com/mmitushevskiMelon/api-examples#post-restapiv1taskpositions
+            // plese refer to the documentation for more info: https://github.com/fundapps/TechDocs#post-restapiv1taskpositions
             var dataProvider = 1;
-            
+
             //Example using RestSharp (https://github.com/restsharp/RestSharp)
 
             //Create a client which will connect to the HTTPS endpoint with the API credentials you have been provided
@@ -34,17 +34,17 @@ namespace FundAppsScripts.Scripts
             };
 
             // make the HTTP POST request
-            var request = new RestRequest($"/rest/api/v1/task/positions", Method.POST);
+            var request = new RestRequest($"/v2/task/positions", Method.POST);
 
             // add body params to the request
             request.AddFile("positions", pathToFile, "text/csv");
             request.AddParameter("snapshotDate", snapshotDate);
             request.AddParameter("dataProvider", dataProvider);
-            
+
             // add header with the rapptr environment
             request.AddHeader("X-Client-Environment", clientEnvironmentSubDomain);
             request.AddHeader("Content-Type", "multipart/form-data");
-            
+
             var response = client.Execute<TaskProfileResponse>(request);
 
             // if response comes back with a 200 status, then as task for the positions file was created successfully

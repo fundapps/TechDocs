@@ -20,7 +20,7 @@ namespace FundAppsScripts.Scripts
             taskId = taskId ?? "";
 
             //Example using RestSharp (https://github.com/restsharp/RestSharp)
-   
+
             //Create a client which will connect to the HTTPS endpoint with the API credentials you have been provided
             var client = new RestClient(baseUrl)
             {
@@ -28,7 +28,7 @@ namespace FundAppsScripts.Scripts
             };
 
             // make the HTTP GET request with the taskId as route parameter
-            var request = new RestRequest($"/rest/api/v1/task/{taskId}/status", Method.GET);
+            var request = new RestRequest($"/v2/task/{taskId}/status", Method.GET);
 
             // add header with the rapptr environment
             request.AddHeader("X-Client-Environment", clientEnvironmentSubDomain);
