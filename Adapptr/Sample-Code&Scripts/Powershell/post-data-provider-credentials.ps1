@@ -44,10 +44,9 @@ function API-Post-Json {
 
 function Update-Credentials {
     Param ($User, $Password, $DataProviderId, $DataProviderUsername, $DataProviderPassword, $ClientEnvironment)
-    Write-Host ("$ClientEnvironment-svc.fundapps.co/api/adapptr/v2/configuration/dataproviders/$DataProviderId/credentials")
 
     $params = @{
-        Uri = "$ClientEnvironment-svc.fundapps.co/api/adapptr/v2/configuration/dataproviders/$DataProviderId/credentials"
+        Uri = "https://$ClientEnvironment-svc.fundapps.co/api/adapptr/v2/configuration/dataproviders/$DataProviderId/credentials"
         User = $User
         Password = $Password
         Data = @{
