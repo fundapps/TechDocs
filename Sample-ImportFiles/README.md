@@ -24,6 +24,7 @@ We accept transaction data in CSV format. You can find a [sample file here](Tran
 | Price           | Price transaction was executed at    | [Decimal(28,8)](https://github.com/fundapps/api-examples#data-types) | X        |
 | Quantity        | Quantity purchased/sold              | [Decimal(28,8)](https://github.com/fundapps/api-examples#data-types) | X        |
 | BrokerName      | Broker transaction was executed with | [String(255)](https://github.com/fundapps/api-examples#data-types)   |
+| Currency        | Currency transaction was executed in | [String(255)](https://github.com/fundapps/api-examples#data-types)   |
 
 ### Recognised Transaction Types (All case sensitive)
 
