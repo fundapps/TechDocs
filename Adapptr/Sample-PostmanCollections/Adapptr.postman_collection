@@ -427,6 +427,95 @@
 			},
 			"response": []
 		}
+		{
+			"name": "Composites",
+			"item": [
+				{
+					"name": "Upload composite",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Client-Environment",
+								"value": "{{ClientEnvironment}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "composites",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BaseUrl}}/api/adapptr/v2/composites",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"api",
+								"adapptr",
+								"v2",
+								"composites"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload Positions Expost",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Client-Environment",
+								"value": "{{ClientEnvironment}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "positions",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BaseUrl}}/api/adapptr/v2/task/positions/expost",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"api",
+								"adapptr",
+								"v2",
+								"task",
+								"positions",
+								"expost"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
 	],
 	"auth": {
 		"type": "basic",
