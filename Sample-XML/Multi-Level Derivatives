@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Snapshot Date="2022-08-16">
+    <Instruments>
+      <Option InstrumentId="CALL(EU)_NL0012365084_CASH" InstrumentName="NSI N.V. - Class A - Cash(EU) Call Option" CallOrPut="Call" ExerciseStyle="European" ContractSize="5" Delta="1" InstrumentCurrency="EUR" IsCashSettled="True" Market="XXXX" MaturityDate="2022-01-14" Price="14" IsOTC="True" DeliveryMonth="2019-07" MarketsListedIn="XXXX">
+        <Component InstrumentId="CONV_NL0012365084" />
+      </Option>  
+      <Convertible InstrumentId="CONV_NL0012365084" InstrumentName="NSI N.V. - Conv.Bond 5.7% 2031" ISIN="NL00123650CB" Market="XAMS" MarketsListedIn="XAMS" ConversionRatio="10" InControlOfConversion="true" MaturityDate="2031-11-15" Delta="1" IsCoveredConvertible="false">
+        <Component InstrumentId="NL0012365084" />
+      </Convertible>
+      <Equity InstrumentId="NL0012365084" InstrumentName="NSI N.V." IssuerId="724500I77C30W2LZZJ03" IssuerName="NSI N.V." GICSIndustries="251020" ISIN="NL0012365084" InstrumentCurrency="EUR" CountryOfIncorporation="NL" CountryOfIssue="NL" LEI="724500I77C30W2LZZJ03" Market="XAMS" MarketsListedIn="XAMS" Price="17.6" VotesPerShare="1" ClassSharesOutstanding="100000" TotalSharesOutstanding="100000" TotalSharesInTreasury="0" TotalVotingShares="100000" TotalVotingSharesInTreasury="0" TotalVotingRights="100000" TotalVotingRightsInTreasury="0" IsWhenIssued="False" ParValue="0.07" />
+    </Instruments>
+    <Portfolios>
+      <Portfolio PortfolioId="MLDF">
+        <Asset AssetId="CALL(EU)_NL0012365084_CASH" AssetName="NSI N.V. - Class A - Cash(EU) Call Option" InstrumentId="CALL(EU)_NL0012365084_CASH" Quantity="-100" SftType="Normal"/>
+      </Portfolio>
+    </Portfolios>
+</Snapshot>
+  
