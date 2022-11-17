@@ -1,1 +1,0 @@
-powershell.exe -NoProfile -ExecutionPolicy RemoteSigned "& './SavePassword.ps1'
