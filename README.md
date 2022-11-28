@@ -241,9 +241,6 @@ Please note our collection of Adapptr samples:
 - [Sample Import Files](Adapptr/Sample-ImportFiles)
 - [Sample Postman Collections](Adapptr/Sample-PostmanCollections)
 
-Please select a version in order to access the API documentation:
+Adapptr API documentation:
 
 - [Adapptr API@v2 (latest)](Adapptr/versions/v2.md)
-- [Adapptr API@v1](Adapptr/versions/v1.md)
-
-ℹ See [here](Adapptr/APIMigration.md) for a page detailing the API migration.
