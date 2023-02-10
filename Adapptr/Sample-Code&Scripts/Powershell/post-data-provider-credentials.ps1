@@ -60,4 +60,4 @@ function Update-Credentials {
     Write-Host "Done"
 }
 
-Write-Host "Done"
+Write-Host "Functions created"
