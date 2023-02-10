@@ -93,4 +93,4 @@ function Import-Positions {
     Import-File -User $User -Password $Password -File $File -Uri "https://$ClientEnvironment-svc.fundapps.co/api/adapptr/v2/task/positions" -ClientEnvironment $ClientEnvironment
 }
 
-Write-Host "Done"
+Write-Host "Functions created"

@@ -53,4 +53,4 @@ function Get-Status {
     Write-Host "Done"
 }
 
-Write-Host "Done"
+Write-Host "Functions created"
