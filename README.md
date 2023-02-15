@@ -6,12 +6,12 @@ Our API methods return machine readable responses in XML format, including error
 
 ## Base URI
 
-If your Rapptr installation is available at <https://%company%.fundapps.co/>, your API URI is available at <https://%company%-api.fundapps.co/>. Same rule applies for your staging API, available at <https://%company%-staging-api.fundapps.co/>.  
+If your installation is available at <https://%company%.fundapps.co/>, your API URI is available at <https://%company%-api.fundapps.co/>. Same rule applies for your staging API, available at <https://%company%-staging-api.fundapps.co/>.  
 All requests made to our API must be over HTTPS.
 
 ## Authentication
 
-You authenticate to the Rapptr API via [Basic Authentication](https://tools.ietf.org/html/rfc2617) over HTTPS. A Rapptr administrator from your organisation must create a user with the role "API" for this purpose. You must authenticate for all requests.
+You authenticate to the API via [Basic Authentication](https://tools.ietf.org/html/rfc2617) over HTTPS. An administrator from your organisation must create a user with the role "API" for this purpose. You must authenticate for all requests.
 **Note:** Please ensure you create a separate user for the API as if you use an existing user's account, as soon as they change their password the API upload will fail.
 
 ## Methods
@@ -36,7 +36,7 @@ Upload Daily Positions. This method expects to receive data in XML format ([exam
 
 #### Position File XSD
 
-We make an XSD schema available for the position upload XML format; this may be retrieved from the `GET /v1/expost/xsd` API endpoint on your Rapptr instance . If you don't have access to an instance yet and would like access to an XSD file, please [contact support](https://fundapps.zendesk.com/hc/en-us/articles/200951119-Contacting-Support).
+We make an XSD schema available for the position upload XML format; this may be retrieved from the `GET /v1/expost/xsd` API endpoint on your instance . If you don't have access to an instance yet and would like access to an XSD file, please [contact support](https://fundapps.zendesk.com/hc/en-us/articles/200951119-Contacting-Support).
 
 ### `GET /v1/expost/result/<guid>`
 
@@ -54,7 +54,7 @@ This endpoint returns a `202 Accepted` HTTP status whilst the check is in progre
 | Passed          | Failed     | Rule execution failed                        |
 | Passed          | Passed     | Rule execution successful                    |
 
-When the rule execution is completed successfully, an additional 'Summary' element is provided in the response. This aims to provide the same information as the email notification sent by Rapptr when a positions file finishes processing.
+When the rule execution is completed successfully, an additional 'Summary' element is provided in the response. This aims to provide the same information as the email notification sent when a positions file finishes processing.
 
 The Summary element is comprised of:
 
@@ -106,7 +106,7 @@ You cannot check the progress of a portfolio file upload. Instead, when you uplo
 
 ### `POST /v1/portfolios/import` (Optional)
 
-Upload Portfolio data, if your portfolio structure changes frequently you may wish to refresh this at an appropriate frequency. There is the option to use `/v1/portfolios/import?ignoreUnknownProperties=true` to ignore unknown properties, needed when uploading portfolio file exported from Rapptr. When no `ignoreUnknownProperties` parameter is appended, the default value of `ignoreUnknownProperties=false` will be used - the suffix is optional and not required to set the value to `false`. Expects CSV - [example file](Sample-ImportFiles/Portfolios.csv).
+Upload Portfolio data, if your portfolio structure changes frequently you may wish to refresh this at an appropriate frequency. There is the option to use `/v1/portfolios/import?ignoreUnknownProperties=true` to ignore unknown properties, needed when uploading portfolio file exported from the system. When no `ignoreUnknownProperties` parameter is appended, the default value of `ignoreUnknownProperties=false` will be used - the suffix is optional and not required to set the value to `false`. Expects CSV - [example file](Sample-ImportFiles/Portfolios.csv).
 
 ### `POST /v1/transactions/import` (Optional)
 
@@ -196,7 +196,7 @@ These Content-Type values are as follows:
 
 ## Content Names
 
-When uploading data to the API, it is stored and later displayed in Rapptr using a default file name. To specify a different file name, populate the "X-ContentName" header, e.g.
+When uploading data to the API, it is stored and later displayed in the UI using a default file name. To specify a different file name, populate the "X-ContentName" header, e.g.
 
     POST https://%company%-api.fundapps.co/v1/expost/check HTTP/1.1 Content-Type: "application/xml" X-ContentName: "positions-monday.xml"
 
@@ -208,7 +208,7 @@ When uploading data to the API, it is stored and later displayed in Rapptr using
 | Date                     | Must be in "YYYY-MM-DD" format ([ISO 8601](https://en.wikipedia.org/wiki/ISO_8601))                                                                        | 2015-12-31    |
 | Decimal(Precision,Scale) | Must use "." as decimal separator. Group (thousand) separators are not allowed, exponential formatting not allowed. Up to 21 decimal places are supported. | 123444.227566 |
 | Integer                  | Whole number (positive or negative). Group (thousand) separators are not allowed, exponential formatting not allowed                                       | 19944         |
-| String                   | A sequence of characters. When using CSV format must not include commas (","). All strings are case-INSENSITIVE in Rapptr (except currencies)              | Nokia         |
+| String                   | A sequence of characters. When using CSV format must not include commas (","). All strings are case-INSENSITIVE (except currencies)                        | Nokia         |
 | List                     | Comma separated string                                                                                                                                     | XNYC,XLON     |
 
 ## Max File Size

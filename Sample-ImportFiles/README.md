@@ -1,12 +1,12 @@
-# Rapptr File Formats
+# File Formats
 
 ## Portfolio Data
 
-When uploading company structures and portfolios to Rapptr, we recommend that this is done at once using our CSV portfolio file template. You can find a [sample file here](https://github.com/fundapps/api-examples/blob/main/Sample-ImportFiles/Portfolios.csv) and a sample file with multiple aggregation structures [here](https://github.com/fundapps/api-examples/blob/main/Sample-ImportFiles/PortfoliosMultipleAggregationStructures.csv). For more guidance on how to structure your portfolio file, please refer to this [Help Centre article](https://fundapps.zendesk.com/hc/en-us/articles/210134023-Portfolio-File).
+When uploading company structures and portfolios, we recommend that this is done at once using our CSV portfolio file template. You can find a [sample file here](https://github.com/fundapps/api-examples/blob/main/Sample-ImportFiles/Portfolios.csv) and a sample file with multiple aggregation structures [here](https://github.com/fundapps/api-examples/blob/main/Sample-ImportFiles/PortfoliosMultipleAggregationStructures.csv). For more guidance on how to structure your portfolio file, please refer to this [Help Centre article](https://fundapps.zendesk.com/hc/en-us/articles/210134023-Portfolio-File).
 
 Please see [here](http://docs.fundapps.co/disclosureProperties.html#portfolioProperties) for the portfolio property descriptions
 
-_PortfolioId_ needs to be unique. In the scenario where a PortfolioId is uploaded which already exists in Rapptr, the previous portfolio details associated with that PortfolioId will be overridden, so if any columns are blank (e.g. disclosure form properties, then existing values will be overridden)
+_PortfolioId_ needs to be unique. In the scenario where a PortfolioId is uploaded which already exists, the previous portfolio details associated with that PortfolioId will be overridden, so if any columns are blank (e.g. disclosure form properties, then existing values will be overridden)
 
 ## Transaction Data
 
@@ -42,7 +42,7 @@ We accept transaction data in CSV format. You can find a [sample file here](Tran
 
 ### Data Requirements
 
-- _TransactionId_ needs to be unique. In the scenario where a TransactionId is uploaded which already exists in Rapptr, this will result in a validation error.
+- _TransactionId_ needs to be unique. In the scenario where a TransactionId is uploaded which already exists, this will result in a validation error.
 - _AssetId_ and _PortfolioId_ values need to match the fields with the same name in Position data; this is key in order to be able to query the correct transactions for disclosure forms.
 
 ## Imported Disclosure Data
