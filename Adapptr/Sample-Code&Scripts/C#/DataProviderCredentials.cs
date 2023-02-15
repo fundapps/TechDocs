@@ -51,7 +51,7 @@ namespace FundAppsScripts.Scripts
                 Password = refinitivPassword
             });
 
-            // add header with the rapptr environment
+            // add header with the environment
             request.AddHeader("X-Client-Environment", clientEnvironmentSubDomain);
 
             var response = client.Execute(request);

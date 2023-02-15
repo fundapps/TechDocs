@@ -7,7 +7,7 @@ require 'colorize'
 # Usage:
 # ... (run 'bundle install' to restore gems from Gemfile) ...
 #
-# fundapps_api = FundAppsAPI.new endpoint: "http://rapptr.local:38727", username: 'jsimpson', password: 'password'
+# fundapps_api = FundAppsAPI.new endpoint: "http://fundapps.local:38727", username: 'awhite', password: 'password'
 # fundapps_api.import_positions file: 'SamplePositions_Simple.zip'
 # fundapps_api.import_positions_and_get_result file: 'Disclosure_US_1Day.zip'
 # fundapps_api.import_portfolios file: 'Portfolios.csv'

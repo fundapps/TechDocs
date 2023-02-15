@@ -30,7 +30,7 @@ namespace FundAppsScripts.Scripts
             // make the HTTP GET request with the taskId as route parameter
             var request = new RestRequest($"/v2/task/{taskId}/status", Method.GET);
 
-            // add header with the rapptr environment
+            // add header with the environment
             request.AddHeader("X-Client-Environment", clientEnvironmentSubDomain);
 
             var checkStatusTimeout = DateTime.UtcNow.AddMinutes(5);
@@ -64,7 +64,7 @@ namespace FundAppsScripts.Scripts
                 //transmitted status
                 if (response.Data.Status.Id == 3)
                 {
-                    // logic when the status is transmitted to rapptr successfully. Maybe create another request for checking the status in rapptr using the tracking endpoint.
+                    // logic when the status is transmitted successfully. Maybe create another request for checking the status using the tracking endpoint.
                     break;
                 }
 

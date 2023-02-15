@@ -41,7 +41,7 @@ namespace FundAppsScripts.Scripts
             request.AddParameter("snapshotDate", snapshotDate);
             request.AddParameter("dataProvider", dataProvider);
 
-            // add header with the rapptr environment
+            // add header with the environment
             request.AddHeader("X-Client-Environment", clientEnvironmentSubDomain);
             request.AddHeader("Content-Type", "multipart/form-data");
 
