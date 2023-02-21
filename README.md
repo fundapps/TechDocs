@@ -20,6 +20,23 @@ A number of methods are available, depending on the kind of data being uploaded.
 
 All of our API methods expect your upload file to be sent as the body of the request; our example implementations show how to achieve this with commonly used HTTP libraries.
 
+## Compatibility
+
+Wherever possible, REST resources and their representations will be maintained in a backwards compatible manner.
+
+If it is necessary to change a representation in a way that is not backwards compatible, a new resource will be created using the new representation, and the old resource will be maintained in accordance with the deprecation policy.
+
+The behaviour of an API may change without warning if the existing behaviour is incorrect or constitutes a security vulnerability. 
+
+In particular, consumers should pay attention to the following: 
+* If a property has a primitive type and the API documentation does not explicitly limit its possible values, clients MUST NOT assume the values are constrained to a particular set of possible responses.
+* If a property of an object is not explicitly declared as mandatory in the API, clients MUST NOT assume it will be present.
+* New properties MAY be added to a representation at any time, but a new property MUST NOT alter the meaning of an existing property.
+
+## Deprecation 
+
+Our REST APIs will be given reasonable notice of deprecations. Any deprecated API MUST be available in its original form for at least 3 months, UNLESS there are critical security vulnerabilities.
+
 ### `POST /v1/expost/check`
 
 Upload Daily Positions. This method expects to receive data in XML format ([example XML position files](Sample-XML/)); large files may be zipped. The response includes a link which when polled allows monitoring of the progress of processing the file.
