@@ -78,15 +78,6 @@ The Summary element is comprised of:
 - The total number of alerts by type - i.e. Breach, Unknown, etc.
 - The number of new alerts by type (since the day before).
 
-You cannot check the progress of a portfolio file upload. Instead, when you upload a portfolio file, it will return a status immediately of any of the following:
-
-| ValidationState    | Explanation                  |
-| ------------------ | ---------------------------- |
-| Uploaded           | Succesfully uploaded         |
-| Validation failure | File did not pass validation |
-| No input document  | No file attached to API call |
-| Unexpected Error   | Error in file upload         |
-
 #### Sample
 
     (Request)
@@ -124,6 +115,74 @@ You cannot check the progress of a portfolio file upload. Instead, when you uplo
 ### `POST /v1/portfolios/import` (Optional)
 
 Upload Portfolio data, if your portfolio structure changes frequently you may wish to refresh this at an appropriate frequency. There is the option to use `/v1/portfolios/import?ignoreUnknownProperties=true` to ignore unknown properties, needed when uploading portfolio file exported from the system. When no `ignoreUnknownProperties` parameter is appended, the default value of `ignoreUnknownProperties=false` will be used - the suffix is optional and not required to set the value to `false`. Expects CSV - [example file](Sample-ImportFiles/Portfolios.csv).
+
+You cannot check the progress of a portfolio file upload. Instead, when you upload a portfolio file, it will return a status immediately of any of the following:
+
+| ValidationState    | Explanation                  |
+| ------------------ | ---------------------------- |
+| Uploaded           | Succesfully uploaded         |
+| Validation failure | File did not pass validation |
+| No input document  | No file attached to API call |
+| Unexpected Error   | Error in file upload         |
+| With warnings      | File contains warnings, if there are no errors or validation failures then the file will be imported       |
+
+### Sample Responses
+**Upload successful**
+
+    Response status: 200 OK
+    Content-Type: application/xml
+
+ **Validation failure**
+ 
+    Response status: 200 OK
+    Content-Type: application/xml
+    
+    (Response Content)
+    <Response>
+        <Error>Bad request. Input document did not pass validation. Please contact support@fundapps.co for assistance.</Error>
+    </Response>
+
+**No input document**
+
+    Response status: 400 Bad Request
+    Content-Type: application/xml
+    
+    (Response Content) 
+    <Response>
+        <Error>Bad request. No input document was found. Please contact support@fundapps.co for assistance.</Error>
+    </Response>
+    
+**Unexpected Error**    
+
+    Response status: 400 Bad Request
+    Content-Type: application/xml
+    
+    (Response Content) 
+    <Response>
+        <Error>Unexpected error while processing import.</Error>
+    </Response>
+    
+**With 13F Warnings**
+
+    Response status: 200 OK
+    Content-Type: application/xml
+    
+    (Response Content)
+    <Response>
+        <Warning>To ensure correct filings for 13F, your InvestmentManager13F details should be consistent in your portfolio file or within the portfolio settings.</Warning>
+    </Response>
+    
+**With validation failure and 13F warnings**
+
+    Response status: 200 OK
+    Content-Type: application/xml
+
+    (Response Content)
+    <Response>
+        <Error>Bad request. Input document did not pass validation. Please contact support@fundapps.co for assistance.</Error>
+        <Warning>To ensure correct filings for 13F, your InvestmentManager13F details should be consistent in your portfolio file or within the portfolio settings.</Warning>
+    </Response>
+
 
 ### `POST /v1/transactions/import` (Optional)
 
