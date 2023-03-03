@@ -134,7 +134,7 @@ You cannot check the progress of a portfolio file upload. Instead, when you uplo
 
  **Validation failure**
  
-    Response status: 200 OK
+    Response status: 400 Bad Request
     Content-Type: application/xml
     
     (Response Content)
@@ -174,7 +174,7 @@ You cannot check the progress of a portfolio file upload. Instead, when you uplo
     
 **With validation failure and 13F warnings**
 
-    Response status: 200 OK
+    Response status: 400 Bad Request
     Content-Type: application/xml
 
     (Response Content)
