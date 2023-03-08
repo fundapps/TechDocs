@@ -9,14 +9,14 @@
 Write-Host "Install functions"
 
 function API-Post-Json {
-    Param ($Uri, $User, $Password, $Data, $ClientEnvironment)
+    Param ($Uri, $User, $Password, $Data)
     $basicAuth = "Basic " + [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes($($User) + ":" + $($Password)));
 
     $params = @{
         Uri = $Uri
         Method = 'Post'
         ContentType = "application/json"
-        Headers = @{ Authorization = $basicAuth; 'X-Client-Environment' = $ClientEnvironment}
+        Headers = @{ Authorization = $basicAuth }
         Body = ConvertTo-Json -InputObject $Data
     }
 
@@ -53,7 +53,6 @@ function Update-Credentials {
             Username = $DataProviderUsername
             Password = $DataProviderPassword
         }
-        ClientEnvironment = $ClientEnvironment
     }
     Write-Host "Request started"
     API-Post-Json @params

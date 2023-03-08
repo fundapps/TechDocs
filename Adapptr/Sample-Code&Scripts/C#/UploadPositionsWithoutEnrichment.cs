@@ -13,8 +13,7 @@ namespace FundAppsScripts.Scripts
             var baseUrl = _adapptrConfig.BaseUrl;
             var username = _adapptrConfig.Username;
             var password = _adapptrConfig.Password;
-            // your FundApps environment name
-            var clientEnvironmentSubDomain = "";
+
             // include the file in the path - csv file only
             var pathToFile = "";
             // the snapshot date of your positions in the format yyyy-MM-dd
@@ -41,8 +40,6 @@ namespace FundAppsScripts.Scripts
             request.AddParameter("snapshotDate", snapshotDate);
             request.AddParameter("format", format);
 
-            // add header with the environment
-            request.AddHeader("X-Client-Environment", clientEnvironmentSubDomain);
             request.AddHeader("Content-Type", "multipart/form-data");
 
             var response = client.Execute<TaskProfileResponse>(request);

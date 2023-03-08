@@ -23,8 +23,6 @@ namespace FundAppsScripts.Scripts
             var baseUrl = _adapptrConfig.BaseUrl;
             var username = _adapptrConfig.Username;
             var password = _adapptrConfig.Password;
-            // your FundApps environment name
-            var clientEnvironmentSubDomain = "";
 
             //data providers ids can be obtained from a GET /v2/dataproviders. You will need to fill Id with the value of the data vendor you are using
             var refinitivId = _adapptrConfig.RefinitivConfig.Id;
@@ -50,9 +48,6 @@ namespace FundAppsScripts.Scripts
                 Username = refinitivUsername,
                 Password = refinitivPassword
             });
-
-            // add header with the environment
-            request.AddHeader("X-Client-Environment", clientEnvironmentSubDomain);
 
             var response = client.Execute(request);
 
