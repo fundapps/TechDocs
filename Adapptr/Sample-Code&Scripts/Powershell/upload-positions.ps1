@@ -39,7 +39,7 @@ function API-Post {
         Uri = $Uri
         Method = 'Post'
         ContentType = "multipart/form-data; boundary=`"$boundary`""
-        Headers = @{ Authorization = $basicAuth; 'X-Client-Environment' = $ClientEnvironment}
+        Headers = @{ Authorization = $basicAuth }
         Body = $bodyLines
     }
 
@@ -81,16 +81,16 @@ function Get-Content-Type {
 }
 
 function Import-File {
-    Param ($Uri, $User, $Password, $File, $ClientEnvironment)
+    Param ($Uri, $User, $Password, $File)
     Write-Host "Request started"
-    API-Post -Uri $Uri -User $User -Password $Password -File $File -ClientEnvironment $ClientEnvironment
+    API-Post -Uri $Uri -User $User -Password $Password -File $File
     Write-Host "Done"
 }
 
 
 function Import-Positions {
     Param ($User, $Password, $File, $ClientEnvironment)
-    Import-File -User $User -Password $Password -File $File -Uri "https://$ClientEnvironment-svc.fundapps.co/api/adapptr/v2/task/positions" -ClientEnvironment $ClientEnvironment
+    Import-File -User $User -Password $Password -File $File -Uri "https://$ClientEnvironment-svc.fundapps.co/api/adapptr/v2/task/positions"
 }
 
 Write-Host "Functions created"

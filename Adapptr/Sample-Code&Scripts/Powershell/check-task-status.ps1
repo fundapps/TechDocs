@@ -7,13 +7,13 @@
 Write-Host "Install functions"
 
 function API-GET {
-    Param ($Uri, $User, $Password, $ClientEnvironment)
+    Param ($Uri, $User, $Password)
     $basicAuth = "Basic " + [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes($($User) + ":" + $($Password)));
 
     $params = @{
         Uri = $Uri
         Method = 'Get'
-        Headers = @{ Authorization = $basicAuth; 'X-Client-Environment' = $ClientEnvironment}
+        Headers = @{ Authorization = $basicAuth }
     }
 
     try {
@@ -46,7 +46,6 @@ function Get-Status {
         Uri = "https://$ClientEnvironment-svc.fundapps.co/api/adapptr/v2/task/$TaskId/status"
         User = $User
         Password = $Password
-        ClientEnvironment = $ClientEnvironment
     }
     Write-Host "Request started"
     API-GET @params

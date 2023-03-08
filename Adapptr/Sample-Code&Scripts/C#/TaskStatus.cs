@@ -14,8 +14,6 @@ namespace FundAppsScripts.Scripts
             var baseUrl = _adapptrConfig.BaseUrl;
             var username = _adapptrConfig.Username;
             var password = _adapptrConfig.Password;
-            // your FundApps environment name
-            var clientEnvironmentSubDomain = "";
             // task id (GUID) from the uploading positions file via the POST request response
             taskId = taskId ?? "";
 
@@ -29,9 +27,6 @@ namespace FundAppsScripts.Scripts
 
             // make the HTTP GET request with the taskId as route parameter
             var request = new RestRequest($"/v2/task/{taskId}/status", Method.GET);
-
-            // add header with the environment
-            request.AddHeader("X-Client-Environment", clientEnvironmentSubDomain);
 
             var checkStatusTimeout = DateTime.UtcNow.AddMinutes(5);
 

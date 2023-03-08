@@ -194,13 +194,6 @@
 			"name": "Upload Positions",
 			"request": {
 				"method": "POST",
-				"header": [
-					{
-						"key": "X-Client-Environment",
-						"value": "{{ClientEnvironment}}",
-						"type": "text"
-					}
-				],
 				"body": {
 					"mode": "formdata",
 					"formdata": [
@@ -276,13 +269,6 @@
 			"name": "Upload Positions Without Enrichment",
 			"request": {
 				"method": "POST",
-				"header": [
-					{
-						"key": "X-Client-Environment",
-						"value": "{{ClientEnvironment}}",
-						"type": "text"
-					}
-				],
 				"body": {
 					"mode": "formdata",
 					"formdata": [
@@ -327,13 +313,6 @@
 			},
 			"request": {
 				"method": "GET",
-				"header": [
-					{
-						"key": "X-Client-Environment",
-						"value": "{{ClientEnvironment}}",
-						"type": "text"
-					}
-				],
 				"url": {
 					"raw": "{{BaseUrl}}/v2/task/:taskID/status",
 					"host": [
@@ -361,13 +340,6 @@
 			"name": "Data Provider Credentials",
 			"request": {
 				"method": "POST",
-				"header": [
-					{
-						"key": "X-Client-Environment",
-						"value": "{{ClientEnvironment}}",
-						"type": "text"
-					}
-				],
 				"body": {
 					"mode": "raw",
 					"raw": "{\r\n    \"Username\": \"\",\r\n    \"Password\": \"\"\r\n}",
@@ -405,13 +377,6 @@
 			"name": "Nomenclatures",
 			"request": {
 				"method": "GET",
-				"header": [
-					{
-						"key": "X-Client-Environment",
-						"value": "{{ClientEnvironment}}",
-						"type": "text"
-					}
-				],
 				"url": {
 					"raw": "{{BaseUrl}}/v2/nomenclatures",
 					"host": [
@@ -437,13 +402,6 @@
 					},
 					"request": {
 						"method": "POST",
-						"header": [
-							{
-								"key": "X-Client-Environment",
-								"value": "{{ClientEnvironment}}",
-								"type": "text"
-							}
-						],
 						"body": {
 							"mode": "formdata",
 							"formdata": [
@@ -473,13 +431,6 @@
 					"name": "Upload Positions Expost",
 					"request": {
 						"method": "POST",
-						"header": [
-							{
-								"key": "X-Client-Environment",
-								"value": "{{ClientEnvironment}}",
-								"type": "text"
-							}
-						],
 						"body": {
 							"mode": "formdata",
 							"formdata": [
