@@ -1,0 +1,242 @@
+openapi: 3.0.0
+info:
+  title: FundApps API
+  version: 1.0.0
+  description: |
+    We provide a REST-ful HTTPS API for automated interfaces between your systems and our service. Our API uses predictable, resource-oriented URI's to make methods available and HTTP response codes to indicate errors. These built-in HTTP features, like HTTP authentication and HTTP verbs are part of the standards underpinning the modern web and are able to be understood by off-the-shelf HTTP clients.
+
+    Our API methods return machine readable responses in XML format, including error conditions.
+
+
+  contact:
+    name: FundApps
+    url: https://www.fundapps.co/
+
+servers:
+  - url: https://demo-ace-api.fundapps.co/v1
+
+paths:
+  /ExPost/Check:
+    post:
+      tags:
+        - Position Files
+      summary: |
+        Upload Daily Positions. This method expects to receive data in XML format ([example XML position files](Sample-XML/)); large files may be zipped.
+      requestBody:
+        content:
+          application/xml:
+            schema:
+              type: string
+              format: binary
+          application/zip:
+            schema:
+              type: string
+              format: binary
+          text/csv:
+            schema:
+              type: string
+              format: binary
+      responses:
+        '400':
+          description: No file was attached to this request
+          content:
+            application/xml:
+              schema:
+                type: object
+                xml:
+                  name: Response
+                properties:
+                  error:
+                    xml:
+                      name: Error
+                    type: string
+                    description: The error message.
+              example:
+                error: Bad request. No input document was found. Please contact support@fundapps.co for assistance.
+        '202':
+          description: |
+            The response includes a link which when polled allows monitoring of the progress of processing the file.
+          content:
+            application/xml:
+              schema:
+                xml:
+                  name: Links
+                type: object
+                properties:
+                  result:
+                    type: string
+                    xml:
+                      name: Result
+                example:
+                  result: /v1/ExPost/Result/fe633307-f196-4609-abfe-a1fc0111e875
+  /ExPost/Result/{id}:
+    get:
+      tags:
+        - Position Files
+      parameters:
+        - name: id
+          in: path
+          description: Id of the import process obtained from posting to `/ExPost/Check`
+          schema:
+            type: string
+            format: uuid
+          required: true
+      responses:
+        '202':
+          description: The file is still in progress
+          $ref: "#/components/responses/ExPostResultErrorOrPending"
+            
+        '200':
+          description: The file has completed
+          $ref: "#/components/responses/ExPostResultSuccess"
+
+
+components:
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+
+  responses:  
+    ExPostResultErrorOrPending:
+      $ref: "#/components/responses/ExPostResultErrorOrPending"
+      content:
+        application/xml:
+          schema:
+            $ref: "#/components/schemas/ExPostResult"
+          examples:
+            InProgress:
+              value:
+                validationState: Passed
+                ruleState: InProgress
+            Errored:
+              value:
+                validationState: Failed
+                ruleState: NotRun
+
+    ExPostResultSuccess:
+      $ref: "#/components/responses/ExPostResultSuccess"
+      content:
+        application/xml:
+          schema:
+            $ref: "#/components/schemas/ExPostResult"
+            #oneOf:
+            #  - $ref: "#/components/schemas/ExPostResultSuccessInfo"
+            #  - $ref: "#/components/schemas/ExPostResultErrorOrPendingInfo"
+          examples:
+            Success:
+              value:
+                validationState: Passed
+                ruleState: Passed
+                status: Okay
+                pipelineStage: Finished
+                duration: "00:01:28.7030000"
+                summary:
+                  dataDate: 2015-07-20
+                  Breach:
+                    total: 1
+                    new: 1
+                  Disclosure:
+                    total: 18
+                    new: 18
+                  Unknown:
+                    total: 2
+                    new: 2
+                  Warning:
+                    total: 4
+                    new: 4
+                  OK:
+                    total: 399
+                    new: 399
+            Errored:
+              value:
+                validationState: Failed
+                ruleState: NotRun
+
+  schemas:
+    ExPostResult:
+      xml:
+        name: ResultSnapshot
+      type: object
+      properties:
+        validationState:
+          type: string
+          xml:
+            name: ValidationState
+            attribute: true
+          enum:
+            - Unknown
+            - Pending
+            - InProgress
+            - Passed
+            - Failed
+        ruleState:
+          type: string
+          xml:
+            name: RuleState
+            attribute: true
+          enum:
+            - Unknown
+            - Pending
+            - InProgress
+            - NotRun
+            - Passed
+            - Failed
+        status:
+          type: string
+          xml:
+            name: PipelineStage
+            attribute: true
+          enum:
+            - Okay
+        pipelineStage:
+          type: string
+          xml:
+            name: PipelineStage
+            attribute: true
+          enum:
+            - Finished
+        duration:
+          type: string
+          xml:
+            name: Duration
+            attribute: true
+        summary:
+          type: object
+          xml:
+            name: Summary
+          properties:
+            dataDate:
+              xml:
+                name: DataDate
+                attribute: true
+              type: string
+              format: date
+            Breach:
+              $ref: "#/components/schemas/ResultType"
+            Disclosure:
+              $ref: "#/components/schemas/ResultType"
+            Unknown:
+              $ref: "#/components/schemas/ResultType"
+            Warning:
+              $ref: "#/components/schemas/ResultType"
+            OK:
+              $ref: "#/components/schemas/ResultType"
+            
+    ResultType:
+      type: object
+      properties:
+        total:
+          xml:
+            name: Total
+            attribute: true
+          type: number
+        new:
+          xml:
+            name: New
+            attribute: true
+          type: number
+
+
+security:
+  - basicAuth: []
