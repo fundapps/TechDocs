@@ -20,6 +20,7 @@ function API-Post {
     # plese refer to the documentation for more information on parameters that you can use: https://github.com/fundapps/TechDocs#post-restapiv1taskpositions
 
     $dataProvider = "1";
+    $dryRun = "true";
 
     $bodyLines = (
         "--$boundary",
@@ -28,6 +29,9 @@ function API-Post {
         "--$boundary",
         "Content-Disposition: form-data; name=`"dataProvider`"$LF",
         "$dataProvider$LF",
+        "--$boundary",
+        "Content-Disposition: form-data; name=`"dryRun`"$LF",
+        "$dryRun$LF",
         "--$boundary",
         "Content-Disposition: form-data; name=`"positions`"; filename=`"positions.csv`"",
         "Content-Type: application/octet-stream$LF",
