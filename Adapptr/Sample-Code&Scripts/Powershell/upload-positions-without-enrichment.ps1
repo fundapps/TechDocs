@@ -16,8 +16,8 @@ function API-Post {
     $snapshotDate = Get-Date -Format "yyyy-MM-dd";
 
     # please refer to the documentation for more info on parameters:
-    # https://github.com/fundapps/TechDocs#available-nomenclatures-get-restapiv1nomenclatures
-    # https://github.com/fundapps/TechDocs#post-restapiv1taskpositionswithout-enrichment
+    # https://github.com/fundapps/TechDocs/blob/main/Adapptr/versions/v2.md#available-nomenclatures-get-v2nomenclatures
+    # https://github.com/fundapps/TechDocs/blob/main/Adapptr/versions/v2.md#upload-positions-without-enrichment-post-v2taskpositionswithout-enrichment
 
     $format = "2";
 
