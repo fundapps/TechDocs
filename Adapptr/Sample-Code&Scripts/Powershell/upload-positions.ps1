@@ -17,7 +17,7 @@ function API-Post {
     $snapshotDate = Get-Date -Format "yyyy-MM-dd";
 
 
-    # plese refer to the documentation for more information on parameters that you can use: https://github.com/fundapps/TechDocs#post-restapiv1taskpositions
+    # please refer to the documentation for more information on parameters that you can use: https://github.com/fundapps/TechDocs/blob/main/Adapptr/versions/v2.md#upload-positions-post-v2taskpositions
 
     $dataProvider = "1";
 
