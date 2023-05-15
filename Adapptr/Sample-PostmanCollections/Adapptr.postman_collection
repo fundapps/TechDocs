@@ -391,7 +391,7 @@
 				}
 			},
 			"response": []
-		}
+		},
 		{
 			"name": "Composites",
 			"item": [
@@ -466,7 +466,7 @@
 					"response": []
 				}
 			]
-		},
+		}
 	],
 	"auth": {
 		"type": "basic",
