@@ -2,7 +2,7 @@
 
 ## Portfolio Data
 
-When uploading company structures and portfolios, we recommend that this is done at once using our CSV portfolio file template. You can find a [sample file here](https://github.com/fundapps/api-examples/blob/main/Sample-ImportFiles/Portfolios.csv) and a sample file with multiple aggregation structures [here](https://github.com/fundapps/api-examples/blob/main/Sample-ImportFiles/PortfoliosMultipleAggregationStructures.csv). For more guidance on how to structure your portfolio file, please refer to this [Help Centre article](https://fundapps.zendesk.com/hc/en-us/articles/210134023-Portfolio-File).
+When uploading company structures and portfolios, we recommend that this is done at once using our CSV portfolio file template. You can find a [sample file here](https://github.com/fundapps/TechDocs/blob/main/Sample-ImportFiles/Portfolios%20Minimal%20File.csv) and a sample file with multiple aggregation structures [here](https://github.com/fundapps/api-examples/blob/main/Sample-ImportFiles/PortfoliosMultipleAggregationStructures.csv). For more guidance on how to structure your portfolio file, please refer to this [Help Centre article](https://fundapps.zendesk.com/hc/en-us/articles/210134023-Portfolio-File).
 
 Please see [here](http://docs.fundapps.co/disclosureProperties.html#portfolioProperties) for the portfolio property descriptions
 
