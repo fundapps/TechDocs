@@ -297,7 +297,7 @@ We provide a number of example implementations against our API using commonly av
 
 # FundApps Room In A Name (RIAN) API
 
-The Room In A Name API allows our clients to programtically consume the exact number of instruments they can trade before reaching a reportable threshold, in both an upward and downward direction.
+The Room In A Name API allows our clients to programmatically consume the exact number of instruments they can trade before reaching a reportable threshold, in both an upward and downward direction.
 
 The RIAN API is interactively documented using Swagger. Clients can access the documentation at {clientname}-api.fundapps.co/swagger with an API user.
 
