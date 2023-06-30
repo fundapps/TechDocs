@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Snapshot Date="2015-02-22">
     <Instruments>
-        <Equity InstrumentId="FI0009000681" InstrumentName="Nokia Equity" IssuerId="1" IssuerName="Nokia" ISIN="FI0009000681" CountryOfIssue="FI" CountryOfIncorporation="FI" TotalVotingRights="3000" ClassSharesOutstanding="1000" TotalSharesOutstanding="2000" TotalSharesInTreasury="200" MarketCap="1000" InstrumentCurrency="GBP" VotesPerShare="3" Market="XHEL" MarketsListedIn="XHEL" Price="10" CUSIP="" LotSize="1"/>
+        <Equity InstrumentId="FI0009000681" InstrumentName="Nokia Equity" IssuerId="1" IssuerName="Nokia" ISIN="FI0009000681" CountryOfIssue="FI" CountryOfIncorporation="FI" TotalVotingRights="3000" ClassSharesOutstanding="1000" TotalSharesOutstanding="2000" TotalSharesInTreasury="200" InstrumentCurrency="GBP" VotesPerShare="3" Market="XHEL" MarketsListedIn="XHEL" Price="10" CUSIP=""/>
     </Instruments> 
     <Portfolios>
         <Portfolio PortfolioId="11">
