@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "faca8254-b3bf-4b42-864d-1bacd72f12a5",
+		"_postman_id": "52430cf1-1faa-4c5f-b308-2770d26e4297",
 		"name": "Adapptr",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "3279036"
+		"_exporter_id": "22788416"
 	},
 	"item": [
 		{
@@ -191,208 +191,6 @@
 			]
 		},
 		{
-			"name": "Upload Positions",
-			"request": {
-				"method": "POST",
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "positions",
-							"type": "file",
-							"src": "test.csv"
-						},
-						{
-							"key": "snapshotDate",
-							"value": "2022-03-30",
-							"type": "text"
-						},
-						{
-							"key": "services",
-							"value": "2",
-							"type": "text"
-						},
-						{
-							"key": "primaryIdentifier",
-							"value": "1",
-							"type": "text"
-						},
-						{
-							"key": "secondaryIdentifier",
-							"value": "2",
-							"type": "text"
-						},
-						{
-							"key": "excludeErroredAssets",
-							"value": "false",
-							"type": "text"
-						},
-						{
-							"key": "dataProvider",
-							"value": "1",
-							"type": "text"
-						},
-						{
-							"key": "excludeDuplicatedAssets",
-							"value": "false",
-							"type": "text"
-						},
-						{
-							"key": "copyDownParentInstrumentData",
-							"value": "false",
-							"type": "text"
-						},
-						{
-							"key": "populateExecutionVenueWithMarket",
-							"value": "false",
-							"type": "text"
-						}
-					]
-				},
-				"url": {
-					"raw": "{{BaseUrl}}/v2/task/positions",
-					"host": [
-						"{{BaseUrl}}"
-					],
-					"path": [
-						"api",
-						"adapptr",
-						"v1",
-						"task",
-						"positions"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Upload Positions Without Enrichment",
-			"request": {
-				"method": "POST",
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "positions",
-							"type": "file",
-							"src": []
-						},
-						{
-							"key": "snapshotDate",
-							"value": "2021-11-16",
-							"type": "text"
-						},
-						{
-							"key": "format",
-							"value": "2",
-							"type": "text"
-						}
-					]
-				},
-				"url": {
-					"raw": "{{BaseUrl}}/v2/task/positions/without-enrichment",
-					"host": [
-						"{{BaseUrl}}"
-					],
-					"path": [
-						"api",
-						"adapptr",
-						"v1",
-						"task",
-						"positions",
-						"without-enrichment"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Task Status",
-			"protocolProfileBehavior": {
-				"disabledSystemHeaders": {}
-			},
-			"request": {
-				"method": "GET",
-				"url": {
-					"raw": "{{BaseUrl}}/v2/task/:taskID/status",
-					"host": [
-						"{{BaseUrl}}"
-					],
-					"path": [
-						"api",
-						"adapptr",
-						"v1",
-						"task",
-						":taskID",
-						"status"
-					],
-					"variable": [
-						{
-							"key": "taskID",
-							"value": "c60861a2-a3b2-4599-b4ac-3b55f403dad7"
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Data Provider Credentials",
-			"request": {
-				"method": "POST",
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"Username\": \"\",\r\n    \"Password\": \"\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "{{BaseUrl}}/v2/configuration/dataproviders/:providerId/credentials",
-					"host": [
-						"{{BaseUrl}}"
-					],
-					"path": [
-						"api",
-						"adapptr",
-						"v1",
-						"configuration",
-						"dataproviders",
-						":providerId",
-						"credentials"
-					],
-					"variable": [
-						{
-							"key": "providerId",
-							"value": "1"
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Nomenclatures",
-			"request": {
-				"method": "GET",
-				"url": {
-					"raw": "{{BaseUrl}}/v2/nomenclatures",
-					"host": [
-						"{{BaseUrl}}"
-					],
-					"path": [
-						"api",
-						"adapptr",
-						"v1",
-						"nomenclatures"
-					]
-				}
-			},
-			"response": []
-		},
-		{
 			"name": "Composites",
 			"item": [
 				{
@@ -402,6 +200,7 @@
 					},
 					"request": {
 						"method": "POST",
+						"header": [],
 						"body": {
 							"mode": "formdata",
 							"formdata": [
@@ -431,6 +230,7 @@
 					"name": "Upload Positions Expost",
 					"request": {
 						"method": "POST",
+						"header": [],
 						"body": {
 							"mode": "formdata",
 							"formdata": [
@@ -466,6 +266,213 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Upload Positions",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "positions",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "snapshotDate",
+							"value": "2022-03-30",
+							"type": "text"
+						},
+						{
+							"key": "dataProvider",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "services",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "primaryIdentifier",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "secondaryIdentifier",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "excludeErroredAssets",
+							"value": "false",
+							"type": "text"
+						},
+						{
+							"key": "excludeDuplicatedAssets",
+							"value": "false",
+							"type": "text"
+						},
+						{
+							"key": "copyDownParentInstrumentData",
+							"value": "false",
+							"type": "text"
+						},
+						{
+							"key": "populateExecutionVenueWithMarket",
+							"value": "false",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/api/adapptr/v2/task/positions",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"api",
+						"adapptr",
+						"v2",
+						"task",
+						"positions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Positions Without Enrichment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "positions",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "snapshotDate",
+							"value": "2021-11-16",
+							"type": "text"
+						},
+						{
+							"key": "format",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/api/adapptr/v2/task/positions/without-enrichment",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"api",
+						"adapptr",
+						"v2",
+						"task",
+						"positions",
+						"without-enrichment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Task Status",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseUrl}}/api/adapptr/v2/task/:taskID/status",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"api",
+						"adapptr",
+						"v2",
+						"task",
+						":taskID",
+						"status"
+					],
+					"variable": [
+						{
+							"key": "taskID",
+							"value": "c60861a2-a3b2-4599-b4ac-3b55f403dad7"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Data Provider Credentials",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Username\": \"\",\r\n    \"Password\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/api/adapptr/v2/configuration/dataproviders/:providerId/credentials",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"api",
+						"adapptr",
+						"v2",
+						"configuration",
+						"dataproviders",
+						":providerId",
+						"credentials"
+					],
+					"variable": [
+						{
+							"key": "providerId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Nomenclatures",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseUrl}}/api/adapptr/v2/nomenclatures",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"api",
+						"adapptr",
+						"v2",
+						"nomenclatures"
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"auth": {
@@ -506,7 +513,7 @@
 	"variable": [
 		{
 			"key": "BaseUrl",
-			"value": "http://{{ClientEnvironment}}-svc.fundapps.co/api/adapptr"
+			"value": "http://{{ClientEnvironment}}-svc.fundapps.co"
 		},
 		{
 			"key": "ClientEnvironment",
