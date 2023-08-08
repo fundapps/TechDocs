@@ -3,6 +3,14 @@
 const request = require('request');
 const fs = require('fs');
 
+const fileName = 'Transactions.csv'
+const username = '';
+const password = '';
+const url = 'https://demo-diamonds-api.fundapps.co/v1/transactions/import';
+const fileNameHeader = 'Transactions.csv';
+const contentTypeHeader = 'text/csv';
+const authHeader = 'Basic '+ btoa(`${username}:${password}`);
+
 // if response comes back with a 2xx status, then file was received successfully
 function logResult(error, response, body) {
   console.log(error);
@@ -15,19 +23,15 @@ function requestOptions(data) {
   return {
     headers: {
       // use this line to specify a name for the uploaded file
-      'X-ContentName': [POSITIONS FILE NAME],
+      'X-ContentName': fileNameHeader,
       // use this line to define the file type. e.g. 'text/xml', 'application/zip'
-      'Content-Type': [POSITIONS FILE TYPE],
+      'Content-Type': contentTypeHeader,
+      'Authorization': authHeader
     },
     // connect to the HTTPS endpoint with the API credentials you have been provided
-    uri: 'https://[ALIAS]-api.fundapps.co/v1/expost/check',
+    uri: url,
     method: 'POST',
     body: data,
-    auth: {
-      user: [USERNAME],
-      pass: [PASSWORD],
-      sendImmediately: false,
-    },
   };
 }
 
@@ -35,7 +39,7 @@ function sendFile(data) {
   request(requestOptions(data), logResult);
 }
 
-fs.readFile([POSITIONS FILE], (error, data) => {
+fs.readFile(fileName, (error, data) => {
   if (error == null) {
     sendFile(data);
   } else {
