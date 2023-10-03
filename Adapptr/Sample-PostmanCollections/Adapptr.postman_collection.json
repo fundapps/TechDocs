@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "52430cf1-1faa-4c5f-b308-2770d26e4297",
+		"_postman_id": "dced90f9-9bba-43e4-9563-00f6e49ab6ca",
 		"name": "Adapptr",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "22788416"
@@ -260,6 +260,47 @@
 									"value": null,
 									"disabled": true
 								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "External DataProvider Checks",
+			"item": [
+				{
+					"name": "Validate Refinitiv Credentials",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Credentials\": {\r\n        \"Username\": \"\",\r\n        \"Password\": \"\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://selectapi.datascope.refinitiv.com/RestApi/v1/Authentication/RequestToken",
+							"protocol": "https",
+							"host": [
+								"selectapi",
+								"datascope",
+								"refinitiv",
+								"com"
+							],
+							"path": [
+								"RestApi",
+								"v1",
+								"Authentication",
+								"RequestToken"
 							]
 						}
 					},
