@@ -1,3 +1,10 @@
+if (-Not (Test-Path ".\post-data-provider-credentials.ps1"))
+{
+    Write-Host "Please download the required helper functions from 'https://github.com/fundapps/TechDocs/blob/main/Adapptr/Sample-Code%26Scripts/Powershell/post-data-provider-credentials.ps1' into a file called 'post-data-provider-credentials.ps1'."
+    Write-Host "If you have this file locally, you might need to run this script from the folder containing this script."
+    Break 1
+}
+
 . ".\post-data-provider-credentials.ps1"
 
 $adapptr_username = Read-Host "Adapptr username"

@@ -6,6 +6,14 @@
 # If you need to use Bloomberg as a data provider the implementation given below is not applicable
 # Please refer to the documentation for more info: https://github.com/fundapps/api-examples#data-provider-credentials-post-restapiv1configurationdataprovidersprovideridcredentials
 
+$isDotSourced = $MyInvocation.InvocationName -eq '.' -or $MyInvocation.Line -eq ''
+
+if (-not $isDotSourced)
+{
+    Write-Host "You need to source this script, please run using '. .\post-data-provider-credentials.ps1'. The 'dot space' has been omitted."
+    Break 1
+}
+
 Write-Host "Install functions"
 
 function API-Post-Json {
