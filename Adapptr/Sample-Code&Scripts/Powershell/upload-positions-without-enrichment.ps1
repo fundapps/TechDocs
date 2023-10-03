@@ -1,7 +1,15 @@
 #
-# Usage: First run the script, then call the function below. You might need to run the script with . .\upload-positions.ps1 instead of .\upload-positions.ps1
+# Usage: First run the script, then call the function below. You might need to run the script with . .\upload-positions-without-enrichment.ps1 instead of .\upload-positions-without-enrichment.ps1
 # Import-Positions -User "[USERNAME]" -Password "[PASSWORD]" -File "[PATH_TO_FILE]" -ClientEnvironment "[ALIAS]"
 # For how to encrypt passwords on a machine before using as a parameter see here: https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/convertto-securestring?view=powershell-7
+
+$isDotSourced = $MyInvocation.InvocationName -eq '.' -or $MyInvocation.Line -eq ''
+
+if (-not $isDotSourced)
+{
+    Write-Host "You need to source this script, please run using '. .\upload-positions-without-enrichment.ps1'. The 'dot space' has been omitted."
+    Break 1
+}
 
 Write-Host "Install functions"
 

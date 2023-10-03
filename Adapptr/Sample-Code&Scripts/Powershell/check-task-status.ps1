@@ -4,6 +4,15 @@
 #Get-Status -User "[USERNAME]" -Password "[PASSWORD]" -TaskId "[TASKID]"  -ClientEnvironment "[ALIAS]"
 # For how to encrypt passwords on a machine before using as a parameter see here: https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/convertto-securestring?view=powershell-7
 
+$isDotSourced = $MyInvocation.InvocationName -eq '.' -or $MyInvocation.Line -eq ''
+
+if (-not $isDotSourced)
+{
+    Write-Host "You need to source this script, please run using '. .\check-task-status.ps1'. The 'dot space' has been omitted."
+    Break 1
+}
+
+
 Write-Host "Install functions"
 
 function API-GET {
