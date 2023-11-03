@@ -17,4 +17,4 @@ PortfolioId,PortfolioName,PortfolioType,PortfolioCurrency,PortfolioCompany,Legal
 18,Delegated,Portfolio,GBP,FundApps Alternatives,108,107,108,108,107,"Disclosure, Validation, Validation Disclosure, Short Selling",2013-03-12,,,,FALSE,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 19,MultiDelegated,Portfolio,GBP,FundApps Alternatives,109,"107,108",109,109,"107,108","Disclosure, Validation, Validation Disclosure, Short Selling",2013-06-12,,,,FALSE,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 20,Non_Delegated_2,Portfolio,GBP,FundApps Alternatives,110,,110,110,,"Disclosure, Validation, Validation Disclosure, Short Selling",2013-11-12,,,,FALSE,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-21,DelegatedExternally,Portfolio,GBP,FundApps Alternatives,,110,,,110,"Disclosure, Validation, Validation Disclosure, Short Selling",2013-01-12,,,,FALSE,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+21,DelegatedExternally,Portfolio,GBP,FundApps Alternatives,109,110,109,,110,"Disclosure, Validation, Validation Disclosure, Short Selling",2013-01-12,,,,FALSE,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
