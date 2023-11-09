@@ -1,0 +1,5 @@
+CompositeId,CompositeIdType,ComponentId,ComponentIdType,Weighting
+.KS100EWI,DataProviderId,005930.KS,DataProviderId,0.2
+.KS100EWI,DataProviderId,KR7005930003,Isin,0.3
+46141D203,Cusip,US912796ZP71,Isin,0.08646
+BNVTS02,Sedol,US912796ZP71,Isin,0.08646
