@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Snapshot Date="2023-08-21">
+    <Instruments>
+    <Bond InstrumentId="German Bond 1" InstrumentName="German Bond 1" InstrumentCurrency="EUR" IssuerId="Germany" IssuerName="Germany"  ISIN="DE0001102317" MarketsListedIn="XFRA" Market="XFRA" Price="100" CountryOfIssue="DE" DurationAdjustment="1" FaceValue="100" IsGovernmentBacked="true" />
+    <Bond InstrumentId="Netherlands Bond 1" InstrumentName="Netherlands Bond 1" InstrumentCurrency="EUR" IssuerId="Netherlands" IssuerName="Netherlands" ISIN="NL0009446418" MarketsListedIn="XAMS" Market="XAMS" Price="100" CountryOfIssue="NL" DurationAdjustment="1" FaceValue="100" IsGovernmentBacked="true" />  
+    <Index InstrumentId="S and P Eurozone Sovereign Bond Index" InstrumentName="S and P Eurozone Sovereign Bond Index" Price="3120.00" InstrumentCurrency="EUR" >
+            <Component InstrumentId="German Bond 1" Weighting="0.1"/>
+            <Component InstrumentId="Netherlands Bond 1" Weighting="0.1"/>
+    </Index>   
+    <Option InstrumentId="OptionIndexSovBond" InstrumentName="OptionIndexSovBond" CallOrPut="Call" ExerciseStyle="European" ContractSize="10" Delta="0.5" InstrumentCurrency="EUR" IsCashSettled="True" Market="XFRA" MaturityDate="2023-09-29" Price="14" IsOTC="FALSE" DeliveryMonth="2019-07" MarketsListedIn="XFRA" Notional="100000">
+      <Component InstrumentId="S and P Eurozone Sovereign Bond Index" />
+    </Option>
+    </Instruments>
+    <Portfolios>
+        <Portfolio PortfolioId="11">
+            <Asset AssetId="OptionIndexSovBondAsset" AssetName="OptionIndexSovBondAsset" InstrumentId="OptionIndexSovBond" Quantity="-7000000" SFTType="Normal" />
+        </Portfolio>
+    </Portfolios>
+</Snapshot>
