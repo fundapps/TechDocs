@@ -27,7 +27,7 @@ namespace FundAppsScripts.Scripts
             var request = new RestRequest($"/v2/task/positions/expost", Method.POST);
 
             // add body params to the request
-            request.AddParameter("positions", File.ReadAllText(pathToFile), "text/xml", ParameterType.RequestBody);
+            request.AddFile("positions", pathToFile);
 
             request.AddHeader("Content-Type", "multipart/form-data");
 
