@@ -63,7 +63,7 @@ namespace FundAppsScripts.Scripts
                     break;
                 }
 
-                throw new Exception("Unsuppored status");
+                throw new Exception("Unsupported status");
             }
 
             // success
