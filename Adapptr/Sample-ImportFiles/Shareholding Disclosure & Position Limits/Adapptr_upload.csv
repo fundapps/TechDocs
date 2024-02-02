@@ -1,0 +1,12 @@
+PortfolioId,AssetId,AssetName,ISIN,SEDOL,DataProviderId,ComponentDataProviderId,Quantity,MarketValue,SFTType,CUSIP,Price,InstrumentCurrency,AssetClass,ComponentISIN,IsCashSettled,DeliveryMonth,Market,CommoditySymbol,ULAssetClass,CallorPut,Delta,ContractSize,OpenInterestSingleMonth,OpenInterestAllMonth
+11,US0378331005,Apple Inc,US0378331005,B0YQ5W0,,,10000,10000000,Normal,037833100,100,USD,,,
+11,B10RVH1,Microsoft Inc,,B10RVH1,,,355310000,355310000,Normal,,10,USD,,,
+11,DE0005190003,BMW AG,DE0005190003,,,,500,10000,Normal,,14,EUR,,,
+11,GB0006043169,Aldi,GB0006043169,,,,425500,42550000,Normal,,10,GBP,,,
+11,US49639K1016,Kingsoft Cloud ADR,US49639K1016,,,,3999940,3914832480,Normal,,10.4,USD,,,
+11,UnlistedSwap,OTC Swap with exchange traded component,,,,,30000,422409000,Normal,,5,USD,Swap,GB0006043169,FALSE
+11,UnlistedSwapVod,OTC Swap with exchange traded component VOD,,,,VOD.L,30000,422409000,Normal,,5,USD,Swap,,FALSE
+11,VOD_EQ_XLON,Vodafone,,,VOD.L,,20000,2012400,Normal,,100.62,GBP,,,
+11,ALTG_O_XMOD,ALTUS GROUP LIMITED (AIF) OPTIONS,,,AIFL152305000.M,,10000,1000000,Normal,,100,CAD,,,
+11,CDEC21,CORN FUTURE DEC21,,,,,-1362,,,,,,Future,,TRUE,2021-12,XCBT,C,Commodity,,,100,10000,5000000
+12,CA02215R1073,SSO - ALTUS GROUP LIMITED (AIF) OPTIONS,,,,,1000,,,,,,Option,,TRUE,2021-12,IFLL,AQB,Equity,Call,0.4,,,
