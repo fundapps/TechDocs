@@ -24,8 +24,7 @@ namespace FundAppsScripts.Scripts
             var username = _adapptrConfig.Username;
             var password = _adapptrConfig.Password;
 
-            //data providers ids can be obtained from a GET /v2/dataproviders. You will need to fill Id with the value of the data vendor you are using
-            var refinitivId = _adapptrConfig.RefinitivConfig.Id;
+            var refinitivId = 1;
             // set your username
             var refinitivUsername = _adapptrConfig.RefinitivConfig.Username;
             // set your password
