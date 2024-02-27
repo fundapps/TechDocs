@@ -23,6 +23,7 @@ function API-Post {
     $boundary = [System.Guid]::NewGuid().ToString();
     $LF = "`r`n";
     $snapshotDate = Get-Date -Format "yyyy-MM-dd";
+    $excludeErroredAssets = $true
 
 
     # please refer to the documentation for more information on parameters that you can use: https://github.com/fundapps/TechDocs/blob/main/Adapptr/versions/v2.md#upload-positions-post-v2taskpositions
@@ -33,12 +34,19 @@ function API-Post {
         "--$boundary",
         "Content-Disposition: form-data; name=`"snapshotDate`"$LF",
         "$snapshotDate$LF",
+        
+        "--$boundary",
+        "Content-Disposition: form-data; name=`"excludeErroredAssets`"$LF",
+        "$excludeErroredAssets$LF",
+        
         "--$boundary",
         "Content-Disposition: form-data; name=`"dataProvider`"$LF",
         "$dataProvider$LF",
+        
         "--$boundary",
         "Content-Disposition: form-data; name=`"positions`"; filename=`"positions.csv`"",
         "Content-Type: application/octet-stream$LF",
+        
         $fileEnc,
         "--$boundary--$LF"
     ) -join $LF
