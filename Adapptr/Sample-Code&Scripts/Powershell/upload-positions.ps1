@@ -23,7 +23,7 @@ function API-Post {
     $boundary = [System.Guid]::NewGuid().ToString();
     $LF = "`r`n";
     $snapshotDate = Get-Date -Format "yyyy-MM-dd";
-    $excludeErroredAssets = $true
+    $excludeErroredAssets = $false
 
 
     # please refer to the documentation for more information on parameters that you can use: https://github.com/fundapps/TechDocs/blob/main/Adapptr/versions/v2.md#upload-positions-post-v2taskpositions
