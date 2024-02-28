@@ -23,9 +23,11 @@ def upload_file(file_path: str, snapshote_date: datetime.date) -> str:
         Task Id: The Adapptr id for the run (used to check status)
     """
     url = f"{base_url}task/positions"
+
+    # All options available here: https://github.com/fundapps/TechDocs/blob/main/Adapptr/versions/v2.md#upload-positions-post-v2taskpositions
     data = {
         'snapshotDate': snapshote_date.strftime('%Y-%m-%d'),
-        'dataProvider': 1, # 1 for Refinitiv, 2 for Bloomberg
+        'dataProvider': 1, # https://github.com/fundapps/TechDocs/blob/main/Adapptr/versions/v2.md#available-nomenclatures-get-v2nomenclatures
         'excludedErroredAssets': False,
     }
     with open(file_path, 'rb') as file:
