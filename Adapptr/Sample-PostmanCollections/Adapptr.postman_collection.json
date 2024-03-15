@@ -347,6 +347,11 @@
 							"type": "text"
 						},
 						{
+							"key": "tertiaryIdentifier",
+							"value": "3",
+							"type": "text"
+						},
+						{
 							"key": "excludeErroredAssets",
 							"value": "false",
 							"type": "text"
