@@ -114,7 +114,7 @@ The Summary element is comprised of:
 
 ### `POST /v1/portfolios/import` (Optional)
 
-Upload Portfolio data, if your portfolio structure changes frequently you may wish to refresh this at an appropriate frequency. There is the option to use `/v1/portfolios/import?ignoreUnknownProperties=true` to ignore unknown properties, needed when uploading portfolio file exported from the system. When no `ignoreUnknownProperties` parameter is appended, the default value of `ignoreUnknownProperties=false` will be used - the suffix is optional and not required to set the value to `false`. Expects CSV - [example file](Sample-ImportFiles/Portfolios.csv).
+Upload Portfolio data, if your portfolio structure changes frequently you may wish to refresh this at an appropriate frequency. There is the option to use `/v1/portfolios/import?ignoreUnknownProperties=true` to ignore unknown properties, needed when uploading portfolio file exported from the system. When no `ignoreUnknownProperties` parameter is appended, the default value of `ignoreUnknownProperties=false` will be used - the suffix is optional and not required to set the value to `false`. Expects CSV - [example file](Sample-ImportFiles/Portfolios Shareholding Disclosure.csv).
 
 You cannot check the progress of a portfolio file upload. Instead, when you upload a portfolio file, it will return a status immediately of any of the following:
 
