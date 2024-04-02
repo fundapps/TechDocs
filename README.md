@@ -1,3 +1,7 @@
+# ❗NOTICE: New Techdocs Website❗
+Our technical documentation has moved to techdocs.fundapps.co (click the link [here](https://techdocs.fundapps.co/)). 
+This GitHub repository will be archived on 2/7/2024. All the information and examples contained here can be found in our new website.
+
 # FundApps API Spec & Examples
 
 We provide a REST-ful HTTPS API for automated interfaces between your systems and our service. Our API uses predictable, resource-oriented URI's to make methods available and HTTP response codes to indicate errors. These built-in HTTP features, like HTTP authentication and HTTP verbs are part of the standards underpinning the modern web and are able to be understood by off-the-shelf HTTP clients.
