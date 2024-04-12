@@ -28,7 +28,7 @@ def upload_file(file_path: str, snapshote_date: datetime.date) -> str:
     data = {
         'snapshotDate': snapshote_date.strftime('%Y-%m-%d'),
         'dataProvider': 1, # https://github.com/fundapps/TechDocs/blob/main/Adapptr/versions/v2.md#available-nomenclatures-get-v2nomenclatures
-        'excludedErroredAssets': False,
+        'excludeErroredAssets': 'true',
     }
     with open(file_path, 'rb') as file:
         files = {'positions': (file_path, file)}
